@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 多维随机变量及其分布 | 概率论与数理统计</title>
+  <meta name="description" content="3 多维随机变量及其分布 | 概率论与数理统计" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 多维随机变量及其分布 | 概率论与数理统计" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 多维随机变量及其分布 | 概率论与数理统计" />
+  
+  
+  
+
+<meta name="author" content="胡鹏" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="随机变量及其分布.html"/>
+<link rel="next" href="随机变量的数字特征.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">概率论与数理统计</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html"><i class="fa fa-check"></i><b>1</b> 随机事件及其概率</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#样本空间与随机事件"><i class="fa fa-check"></i><b>1.1</b> 样本空间与随机事件</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#基本概念"><i class="fa fa-check"></i><b>1.1.1</b> 基本概念</a></li>
+<li class="chapter" data-level="1.1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的关系与运算"><i class="fa fa-check"></i><b>1.1.2</b> 事件的关系与运算</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的频率与概率"><i class="fa fa-check"></i><b>1.2</b> 事件的频率与概率</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#频率的定义"><i class="fa fa-check"></i><b>1.2.1</b> 频率的定义</a></li>
+<li class="chapter" data-level="1.2.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#概率的公理化定义"><i class="fa fa-check"></i><b>1.2.2</b> 概率的公理化定义</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型与几何概型"><i class="fa fa-check"></i><b>1.3</b> 古典概型与几何概型</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型"><i class="fa fa-check"></i><b>1.3.1</b> 古典概型</a></li>
+<li class="chapter" data-level="1.3.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#几何概型"><i class="fa fa-check"></i><b>1.3.2</b> 几何概型</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率"><i class="fa fa-check"></i><b>1.4</b> 条件概率</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率-1"><i class="fa fa-check"></i><b>1.4.1</b> 条件概率</a></li>
+<li class="chapter" data-level="1.4.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#乘法公式"><i class="fa fa-check"></i><b>1.4.2</b> 乘法公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式与贝叶斯公式"><i class="fa fa-check"></i><b>1.5</b> 全概率公式与贝叶斯公式</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式"><i class="fa fa-check"></i><b>1.5.1</b> 全概率公式</a></li>
+<li class="chapter" data-level="1.5.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#贝叶斯公式"><i class="fa fa-check"></i><b>1.5.2</b> 贝叶斯公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性"><i class="fa fa-check"></i><b>1.6</b> 事件的独立性</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性-1"><i class="fa fa-check"></i><b>1.6.1</b> 事件的独立性</a></li>
+<li class="chapter" data-level="1.6.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#伯努利概型"><i class="fa fa-check"></i><b>1.6.2</b> 伯努利概型</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html"><i class="fa fa-check"></i><b>2</b> 随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量与分布函数"><i class="fa fa-check"></i><b>2.1</b> 随机变量与分布函数</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量"><i class="fa fa-check"></i><b>2.1.1</b> 随机变量</a></li>
+<li class="chapter" data-level="2.1.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#分布函数"><i class="fa fa-check"></i><b>2.1.2</b> 分布函数</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量及其分布"><i class="fa fa-check"></i><b>2.2</b> 离散型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念"><i class="fa fa-check"></i><b>2.2.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#常见离散型随机变量"><i class="fa fa-check"></i><b>2.2.2</b> 常见离散型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量及其分布"><i class="fa fa-check"></i><b>2.3</b> 连续型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念-1"><i class="fa fa-check"></i><b>2.3.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.3.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#几种常见的连续性随机变量"><i class="fa fa-check"></i><b>2.3.2</b> 几种常见的连续性随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量函数的分布"><i class="fa fa-check"></i><b>2.4</b> 随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量情形"><i class="fa fa-check"></i><b>2.4.1</b> 离散型随机变量情形</a></li>
+<li class="chapter" data-level="2.4.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量情形"><i class="fa fa-check"></i><b>2.4.2</b> 连续型随机变量情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html"><i class="fa fa-check"></i><b>3</b> 多维随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量及其联合分布函数"><i class="fa fa-check"></i><b>3.1</b> 二维随机变量及其联合分布函数</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#多维随机变量"><i class="fa fa-check"></i><b>3.1.1</b> 多维随机变量</a></li>
+<li class="chapter" data-level="3.1.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量"><i class="fa fa-check"></i><b>3.1.2</b> 二维离散型随机变量</a></li>
+<li class="chapter" data-level="3.1.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量"><i class="fa fa-check"></i><b>3.1.3</b> 二维连续型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布和条件分布"><i class="fa fa-check"></i><b>3.2</b> 边缘分布和条件分布</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布"><i class="fa fa-check"></i><b>3.2.1</b> 边缘分布</a></li>
+<li class="chapter" data-level="3.2.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#条件分布"><i class="fa fa-check"></i><b>3.2.2</b> 条件分布</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性"><i class="fa fa-check"></i><b>3.3</b> 随机变量的独立性</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性-1"><i class="fa fa-check"></i><b>3.3.1</b> 随机变量的独立性</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量函数的分布"><i class="fa fa-check"></i><b>3.4</b> 二维随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.1</b> 二维离散型随机变量函数的分布</a></li>
+<li class="chapter" data-level="3.4.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.2</b> 二维连续型随机变量函数的分布</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html"><i class="fa fa-check"></i><b>4</b> 随机变量的数字特征</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望"><i class="fa fa-check"></i><b>4.1</b> 数学期望</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的定义"><i class="fa fa-check"></i><b>4.1.1</b> 数学期望的定义</a></li>
+<li class="chapter" data-level="4.1.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#随机变量函数的数学期望"><i class="fa fa-check"></i><b>4.1.2</b> 随机变量函数的数学期望</a></li>
+<li class="chapter" data-level="4.1.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的性质及条件期望"><i class="fa fa-check"></i><b>4.1.3</b> 数学期望的性质及条件期望</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差"><i class="fa fa-check"></i><b>4.2</b> 方差</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的定义"><i class="fa fa-check"></i><b>4.2.1</b> 方差的定义</a></li>
+<li class="chapter" data-level="4.2.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#常见随机变量的方差"><i class="fa fa-check"></i><b>4.2.2</b> 常见随机变量的方差</a></li>
+<li class="chapter" data-level="4.2.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的性质"><i class="fa fa-check"></i><b>4.2.3</b> 方差的性质</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数原点矩及中心距"><i class="fa fa-check"></i><b>4.3</b> 协方差与相关系数，原点矩及中心距</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数"><i class="fa fa-check"></i><b>4.3.1</b> 协方差与相关系数</a></li>
+<li class="chapter" data-level="4.3.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#原点矩及中心距"><i class="fa fa-check"></i><b>4.3.2</b> 原点矩及中心距</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html"><i class="fa fa-check"></i><b>5</b> 大数定律与中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理"><i class="fa fa-check"></i><b>5.1</b> 大数定理</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理-1"><i class="fa fa-check"></i><b>5.1.1</b> 大数定理</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理"><i class="fa fa-check"></i><b>5.2</b> 中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理-1"><i class="fa fa-check"></i><b>5.2.1</b> 中心极限定理</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html"><i class="fa fa-check"></i><b>6</b> 样本与抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#基本概念-1"><i class="fa fa-check"></i><b>6.1</b> 基本概念</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#总体与样本"><i class="fa fa-check"></i><b>6.1.1</b> 总体与样本</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征"><i class="fa fa-check"></i><b>6.2</b> 样本数字特征</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征-1"><i class="fa fa-check"></i><b>6.2.1</b> 样本数字特征</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布"><i class="fa fa-check"></i><b>6.3</b> 正态总体的抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布-1"><i class="fa fa-check"></i><b>6.3.1</b> 正态总体的抽样分布</a></li>
+<li class="chapter" data-level="6.3.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#分位数"><i class="fa fa-check"></i><b>6.3.2</b> 分位数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="参数估计.html"><a href="参数估计.html"><i class="fa fa-check"></i><b>7</b> 参数估计</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="参数估计.html"><a href="参数估计.html#参数的点估计"><i class="fa fa-check"></i><b>7.1</b> 参数的点估计</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="参数估计.html"><a href="参数估计.html#矩法估计"><i class="fa fa-check"></i><b>7.1.1</b> 矩法估计</a></li>
+<li class="chapter" data-level="7.1.2" data-path="参数估计.html"><a href="参数估计.html#极大似然估计"><i class="fa fa-check"></i><b>7.1.2</b> 极大似然估计</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="参数估计.html"><a href="参数估计.html#估计量的评价标准"><i class="fa fa-check"></i><b>7.2</b> 估计量的评价标准</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="参数估计.html"><a href="参数估计.html#无偏性"><i class="fa fa-check"></i><b>7.2.1</b> 无偏性</a></li>
+<li class="chapter" data-level="7.2.2" data-path="参数估计.html"><a href="参数估计.html#有效性"><i class="fa fa-check"></i><b>7.2.2</b> 有效性</a></li>
+<li class="chapter" data-level="7.2.3" data-path="参数估计.html"><a href="参数估计.html#一致性"><i class="fa fa-check"></i><b>7.2.3</b> 一致性</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="参数估计.html"><a href="参数估计.html#参数的区间估计"><i class="fa fa-check"></i><b>7.3</b> 参数的区间估计</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="参数估计.html"><a href="参数估计.html#区间估计基本方法"><i class="fa fa-check"></i><b>7.3.1</b> 区间估计基本方法</a></li>
+<li class="chapter" data-level="7.3.2" data-path="参数估计.html"><a href="参数估计.html#单个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.2</b> 单个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.3" data-path="参数估计.html"><a href="参数估计.html#两个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.3</b> 两个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.4" data-path="参数估计.html"><a href="参数估计.html#单侧置信区间"><i class="fa fa-check"></i><b>7.3.4</b> 单侧置信区间</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="假设检验.html"><a href="假设检验.html"><i class="fa fa-check"></i><b>8</b> 假设检验</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="假设检验.html"><a href="假设检验.html#假设检验的基本概念"><i class="fa fa-check"></i><b>8.1</b> 假设检验的基本概念</a></li>
+<li class="chapter" data-level="8.2" data-path="假设检验.html"><a href="假设检验.html#正态总体均值与方差的假设检验"><i class="fa fa-check"></i><b>8.2</b> 正态总体均值与方差的假设检验</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="假设检验.html"><a href="假设检验.html#单个正态总体情形"><i class="fa fa-check"></i><b>8.2.1</b> 单个正态总体情形</a></li>
+<li class="chapter" data-level="8.2.2" data-path="假设检验.html"><a href="假设检验.html#两个正态总体情形"><i class="fa fa-check"></i><b>8.2.2</b> 两个正态总体情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="附录.html"><a href="附录.html"><i class="fa fa-check"></i>附录</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">概率论与数理统计</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="多维随机变量及其分布" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> 多维随机变量及其分布</h1>
+<div id="二维随机变量及其联合分布函数" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> 二维随机变量及其联合分布函数</h2>
+<p><font size=4><strong>引言</strong></font></p>
+<p>在实际问题的研究中，对于某些随机试验的结果需要同时用两个或者两个以上上的随机变量来描述，例如</p>
+<ul>
+<li><p>要研究儿童的生长发育情况，常用身高和体重两个随机变量来描述；</p></li>
+<li><p>研究某地区的气候状况需要考虑温度、湿度等多个随机变量；</p></li>
+<li><p>研究国民经济状况，就需要用GDP、固定资产投资、各产业产值、人均消费额等很多随机变量来描述。</p></li>
+<li><p>在研究每个家庭的支出情况时，我们感兴趣于每个家庭的衣食住行四个方面。</p></li>
+</ul>
+<p><font size=4><strong>引例：</strong></font></p>
+<p><strong>【保险中的理赔总量模型】</strong>保险公司在一个会计年度保险单的理赔次数、每次的理赔额和全年理赔总量均为随机变量。某保险公司为了研究
+某类保险在一个会计年度的理赔总量，用<span class="math inline">\(X_{i}\)</span>表示某类保险单的第<span class="math inline">\(i\)</span>次理赔额，<span class="math inline">\(N\)</span>表示在一个会计年度所有这类保单
+发生理赔次数，<span class="math inline">\(Y\)</span>表示这一年中对这类保单的理赔总量。建立如下理赔总量模型：</p>
+<ul>
+<li>现有一组保单，假设在一年内可能发生的理赔次数为0，1，2和3，相应的概率为0.1，0.3，0.4和0.2。每张保单可
+能产生的理赔额为1，2，3（万元），相应的概率为0.5，0.4，0.1，试分析理赔总量<span class="math inline">\(Y\)</span>的概率分布，并求理赔总量超过6万元的概率。</li>
+</ul>
+<div id="多维随机变量" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> 多维随机变量</h3>
+<p><font size=4><strong>（1）多维随机变量</strong></font></p>
+<p><strong>定义：</strong>如果<span class="math inline">\(X_{1}(\omega), X_{2}(\omega), \cdots, X_{n}(\omega)\)</span>是定义在同一个样本空间<span class="math inline">\(\Omega=\{\omega\}\)</span>上的<span class="math inline">\(n\)</span>个随机变量，则称
+<span class="math display">\[X(\omega)=(X_{1}(\omega), X_{2}(\omega), \cdots, X_{n}(\omega))\]</span>
+为<span class="math inline">\(n\)</span>维随机变量或者<span class="math inline">\(n\)</span>维随机向量，简记为
+<span class="math display">\[X=(X_{1}, X_{2}, \cdots, X_{n})\]</span></p>
+<ul>
+<li>多维随机变量的关键是定义在同一样本空间上，对于不同样本空间上的两个随机变量，本章将不涉及这类问题。</li>
+</ul>
+<p><font size=4><strong>（2）多维随机变量联合分布函数</strong></font></p>
+<p>对任意<span class="math inline">\(n\)</span>个实数<span class="math inline">\(x_{1}, x_{2}, \cdots, x_{n}\)</span>，则<span class="math inline">\(n\)</span>个事件<span class="math inline">\(\{X_{1}\leq x_{1}\}\)</span>, <span class="math inline">\(\{X_{2}\leq x_{2}\}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\{X_{n}\leq x_{n}\}\)</span> 同时发生的概率
+<span class="math display">\[F(x_{1}, x_{2}, \cdots, x_{n})=P\{\{X_{1}\leq x_{1}\}, \{X_{2}\leq x_{2}\}, \cdots, \{X_{n}\leq x_{n}\}\]</span>
+称为<span class="math inline">\(n\)</span>维随机变量<span class="math inline">\(X=(X_{1}, X_{2}, \cdots, X_{n})\)</span>的联合分布函数（或简称分布函数）。</p>
+<p><strong>特殊情况：二维随机变量</strong></p>
+<p><font size=4><strong>（3）二维随机变量</strong></font></p>
+<p><strong>①二维随机变量</strong></p>
+<p>如果<span class="math inline">\(X(\omega),Y(\omega)\)</span>是定义在同一个样本空间<span class="math inline">\(\Omega=\{\omega\}\)</span>上的随机变量，由它们构成的一个向量<span class="math inline">\((X,Y)\)</span>叫做
+二维随机向量或二维随机变量。</p>
+<p><strong>②二维随机变量联合分布函数</strong></p>
+<p>设<span class="math inline">\((X, Y)\)</span>是二维随机变量，对于任意实数<span class="math inline">\(x, y\)</span>，事件<span class="math inline">\(\{X\leq x\}\)</span>，<span class="math inline">\(\{Y\leq y\}\)</span>同时发生的概率
+<span class="math display">\[F(x,y)=P\{X\leq x, Y\leq y\} \tag{3.1}\]</span>
+称为二维随机变量<span class="math inline">\((X, Y)\)</span>的分布函数，或<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>的联合分布函数。</p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5raKQm.nw*3c83R2df1bJjAzap148Uw5ZyQ60lspp0OAcrSVW7TthlLcq21WuuROixjSg96dYoRZd3Zkw0pvLEo!/mnull&amp;bo=LAHPAAAAAAABB8I!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片31" />
+</center>
+<center>
+图 3.1
+</center>
+<ul>
+<li>如果将二维随机变量<span class="math inline">\((X, Y)\)</span>看成是平面上随机点的坐标，那么分布函数<span class="math inline">\(F(x, y)\)</span>在<span class="math inline">\((x, y)\)</span>处的函数值就是随机点<span class="math inline">\((X, Y)\)</span>落在以点<span class="math inline">\((x, y)\)</span>为右上角的无穷矩形内的概率。</li>
+</ul>
+<p><strong>③二维随机变量的分布函数的性质</strong></p>
+<ul>
+<li><p>单调性：<span class="math inline">\(F(x, y)\)</span>分别对<span class="math inline">\(x\)</span>或<span class="math inline">\(y\)</span>是单调不减的，即</p>
+<ul>
+<li><p>当<span class="math inline">\(x_{1}&lt;x_{2}\)</span>时，有<span class="math inline">\(F(x_{1},y)\leq F(x_{2},y)\)</span>;</p></li>
+<li><p>当<span class="math inline">\(y_{1}&lt;y_{2}\)</span>时，有<span class="math inline">\(F(x,y_{1})\leq F(x,y_{2})\)</span>;</p></li>
+</ul></li>
+<li><p>有界性：对任意的<span class="math inline">\(x\)</span>和<span class="math inline">\(y\)</span>，有<span class="math inline">\(0\leq F(x, y)\leq 1\)</span>，且有</p>
+<ul>
+<li><p>对于任意给定的<span class="math inline">\(y\)</span>，<span class="math inline">\(F(-\infty, y)=\lim_{x\rightarrow -\infty}F(x,y)=0,\)</span></p></li>
+<li><p>对于任意给定的<span class="math inline">\(x\)</span>，<span class="math inline">\(F(x, -\infty)=\lim_{y\rightarrow -\infty}F(x,y)=0,\)</span></p></li>
+<li><p><span class="math inline">\(F(-\infty, -\infty)=\lim_{x,y\rightarrow -\infty}=0\)</span></p></li>
+<li><p><span class="math inline">\(F(+\infty, +\infty)=\lim_{x,y\rightarrow +\infty}=1\)</span></p></li>
+</ul></li>
+<li><p>右连续性：对于每个变量都是右连续的，即<span class="math display">\[F(x+0, y)=F(x,y),~~F(x,y+0)=F(x,y) \tag{3.2}\]</span></p></li>
+<li><p>非负性：对于任意的<span class="math inline">\(x_{1}&lt;x_{2}\)</span>, <span class="math inline">\(y_{1}&lt;y_{2}\)</span>，有</p></li>
+</ul>
+<p><span class="math display">\[ \begin{aligned}
+  P\{&amp; x_{1}&lt;X\leq x_{2},y_{1}&lt;Y\leq y_{2}\}\\
+  &amp;=F(x_{2},y_{2})-F(x_{1},y_{2})-F(x_{2},y_{1})+F(x_{1},y_{1})\geq 0
+  \end{aligned} \tag{3.3}\]</span></p>
+<ul>
+<li><p>有界性也可以从几何上加以说明，例如在图1中将无穷矩形的右边边界向左无限平移（即<span class="math inline">\(x\rightarrow -\infty\)</span>），则“随机点<span class="math inline">\((X, Y)\)</span>落在这个矩形内”这一事件趋于不可能事件，故其概率趋于0，即有<span class="math inline">\(F(-\infty, y)=0\)</span>; 又如当<span class="math inline">\(x\rightarrow \infty, y\rightarrow \infty\)</span> 时，图中的无穷矩形扩展到全平面，随机点<span class="math inline">\((X, Y)\)</span>落在其中这一事件趋于必然事件，故其概率趋于1，即<span class="math inline">\(F(\infty, \infty)=1\)</span></p></li>
+<li><p>具有上述四条性质的二元函数<span class="math inline">\(F(x, y)\)</span>一定是某个二维随机变量的分布函数，要证明某个二元函数需要验证满足上述四条性质。</p>
+<ul>
+<li><p>注意，一个二元函数<span class="math inline">\(F(x, y)\)</span>满足前三条性质时不一定满足第四条，例如</p>
+<p><span class="math display">\[\begin{equation*}
+F(x,y)=\left\{
+         \begin{array}{ll}
+           0, &amp; x+y&lt;0 \\
+           1, &amp; x+y\geq 0
+         \end{array}
+       \right.
+\end{equation*}\]</span></p></li>
+</ul></li>
+</ul>
+</div>
+<div id="二维离散型随机变量" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> 二维离散型随机变量</h3>
+<p><font size=4><strong>（1）定义:二维离散型随机变量</strong></font></p>
+<p>若二维随机变量<span class="math inline">\((X, Y)\)</span> 所取的可能值是有限对或无限可列多对，则称<span class="math inline">\((X, Y)\)</span>为二维离散型随机变量。</p>
+<p><font size=4><strong>（2）定义:二维离散型随机变量联合分布律</strong></font></p>
+<p>若二维离散型随机变量<span class="math inline">\((X, Y)\)</span>的所有可能取值为<span class="math inline">\((x_{i}, y_{j}), (i,j=1, 2, \cdots)\)</span>，则称
+<span class="math display">\[P\{X=x_{i}, Y=y_{j}\}=p_{ij}, i,j=1, 2, \cdots \tag{3.4}\]</span>
+为二维离散型随机变量<span class="math inline">\((X, Y)\)</span>的联合分布律（简称分布律）。</p>
+<p>二维离散型随机变量<span class="math inline">\((X, Y)\)</span>的分布律也可以用如下分布表给出：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><span class="math inline">\(x_{1}\)</span></th>
+<th align="center"><span class="math inline">\(x_{2}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center"><span class="math inline">\(x_{i}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(y_{1}\)</span></td>
+<td align="center"><span class="math inline">\(p_{11}\)</span></td>
+<td align="center"><span class="math inline">\(p_{21}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{i1}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(y_{2}\)</span></td>
+<td align="center"><span class="math inline">\(p_{12}\)</span></td>
+<td align="center"><span class="math inline">\(p_{22}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{i2}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(y_{j}\)</span></td>
+<td align="center"><span class="math inline">\(p_{1j}\)</span></td>
+<td align="center"><span class="math inline">\(p_{2j}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{ij}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><font size=4><strong>（3）联合分布律的性质</strong></font></p>
+<ul>
+<li><p>非负性：<span class="math inline">\(p_{ij}\geq 0, i, j=1, 2, \cdots\)</span></p></li>
+<li><p>正则性：<span class="math inline">\(\sum_{i=1}^{+\infty}\sum_{j=1}^{+\infty}p_{ij}=1.\)</span></p></li>
+</ul>
+<p><strong>注：</strong></p>
+<ul>
+<li><p>求二维离散型随机变量<span class="math inline">\((X, Y)\)</span>的分布律，关键是写出<span class="math inline">\((X, Y)\)</span>所有可能取到的数对及其发生的概率。</p></li>
+<li><p>已知二维离散型随机变量<span class="math inline">\((X, Y)\)</span>的联合分布律，我们对一切满足<span class="math inline">\(x_{i}\leq x, y_{j}\leq y\)</span> 的<span class="math inline">\(i, j\)</span>求和得到分布函数，即</p>
+<p><span class="math display">\[\begin{aligned}
+F(x,y)=\sum_{x_{i}\leq x}\sum_{y_{j}\leq y}p_{ij}.
+\end{aligned} \tag{3.5}\]</span></p></li>
+</ul>
+<p><font size=4><strong>（4）例题</strong></font></p>
+<p><strong>例1：</strong>从一个装有3支蓝色、2支红色、3支绿色
+圆珠笔的盒子里，随机抽取两支, 若 <span class="math inline">\(X\)</span>、<span class="math inline">\(Y\)</span>分别
+表示抽出的蓝笔数和红笔数，求<span class="math inline">\((X, Y)\)</span>的分布律。</p>
+<p>解：依题意可知，<span class="math inline">\((X, Y)\)</span>所有可能取值为<span class="math inline">\((0, 0)\)</span>，<span class="math inline">\((0, 1)\)</span>，<span class="math inline">\((1, 0)\)</span>，
+<span class="math inline">\((1, 1)\)</span>，<span class="math inline">\((0, 2)\)</span>，<span class="math inline">\((2, 0)\)</span>.
+<span class="math display">\[\begin{equation*}
+P\{X=0, Y=0\}=C_{3}^{0}\cdot C_{2}^{0}\cdot C_{3}^{2}/C_{8}^{2}=\frac{3}{28}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+P\{X=0, Y=1\}=C_{3}^{0}\cdot C_{2}^{1}\cdot C_{3}^{1}/C_{8}^{2}=\frac{3}{14}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+P\{X=1, Y=1\}=C_{3}^{1}\cdot C_{2}^{1}\cdot C_{3}^{0}/C_{8}^{2}=\frac{3}{14}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+P\{X=0, Y=2\}=C_{3}^{0}\cdot C_{2}^{2}\cdot C_{3}^{0}/C_{8}^{2}=\frac{1}{28}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+P\{X=1, Y=0\}=C_{3}^{1}\cdot C_{2}^{0}\cdot C_{3}^{1}/C_{8}^{2}=\frac{9}{28}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+P\{X=2, Y=0\}=C_{3}^{2}\cdot C_{2}^{0}\cdot C_{3}^{0}/C_{8}^{2}=\frac{3}{28}
+\end{equation*}\]</span></p>
+故所求分布律为
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">3/28</td>
+<td align="center">9/28</td>
+<td align="center">3/28</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">3/14</td>
+<td align="center">3/14</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">1/28</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例2：</strong>在一箱中装有12只开关，其实2只次品，在其中取两次，每次取一只，我们定义随机变量<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>如下：
+<span class="math display">\[\begin{equation*}
+  X=\left\{
+      \begin{array}{ll}
+        0, &amp; \text{若第一次取出的是正品;} \\
+        1, &amp; \text{若第一次取出的是次品.}
+      \end{array}
+    \right.
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
+  Y=\left\{
+      \begin{array}{ll}
+        0, &amp; \text{若第二次取出的是正品;} \\
+        1, &amp; \text{若第二次取出的是次品.}
+      \end{array}
+    \right.
+\end{equation*}\]</span>
+考虑如下两种情况：（1）、放回抽取；（2）、不放回抽取，试分别就（1）和（2）两种情形，写出<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的分布律。</p>
+<p>解：由<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的定义可知，<span class="math inline">\((X, Y)\)</span>的取值所有可能为<span class="math inline">\((0, 0)\)</span>, <span class="math inline">\((0, 1)\)</span>, <span class="math inline">\((1, 0)\)</span>, <span class="math inline">\((1, 1)\)</span>.</p>
+<p>（1）、有放回抽取
+<span class="math display">\[\begin{equation*}
+  P\{X=0, Y=0\}=\frac{10}{12}\times\frac{10}{12}=\frac{25}{36},
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  P\{X=0, Y=1\}=\frac{10}{12}\times\frac{2}{12}=\frac{5}{36},
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  P\{X=1, Y=0\}=\frac{2}{12}\times\frac{10}{12}=\frac{5}{36},
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  P\{X=1, Y=1\}=\frac{2}{12}\times\frac{2}{12}=\frac{1}{36},
+\end{equation*}\]</span></p>
+因此，<span class="math inline">\((X, Y)\)</span>的联合分布表为：
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">25/36</td>
+<td align="center">5/36</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">5/36</td>
+<td align="center">1/36</td>
+</tr>
+</tbody>
+</table>
+<p>（2）、无放回抽取
+<span class="math display">\[\begin{equation*}
+  P\{X=0, Y=0\}=\frac{10}{12}\times\frac{9}{11}=\frac{15}{22},
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  P\{X=0, Y=1\}=\frac{10}{12}\times\frac{1}{11}=\frac{5}{33},
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  P\{X=1, Y=0\}=\frac{2}{12}\times\frac{10}{11}=\frac{5}{33},
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  P\{X=1, Y=1\}=\frac{2}{12}\times\frac{1}{11}=\frac{1}{66},
+\end{equation*}\]</span></p>
+因此，<span class="math inline">\((X, Y)\)</span>的联合分布表为：
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">15/22</td>
+<td align="center">5/33</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">5/33</td>
+<td align="center">1/66</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例3：</strong>袋中有2只黑球、2只白球、3只红球，在其中任取2只球。以<span class="math inline">\(X\)</span>表示取到黑球的只数，以<span class="math inline">\(Y\)</span>表示取到白球的只数。</p>
+<ul>
+<li><p>求<span class="math inline">\((X,Y)\)</span>的分布律；</p></li>
+<li><p>求概率<span class="math inline">\(P\{X+Y\geq 2\}\)</span>, <span class="math inline">\(P\{X^{2}+Y^{2}\leq 1\}\)</span>。</p></li>
+</ul>
+<p>解：（1）、<span class="math inline">\(X\)</span>所有可能取的不同值为0,1,2； <span class="math inline">\(Y\)</span>所有可能取的不同值为0,1,2. <span class="math inline">\((X,Y)\)</span>的分布律为
+<span class="math display">\[\begin{equation*}
+  P\{X=i, Y=j\}=\frac{C_{2}^{i}C_{2}^{j}C_{3}^{2-i-j}}{C_{7}^{2}}, i, j=0, 1, 2, 0\leq i+j\leq 2.
+\end{equation*}\]</span></p>
+分布律也可写成以下表格的形式：
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">1/7</td>
+<td align="center">2/7</td>
+<td align="center">1/21</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">2/7</td>
+<td align="center">4/21</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">1/21</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>（2）、
+<span class="math display">\[\begin{equation*}
+\begin{split}
+  P\{X+Y\geq 2\}&amp;=P\{X=0, Y=2\}+P\{X=1, Y=1\}\\
+  &amp;+P\{X=2, Y=0\}=\frac{6}{21}.
+\end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+  P\{X^{2}+Y^{2}\leq 1\}&amp;=P\{X=0, Y=0\}+P\{X=0, Y=1\}\\
+  &amp;+P\{X=1, Y=0\}=\frac{5}{7}.
+\end{split}
+\end{equation*}\]</span></p>
+</div>
+<div id="二维连续型随机变量" class="section level3" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> 二维连续型随机变量</h3>
+<p><font size=4><strong>（1）二维连续型随机变量</strong></font></p>
+<p><strong>定义：</strong>对于二维随机变量<span class="math inline">\((X, Y)\)</span>的分布函数<span class="math inline">\(F(x,y)\)</span>，如果存在非负的函数<span class="math inline">\(f(x,y)\)</span>，使得对任意实数<span class="math inline">\(x, y\)</span>，有
+<span class="math display">\[\begin{equation*}
+   F(x,y)=\int_{-\infty}^{y}\int_{-\infty}^{x}f(\mu,\nu)d\mu d\nu
+ \end{equation*}\]</span>
+则称<span class="math inline">\((X, Y)\)</span>为连续型的二维随机变量。函数<span class="math inline">\(f(x,y)\)</span>称为二维随机变量<span class="math inline">\((X, Y)\)</span>的概率密度或者称为随机变量<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的联合密度函数。</p>
+<p><font size=4><strong>（2）二维连续型随机变量联合密度函数的性质</strong></font></p>
+<ul>
+<li><p>非负性：<span class="math display">\[f(x,y)\geq 0, \forall x, y \in (-\infty, +\infty) \tag{3.6}\]</span></p></li>
+<li><p>正则性：<span class="math display">\[\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy=1 \tag{3.7}\]</span></p></li>
+<li><p>设<span class="math inline">\(G\)</span>是<span class="math inline">\(xOy\)</span>平面上的一个区域，点<span class="math inline">\((X, Y)\)</span>落在<span class="math inline">\(G\)</span>的概率为</p>
+<p><span class="math display">\[P\{(X,Y)\in G\}=\int\int_{G}f(x, y)dxdy. \tag{3.8}\]</span></p></li>
+<li><p>若<span class="math inline">\(f(x,y)\)</span>在<span class="math inline">\((x,y)\)</span>连续，则有<span class="math display">\[\frac{\partial^{2}F(x,y)}{\partial x\partial y}=f(x,y). \tag{3.9}\]</span></p></li>
+</ul>
+<p><strong>说明：</strong></p>
+<p>几何上，<span class="math inline">\(z=f(x,y)\)</span>表示的是空间上的一个曲面，
+<span class="math display">\[\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy=1 \tag{3.10}\]</span>
+表示介于<span class="math inline">\(f(x,y)\)</span>与<span class="math inline">\(xOy\)</span>平面之间的空间区域的全部体积等于1。</p>
+<p><span class="math display">\[P\{(X,Y)\in G\}=\int\int_{G}f(x, y)dxdy. \tag{3.11}\]</span>
+<span class="math inline">\(P\{(X,Y)\in G\}\)</span>的值等于以<span class="math inline">\(G\)</span>为底，以曲面<span class="math inline">\(z=f(x,y)\)</span>为顶面的柱体体积。</p>
+<p><font size=4><strong>（3）例题</strong></font></p>
+<p><strong>例4：</strong>设二维随机变量<span class="math inline">\((X, Y)\)</span>具有概率密度
+<span class="math display">\[\begin{equation*}
+   f(x,y)=\left\{
+            \begin{array}{ll}
+              ke^{-(2x+y)}, &amp; x&gt;0, y&gt;0, \\
+              0, &amp; \text{其他.}
+            \end{array}
+          \right.
+ \end{equation*}\]</span></p>
+<ul>
+<li><p>确定常数<span class="math inline">\(k\)</span>；</p></li>
+<li><p>求分布函数<span class="math inline">\(F(x,y)\)</span>;</p></li>
+<li><p>求概率<span class="math inline">\(P\{Y\leq X\}\)</span>。</p></li>
+</ul>
+<p>解：（1）、因为<span class="math inline">\(f(x,y)\)</span>为密度函数，则
+<span class="math display">\[\begin{equation*}
+  \begin{split}
+    1&amp;=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy=k\int_{0}^{+\infty}\int_{0}^{+\infty}e^{-(2x+y)}dxdy\\
+    &amp;=k\int_{0}^{+\infty}e^{-2x}dx\int_{0}^{+\infty}e^{-y}dy=\frac{k}{2}
+  \end{split}
+\end{equation*}\]</span>
+故有<span class="math inline">\(k=2\)</span>.</p>
+<p>（2）、
+<span class="math display">\[\begin{equation*}
+\begin{split}
+  F(x,y)&amp;=\int_{-\infty}^{y}\int_{-\infty}^{x}f(\mu,\nu)d\mu d\nu\\
+  &amp;=\left\{
+      \begin{array}{ll}
+        \int_{0}^{y}\int_{0}^{x}2e^{-(2\mu+\nu)}d\mu d\nu, &amp; x&gt;0, y&gt;0 \\
+        0, &amp; \text{其他.}
+      \end{array}
+    \right.
+\end{split}
+\end{equation*}\]</span></p>
+<p>故得
+<span class="math display">\[\begin{equation*}
+  F(x,y)=\left\{
+           \begin{array}{ll}
+             (1-e^{-2x})(1-e^{-y}), &amp; x&gt;0, y&gt;0; \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p>（3）、将<span class="math inline">\((X, Y)\)</span>看作是平面上随机点的坐标，即有<span class="math inline">\(\{Y\leq X\}=\{(X, Y)\in G\}\)</span>,
+<span class="math display">\[\begin{equation*}
+    \begin{split}
+      P\{Y\leq X\}&amp;=P\{(X, Y)\in G\}\\
+      &amp;=\int\int_{G}f(x, y)dxdy\\
+      &amp;=\int_{0}^{\infty}\int_{y}^{\infty}2e^{-(2x+y)}dxdy\\
+      &amp;=\frac{1}{3}
+    \end{split}
+  \end{equation*}\]</span></p>
+<p><strong>例5：</strong>设二维随机变量<span class="math inline">\((X, Y)\)</span>具有概率密度
+<span class="math display">\[\begin{equation*}
+   f(x,y)=\left\{
+            \begin{array}{ll}
+              kx(x-y), &amp; 0&lt;x&lt;1, -x&lt;y&lt;x, \\
+              0, &amp; \text{其他.}
+            \end{array}
+          \right.
+ \end{equation*}\]</span></p>
+<ul>
+<li><p>确定常数<span class="math inline">\(k\)</span>；</p></li>
+<li><p>求概率<span class="math inline">\(P\{Y\leq X/2\}\)</span>。</p></li>
+</ul>
+<p>解：由于在区域<span class="math inline">\(G:\{0&lt;x&lt;1, -x&lt;y&lt;x\}\)</span>上有<span class="math inline">\(f(x,y)&gt;0\)</span>，其他<span class="math inline">\(f(x,y)=0\)</span>。所以</p>
+<p><span class="math display">\[\begin{equation*}
+  \begin{split}
+    1&amp;=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy=\int\int_{G}f(x,y)dxdy\\
+    &amp;=\int_{0}^{1}\int_{-x}^{x}kx(x-y)dxdy=\int_{0}^{1}\int_{-x}^{x}(kx^{2}-kxy)dxdy\\
+    &amp;=\int_{0}^{1}\int_{-x}^{x}kx^{2}dxdy=2k\int_{0}^{1}x^{2}dx\int_{0}^{x}dx\\
+    &amp;=2k\int_{0}^{1}x^{3}dx\\
+    &amp;=\frac{k}{2}
+  \end{split}
+\end{equation*}\]</span>
+故有<span class="math inline">\(k=2\)</span>。</p>
+<p>（2）、将<span class="math inline">\((X, Y)\)</span>看作是平面上随机点的坐标，即有<span class="math inline">\(\{Y\leq X/2\}=\{(X, Y)\in D\}\)</span>,
+<span class="math display">\[\begin{equation*}
+    \begin{split}
+      P\{Y\leq X/2\}&amp;=P\{(X, Y)\in D\}\\
+      &amp;=\int\int_{D\bigcap G}f(x, y)dxdy\\
+      &amp;=\int_{0}^{1}dx\int_{-x}^{x/2}2x(x-y)dy\\
+      &amp;=\frac{15}{16}
+    \end{split}
+  \end{equation*}\]</span></p>
+<p><font size=4><strong>（4）常用二维分布</strong></font></p>
+<p><strong>①定义：二维均匀分布</strong></p>
+<p>设<span class="math inline">\(G\)</span>是平面上的一个有界区域，其面积为<span class="math inline">\(A\)</span>，令
+<span class="math display">\[\begin{equation*}
+  f(x,y)=\left\{
+           \begin{array}{ll}
+             \frac{1}{A}, &amp; (x,y)\in G \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+以<span class="math inline">\(f(x,y)\)</span>为概率密度的二维随机变量<span class="math inline">\((X, Y)\)</span>称为服从区域<span class="math inline">\(G\)</span>上的均匀分布。</p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5ruodou35LvItRTh1WM1l6pfhP1E.Pf33Hcyxoe8PdDU0E.l1kuAg8ownSRAs4G6hfQ6QfEqa7U*uMfGSfUHtfo!/mnull&amp;bo=5gDOAAAAAAABBwg!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片32" />
+</center>
+<center>
+图 3.2
+</center>
+<p><strong>②定义：二维正态分布</strong></p>
+<p>若二维随机变量<span class="math inline">\((X, Y)\)</span>具有概率密度
+<span class="math display">\[\begin{aligned}
+   \begin{split}
+     f(x,y)=&amp;\frac{1}{2\pi\sigma_{1}\sigma_{2}\sqrt{1-\rho^{2}}}\exp\left\{-\frac{1}{2(1-\rho^{2})}\left[\frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}\right.\right.\\
+     &amp;\left.\left.-2\rho\frac{(x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}+\frac{(y-\mu_{2})^{2}}{\sigma_{2}^{2}}\right]\right\}
+   \end{split}
+ \end{aligned} \tag{3.12}\]</span>
+其中<span class="math inline">\(-\infty&lt;x&lt;+\infty, -\infty&lt;y&lt;+\infty\)</span>, <span class="math inline">\(\mu_{1}\)</span>, <span class="math inline">\(\mu_{2}\)</span>, <span class="math inline">\(\sigma_{1}&gt;0\)</span>, <span class="math inline">\(\sigma_{2}&gt;0\)</span>以及<span class="math inline">\(|\rho|&lt;1\)</span>都是参数，则称<span class="math inline">\((X, Y)\)</span>服从参数<span class="math inline">\(\mu_{1}\)</span>, <span class="math inline">\(\mu_{2}\)</span>, <span class="math inline">\(\sigma_{1}\)</span>, <span class="math inline">\(\sigma_{2}\)</span>, <span class="math inline">\(\rho\)</span>的二维正态分布，记为
+<span class="math display">\[(X, Y)\sim N(\mu_{1}, \mu_{2}, \sigma_{1}, \sigma_{2}, \rho). \tag{3.13}\]</span></p>
+<p><strong>③二维正态分布图像</strong></p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5ruodou35LvItRTh1WM1l6rf9sEJRMZBqvaaJ*jiu3yotrnO2.vvK8sgJWdfgsNdau79j.q.gFPyvGgIBbfoNpM!/mnull&amp;bo=*gDBAAAAAAABBx8!&amp;rf=photolist&amp;t=5" alt="图片33" /><img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5ruodou35LvItRTh1WM1l6qzaPDhMdOPUdlFHxdGOcaCJTK8juXcDAsIFR4j6EksS*tTvvi*kqhgdDblXsYrr.M!/mnull&amp;bo=*gDBAAAAAAABBx8!&amp;rf=photolist&amp;t=5" alt="图片34" />
+</center>
+<center>
+图 3.3
+</center>
+</div>
+</div>
+<div id="边缘分布和条件分布" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> 边缘分布和条件分布</h2>
+<p>二维随机变量(X,Y)的分布主要包含三个方面的信息：</p>
+<ul>
+<li><p>每个分量的信息，即边缘分布；</p></li>
+<li><p>两个分量之间的关系程度，即相关系数；</p></li>
+<li><p>给定一个分量时，另一个分量的分布，即条件分布</p></li>
+<li><p>本节将主要讨论边缘分布和条件分布。</p></li>
+</ul>
+<div id="边缘分布" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> 边缘分布</h3>
+<p><font size=4><strong>（1）边缘分布定义</strong></font></p>
+<p>设二维随机变量<span class="math inline">\((X, Y)\)</span>具有分布函数<span class="math inline">\(F(x, y)\)</span>。<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>都是一维随机变量，也各有对应的分布函数<span class="math inline">\(F_{X}(x)\)</span>和<span class="math inline">\(F_{Y}(y)\)</span>，依次称为二维随机变量<span class="math inline">\((X, Y)\)</span>关于<span class="math inline">\(X\)</span>和关于<span class="math inline">\(Y\)</span>的边缘分布函数。</p>
+<p><strong>定义：边缘分布</strong>
+设<span class="math inline">\(F(x,y)\)</span>为随机变量<span class="math inline">\((X, Y)\)</span>的分布函数，即
+<span class="math inline">\(F(x, y)=P\{X\leq x, Y\leq y\}.\)</span>
+令<span class="math inline">\(y\rightarrow \infty\)</span>，称
+<span class="math display">\[P\{X\leq x\}=P\{X\leq x, Y&lt;\infty\}=F(x, \infty)\triangleq F_{X}(x) \tag{3.14}\]</span>
+为随机变量<span class="math inline">\((X, Y)\)</span>关于<span class="math inline">\(X\)</span>的边缘分布函数。同理令<span class="math inline">\(x\rightarrow \infty\)</span>，
+<span class="math display">\[F_{Y}(y)=F(\infty, y)=P\{X&lt;\infty, Y\leq y\}=P\{Y\leq y\} \tag{3.15}\]</span>
+为随机变量<span class="math inline">\((X, Y)\)</span>关于<span class="math inline">\(Y\)</span>的边缘分布函数。</p>
+<p><strong>例1：</strong>设<span class="math inline">\((X, Y)\)</span>的分布函数为
+<span class="math display">\[ F(x,y)=\frac{1}{\pi^{2}}\left(\arctan(x)+\frac{\pi}{2}\right)\left(\arctan(y)+\frac{\pi}{2}\right),\]</span>
+其中<span class="math inline">\(-\infty&lt;x, y&lt;+\infty\)</span>，求关于<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>的边缘分布函数<span class="math inline">\(F_{X}(x)\)</span>与<span class="math inline">\(F_{Y}(y)\)</span>。</p>
+<p>解：有定义知
+<span class="math display">\[\begin{equation*}
+  \begin{split}
+    F_{X}(x)&amp;=\lim_{y\rightarrow +\infty}F(x,y)=\lim_{y\rightarrow +\infty}\left[\frac{1}{\pi^{2}}\left(\arctan(x)+\frac{\pi}{2}\right)\left(\arctan(y)+\frac{\pi}{2}\right)\right]\\
+    &amp;=\frac{1}{\pi^{2}}\left(\arctan(x)+\frac{\pi}{2}\right)\cdot \pi=\frac{1}{\pi}\arctan(x)+\frac{1}{2}, -\infty&lt;x&lt;+\infty,
+  \end{split}
+\end{equation*}\]</span></p>
+<p>同理可求<span class="math display">\[F_{Y}(y)=\frac{1}{\pi}\arctan(y)+\frac{1}{2}, -\infty&lt;y&lt;+\infty\]</span></p>
+<p><font size=4><strong>（2）离散型随机变量的边缘分布律</strong></font></p>
+<p><strong>定义：</strong>设二维离散型随机变量<span class="math inline">\((X, Y)\)</span>的联合分布律为
+<span class="math display">\[P\{X=x_{i}, Y=y_{j}\}=p_{ij}, i,j=1, 2, \cdots.\]</span>
+记
+<span class="math display">\[\begin{equation*}
+p_{i\cdot}=\sum_{j=1}^{\infty}p_{ij}=P\{X=x_{i}\}, i=1, 2, \cdot,
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+p_{\cdot j}=\sum_{i=1}^{\infty}p_{ij}=P\{Y=y_{i}\}, j=1, 2, \cdot,
+\end{equation*}\]</span>
+分别称<span class="math inline">\(p_{i\cdot} (i=1,2,\cdot)\)</span>和<span class="math inline">\(p_{\cdot j} (j=1,2,\cdot)\)</span>为<span class="math inline">\((X, Y)\)</span>关于<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的边缘分布律。</p>
+<font size=4><strong>（3）边缘分布表</strong></font>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><span class="math inline">\(x_{1}\)</span></th>
+<th align="center"><span class="math inline">\(x_{2}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center"><span class="math inline">\(x_{i}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center"><span class="math inline">\(p_{\cdot j}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(y_{1}\)</span></td>
+<td align="center"><span class="math inline">\(p_{11}\)</span></td>
+<td align="center"><span class="math inline">\(p_{21}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{i1}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{\cdot 1}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(y_{2}\)</span></td>
+<td align="center"><span class="math inline">\(p_{12}\)</span></td>
+<td align="center"><span class="math inline">\(p_{22}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{i2}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{\cdot 2}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(y_{j}\)</span></td>
+<td align="center"><span class="math inline">\(p_{1j}\)</span></td>
+<td align="center"><span class="math inline">\(p_{2j}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{ij}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{\cdot j}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>因此得离散型随机变量关于<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的边缘分布函数分别为
+<span class="math display">\[F_{X}(x)=F(x,\infty)=\sum_{x_{i}\leq x}\sum_{j=1}^{\infty}p_{ij}, ~~F_{Y}(y)=F(\infty,y)=\sum_{y_{j}\leq y}\sum_{i=1}^{\infty}p_{ij}, \]</span></p>
+<p><strong>例2：</strong>设一只口袋中有5个球，有两个球上标有数字1，3个球上标有数字0，现从中(1)、有放回地摸两个球，(2)、 无放回地摸两个球.并以<span class="math inline">\(X\)</span>表示第一次摸到的球上标有的数字，以<span class="math inline">\(Y\)</span>表示第二次摸到的球上标有的数字，求<span class="math inline">\((X, Y)\)</span>的联合分布律及其两个边缘分布律。</p>
+<p>解：(1)、 <span class="math inline">\((X, Y)\)</span>所有可能取值为：<span class="math inline">\((0, 0)\)</span>, <span class="math inline">\((0, 1)\)</span>, <span class="math inline">\((1, 0)\)</span>, <span class="math inline">\((1, 1)\)</span>，则
+<span class="math display">\[P\{X=0, Y=0\}=P\{X=0\}P\{Y=0|X=0\}=\frac{3}{5}\times\frac{3}{5}=\frac{9}{25}\]</span>
+同理有<span class="math display">\[P\{X=0, Y=1\}=\frac{3}{5}\times\frac{2}{5}=\frac{6}{25},\]</span></p>
+<span class="math display">\[P\{X=1, Y=0\}=\frac{2}{5}\times\frac{3}{5}=\frac{6}{25},\]</span>
+<span class="math display">\[P\{X=1, Y=1\}=\frac{2}{5}\times\frac{2}{5}=\frac{4}{25}.\]</span>
+于是<span class="math inline">\((X, Y)\)</span>的分布律和边缘分布律如下：
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center"><span class="math inline">\(P\{Y=y_{j}\}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">9/25</td>
+<td align="center">6/25</td>
+<td align="center">3/5</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">6/25</td>
+<td align="center">4/25</td>
+<td align="center">2/5</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(P\{X=x_{i}\}\)</span></td>
+<td align="center">3/5</td>
+<td align="center">2/5</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>(2)、 <span class="math inline">\((X, Y)\)</span>所有可能取值也为：<span class="math inline">\((0, 0)\)</span>, <span class="math inline">\((0, 1)\)</span>, <span class="math inline">\((1, 0)\)</span>, <span class="math inline">\((1, 1)\)</span>，则
+<span class="math display">\[P\{X=0, Y=0\}=P\{X=0\}P\{Y=0|X=0\}=\frac{3}{5}\times\frac{2}{4}=\frac{3}{10}\]</span></p>
+同理有<span class="math display">\[P\{X=0, Y=1\}=\frac{3}{5}\times\frac{2}{4}=\frac{3}{10},\]</span>
+<span class="math display">\[P\{X=1, Y=0\}=\frac{2}{5}\times\frac{3}{4}=\frac{3}{10},\]</span>
+<span class="math display">\[P\{X=1, Y=1\}=\frac{2}{5}\times\frac{1}{4}=\frac{1}{10}.\]</span>
+于是<span class="math inline">\((X, Y)\)</span>的分布律和边缘分布律如下：
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center"><span class="math inline">\(P\{Y=y_{j}\}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">3/10</td>
+<td align="center">3/10</td>
+<td align="center">3/5</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">3/10</td>
+<td align="center">1/10</td>
+<td align="center">2/5</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(P\{X=x_{i}\}\)</span></td>
+<td align="center">3/5</td>
+<td align="center">2/5</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>对于两种情况，<span class="math inline">\(X\)</span>，<span class="math inline">\(Y\)</span>的边缘分布是相同的，但<span class="math inline">\((X, Y)\)</span>的分布不同，说明由联合分布可得到边缘分布，但由边缘分布却不一定能确定联合分布。</p>
+<p><font size=4><strong>（4）连续型随机变量的边缘分布律</strong></font></p>
+<p><strong>定义：</strong>设二维连续型随机变量<span class="math inline">\((X, Y)\)</span>的分布函数为<span class="math inline">\(F(x, y)\)</span>，概率密度为<span class="math inline">\(f(x, y)\)</span>. 由于
+<span class="math display">\[F_{X}(x)=F(x,+\infty)=\int_{-\infty}^{x}\left[\int_{-\infty}^{+\infty}f(x,y)dy\right]dx \tag{3.16}\]</span>
+由分布函数定义知，<span class="math inline">\(X\)</span>是一个连续型随机变量，且其概率密度为
+<span class="math display">\[f_{X}(x)=\int_{-\infty}^{+\infty}f(x,y)dy,\tag{3.17}\]</span>
+同样，<span class="math inline">\(Y\)</span>是一个连续型随机变量，且其概率密度为 <span class="math display">\[f_{Y}(y)=\int_{-\infty}^{+\infty}f(x,y)dx,\tag{3.18}\]</span>
+分别称<span class="math inline">\(f_{X}(x)\)</span>和<span class="math inline">\(f_{Y}(y)\)</span>为<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>的边缘概率密度。</p>
+<p><strong>例3：</strong>设二维连续型随机变量<span class="math inline">\((X, Y)\)</span>的联合概率密度函数为
+<span class="math display">\[\begin{equation*}
+  f(x,y)=\left\{
+           \begin{array}{ll}
+             xye^{-(x+y)}, &amp; x\geq 0, y\geq 0, \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+求边缘概率密度<span class="math inline">\(f_{X}(x)\)</span>, <span class="math inline">\(f_{Y}(y)\)</span>.</p>
+<p>解：由<span class="math inline">\((X, Y)\)</span>的联合密度函数可知<span class="math inline">\(X\geq 0, Y\geq 0\)</span>，故有<span class="math inline">\(f_{X}(x)=0, x&lt;0\)</span>，所以当<span class="math inline">\(x\geq 0\)</span>时
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\int_{-\infty}^{+\infty}f(x,y)dy=\int_{0}^{+\infty}xye^{-(x+y)}dy=xe^{-x},
+\end{equation*}\]</span>
+所以
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\left\{
+           \begin{array}{ll}
+             xe^{-x}, &amp; x\geq 0 \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+同理有
+<span class="math display">\[\begin{equation*}
+f_{Y}(y)=\int_{-\infty}^{+\infty}f(x,y)dx=\left\{
+           \begin{array}{ll}
+             ye^{-y}, &amp; y\geq 0 \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p><strong>例4：</strong>若二维随机变量<span class="math inline">\((X, Y)\)</span>服从二维正态分布，其概率密度
+<span class="math display">\[\begin{equation*}
+   \begin{split}
+     f(x,y)=&amp;\frac{1}{2\pi\sigma_{1}\sigma_{2}\sqrt{1-\rho^{2}}}\exp\left\{-\frac{1}{2(1-\rho^{2})}\left[\frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}\right.\right.\\
+     &amp;\left.\left.-2\rho\frac{(x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}+\frac{(y-\mu_{2})^{2}}{\sigma_{2}^{2}}\right]\right\}
+   \end{split}
+ \end{equation*}\]</span>
+其中<span class="math inline">\(-\infty&lt;x&lt;+\infty, -\infty&lt;y&lt;+\infty\)</span>, <span class="math inline">\(\mu_{1}\)</span>, <span class="math inline">\(\mu_{2}\)</span>, <span class="math inline">\(\sigma_{1}&gt;0\)</span>, <span class="math inline">\(\sigma_{2}&gt;0\)</span>以及<span class="math inline">\(|\rho|&lt;1\)</span>都是参数，试求其边缘分布。</p>
+<p>解：由于
+<span class="math display">\[\begin{equation*}
+\begin{split}
+-2\rho&amp;\frac{(x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}}+\frac{(y-\mu_{2})^{2}}{\sigma_{2}^{2}}\\
+&amp;=\left(\frac{y-\mu_{2}}{\sigma_{2}}-\rho\frac{x-\mu_{1}}{\sigma_{1}}\right)^{2}-\rho^{2}\frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}
+\end{split}
+\end{equation*}\]</span>
+所以
+<span class="math display">\[\begin{equation*}
+\begin{split}
+f_{X}(x)&amp;=\int_{-\infty}^{+\infty}f(x,y)dy\\
+&amp;=\frac{1}{2\pi\sigma_{1}\sigma_{2}\sqrt{1-\rho^{2}}}e^{-\frac{(x-\mu_{1})^{2}}{2\sigma_{1}^{2}}}\int_{-\infty}^{+\infty}e^{-\frac{1}{2(1-\rho^{2})}\left(\frac{y-\mu_{2}}{\sigma_{2}}-\rho\frac{x-\mu_{1}}{\sigma_{1}}\right)^{2}}dy
+\end{split}
+\end{equation*}\]</span></p>
+<p>令<span class="math inline">\(t=\frac{1}{\sqrt{1-\rho^{2}}}\left(\frac{y-\mu_{2}}{\sigma_{2}}-\rho\frac{x-\mu_{1}}{\sigma_{1}}\right)\)</span>，则有
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\frac{1}{2\pi\sigma_{1}}e^{-\frac{(x-\mu_{1})^{2}}{2\sigma_{1}^{2}}}\int_{-\infty}^{+\infty}e^{-\frac{t^{2}}{2}}dt=\frac{1}{\sqrt{2\pi}\sigma_{1}}e^{-\frac{(x-\mu_{1})^{2}}{2\sigma_{1}^{2}}},
+\end{equation*}\]</span></p>
+<p>其中<span class="math inline">\(-\infty&lt;x&lt;+\infty\)</span>，同理有
+<span class="math display">\[\begin{equation*}
+f_{Y}(y)=\frac{1}{\sqrt{2\pi}\sigma_{2}}e^{-\frac{(y-\mu_{2})^{2}}{2\sigma_{2}^{2}}}, -\infty&lt;y&lt;+\infty
+\end{equation*}\]</span></p>
+<p>我们看到二维正态分布的两个边缘分布都是一维正态分布，并且都不依赖于参数<span class="math inline">\(\rho\)</span>，亦即对于给定的<span class="math inline">\(\mu_{1}\)</span>, <span class="math inline">\(\mu_{2}\)</span>, <span class="math inline">\(\sigma_{1}\)</span> <span class="math inline">\(\sigma_{2}\)</span>，不同的<span class="math inline">\(\rho\)</span>对应不同的二维正态分布，它们的边缘分布都是一样的，这一事实再次表明，单由关于<span class="math inline">\(X\)</span>和关于<span class="math inline">\(Y\)</span>的边缘分布，一般来说不能确定随机变量<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的联合分布。</p>
+</div>
+<div id="条件分布" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> 条件分布</h3>
+<p>考察二维随机变量<span class="math inline">\((X, Y)\)</span>时， 常常需要考虑已知其中一个随机变量取得某值的条件下， 求另一个随机变量取值的概率，另外， 我们由事件的条件概率也很自然地引出条件概率分布的概念。</p>
+<p><strong>条件概率回顾：</strong></p>
+<p>设<span class="math inline">\(A, B\)</span>为随机试验E的两个事件，且<span class="math inline">\(P(A)&gt;0\)</span>，则称
+<span class="math display">\[\begin{equation*}
+  P(B|A)=\frac{P(A\bigcap B)}{P(A)}
+\end{equation*}\]</span>
+为在事件<span class="math inline">\(A\)</span>发生的条件下事件<span class="math inline">\(B\)</span>发生的条件概率。</p>
+<ul>
+<li>由条件概率公式自然引出离散型随机变量的条件分布。</li>
+</ul>
+<p><font size=4><strong>（1）二维离散型随机变量的条件分布</strong></font></p>
+<p><strong>定义：</strong>设二维随机变量<span class="math inline">\((X, Y)\)</span>的联合分布律为<span class="math inline">\(p_{ij}=P\{X=x_{i}, Y=y_{j}\}\)</span>, <span class="math inline">\(i, j=1, 2, \cdots\)</span>，对于给定的<span class="math inline">\(j\)</span>，若<span class="math inline">\(P\{Y=y_{j}\}=p_{\cdot j}=\sum_{i=1}^{+\infty}p_{ij}&gt;0\)</span>，则称</p>
+<p><span class="math display">\[\begin{aligned}
+P\{X=x_{i}|Y=y_{j}\}=\frac{P\{X=x_{i}, Y=y_{j}\}}{P\{Y=y_{j}\}}=\frac{p_{ij}}{p_{\cdot j}}, j=1,2,\cdots
+\end{aligned} \tag{3.18}\]</span></p>
+<p>为在<span class="math inline">\(Y=y_{j}\)</span>条件下随机变量<span class="math inline">\(X\)</span>的条件分布律，记为<span class="math inline">\(p_{i|j}\)</span>。</p>
+<p>同样，对于给定的<span class="math inline">\(i\)</span>，若<span class="math inline">\(P\{Y=x_{i}\}=p_{i\cdot}=\sum_{j=1}^{+\infty}p_{ij}&gt;0\)</span>，则称
+<span class="math display">\[\begin{aligned}
+P\{Y=y_{j}|X=x_{i}\}=\frac{P\{X=x_{i}, Y=y_{j}\}}{P\{Y=x_{i}\}}=\frac{p_{ij}}{p_{i\cdot }}, i=1,2,\cdots
+\end{aligned} \tag{3.19}\]</span>
+为在<span class="math inline">\(X=x_{i}\)</span>条件下随机变量<span class="math inline">\(Y\)</span>的条件分布律，记为<span class="math inline">\(p_{j|i}\)</span>。</p>
+<p><strong>离散型条件分布律的性质</strong></p>
+<ul>
+<li><p>非负性：<span class="math inline">\(P\{X=x_{i}|Y=y_{j}\}\geq 0 \tag{3.20}\)</span></p></li>
+<li><p>正则性：<span class="math inline">\(\sum_{i=1}^{\infty}P\{X=x_{i}|Y=y_{j}\}=\sum_{i=1}^{\infty}\frac{p_{ij}}{p_{\cdot j}}=1 \tag{3.21}\)</span></p></li>
+</ul>
+<p><font size=4><strong>（2）离散型随机变量的条件分布函数</strong></font></p>
+<ul>
+<li><p>给定<span class="math inline">\(Y=y_{j}\)</span>条件下<span class="math inline">\(X\)</span>的条件分布函数为</p>
+<p><span class="math display">\[\begin{aligned}
+  F(x|y_{j})=\sum_{x_{i}\leq x}P\{X=x_{i}|Y=y_{j}\}=\sum_{x_{i}\leq x}p_{i|j},
+\end{aligned}\tag{3.22}\]</span></p></li>
+<li><p>给定<span class="math inline">\(X=x_{j}\)</span>条件下<span class="math inline">\(Y\)</span>的条件分布函数为</p>
+<p><span class="math display">\[\begin{aligned}
+  F(y|x_{i})=\sum_{y_{j}\leq y}P\{Y=y_{j}|X=x_{i}\}=\sum_{y_{j}\leq y}p_{j|i}.
+\end{aligned}\tag{3.23}\]</span></p></li>
+</ul>
+<strong>例1：</strong>设某工厂每天工作时间<span class="math inline">\(X\)</span>可分为6小时、8小时、10小时和12小时， 工人的工作效率Y可以按50%、70%、90%分为三类。 已知<span class="math inline">\((X, Y)\)</span>的概率分布如下：
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">6</th>
+<th align="center">8</th>
+<th align="center">10</th>
+<th align="center">12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.5</td>
+<td align="center">0.014</td>
+<td align="center">0.036</td>
+<td align="center">0.058</td>
+<td align="center">0.072</td>
+</tr>
+<tr class="even">
+<td align="center">0.7</td>
+<td align="center">0.036</td>
+<td align="center">0.216</td>
+<td align="center">0.180</td>
+<td align="center">0.043</td>
+</tr>
+<tr class="odd">
+<td align="center">0.9</td>
+<td align="center">0.072</td>
+<td align="center">0.180</td>
+<td align="center">0.079</td>
+<td align="center">0.014</td>
+</tr>
+</tbody>
+</table>
+<p>如果以工作效率不低于70%的概率越大越好作为评判标准，问每天工作时间以几个小时为最好？</p>
+<p>解：应分别考虑工作时间<span class="math inline">\(X\)</span>等于6,8,10,12时，效率<span class="math inline">\(Y\)</span>的条件分布，即
+<span class="math display">\[\begin{equation*}
+P\{Y=y_{j}|X=x_{i}\}=\frac{P\{X=x_{i}, Y=y_{j}\}}{P\{Y=x_{i}\}},
+\end{equation*}\]</span>
+其中<span class="math inline">\(x_{i}=6,8,10,12, y_{j}=0.5,0.7,0.9\)</span>。</p>
+先求<span class="math inline">\((X, Y)\)</span>的边缘分布律：
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">6</th>
+<th align="center">8</th>
+<th align="center">10</th>
+<th align="center">12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{i\cdot}\)</span></td>
+<td align="center">0.122</td>
+<td align="center">0.432</td>
+<td align="center">0.317</td>
+<td align="center">0.129</td>
+</tr>
+</tbody>
+</table>
+计算可得
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(Y\)</span></th>
+<th align="center">0.5</th>
+<th align="center">0.7</th>
+<th align="center">0.9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(P\{Y=y_{j}|X=6\}\)</span></td>
+<td align="center">0.115</td>
+<td align="center">0.295</td>
+<td align="center">0.590</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(P\{Y=y_{j}|X=8\}\)</span></td>
+<td align="center">0.083</td>
+<td align="center">0.500</td>
+<td align="center">0.417</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(P\{Y=y_{j}|X=10\}\)</span></td>
+<td align="center">0.183</td>
+<td align="center">0.568</td>
+<td align="center">0.249</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(P\{Y=y_{j}|X=12\}\)</span></td>
+<td align="center">0.558</td>
+<td align="center">0.333</td>
+<td align="center">0.109</td>
+</tr>
+</tbody>
+</table>
+<p>从表中可以看出<span class="math inline">\(P\{Y\geq 0.7| X=x_{i}\}\)</span>的值中，当<span class="math inline">\(x_{i}=8\)</span>时，概率
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{Y\geq 0.7| X=8\}&amp;=P\{Y=0.7| X=8\}+P\{Y=0.9| X=8\}\\
+&amp;=0.500+0.417=0.917
+\end{split}
+\end{equation*}\]</span>
+最大，即每天工作8小时，工作效率达到最优。</p>
+<p><strong>例2：</strong>一射手进行射击，击中目标的概率为<span class="math inline">\(p(0&lt;p&lt;1)\)</span>，射击
+到击中目标两次为止。设以<span class="math inline">\(X\)</span>表示首次击中目标
+所进行的射击次数，以<span class="math inline">\(Y\)</span>表示总共进行的射击次
+数，试求<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的联合分布律以及条件分布律。</p>
+<p>解：依题意可知<span class="math inline">\(Y=n\)</span>就表示在第<span class="math inline">\(n\)</span>次射击时击中目标，且在第1次，第2次，
+<span class="math inline">\(\cdots\cdots\)</span>，第<span class="math inline">\(n-1\)</span>次射击中恰有一次击中目标。已知各次射击是相互独立的，于是不管<span class="math inline">\(m (m&lt;n)\)</span>是多少，有<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的联合分布律为
+<span class="math display">\[P\{X=m, Y=n\}=p^{2}q^{n-2}, \]</span>
+其中<span class="math inline">\(q=1-p, n=2,3,\cdots; m=1,2,\cdots, n-1\)</span>.
+因此可得<span class="math inline">\(X\)</span>的边缘分布律为
+<span class="math display">\[\begin{equation*}
+  \begin{split}
+    P\{X=m\}&amp;=\sum_{n=m+1}^{+\infty}P\{X=m, Y=n\}=\sum_{n=m+1}^{+\infty}p^{2}q^{n-2}\\
+    &amp;=p^{2}\sum_{n=m+1}^{+\infty}q^{n-2}=\frac{p^{2}q^{m-1}}{1-q}=pq^{m-1}, m=1,2,\cdots
+  \end{split}
+\end{equation*}\]</span></p>
+<p><span class="math inline">\(Y\)</span>的边缘分布律为
+<span class="math display">\[\begin{equation*}
+  \begin{split}
+    P\{Y=n\}&amp;=\sum_{m=1}^{n-1}P\{X=m, Y=n\}\\
+    &amp;=\sum_{m=1}^{n-1}p^{2}q^{n-2}=(n-1)p^{2}q^{n-2}, n=2,3,\cdots
+  \end{split}
+\end{equation*}\]</span>
+因此，当<span class="math inline">\(n=2,3,\cdots\)</span>时，
+<span class="math display">\[\begin{equation*}
+  P\{X=m|Y=n\}=\frac{p^{2}q^{n-2}}{(n-1)p^{2}q^{n-2}}, m=1,2,\cdots, n-1;
+\end{equation*}\]</span>
+当<span class="math inline">\(m=1,2,\cdots\)</span>时，
+<span class="math display">\[\begin{equation*}
+  P\{Y=n|X=m\}=\frac{p^{2}q^{n-2}}{pq^{m-1}}=pq^{n-m-1}, n=m+1,m+2,\cdots.
+\end{equation*}\]</span></p>
+<p><strong>例3：</strong>设在一段时间内进入某一商店的顾客人数<span class="math inline">\(X\)</span>服从泊松分布<span class="math inline">\(P(\lambda)\)</span>，每个顾客购买某种物品的概率为<span class="math inline">\(p\)</span>，
+并且各个顾客是否购买该种物品相互独立，求进入商店的顾客购买这种物品的人数<span class="math inline">\(Y\)</span>的分布律。</p>
+<p>解：依题意得：
+<span class="math display">\[\begin{equation*}
+  P\{X=m\}=\frac{\lambda^{m}}{m!}e^{-\lambda}, m=0,1,2,\cdots,
+\end{equation*}\]</span>
+在进入商店的人数<span class="math inline">\(X=m\)</span>的条件下，购买某种物品的人数Y的条件分布为二项分布<span class="math inline">\(B(m, p)\)</span>，即
+<span class="math display">\[\begin{equation*}
+  P\{Y=k|X=m\}=C_{m}^{k}p^{k}(1-p)^{m-k}, k=0,1,2,\cdots,m
+\end{equation*}\]</span></p>
+<p>由全概率公式有
+<span class="math display">\[\begin{equation*}
+  \begin{split}
+    P\{Y=k\}&amp;=\sum_{m=k}^{\infty}P\{X=m\}P\{Y=k|X=m\}\\
+    &amp;=\sum_{m=k}^{\infty}\frac{\lambda^{m}}{m!}e^{-\lambda}\cdot C_{m}^{k}p^{k}(1-p)^{m-k}\\
+    &amp;= \sum_{m=k}^{\infty}\frac{\lambda^{m}}{m!}e^{-\lambda}\frac{m!}{k!(m-k)!}p^{k}(1-p)^{m-k}\\
+    &amp;=e^{-\lambda}\frac{(\lambda p)^{k}}{k!}\sum_{m=k}^{\infty}\frac{[(1-p)\lambda]^{m-k}}{(m-k)!}=e^{-\lambda}\frac{(\lambda p)^{k}}{k!}e^{(1-p)\lambda}\\
+    &amp;=e^{-\lambda p}\frac{(\lambda p)^{k}}{k!}
+  \end{split}
+\end{equation*}\]</span>
+即 <span class="math inline">\(Y\sim P(\lambda p)\)</span>。</p>
+<p><font size=4><strong>（3）连续型随机变量的条件分布</strong></font></p>
+<p>设<span class="math inline">\((X, Y)\)</span>是二维连续型随机变量，如果还按照离散型随机变量相同的定义方法（直接可以从条件概率引出）
+定义连续型随机变量的条件分布函数<span class="math inline">\(P\{X\leq x|Y=y\}\)</span>是行不通的。主要是因为在连续型情形，取到某一个点的概率为0，即<span class="math inline">\(P\{Y=y\}=0\)</span>。 因此我们利用极限的方法来引入条件分布函数的概念。</p>
+<p>设<span class="math inline">\((X, Y)\)</span>的概率密度为<span class="math inline">\(f(x, y)\)</span>，<span class="math inline">\((X, Y)\)</span>关于<span class="math inline">\(Y\)</span>的边缘概率密度为<span class="math inline">\(f_{Y}(y)\)</span>，给定，对于任意固定的<span class="math inline">\(x\)</span>，对于任意<span class="math inline">\(\varepsilon&gt;0\)</span>，考虑条件概率
+<span class="math display">\[P\{X\leq x|y&lt;Y\leq y+\varepsilon\}\]</span>
+并且假设<span class="math inline">\(P\{y&lt;Y\leq y+\varepsilon\}&gt;0\)</span>。</p>
+<p>由条件概率公式可得：
+<span class="math display">\[
+\begin{aligned}
+\begin{split}
+P\{X\leq x|y&lt;Y\leq y+\varepsilon\}&amp;=\frac{P\{X\leq x, y&lt;Y\leq y+\varepsilon\}}{P\{y&lt;Y\leq y+\varepsilon\}}\\
+&amp;=\frac{\int_{-\infty}^{x}\left[\int_{y}^{y+\varepsilon}f(x,y)dy\right]dx}{\int_{y}^{y+\varepsilon}f_{Y}(y)dy}
+\end{split}
+\end{aligned} \tag{3.24}\]</span>
+在某些条件下，当<span class="math inline">\(\varepsilon\)</span>很小时，上式右端分子、分母分别近似于\
+<span class="math inline">\(\varepsilon\int_{-\infty}^{x}f(x,y)dx\)</span>和<span class="math inline">\(\varepsilon f_{Y}(y)\)</span>，于是当<span class="math inline">\(\varepsilon\)</span> 很小时，有</p>
+<p><span class="math display">\[\begin{aligned}
+\begin{split}
+P\{X\leq x|y&lt;Y\leq y+\varepsilon\}\approx\frac{\varepsilon\int_{-\infty}^{x}f(x,y)dx}{\varepsilon f_{Y}(y)}=\int_{-\infty}^{x}\frac{f(x,y)}{f_{Y}(y)}dx
+\end{split}
+\end{aligned}\tag{3.25}\]</span></p>
+<p><font size=4><strong>（4）条件概率密度</strong></font></p>
+<p>类似一维连续型随机变量概率密度的定义，我们给出以下定义：</p>
+<p><strong>定义：条件概率密度</strong></p>
+<p>设二维随机变量<span class="math inline">\((X, Y)\)</span>的概率密度为<span class="math inline">\(f(x, y)\)</span>，<span class="math inline">\((X, Y)\)</span>关于<span class="math inline">\(X\)</span>，关于<span class="math inline">\(Y\)</span>的边缘概率密度为分别为<span class="math inline">\(f_{X}(x)\)</span>和<span class="math inline">\(f_{Y}(y)\)</span>，若对于固定的<span class="math inline">\(y\)</span>，<span class="math inline">\(f_{Y}(y)&gt;0\)</span>，则称 <span class="math inline">\(\frac{f(x,y)}{f_{Y}(y)}\)</span>为在<span class="math inline">\(Y=y\)</span>的条件下的条件概率密度，记为
+<span class="math display">\[f_{X|Y}(x|y)=\frac{f(x,y)}{f_{Y}(y)}.\tag{3.26}\]</span>
+若对于固定的<span class="math inline">\(x\)</span>，<span class="math inline">\(f_{X}(x)&gt;0\)</span>，则称<span class="math inline">\(\frac{f(x,y)}{f_{X}(x)}\)</span>为在<span class="math inline">\(X=x\)</span>的条件下的条件概率密度，记为
+<span class="math display">\[f_{Y|X}(y|x)=\frac{f(x,y)}{f_{X}(x)}. \tag{3.27}\]</span></p>
+<p><strong>说明：</strong>
+由密度函数的判定准则可知，上述条件密度函数的定义是合理的。</p>
+<ul>
+<li><p>非负性：<span class="math display">\[f_{X|Y}(x|y)=\frac{f(x,y)}{f_{Y}(y)}\geq 0;\tag{3.28}\]</span></p></li>
+<li><p>正则性:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  \begin{split}
+      \int_{-\infty}^{+\infty}f_{X|Y}(x|y)dx&amp;=\int_{-\infty}^{+\infty}\frac{f(x,y)}{f_{Y}(y)}dx\\
+      &amp;=\frac{1}{f_{Y}(y)}\int_{-\infty}^{+\infty}f(x,y)dx=1
+  \end{split}
+  \end{aligned}\tag{3.29}\]</span></p>
+<p><font size=4><strong>（5）条件分布函数</strong></font></p>
+<p><strong>定义：条件分布函数</strong>
+称
+<span class="math display">\[\int_{-\infty}^{x}f_{X|Y}(x|y)dx=\int_{-\infty}^{x}\frac{f(x,y)}{f_{Y}(y)}dx\tag{3.30}\]</span>
+为在<span class="math inline">\(Y=y\)</span>的条件下<span class="math inline">\(X\)</span>的条件分布函数，记为<span class="math inline">\(P\{X\leq x|Y=y\}\)</span>或者<span class="math inline">\(F_{X|Y}(x|y)\)</span>，即 <span class="math display">\[F_{X|Y}(x|y)=P\{X\leq x|Y=y\}=\int_{-\infty}^{x}\frac{f(x,y)}{f_{Y}(y)}dx.\tag{3.31}\]</span>
+类似的，称<span class="math display">\[F_{Y|X}(y|x)=P\{Y\leq y|X=x\}=\int_{-\infty}^{y}\frac{f(x,y)}{f_{X}(x)}dy.\tag{3.32}\]</span>
+为在<span class="math inline">\(X=x\)</span>的条件下<span class="math inline">\(Y\)</span>的条件分布函数。</p>
+<p><strong>例4：</strong>设随机向量<span class="math inline">\((X,Y)\)</span>服从区域<span class="math inline">\(D\)</span>上的均匀分布，其中<span class="math inline">\(D=\{(x,y)|x^{2}+y^{2}\leq 1\}\)</span>，求条件概率密度<span class="math inline">\(f_{X|Y}(x|y)\)</span>。</p>
+<p>解：依题意可知<span class="math inline">\((X, Y)\)</span>具有概率密度
+<span class="math display">\[\begin{equation*}
+  f(x,y)=\left\{
+           \begin{array}{ll}
+             \frac{1}{\pi}, &amp; x^{2}+y^{2}\leq 1 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+且具有边缘密度
+<span class="math display">\[\begin{equation*}
+  \begin{split}
+    f_{Y}(y)&amp;=\int_{-\infty}^{+\infty}f(x,y)dx\\
+    &amp;=\left\{
+           \begin{array}{ll}
+             \frac{1}{\pi}\int_{-\sqrt{1-y^{2}}}^{\sqrt{1-y^{2}}}dx=\frac{2}{\pi}\sqrt{1-y^{2}}, &amp; -1\leq y \leq 1 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+  \end{split}
+\end{equation*}\]</span></p>
+于是当<span class="math inline">\(-1\leq y\leq 1\)</span>是有
+<span class="math display">\[\begin{equation*}
+f_{X|Y}(x|y)=\left\{
+               \begin{array}{ll}
+                 \frac{1/\pi}{2\sqrt{1-y^{2}}/\pi}=\frac{1}{2\sqrt{1-y^{2}}}, &amp; -\sqrt{1-y^{2}}\leq x\leq \sqrt{1-y^{2}} \\
+                 0, &amp; \text{其他}
+               \end{array}
+             \right.
+\end{equation*}\]</span>
+当<span class="math inline">\(y=0\)</span>和<span class="math inline">\(y=\frac{1}{2}\)</span>时，<span class="math inline">\(f_{X|Y}(x|y)\)</span>的图形分别为
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5pga0ErGKrOrFdF7E2W1J35getyCuevE2EqXrjzImyDaGwxnLZQdSr327AaqRbxMYrrJLnQ3JPONnBnrsmjtvOk!/mnull&amp;bo=RwG.AAAAAAABB9g!&amp;rf=photolist&amp;t=5" alt="图片38" /><img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5pga0ErGKrOrFdF7E2W1J3569i2*1MJDyPIvqDTD1EsjB4EwwzbJi6JmfwU0H1acuqWgz35a3IFew5AG07GHHbk!/mnull&amp;bo=IwGxAAAAAAABB7M!&amp;rf=photolist&amp;t=5" alt="图片39" />
+</center>
+<center>
+图 3.4
+</center>
+<p><strong>例5：</strong>设二维随机变量<span class="math inline">\((X, Y)\)</span>的概率密度为
+<span class="math display">\[\begin{equation*}
+  f(x,y)=\left\{
+           \begin{array}{ll}
+             21x^{2}y/4, &amp; x^{2}\leq y\leq 1 \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+求条件概率密度<span class="math inline">\(f_{Y|X}(y|x)\)</span>和<span class="math inline">\(f_{X|Y}(x|y)\)</span>，并求条件概率<span class="math inline">\(P\{Y\geq \frac{3}{4}|X=\frac{1}{2}\}\)</span>.</p>
+<p>解：首先，求出边缘概率密度，当<span class="math inline">\(-1&lt;x&lt;1\)</span>时，
+<span class="math display">\[\begin{equation*}
+  f_{X}(x)=\int_{-\infty}^{+\infty}f(x,y)dy=\int_{x^{2}}^{1}21x^{2}y/4dy=\frac{21}{8}x^{2}(1-x^{2})
+\end{equation*}\]</span>
+当<span class="math inline">\(x\leq -1\)</span>或<span class="math inline">\(x\geq 1\)</span>时，<span class="math inline">\(f_{X}(x)=0\)</span>， 所以关于<span class="math inline">\(X\)</span>的边缘概率密度为
+<span class="math display">\[\begin{equation*}
+  f_{X}(x)=\left\{
+           \begin{array}{ll}
+             21x^{2}(1-x^{4})/8, &amp; -1&lt;x&lt;1 \\
+             0, &amp; \text{其他.}
+           \end{array}
+           \right.
+\end{equation*}\]</span></p>
+<p>当<span class="math inline">\(0&lt;y&lt;1\)</span>时
+<span class="math display">\[\begin{equation*}
+  f_{Y}(y)=\int_{-\infty}^{+\infty}f(x,y)dx=\int_{-\sqrt{y}}^{\sqrt{y}}21x^{2}y/4dy=\frac{7}{2}y^{\frac{5}{2}}
+\end{equation*}\]</span>
+当<span class="math inline">\(y\leq 0\)</span>或<span class="math inline">\(y\geq 1\)</span>时，<span class="math inline">\(f_{Y}(y)=0\)</span>， 所以关于<span class="math inline">\(Y\)</span>的边缘概率密度为
+<span class="math display">\[\begin{equation*}
+  f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             7y^{\frac{5}{2}}/2, &amp; 0&lt;y&lt;1 \\
+             0, &amp; \text{其他.}
+           \end{array}
+           \right.
+\end{equation*}\]</span>
+当<span class="math inline">\(-1&lt;x&lt;0\)</span>或<span class="math inline">\(0&lt;x&lt;1\)</span>，<span class="math inline">\(f_{X}(x)&gt;0\)</span>， 故此时的条件概率密度为
+<span class="math display">\[\begin{equation*}
+f_{Y|X}(y|x)=\frac{f(x,y)}{f_{X}(x)}=\left\{
+                                       \begin{array}{ll}
+                                         \frac{21x^{2}y/4}{21x^{2}(1-x^{4})/8}=\frac{2y}{1-x^{4}}, &amp; x^{2}\leq y\leq 1 \\
+                                         0, &amp; \text{其他.}
+                                       \end{array}
+                                     \right.
+\end{equation*}\]</span></p>
+<p>当<span class="math inline">\(0&lt;y&lt;1\)</span>时，<span class="math inline">\(f_{Y}(y)&gt;0\)</span>， 故此时的条件概率密度为
+<span class="math display">\[\begin{equation*}
+f_{X|Y}(x|y)=\frac{f(x,y)}{f_{Y}(y)}=\left\{
+                                       \begin{array}{ll}
+                                         \frac{21x^{2}y/4}{7y^{\frac{5}{2}}/2}=\frac{3}{2}x^{2}y^{-\frac{3}{2}}, &amp; -\sqrt{y}\leq x\leq \sqrt{y} \\
+                                         0, &amp; \text{其他.}
+                                       \end{array}
+                                     \right.
+\end{equation*}\]</span>
+特别，当<span class="math inline">\(x=\frac{1}{2}\)</span>时，
+<span class="math display">\[\begin{equation*}
+f_{Y|X}(y|\frac{1}{2})=\left\{
+                          \begin{array}{ll}
+                          \frac{2y}{1-\frac{1}{2}^{4}}, &amp; \frac{1}{2}^{2}\leq y\leq 1 \\
+                          0, &amp; \text{其他.}
+                          \end{array}
+                          \right.=\left\{
+                                    \begin{array}{ll}
+                                      \frac{32}{15}y, &amp; \frac{1}{4}\leq y\leq 1 \\
+                                      0, &amp; \text{其他.}
+                                    \end{array}
+                                  \right.
+\end{equation*}\]</span>
+所以有
+<span class="math display">\[\begin{equation*}
+P\{Y\geq \frac{3}{4}|X=\frac{1}{2}\}=\int_{\frac{3}{4}}^{+\infty}f_{Y|X}(y|\frac{1}{2})dy=\int_{\frac{3}{4}}^{1}\frac{32}{15}ydy=\frac{7}{15}
+\end{equation*}\]</span></p>
+</div>
+</div>
+<div id="随机变量的独立性" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> 随机变量的独立性</h2>
+<div id="随机变量的独立性-1" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> 随机变量的独立性</h3>
+<p>随机变量的独立性是概率论与数理统计中的一个很重要的概念，它是由随机事件的相互独立性引申而来的。</p>
+<p><font size=4><strong>（1）n维随机变量的独立性</strong></font></p>
+<p>设n维随机变量<span class="math inline">\((X_{1}, X_{2}, \cdots, X_{n})\)</span>的分布函数<span class="math inline">\(F(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(x_{n})\)</span>，<span class="math inline">\(F_{X_{i}}(x_{i})\)</span>为<span class="math inline">\(X_{i}\)</span>的边缘分布函数，如果对于任意<span class="math inline">\(n\)</span> 个实数<span class="math inline">\(x_{1}, x_{2}, \cdots, x_{n}\)</span>，有
+<span class="math display">\[\begin{aligned}
+  P\{X_{1}\leq x_{1}, X_{2}\leq x_{2}, \cdots, X_{n}\leq x_{n},\}=\prod_{i=1}^{n}P\{X_{i}\leq x_{i}\},
+\end{aligned} \tag{3.33}\]</span>
+即
+<span class="math display">\[\begin{aligned}
+    F(x_{1}, x_{2}, \cdots, x_{n})=\prod_{i=1}^{n}F_{X_{i}}(x_{i})
+\end{aligned} \tag{3.34}\]</span>
+则称<span class="math inline">\(X_{1}, X_{2}, \cdots, X_{n}\)</span>相互独立。</p>
+<ul>
+<li><p>在离散型随机变量的情形，如果对于任意<span class="math inline">\(n\)</span>个实数<span class="math inline">\(x_{1}, x_{2}, \cdots, x_{n}\)</span>，有</p>
+<p><span class="math display">\[\begin{aligned}
+P\{X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n},\}=\prod_{i=1}^{n}P\{X_{i}=x_{i}\},
+\end{aligned}\tag{3.35}\]</span>
+则称<span class="math inline">\(X_{1}, X_{2}, \cdots, X_{n}\)</span>相互独立。</p></li>
+<li><p>在连续型随机变量的情形，如果下式几乎处处成立（是指除去测度为零的点集外处处成立）</p>
+<p><span class="math display">\[\begin{aligned}
+  f(x_{1}, x_{2}, \cdots, x_{n})=\prod_{i=1}^{n}f_{X_{i}}(x_{i})
+\end{aligned}\tag{3.36}\]</span>
+则称<span class="math inline">\(X_{1}, X_{2}, \cdots, X_{n}\)</span>相互独立。</p></li>
+</ul>
+<p><font size=4><strong>（2）二维情形</strong></font></p>
+<ul>
+<li>设随机变量<span class="math inline">\((X, Y)\)</span>的联合分布函数为<span class="math inline">\(F(x,y)\)</span>边缘分布函数分别为<span class="math inline">\(F_{X}(x)\)</span>和<span class="math inline">\(F_{Y}(y)\)</span>，则有</li>
+</ul>
+<p><span class="math display">\[X \text{和}Y \text{相互独立}\Leftrightarrow F(x,y)=F_{X}(x)F_{Y}(y)\]</span>
+* 若离散型随机变量<span class="math inline">\((X, Y)\)</span>的联合分布律为<span class="math inline">\(P\{X=x_{i}, Y=y_{j}\}=p_{ij}, i,j=1,2,\cdots\)</span>，</p>
+<p><span class="math display">\[X \text{和}Y \text{相互独立}\Leftrightarrow P\{X=x_{i}, Y=y_{j}\}=P\{X=x_{i}\}P\{Y=y_{j}\} \tag{3.37}\]</span>
+即：
+<span class="math inline">\(X \text{和}Y \text{相互独立}\Leftrightarrow p_{ij}=p_{i\cdot}p_{\cdot j} \tag{3.38}\)</span></p>
+<ul>
+<li>若连续型随机变量<span class="math inline">\((X, Y)\)</span>的联合概率密度为<span class="math inline">\(f(x,y)\)</span>，边缘概率密度分别为<span class="math inline">\(f_{X}(x)\)</span>和<span class="math inline">\(f_{Y}(y)\)</span>，则有</li>
+</ul>
+<p><span class="math display">\[X \text{和}Y \text{相互独立}\Leftrightarrow f(x,y)=f_{X}(x)f_{Y}(y) \tag{3.39}\]</span>
+在平面上几乎处处成立。</p>
+<p><font size=4><strong>（3）例题</strong></font></p>
+<strong>例1：</strong>设随机变量<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的联合分布律为
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><span class="math inline">\(y_{1}\)</span></th>
+<th align="center"><span class="math inline">\(y_{2}\)</span></th>
+<th align="center"><span class="math inline">\(y_{1}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x_{1}\)</span></td>
+<td align="center"><span class="math inline">\(a\)</span></td>
+<td align="center">1/9</td>
+<td align="center"><span class="math inline">\(c\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x_{2}\)</span></td>
+<td align="center">1/9</td>
+<td align="center"><span class="math inline">\(b\)</span></td>
+<td align="center">1/3</td>
+</tr>
+</tbody>
+</table>
+<p>若<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立，求参数<span class="math inline">\(a, b, c\)</span>的值．</p>
+解：依题意有<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的边缘分布律为
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><span class="math inline">\(y_{1}\)</span></th>
+<th align="center"><span class="math inline">\(y_{2}\)</span></th>
+<th align="center"><span class="math inline">\(y_{1}\)</span></th>
+<th align="center"><span class="math inline">\(p_{i\cdot}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x_{1}\)</span></td>
+<td align="center"><span class="math inline">\(a\)</span></td>
+<td align="center">1/9</td>
+<td align="center"><span class="math inline">\(c\)</span></td>
+<td align="center"><span class="math inline">\(a+c+1/9\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x_{2}\)</span></td>
+<td align="center">1/9</td>
+<td align="center"><span class="math inline">\(b\)</span></td>
+<td align="center">1/3</td>
+<td align="center"><span class="math inline">\(b+4/9\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{\cdot j}\)</span></td>
+<td align="center"><span class="math inline">\(a+1/9\)</span></td>
+<td align="center"><span class="math inline">\(b+1/9\)</span></td>
+<td align="center"><span class="math inline">\(c+1/3\)</span></td>
+<td align="center"><span class="math inline">\(a+b+c+5/9=1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>由于<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立，则有</p>
+<ul>
+<li><p><span class="math inline">\(p_{22}=p_{2\cdot}p_{\cdot 2}\)</span>，即
+<span class="math display">\[b=(b+\frac{4}{9})(b+\frac{1}{9})\]</span>
+解之有<span class="math inline">\(b=\frac{2}{9}\)</span>.</p></li>
+<li><p><span class="math inline">\(p_{23}=p_{2\cdot}p_{\cdot 3}\)</span>，即
+<span class="math display">\[\frac{1}{3}=(b+\frac{4}{9})(c+\frac{1}{3})\]</span>
+将<span class="math inline">\(b=\frac{2}{9}\)</span>带入解得<span class="math inline">\(c=\frac{1}{6}\)</span>.</p></li>
+<li><p>最后利用<span class="math inline">\(a+b+c+5/9=1\)</span>得<span class="math inline">\(a=\frac{1}{18}\)</span>.</p></li>
+</ul>
+<p><strong>例2：</strong>在一箱中装有12只开关，其实2只次品，在其中取两次，每次取一只，我们定义随机变量<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>如下：
+<span class="math display">\[\begin{equation*}
+  X=\left\{
+      \begin{array}{ll}
+        0, &amp; \text{若第一次取出的是正品;} \\
+        1, &amp; \text{若第一次取出的是次品.}
+      \end{array}
+    \right.
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
+  Y=\left\{
+      \begin{array}{ll}
+        0, &amp; \text{若第二次取出的是正品;} \\
+        1, &amp; \text{若第二次取出的是次品.}
+      \end{array}
+    \right.
+\end{equation*}\]</span>
+考虑如下两种情况：（1）、放回抽取；（2）、不放回抽取，试分别就（1）和（2）两种情形，试问<span class="math inline">\(X\)</span> 和<span class="math inline">\(Y\)</span>的是否独立？</p>
+解：（1）、有放回情形
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center"><span class="math inline">\(p_{\cdot j}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">25/36</td>
+<td align="center">5/36</td>
+<td align="center">5/6</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">5/36</td>
+<td align="center">1/36</td>
+<td align="center">1/6</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{i\cdot}\)</span></td>
+<td align="center">5/6</td>
+<td align="center">1/6</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>由上表，很容易验证<span class="math inline">\(p_{ij}=p_{i\cdot}p_{\cdot j}, i, j=1, 2\)</span>，即<span class="math inline">\(X\)</span> 和<span class="math inline">\(Y\)</span>相互独立。</p>
+（2）、无放回情形
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center"><span class="math inline">\(p_{\cdot j}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">15/22</td>
+<td align="center">5/33</td>
+<td align="center">55/66</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">5/33</td>
+<td align="center">1/66</td>
+<td align="center">11/66</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{i\cdot}\)</span></td>
+<td align="center">55/66</td>
+<td align="center">11/66</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>由上表，很容易验证<span class="math inline">\(p_{ij}\neq p_{i\cdot}p_{\cdot j}, i, j=1, 2\)</span>，即<span class="math inline">\(X\)</span> 和<span class="math inline">\(Y\)</span>不独立。</p>
+<p><strong>例3：</strong>种保险丝的寿命(以一百小时计) <span class="math inline">\(X\)</span> 服从指数分布，其概率密度为
+<span class="math display">\[\begin{equation*}
+f(x)=\left\{
+           \begin{array}{ll}
+             e^{-x/3}/3, &amp; x\geq 0, \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<ul>
+<li>有两只这种保险丝，其寿命分别为<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>，设<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>相互独立，求<span class="math inline">\(X_{1}\)</span>， <span class="math inline">\(X_{2}\)</span>的联合概率密度。</li>
+<li>在(1)中，一只是原装的，另一只是备用的，备用的只在原装的熔断时自动投入工作，于是两只保险丝的总寿命为<span class="math inline">\(X_{1}+X_{2}\)</span>，求<span class="math inline">\(P\{X_{1}+X_{2}\leq 1\}\)</span>。</li>
+</ul>
+<p>解：（1）、<span class="math inline">\(X_{1}\)</span>的概率密度为
+<span class="math display">\[\begin{equation*}
+f_{X_{1}}(x_{1})=\left\{
+           \begin{array}{ll}
+             e^{-x_{1}/3}/3, &amp; x_{1}\geq 0, \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+<span class="math inline">\(X_{2}\)</span>的概率密度为
+<span class="math display">\[\begin{equation*}
+f_{X_{2}}(x_{2})=\left\{
+           \begin{array}{ll}
+             e^{-x_{2}/3}/3, &amp; x_{2}\geq 0, \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+因为两只保险丝的寿命是相互独立的，故<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>的联合概率密度
+<span class="math display">\[\begin{equation*}
+\begin{split}
+f(x_{1},x_{2})&amp;=f_{X_{1}}(x_{1})f_{X_{2}}(x_{2})=\left\{
+           \begin{array}{ll}
+             e^{-x_{1}/3}/3\cdot e^{-x_{2}/3}/3, &amp; x_{1}\geq 0,x_{2}\geq 0, \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.\\
+&amp;=\left\{
+           \begin{array}{ll}
+             e^{-(x_{1}+x_{2})/3}/9, &amp; x_{1}\geq 0,x_{2}\geq 0, \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{split}
+\end{equation*}\]</span></p>
+<p>（2）、记
+<span class="math display">\[G=\{(x_{1},x_{2})|x_{1}+x_{2}\leq 1, x_{1}\geq 0, x_{2}\geq 0\},\]</span>
+所以两只保险丝的总寿命<span class="math inline">\(X_{1}+X_{2}\leq 1\)</span>的概率为
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{X_{1}+X_{2}\leq 1\}&amp;=\int\int_{G}f(x_{1},x_{2})dx_{1}dx_{2}\\
+&amp;=\int_{0}^{1}\int_{0}^{1-x_{2}}\frac{1}{9}e^{-(x_{1}+x_{2})/3}dx_{1}dx_{2}\\
+&amp;=\frac{1}{9}\int_{0}^{1}e^{-x_{2}/3}\left(\int_{0}^{1-x_{2}}e^{-x_{1}/3}dx_{1}\right)dx_{2}\\
+&amp;=1-\frac{4}{3}e^{-1/3}.
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>例4：</strong>设二维连续型随机变量<span class="math inline">\((X, Y)\)</span>的联合概率密度函数为
+<span class="math display">\[\begin{equation*}
+  f(x,y)=\left\{
+           \begin{array}{ll}
+             xye^{-(x+y)}, &amp; x\geq 0, y\geq 0, \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+问<span class="math inline">\(X\)</span>,和<span class="math inline">\(Y\)</span>是否独立。</p>
+<p>解：由<span class="math inline">\((X, Y)\)</span>的联合密度函数可知<span class="math inline">\(X\geq 0, Y\geq 0\)</span>，故有<span class="math inline">\(f_{X}(x)=0, x&lt;0\)</span>，所以当<span class="math inline">\(x\geq 0\)</span>时
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\int_{-\infty}^{+\infty}f(x,y)dy=\int_{0}^{+\infty}xye^{-(x+y)}dy=xe^{-x},
+\end{equation*}\]</span>
+所以
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\left\{
+           \begin{array}{ll}
+             xe^{-x}, &amp; x\geq 0 \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+同理有
+<span class="math display">\[\begin{equation*}
+f_{Y}(y)=\int_{-\infty}^{+\infty}f(x,y)dx=\left\{
+           \begin{array}{ll}
+             ye^{-y}, &amp; y\geq 0 \\
+             0, &amp; \text{其他.}
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p>综上，很容易得到，对于一切的<span class="math inline">\(x,y\)</span>有
+<span class="math display">\[f(x,y)=f_{X}(x)f_{Y}(y)\]</span>
+故<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立。</p>
+<p><strong>例5：约会问题</strong>
+张三与李四决定在老地方相会，他们到达时间均匀分布在晚上7:00—7:30，且时间相互独立，求：两人在5分钟之内能见面的概率。</p>
+<p>解：设张三到达的时间为<span class="math inline">\(X\)</span>，李四到达的时间为<span class="math inline">\(Y\)</span>，依题意可知<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>分别服从均匀分布，即
+<span class="math display">\[f_{X}(x)=\left\{
+             \begin{array}{ll}
+               1/30, &amp; 0\leq x\leq 30, \\
+               0, &amp; \text{其他}
+             \end{array}
+           \right. ~~f_{Y}(y)=\left\{
+             \begin{array}{ll}
+               1/30, &amp; 0\leq y\leq 30, \\
+               0, &amp; \text{其他}
+             \end{array}
+           \right.
+\]</span>
+由<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的独立性，可知
+<span class="math display">\[f(x,y)=f_{X}(x)f_{Y}(y)=\left\{
+             \begin{array}{ll}
+               1/900, &amp; 0\leq x\leq 30, 0\leq y\leq 30, \\
+               0, &amp; \text{其他}
+             \end{array}
+             \right.
+\]</span></p>
+<p>记
+<span class="math display">\[G=\{(x,y)||x-y|\leq 5, 0\leq x\leq 30, 0\leq y\leq 30\}\]</span>
+因此两人在5分钟之内能见面的概率
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{|X-Y|\leq 5\}&amp;=\int\int_{G}f(x,y)dxdy=\int\int_{G}\frac{1}{900}dxdy \\
+&amp;=\int_{0}^{5}\int_{0}^{y+5}\frac{1}{900}dxdy+\int_{5}^{25}\int_{y-5}^{y+5}\frac{1}{900}dxdy\\
+&amp;~~+\int_{25}^{30}\int_{y-5}^{30}\frac{1}{900}dxdy\\
+&amp;=\frac{11}{36}
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>例6：</strong>设服从二维正态分布，则<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立的充要条件是<span class="math inline">\(\rho=0\)</span>。</p>
+<p>证明：（1）充分性：由前面所讲的例子可知，二维正态分布的边缘分布分别为
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\frac{1}{\sqrt{2\pi}\sigma_{2}}e^{-\frac{(x-\mu_{1})^{2}}{2\sigma_{1}^{2}}}, -\infty&lt;x&lt;+\infty
+\end{equation*}\]</span>
+以及
+<span class="math display">\[\begin{equation*}
+f_{Y}(y)=\frac{1}{\sqrt{2\pi}\sigma_{2}}e^{-\frac{(y-\mu_{2})^{2}}{2\sigma_{2}^{2}}}, -\infty&lt;y&lt;+\infty
+\end{equation*}\]</span>
+很容易验证，当<span class="math inline">\(\rho=0\)</span>时
+<span class="math display">\[f(x,y)=f_{X}(x)f_{Y}(y)\]</span>
+即<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立。</p>
+<p>（2）、必要性。若<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立，由于<span class="math inline">\(f(x,y)\)</span>, <span class="math inline">\(f_{X}(x)\)</span>以及<span class="math inline">\(f_{Y}(y)\)</span>都是连续函数，故对所有的<span class="math inline">\(x, y\)</span>，有
+<span class="math display">\[f(x,y)=f_{X}(x)f_{Y}(y)\]</span>
+特别地，令<span class="math inline">\(x=\mu_{1}\)</span>, <span class="math inline">\(y=\mu_{2}\)</span>, 可以得到
+<span class="math display">\[\frac{1}{2\pi\sigma_{1}\sigma_{2}\sqrt{1-\rho^{2}}}=\frac{1}{2\pi \sigma_{1}\sigma_{2}},\]</span>
+因此<span class="math inline">\(\rho=0\)</span>.</p>
+</div>
+</div>
+<div id="二维随机变量函数的分布" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> 二维随机变量函数的分布</h2>
+<div id="二维离散型随机变量函数的分布" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> 二维离散型随机变量函数的分布</h3>
+<p>在一维随机变量中讨论了：已知随机变量<span class="math inline">\(X\)</span>及它的分布，如何求其函数<span class="math inline">\(Y=g(X)\)</span>的分布。</p>
+<p>在多维随机变量中需讨论：已知随机变量<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>及其联合分布，如何求出它们的函数：
+<span class="math display">\[Y_{i} =g_{i}(X_{1}, X_{2}, \cdots, X_{n}), i=1, 2,…, m\]</span>
+的联合分布。</p>
+<ul>
+<li>一般，先讨论两个随机变量的函数的分布问题，然后将其推广到多个随机变量的情形。在此，我们主要讨论两个随机变量情形。</li>
+</ul>
+<p><strong>引例</strong></p>
+<strong>例1：</strong>设随机变量<span class="math inline">\((X, Y)\)</span>的分布律为
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">-2</th>
+<th align="center">-1</th>
+<th align="center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">-1</td>
+<td align="center">1/12</td>
+<td align="center">1/12</td>
+<td align="center">3/12</td>
+</tr>
+<tr class="even">
+<td align="center">1/2</td>
+<td align="center">2/12</td>
+<td align="center">1/12</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">2/12</td>
+<td align="center">0</td>
+<td align="center">2/12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>求<span class="math inline">\(X+Y\)</span>的分布律；</li>
+<li>求<span class="math inline">\(|X-Y|\)</span>的分布律；</li>
+<li>求<span class="math inline">\(\max\{X, Y\}\)</span>的分布律；</li>
+<li>求<span class="math inline">\(\min\{X, Y\}\)</span>的分布律；</li>
+</ul>
+解：依题意有<span class="math inline">\((X,Y)\)</span>的概率分布
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">-2</th>
+<th align="center">-1</th>
+<th align="center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">-1</td>
+<td align="center">1/12</td>
+<td align="center">1/12</td>
+<td align="center">3/12</td>
+</tr>
+<tr class="even">
+<td align="center">1/2</td>
+<td align="center">2/12</td>
+<td align="center">1/12</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">2/12</td>
+<td align="center">0</td>
+<td align="center">2/12</td>
+</tr>
+</tbody>
+</table>
+等价于
+<table>
+<thead>
+<tr class="header">
+<th align="center">概率</th>
+<th align="center">1/12</th>
+<th align="center">1/12</th>
+<th align="center">3/12</th>
+<th align="center">2/12</th>
+<th align="center">1/12</th>
+<th align="center">2/12</th>
+<th align="center">2/12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\((X,Y)\)</span></td>
+<td align="center">(-1,-2)</td>
+<td align="center">(-1,-1)</td>
+<td align="center">(-1,0)</td>
+<td align="center">(1/2,-2)</td>
+<td align="center">(1/2,-1)</td>
+<td align="center">(3,-2)</td>
+<td align="center">(3,0)</td>
+</tr>
+</tbody>
+</table>
+因此有
+<table>
+<thead>
+<tr class="header">
+<th align="center">概率</th>
+<th align="center">1/12</th>
+<th align="center">1/12</th>
+<th align="center">3/12</th>
+<th align="center">2/12</th>
+<th align="center">1/12</th>
+<th align="center">2/12</th>
+<th align="center">2/12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\((X,Y)\)</span></td>
+<td align="center">(-1,-2)</td>
+<td align="center">(-1,-1)</td>
+<td align="center">(-1,0)</td>
+<td align="center">(1/2,-2)</td>
+<td align="center">(1/2,-1)</td>
+<td align="center">(3,-2)</td>
+<td align="center">(3,0)</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(X+Y\)</span></td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">-3/2</td>
+<td align="center">-1/2</td>
+<td align="center">1</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(|X-Y|\)</span></td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">5/2</td>
+<td align="center">3/2</td>
+<td align="center">5</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\max(X,Y)\)</span></td>
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">1/2</td>
+<td align="center">1/2</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\min(X,Y)\)</span></td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>所以</p>
+（1）、<span class="math inline">\(X+Y\)</span>的分布律为
+<table>
+<thead>
+<tr class="header">
+<th align="center">概率</th>
+<th align="center">1/12</th>
+<th align="center">1/12</th>
+<th align="center">3/12</th>
+<th align="center">2/12</th>
+<th align="center">1/12</th>
+<th align="center">2/12</th>
+<th align="center">2/12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(X+Y\)</span></td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">-3/2</td>
+<td align="center">-1/2</td>
+<td align="center">1</td>
+<td align="center">3</td>
+</tr>
+</tbody>
+</table>
+（2）、<span class="math inline">\(|X-Y|\)</span>的分布律为
+<table>
+<thead>
+<tr class="header">
+<th align="center">概率</th>
+<th align="center">1/12</th>
+<th align="center">/142</th>
+<th align="center">2/12</th>
+<th align="center">1/12</th>
+<th align="center">2/12</th>
+<th align="center">2/12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(|X-Y|\)</span></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">5/2</td>
+<td align="center">3/2</td>
+<td align="center">5</td>
+<td align="center">3</td>
+</tr>
+</tbody>
+</table>
+<p>（3）、<span class="math inline">\(\max\{X, Y\}\)</span>的分布律为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">概率</th>
+<th align="center">2/12</th>
+<th align="center">3/12</th>
+<th align="center">3/12</th>
+<th align="center">4/12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\max(X,Y)\)</span></td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">1/2</td>
+<td align="center">3</td>
+</tr>
+</tbody>
+</table>
+（4）、<span class="math inline">\(\min\{X, Y\}\)</span>的分布律为
+<table>
+<thead>
+<tr class="header">
+<th align="center">概率</th>
+<th align="center">5/12</th>
+<th align="center">5/12</th>
+<th align="center">2/12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\min(X,Y)\)</span></td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>二维离散型随机变量函数分布总结</strong></p>
+<p>若二维离散型随机变量<span class="math inline">\((X, Y)\)</span>的联合分布律为
+<span class="math display">\[P\{X=x_{i}, Y=y_{j}\}=p_{ij}, i,j=1,2,\cdots,\]</span>
+则随机变量函数<span class="math inline">\(Z=f(X,Y)\)</span>的分布律为
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{Z=z_{k}\}&amp;=P\{f(X,Y)=z_{k}\}\\
+&amp;=\sum_{z_{k}=f(x_{i},y_{j})}p_{ij}, k=1,2,\cdots.
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>例2：</strong>假设随机变量<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立，它们分别服从参数为<span class="math inline">\(\lambda_{1}\)</span>和<span class="math inline">\(\lambda_{2}\)</span>的泊松分布。求<span class="math inline">\(Z=X+Y\)</span>的分布律。</p>
+<p>解：依题意可知<span class="math inline">\(R_{Z}=\{0,1,2,\cdots\}\)</span>,
+<span class="math display">\[\begin{equation*}
+  P\{X=k_{1}\}=\frac{\lambda_{1}^{k_{1}}}{k_{1}!}e^{-\lambda_{1}}, k_{1}=0,1,2,3,\cdots
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  P\{Y=k_{2}\}=\frac{\lambda_{2}^{k_{2}}}{k_{2}!}e^{-\lambda_{2}}, k_{2}=0,1,2,3,\cdots
+\end{equation*}\]</span></p>
+<p>利用随机变量<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>独立性，故有
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{Z=i\}&amp;=P\{X+Y=i\}\\
+&amp;=p\{X=0,Y=i\}+\cdots+P\{X=i,Y=0\}\\
+&amp;=\sum_{k=0}^{i}P\{X=k,Y=i-k\}=\sum_{k=0}^{i}P\{X=k\}\cdot P\{Y=i-k\}\\
+&amp;=\sum_{k=0}^{i}\frac{\lambda_{1}^{k}}{k!}e^{-\lambda_{1}} \cdot \frac{\lambda_{2}^{i-k}}{(i-k)!}e^{-\lambda_{2}}=e^{-(\lambda_{1}+\lambda_{2})}\frac{1}{i!}\sum_{k=0}^{i}\frac{i!}{k!(i-k)!}\lambda_{1}^{k}\lambda_{2}^{i-k}\\
+&amp;=e^{-(\lambda_{1}+\lambda_{2})}\frac{1}{i!}\sum_{k=0}^{i}C_{i}^{k}\lambda_{1}^{k}\lambda_{2}^{i-k}=\frac{(\lambda_{1}+\lambda_{2})^{i}}{i!}e^{-(\lambda_{1}+\lambda_{2})}
+\end{split}
+\end{equation*}\]</span>
+即<span class="math inline">\(Z=X+Y\sim P(\lambda_{1}+\lambda_{2})\)</span>，说明泊松分布具有可加性。</p>
+</div>
+<div id="二维连续型随机变量函数的分布" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> 二维连续型随机变量函数的分布</h3>
+<p><font size=4><strong>（1）求二维连续型随机变量函数分布的步骤</strong></font></p>
+<p>设<span class="math inline">\((X, Y)\)</span>为二维连续型随机变量，其概率密度为<span class="math inline">\(f(x, y)\)</span>，<span class="math inline">\(Z=g(X, Y)\)</span>为<span class="math inline">\(X\)</span>，<span class="math inline">\(Y\)</span>的函数，它也是连续型随机变量。</p>
+<p><strong>分布函数法:</strong></p>
+<ul>
+<li><p>求<span class="math inline">\(Z\)</span>的分布函数</p>
+<p><span class="math display">\[\begin{aligned}
+\begin{split}
+F_{Z}(z)&amp;=P\{Z\leq z\}=P\{g(X, Y)\leq z\}\\
+&amp;=P\{(X, Y)\in D_{Z}\}=\int\int_{D_{Z}}f(x,y)dxdy
+\end{split}
+\end{aligned}\tag{3.40}\]</span>
+其中<span class="math inline">\(D_{Z}=\{(x,y)|g(x,y)\leq z\}\)</span>。</p></li>
+<li><p><span class="math inline">\(F_{Z}(z)\)</span>对<span class="math inline">\(z\)</span>求导数，得<span class="math inline">\(Z\)</span>的概率密度为</p>
+<p><span class="math display">\[\begin{aligned}
+f_{Z}(z)=F_{Z}&#39;(z)=\frac{d}{dz}\int\int_{D_{Z}}f(x,y)dxdy.
+\end{aligned}\tag{3.41}\]</span></p></li>
+</ul>
+<p><strong>例1：</strong>设<span class="math inline">\((X,Y)\)</span>服从矩形域<span class="math inline">\(G=[0,2]\times[0,1]\)</span>上的均匀分布，<span class="math inline">\(Z=XY\)</span>，求<span class="math inline">\(Z\)</span>的概率密度函数。</p>
+解：依题意可知，<span class="math inline">\((X, Y)\)</span>的联合概率密度函数为
+<span class="math display">\[\begin{equation*}
+  f(x, y)=\left\{
+            \begin{array}{ll}
+              1/2, &amp; x, y\in G \\
+              0, &amp; \text{其他.}
+            \end{array}
+          \right.
+\end{equation*}\]</span>
+由<span class="math inline">\(0\leq x\leq 2\)</span>以及<span class="math inline">\(0\leq y\leq 1\)</span>，可知<span class="math inline">\(Z\)</span>的值域为<span class="math inline">\([0,2]\)</span>.因此事件<span class="math inline">\(XY\leq Z\)</span>所占区域D如下
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5ruodou35LvItRTh1WM1l6q8zVlnrzvAGMfnV5DMn6Ry45UcYyVc97fGDFPSoRv9o.JRHtinsiB2u4luZynwklE!/mnull&amp;bo=swCNAAAAAAABBx4!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片37" />
+</center>
+<center>
+图 3.5
+</center>
+<p>对于任意的<span class="math inline">\(z\in[0,2]\)</span>，有
+<span class="math display">\[\begin{equation*}
+\begin{split}
+F_{z}(z)&amp;=P\{Z\leq z\}=P\{XY\leq z\}\\
+&amp;=\int\int_{D}\frac{1}{2}dxdy=\int_{0}^{z}\int_{0}^{1}\frac{1}{2}dxdy+\int_{z}^{2}\int_{0}^{\frac{z}{x}}\frac{1}{2}dxdy\\
+&amp;=\frac{1}{2}z+\frac{\ln 2}{2}z-\frac{1}{2}z\ln z
+\end{split}
+\end{equation*}\]</span>
+求导得
+<span class="math display">\[\begin{equation*}
+  f_{Z}(z)=[F_{Z}(z)]&#39;=\frac{1}{2}\ln \frac{2}{z}
+\end{equation*}\]</span>
+即
+<span class="math display">\[\begin{equation*}
+  f_{Z}(z)=\left\{
+             \begin{array}{ll}
+               1/2\ln 2/z, &amp; 0&lt;z\leq 2 \\
+               0, &amp; \text{其他.}
+             \end{array}
+           \right.
+\end{equation*}\]</span></p>
+<p><font size=4><strong>（2）常见连续型随机变量函数:和分布</strong></font></p>
+<p><strong>①<span class="math inline">\(Z=X+Y\)</span>的分布</strong></p>
+<p>已知<span class="math inline">\((X , Y)\)</span>的概率密度为<span class="math inline">\(f(x, y)\)</span>，求<span class="math inline">\(Z=X+Y\)</span>的概率密度。</p>
+解：由于事件<span class="math inline">\(X+Y\leq Z\)</span>所占的区域如下图
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5jdt3Gp6PzBgeVZfDbHZ.AfrVPQgxn**mzhSL2Zs*UlrQXlSTtBb1h0N9jhK9y4PirSv3uHCLbcmeJWinyenuUY!/mnull&amp;bo=6QDcAAAAAAABBxU!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片310" />
+</center>
+<center>
+图 3.6
+</center>
+<p>所以<span class="math inline">\(Z=X+Y\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+\begin{split}
+  F_{Z}(z)&amp;=P\{Z\leq z\}=P\{X+Y \leq z\}\\
+  &amp;=\int\int_{x+y\leq z}f(x,y)dxdy=\int_{-\infty}^{+\infty}dy\int_{-\infty}^{z-y}f(x,y)dx
+  \end{split}
+\end{equation*}\]</span>
+令<span class="math inline">\(x=u-y\)</span>，则
+<span class="math display">\[\begin{equation*}
+\int_{-\infty}^{z-y}f(x,y)dx=\int_{-\infty}^{z}f(u-y,y)du,
+\end{equation*}\]</span>
+所以有
+<span class="math display">\[\begin{equation*}
+\begin{split}
+F_{Z}(z)&amp;=\int_{-\infty}^{+\infty}dy\int_{-\infty}^{z}f(u-y,y)du\\
+&amp;=\int_{-\infty}^{z}\int_{-\infty}^{+\infty}f(u-y,y)dydu
+\end{split}
+\end{equation*}\]</span></p>
+<p>对<span class="math inline">\(F_{Z}(z)\)</span>关于<span class="math inline">\(z\)</span>求导数，得
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=F_{Z}&#39;(z)=\int_{-\infty}^{+\infty}f(z-y,y)dy
+\end{equation*}\]</span>
+同理可得
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=\int_{-\infty}^{+\infty}f(x,z-x)dy.
+\end{equation*}\]</span></p>
+<p><strong>②卷积公式</strong></p>
+<p>如果<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，则有
+<span class="math display">\[\begin{aligned}
+f_{Z}(z)=\int_{-\infty}^{+\infty}f_{X}(x)f_{Y}(z-x)dx=\int_{-\infty}^{+\infty}f_{X}(z-y)f_{Y}(y)dy
+\end{aligned}\tag{3.42}\]</span>
+上式称为<span class="math inline">\(f_{X}\)</span>与<span class="math inline">\(f_{Y}\)</span>的卷积公式，记为<span class="math inline">\(f_{X}\ast f_{Y}\)</span>.</p>
+<p><strong>例2：</strong>假设<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，且都服从标准正态分布，求<span class="math inline">\(Z=X+Y\)</span>的概率密度。</p>
+<p>解：由题意可知<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>的概率密度分别为
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}, f_{Y}(y)=\frac{1}{\sqrt{2\pi}}e^{-\frac{y^{2}}{2}}, -\infty&lt;x,y&lt;+\infty
+\end{equation*}\]</span>
+由于<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，利用卷积公式可得
+<span class="math display">\[\begin{equation*}
+\begin{split}
+f_{Z}(z)&amp;=\int_{-\infty}^{+\infty}f_{X}(x)f_{Y}(z-x)dx=\frac{1}{2\pi}\int_{-\infty}^{+\infty}e^{-\frac{x^{2}}{2}}e^{-\frac{(z-x)^{2}}{2}}dx\\
+&amp;=\frac{1}{2\pi}e^{-\frac{z^{2}}{4}}\cdot \sqrt{\pi}=\frac{1}{\sqrt{2}\sqrt{2\pi}}e^{-\frac{z^{2}}{2(\sqrt{2})^{2}}}
+\end{split}
+\end{equation*}\]</span>
+即<span class="math inline">\(Z\sim N(0,2)\)</span>.</p>
+<p><strong>③说明</strong></p>
+<p>一般，设<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立且<span class="math inline">\(X\sim N(\mu_{1}, \sigma_{1}^{2})\)</span>, <span class="math inline">\(Y\sim N(\mu_{2}, \sigma_{2}^{2})\)</span>，则<span class="math inline">\(Z=X+Y\)</span>仍然服从正态分布，且有<span class="math inline">\(Z\sim N(\mu_{1}+\mu_{2}, \sigma_{1}^{2})+\sigma_{2}^{2})\)</span>.</p>
+<ul>
+<li><strong>正态分布的可加性</strong>
+若随机变量<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}\)</span>相互独立，并且</li>
+</ul>
+<p><span class="math display">\[X_{k}\sim N(\mu_{k}, \sigma_{k}^{2}), k=1,2,\cdots,n\]</span>
+则
+<span class="math display">\[Z=\sum_{k=1}^{n}\alpha_{k}X_{k}\sim N(\sum_{k=1}^{n}\alpha_{k}\mu_{k},\sum_{k=1}^{n}\alpha_{k}^{2}\sigma_{k}^{2})\tag{3.43}\]</span>
+其中<span class="math inline">\(\alpha_{k}, k=1,2,\cdots, n\)</span>为常数。</p>
+<p><strong>例3：</strong>设<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>是两个相互独立的随机变量，其概率密度分别为</p>
+<p><span class="math display">\[\begin{equation*}
+f_{X}(x)=\left\{
+           \begin{array}{ll}
+             1, &amp; 0\leq x\leq 1 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.~~~~f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             e^{-y}, &amp; y&gt;0 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+求：随机变量<span class="math inline">\(Z=X+Y\)</span>的概率密度．</p>
+<p>解：因为<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，故有卷积公式可得
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=\int_{-\infty}^{+\infty}f_{X}(x)f_{Y}(z-x)dx
+\end{equation*}\]</span>
+欲使<span class="math inline">\(f_{X}(x)f_{Y}(z-x)&gt;0\)</span>，即<span class="math inline">\(f_{X}(x)&gt;0, f_{Y}(z-x)&gt;0\)</span>，所以<span class="math inline">\(x\)</span>与<span class="math inline">\(z\)</span>必须满足
+<span class="math display">\[0\leq x\leq 1, z-x&gt;0.\]</span></p>
+将上述<span class="math inline">\(x\)</span>与<span class="math inline">\(z\)</span>的关系描绘在<span class="math inline">\(xOz\)</span>平面上便是图中的阴影部分如下
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5jdt3Gp6PzBgeVZfDbHZ.AdkSoep1GU4oKXCmHSpzf.4SpXEH1IASclW*vpJXYCqSQbTNQufhWyIuV9WP0igmPo!/mnull&amp;bo=3ADWAAAAAAABByo!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片311" />
+</center>
+<center>
+图 3.7
+</center>
+<p>因此，我们针对<span class="math inline">\(Z\)</span>的取值分以下三种情况讨论</p>
+<ul>
+<li><p>(1)、当<span class="math inline">\(z&lt;0\)</span>时，<span class="math inline">\(f_{X}(x)f_{Y}(z-x)=0\)</span>，故<span class="math inline">\(f_{Z}(z)=0\)</span></p></li>
+<li><p>(2)、当<span class="math inline">\(0\leq z&lt;1\)</span>时，<span class="math display">\[f_{Z}(z)=\int_{0}^{z}e^{-(z-x)}dx=1-e^{-z}\]</span></p></li>
+<li><p>(3)、当<span class="math inline">\(1\leq z\)</span>时，<span class="math display">\[f_{Z}(z)=\int_{0}^{1}e^{-(z-x)}dx=(e-1)e^{-z}\]</span></p></li>
+</ul>
+<p>故综上所得
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=\left\{
+           \begin{array}{ll}
+             0, &amp; z&lt;0 \\
+             1-e^{-z}, &amp; 0\leq z&lt;1 \\
+             (e-1)e^{-z}, &amp; 1\leq z.
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p><strong>例4：</strong>设随机变量<span class="math inline">\((X, Y)\)</span>的概率密度为
+<span class="math display">\[\begin{equation*}
+f(x,y)=\left\{
+           \begin{array}{ll}
+             3x, &amp; 0&lt;x&lt;1, 0&lt;y&lt;x \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+试求随机变量<span class="math inline">\(Z=X-Y\)</span>的概率密度。</p>
+<p>解：依题意得
+<span class="math display">\[\begin{equation*}
+\begin{split}
+F_{Z}(z)&amp;=P\{Z\leq z\}=P\{X-Y\leq z\}\\
+&amp;=\int\int_{x-y\leq z}f(x,y)dxdy
+\end{split}
+\end{equation*}\]</span></p>
+结合概率密度的非零区域可得
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5jdt3Gp6PzBgeVZfDbHZ.AdzBSYjeIWtTxu4*fW0w14ZzMqxYQ35wnxKF.dXIFe555RduAdlq5WVGeNQS7GeJTY!/mnull&amp;bo=swCyAAAAAAABByE!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片312" />
+</center>
+<center>
+图 3.8
+</center>
+<ul>
+<li><p>(1)、当<span class="math inline">\(z&lt;0\)</span>时，<span class="math inline">\(F_{Z}(z)=0\)</span>;</p></li>
+<li><p>(2)、当<span class="math inline">\(0\leq z&lt;1\)</span>时</p></li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+F_{Z}(z)&amp;=\int\int_{G}3xdxdy=\int_{0}^{z}\int_{0}^{x}3xdxdy\\
+&amp;~~~~+\int_{z}^{1}\int_{x-z}^{x}3xdxdy=\frac{3}{2}z-\frac{1}{2}z^{3}
+\end{split}
+\end{equation*}\]</span></p>
+<ul>
+<li>(3)、当<span class="math inline">\(z\geq 1\)</span>时，<span class="math inline">\(F_{Z}(z)=1\)</span></li>
+</ul>
+<p>所以<span class="math inline">\(Z\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+F_{Z}(z)=\left\{
+           \begin{array}{ll}
+             0, &amp; z&lt;0 \\
+             3z/2-z^{2}/2, &amp; 0\leq z&lt;1 \\
+             1, &amp; 1\leq z.
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+对其求导，即得<span class="math inline">\(Z=X-Y\)</span>的密度函数
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=\left\{
+           \begin{array}{ll}
+             3(1-z^{2})/2, &amp; 0\leq z&lt;1 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p><font size=4><strong>（3）常见连续型随机变量函数：极值分布</strong></font></p>
+<p><strong>极值分布</strong></p>
+<p>设<span class="math inline">\(X, Y\)</span>是两个相互独立的随机变量，他们的分布函数分别为<span class="math inline">\(F_{X}(x)\)</span>和<span class="math inline">\(F_{Y}(y)\)</span>，求<span class="math inline">\(M=\max(X, Y)\)</span>以及<span class="math inline">\(N=\min(X, Y)\)</span>的分布函数。</p>
+<p>解：（1）、<span class="math inline">\(M=\max(X, Y)\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+\begin{split}
+F_{M}(z)&amp;=P\{M\leq z\}=P\{\max(X,Y)\leq z\}\\
+&amp;=P\{X\leq z, Y\leq z\}
+\end{split}
+\end{equation*}\]</span>
+由于<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，所以
+<span class="math display">\[\begin{equation*}
+F_{M}(z)=P\{X\leq z\}P\{Y\leq z\}=F_{X}(z)F_{Y}(z)
+\end{equation*}\]</span></p>
+<p>（2）、<span class="math inline">\(N=\min(X, Y)\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+\begin{split}
+F_{N}(z)&amp;=P\{N\leq z\}=P\{\min(X,Y)\leq z\}\\
+&amp;=1-P\{\min(X, Y)&gt;z\}=1-P\{X&gt; z, Y&gt; z\}
+\end{split}
+\end{equation*}\]</span>
+由于<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，所以
+<span class="math display">\[\begin{equation*}
+\begin{split}
+F_{N}(z)=1-P\{X&gt; z\}P\{Y&gt; z\}=1-[1-F_{X}(z)][1-F_{Y}(z)]
+\end{split}
+\end{equation*}\]</span></p>
+<p>如果要求<span class="math inline">\(M=\max(X, Y)\)</span>以及<span class="math inline">\(N=\min(X, Y)\)</span>的密度函数，只需要对
+<span class="math display">\[F_{M}(z)=F_{X}(z)F_{Y}(z)\]</span>
+以及
+<span class="math display">\[F_{N}(z)=1-[1-F_{X}(z)][1-F_{Y}(z)]\]</span>
+关于<span class="math inline">\(z\)</span>求导即可。</p>
+<p><strong>推广：</strong></p>
+<p>（1）、<span class="math inline">\(n\)</span>个相互独立的随机变量</p>
+<p>设<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}\)</span>是<span class="math inline">\(n\)</span>个相互独立的随机变量，他们的分布函数分别为<span class="math inline">\(F_{X_{i}}(x_{i}), i=1,2,\cdots,n\)</span>, 则<span class="math inline">\(M=\max(X_{1},X_{2},\cdots,X_{n})\)</span>以及<span class="math inline">\(N=\min(X_{1},X_{2},\cdots,X_{n})\)</span>的分布函数分别为
+<span class="math display">\[F_{M}(z)=F_{X_{1}}(z)F_{X_{2}}(z)\cdots F_{X_{n}}(z)\tag{3.44}\]</span>
+<span class="math display">\[F_{N}(z)=1-[1-F_{X_{1}}(z)][1-F_{X_{2}}(z)]\cdots [1-F_{X_{n}}(z)] \tag{3.45}\]</span></p>
+<p>（2）、<span class="math inline">\(n\)</span>个相互独立同分布的随机变量
+若<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}\)</span>是<span class="math inline">\(n\)</span>个相互独立的随机变量，并且具有相同的分布函数<span class="math inline">\(F(x)\)</span>，则
+<span class="math display">\[F_{M}(z)=[F(z)]^{n}, F_{N}(z)=1-[1-F(z)]^{n} \tag{3.46}\]</span></p>
+<p>（3）、密度函数</p>
+<p>若<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}\)</span>是<span class="math inline">\(n\)</span>个相互独立的随机变量，并且具有相同的分布函数<span class="math inline">\(F(x)\)</span>，以及其密度函数为<span class="math inline">\(f(x)\)</span>，则有
+<span class="math display">\[f_{M}(z)=n[F(z)]^{n-1}\cdot f(z)\tag{3.47}\]</span>
+<span class="math display">\[f_{N}(z)=n[1-F(z)]^{n-1}\cdot f(z)\tag{3.48}\]</span></p>
+<p>特别的，对于两个相互独立同分布且为连续型随机变量，有
+<span class="math display">\[f_{M}(z)=2[F(z)]\cdot f(z)\tag{3.49}\]</span>
+<span class="math display">\[f_{N}(z)=2[1-F(z)]\cdot f(z) \tag{3.50}\]</span></p>
+<p><strong>例5：</strong>设随机变量<span class="math inline">\(X\)</span>的概率密度为
+<span class="math display">\[\begin{equation*}
+f(x)=\left\{
+           \begin{array}{ll}
+             2x, &amp; 0&lt;x&lt;1 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+随机变量<span class="math inline">\(X_{1},X_{2},X_{3},X_{4}\)</span>相互独立且与<span class="math inline">\(X\)</span>有相同的分布,试求随机变量<span class="math inline">\(M=\max(X_{1},X_{2},X_{3},X_{4})\)</span>的概率密度和<span class="math inline">\(P\{M&gt;0.5\}\)</span>。</p>
+<p>解：依题意有<span class="math inline">\(X\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+F_{X}(x)=\int_{-\infty}^{x}f(t)dt=\left\{
+                                    \begin{array}{ll}
+                                      0, &amp; x&lt;0 \\
+                                      x^{2}, &amp; 0\leq x&lt;1 \\
+                                      1, &amp; x\geq 1
+                                    \end{array}
+                                  \right.
+\end{equation*}\]</span></p>
+<p><span class="math inline">\(M=\max(X_{1},X_{2},X_{3},X_{4})\)</span>的分布函数为
+<span class="math display">\[F_{M}(x)=[F_{X}(x)]^{4}\]</span>
+所以<span class="math inline">\(M\)</span>的概率密度为
+<span class="math display">\[\begin{equation*}
+\begin{split}
+f_{M}(x)&amp;=F_{M}&#39;(x)=4[F_{X}(x)]^{3}f(x)\\
+&amp;=\left\{
+           \begin{array}{ll}
+             8x^{7}, &amp; 0&lt;x&lt;1 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{split}
+\end{equation*}\]</span>
+所以
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{M&gt;0.5\}&amp;=1-P\{M\leq 0.5\}=1-F_{M}(0.5)\\
+&amp;=1-0.5^{8}=0.9961.
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>例6：</strong>设系统<span class="math inline">\(L\)</span>由两个相互独立的子系统<span class="math inline">\(L_{1}\)</span>,<span class="math inline">\(L_{2}\)</span>连接而成，连接的方式有三种，分别为（1）、串联，（2）、并联，
+（3）、备用（当系统<span class="math inline">\(L_{1}\)</span>损坏时，系统<span class="math inline">\(L_{2}\)</span>开始工作），设<span class="math inline">\(L_{1}\)</span>,<span class="math inline">\(L_{2}\)</span>的寿命分别为<span class="math inline">\(X\)</span>,<span class="math inline">\(Y\)</span>，
+且它们的概率密度分别为
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\left\{
+           \begin{array}{ll}
+             \alpha e^{-\alpha x}, &amp; x&gt;0 \\
+             0, &amp; x\leq 0
+           \end{array}
+         \right.~~~~f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             \beta e^{-\beta x}, &amp; y&gt;0 \\
+             0, &amp; y\leq 0
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+试求系统<span class="math inline">\(L\)</span>的寿命<span class="math inline">\(Z\)</span>的概率密度。</p>
+<p>解：（1）、串联情形，由于当<span class="math inline">\(L_{1}\)</span>和<span class="math inline">\(L_{2}\)</span>中有一个损坏时，系统<span class="math inline">\(L\)</span>就停止工作，故系统<span class="math inline">\(L\)</span>的寿命<span class="math inline">\(Z=\min(X,Y)\)</span>。
+（2）、并联情形，当且仅当<span class="math inline">\(L_{1}\)</span>和<span class="math inline">\(L_{2}\)</span>都损坏时，系统<span class="math inline">\(L\)</span>就停止工作，故系统<span class="math inline">\(L\)</span>的寿命<span class="math inline">\(Z=\max(X,Y)\)</span>。
+（3）、备用情形，当<span class="math inline">\(L_{1}\)</span>损坏时，<span class="math inline">\(L_{2}\)</span>接着工作，故系统<span class="math inline">\(L\)</span>的寿命等于<span class="math inline">\(L_{1}\)</span>和<span class="math inline">\(L_{2}\)</span>寿命之和，即<span class="math inline">\(Z=X+Y\)</span>。</p>
+<p>依题意可知，<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的分布函数分别为
+<span class="math display">\[\begin{equation*}
+F_{X}(x)=\left\{
+           \begin{array}{ll}
+             1-e^{-\alpha x}, &amp; x&gt;0 \\
+             0, &amp; x\leq 0
+           \end{array}
+         \right.~~~~F_{Y}(y)=\left\{
+           \begin{array}{ll}
+             1- e^{-\beta x}, &amp; y&gt;0 \\
+             0, &amp; y\leq 0
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p>（1）、串联情形，即<span class="math inline">\(Z=\min(X,Y)\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+F_{Z}(z)=1-[1-F_{X}(z)][1-F_{Y}(z)]=\left\{
+           \begin{array}{ll}
+             1-e^{-(\alpha+\beta) z}, &amp; z&gt;0 \\
+             0, &amp; z\leq 0
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+故有密度函数为
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=\left\{
+           \begin{array}{ll}
+             (\alpha+\beta)e^{-(\alpha+\beta) z}, &amp; z&gt;0 \\
+             0, &amp; z\leq 0
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p>（2）、并联情形，即<span class="math inline">\(Z=\max(X,Y)\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+F_{Z}(z)=F_{X}(z)F_{Y}(z)=\left\{
+           \begin{array}{ll}
+             (1-e^{-\alpha z})(1-e^{-\beta z}), &amp; z&gt;0 \\
+             0, &amp; z\leq 0
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+故有密度函数为
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=\left\{
+           \begin{array}{ll}
+             \alpha e^{-\alpha z}+\beta e^{-\beta z}-(\alpha+\beta)e^{-(\alpha+\beta) z}, &amp; z&gt;0 \\
+             0, &amp; z\leq 0
+           \end{array}
+         \right.
+\end{equation*}\]</span>
+（3）、备用情形。</p>
+<ul>
+<li><p>当<span class="math inline">\(z\leq 0\)</span>时，显然可知<span class="math inline">\(f_{Z}(z)=0\)</span>。</p></li>
+<li><p>当<span class="math inline">\(z&gt;0\)</span>时，由于<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，利用卷积公式，可得<span class="math inline">\(Z=X+Y\)</span>的密度函数为</p></li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+f_{Z}(z)&amp;=\int_{-\infty}^{+\infty}f_{X}(z-y)f_{Y}(y)dy=\int_{0}^{z}\alpha e^{-\alpha(z-y)}\beta e^{-\beta y}dy\\
+&amp;=\alpha\beta e^{-\alpha z}\int_{0}^{z}e^{-(\beta-\alpha)y}dy=\frac{\alpha\beta}{\beta-\alpha}(e^{-\alpha z}-e^{-\beta z})
+\end{split}
+\end{equation*}\]</span>
+故有其密度函数为
+<span class="math display">\[\begin{equation*}
+f_{Z}(z)=\left\{
+           \begin{array}{ll}
+             \alpha\beta(e^{-\alpha z}-e^{-\beta z})/(\beta-\alpha), &amp; z&gt;0 \\
+             0, &amp; z\leq 0
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p><font size=4><strong>（4）常见连续型随机变量函数：积和商分布</strong></font></p>
+<p><strong>积和商分布</strong></p>
+<p>设<span class="math inline">\((X, Y)\)</span>是二维连续型随机变量，其概率密度为<span class="math inline">\(f(x,y)\)</span>，则<span class="math inline">\(Z=\frac{Y}{X}\)</span>以及<span class="math inline">\(Z=XY\)</span>仍为连续型随机变量，其概率密度分别为
+<span class="math display">\[f_{Y/X}(z)=\int_{-\infty}^{+\infty}|x|f(x,xz)dx,\tag{3.51}\]</span>
+<span class="math display">\[f_{XY}(z)=\int_{-\infty}^{+\infty}\frac{1}{|x|}f(x,\frac{z}{x})dx\tag{3.52}\]</span></p>
+<ul>
+<li>如果<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，且边缘密度分别为<span class="math inline">\(f_{X}(x)\)</span>, <span class="math inline">\(f_{Y}(y)\)</span>，则有</li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+f_{Y/X}(z)=\int_{-\infty}^{+\infty}|x|f_{X}(x)f_{Y}(xz)dx,~~f_{XY}(z)=\int_{-\infty}^{+\infty}\frac{1}{|x|}f_{X}(x)f_{Y}(\frac{z}{x})dx
+\end{aligned}\tag{3.53}\]</span></p>
+<p><font size=4><strong>（5）常见连续型随机变量函数：平方和分布</strong></font></p>
+<p><strong>平方和分布</strong></p>
+<p>设<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>相互独立，各自服从标准正态分布，求<span class="math inline">\(Z=X^{2}+Y^{2}\)</span>.</p>
+<p>解：易得二维连续型随机变量<span class="math inline">\((X, Y)\)</span>的联合密度函数为
+<span class="math display">\[f(x,y)=f_{X}(x)f_{Y}(y)=\frac{1}{2\pi}e^{1\frac{x^{2}+y^{2}}{2}}.\]</span></p>
+<ul>
+<li><p>当<span class="math inline">\(z\leq 0\)</span>时，有<span class="math inline">\(F_{Z}(z)=0\)</span>;</p></li>
+<li><p>当<span class="math inline">\(z&gt; 0\)</span>时，有</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+\begin{split}
+F_{Z}(z)&amp;=\int\int_{x^{2}+y^{2}\leq z}\frac{1}{2\pi}e^{-\frac{x^{2}+y^{2}}{2}}dxdy
+\end{split}
+\end{aligned}\tag{3.54}\]</span></p>
+<p>利用极坐标变换得
+<span class="math display">\[\begin{aligned}
+\begin{split}
+F_{Z}(z)&amp;=\int\int_{x^{2}+y^{2}\leq z}\frac{1}{2\pi}e^{-\frac{x^{2}+y^{2}}{2}}dxdy\\
+&amp;=\int_{0}^{2\pi}d\theta\int_{0}^{\sqrt{z}}\frac{1}{2\pi}e^{-\frac{r^{2}}{2}}rdr\\
+&amp;=\int_{0}^{\sqrt{z}}e^{-\frac{r^{2}}{2}}rdr=1-e^{-\frac{z}{2}}
+\end{split}
+\end{aligned}\tag{3.55}\]</span>
+故有<span class="math inline">\(Z\)</span>的密度函数为
+<span class="math display">\[\begin{aligned}
+f_{Z}(z)=\left\{
+           \begin{array}{ll}
+             e^{-z/2}/2, &amp; z&gt;0 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{aligned} \tag{3.56}\]</span></p>
+<p>上述分布被称为是自由度为2的<span class="math inline">\(\chi^{2}\)</span>分布，也是参数为2的指数分布。</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="随机变量及其分布.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="随机变量的数字特征.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
