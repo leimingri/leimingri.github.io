@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 随机变量及其分布 | 概率论与数理统计</title>
+  <meta name="description" content="2 随机变量及其分布 | 概率论与数理统计" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 随机变量及其分布 | 概率论与数理统计" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 随机变量及其分布 | 概率论与数理统计" />
+  
+  
+  
+
+<meta name="author" content="胡鹏" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="随机事件及其概率.html"/>
+<link rel="next" href="多维随机变量及其分布.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">概率论与数理统计</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html"><i class="fa fa-check"></i><b>1</b> 随机事件及其概率</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#样本空间与随机事件"><i class="fa fa-check"></i><b>1.1</b> 样本空间与随机事件</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#基本概念"><i class="fa fa-check"></i><b>1.1.1</b> 基本概念</a></li>
+<li class="chapter" data-level="1.1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的关系与运算"><i class="fa fa-check"></i><b>1.1.2</b> 事件的关系与运算</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的频率与概率"><i class="fa fa-check"></i><b>1.2</b> 事件的频率与概率</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#频率的定义"><i class="fa fa-check"></i><b>1.2.1</b> 频率的定义</a></li>
+<li class="chapter" data-level="1.2.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#概率的公理化定义"><i class="fa fa-check"></i><b>1.2.2</b> 概率的公理化定义</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型与几何概型"><i class="fa fa-check"></i><b>1.3</b> 古典概型与几何概型</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型"><i class="fa fa-check"></i><b>1.3.1</b> 古典概型</a></li>
+<li class="chapter" data-level="1.3.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#几何概型"><i class="fa fa-check"></i><b>1.3.2</b> 几何概型</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率"><i class="fa fa-check"></i><b>1.4</b> 条件概率</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率-1"><i class="fa fa-check"></i><b>1.4.1</b> 条件概率</a></li>
+<li class="chapter" data-level="1.4.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#乘法公式"><i class="fa fa-check"></i><b>1.4.2</b> 乘法公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式与贝叶斯公式"><i class="fa fa-check"></i><b>1.5</b> 全概率公式与贝叶斯公式</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式"><i class="fa fa-check"></i><b>1.5.1</b> 全概率公式</a></li>
+<li class="chapter" data-level="1.5.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#贝叶斯公式"><i class="fa fa-check"></i><b>1.5.2</b> 贝叶斯公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性"><i class="fa fa-check"></i><b>1.6</b> 事件的独立性</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性-1"><i class="fa fa-check"></i><b>1.6.1</b> 事件的独立性</a></li>
+<li class="chapter" data-level="1.6.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#伯努利概型"><i class="fa fa-check"></i><b>1.6.2</b> 伯努利概型</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html"><i class="fa fa-check"></i><b>2</b> 随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量与分布函数"><i class="fa fa-check"></i><b>2.1</b> 随机变量与分布函数</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量"><i class="fa fa-check"></i><b>2.1.1</b> 随机变量</a></li>
+<li class="chapter" data-level="2.1.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#分布函数"><i class="fa fa-check"></i><b>2.1.2</b> 分布函数</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量及其分布"><i class="fa fa-check"></i><b>2.2</b> 离散型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念"><i class="fa fa-check"></i><b>2.2.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#常见离散型随机变量"><i class="fa fa-check"></i><b>2.2.2</b> 常见离散型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量及其分布"><i class="fa fa-check"></i><b>2.3</b> 连续型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念-1"><i class="fa fa-check"></i><b>2.3.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.3.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#几种常见的连续性随机变量"><i class="fa fa-check"></i><b>2.3.2</b> 几种常见的连续性随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量函数的分布"><i class="fa fa-check"></i><b>2.4</b> 随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量情形"><i class="fa fa-check"></i><b>2.4.1</b> 离散型随机变量情形</a></li>
+<li class="chapter" data-level="2.4.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量情形"><i class="fa fa-check"></i><b>2.4.2</b> 连续型随机变量情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html"><i class="fa fa-check"></i><b>3</b> 多维随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量及其联合分布函数"><i class="fa fa-check"></i><b>3.1</b> 二维随机变量及其联合分布函数</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#多维随机变量"><i class="fa fa-check"></i><b>3.1.1</b> 多维随机变量</a></li>
+<li class="chapter" data-level="3.1.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量"><i class="fa fa-check"></i><b>3.1.2</b> 二维离散型随机变量</a></li>
+<li class="chapter" data-level="3.1.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量"><i class="fa fa-check"></i><b>3.1.3</b> 二维连续型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布和条件分布"><i class="fa fa-check"></i><b>3.2</b> 边缘分布和条件分布</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布"><i class="fa fa-check"></i><b>3.2.1</b> 边缘分布</a></li>
+<li class="chapter" data-level="3.2.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#条件分布"><i class="fa fa-check"></i><b>3.2.2</b> 条件分布</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性"><i class="fa fa-check"></i><b>3.3</b> 随机变量的独立性</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性-1"><i class="fa fa-check"></i><b>3.3.1</b> 随机变量的独立性</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量函数的分布"><i class="fa fa-check"></i><b>3.4</b> 二维随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.1</b> 二维离散型随机变量函数的分布</a></li>
+<li class="chapter" data-level="3.4.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.2</b> 二维连续型随机变量函数的分布</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html"><i class="fa fa-check"></i><b>4</b> 随机变量的数字特征</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望"><i class="fa fa-check"></i><b>4.1</b> 数学期望</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的定义"><i class="fa fa-check"></i><b>4.1.1</b> 数学期望的定义</a></li>
+<li class="chapter" data-level="4.1.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#随机变量函数的数学期望"><i class="fa fa-check"></i><b>4.1.2</b> 随机变量函数的数学期望</a></li>
+<li class="chapter" data-level="4.1.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的性质及条件期望"><i class="fa fa-check"></i><b>4.1.3</b> 数学期望的性质及条件期望</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差"><i class="fa fa-check"></i><b>4.2</b> 方差</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的定义"><i class="fa fa-check"></i><b>4.2.1</b> 方差的定义</a></li>
+<li class="chapter" data-level="4.2.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#常见随机变量的方差"><i class="fa fa-check"></i><b>4.2.2</b> 常见随机变量的方差</a></li>
+<li class="chapter" data-level="4.2.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的性质"><i class="fa fa-check"></i><b>4.2.3</b> 方差的性质</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数原点矩及中心距"><i class="fa fa-check"></i><b>4.3</b> 协方差与相关系数，原点矩及中心距</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数"><i class="fa fa-check"></i><b>4.3.1</b> 协方差与相关系数</a></li>
+<li class="chapter" data-level="4.3.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#原点矩及中心距"><i class="fa fa-check"></i><b>4.3.2</b> 原点矩及中心距</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html"><i class="fa fa-check"></i><b>5</b> 大数定律与中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理"><i class="fa fa-check"></i><b>5.1</b> 大数定理</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理-1"><i class="fa fa-check"></i><b>5.1.1</b> 大数定理</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理"><i class="fa fa-check"></i><b>5.2</b> 中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理-1"><i class="fa fa-check"></i><b>5.2.1</b> 中心极限定理</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html"><i class="fa fa-check"></i><b>6</b> 样本与抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#基本概念-1"><i class="fa fa-check"></i><b>6.1</b> 基本概念</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#总体与样本"><i class="fa fa-check"></i><b>6.1.1</b> 总体与样本</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征"><i class="fa fa-check"></i><b>6.2</b> 样本数字特征</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征-1"><i class="fa fa-check"></i><b>6.2.1</b> 样本数字特征</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布"><i class="fa fa-check"></i><b>6.3</b> 正态总体的抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布-1"><i class="fa fa-check"></i><b>6.3.1</b> 正态总体的抽样分布</a></li>
+<li class="chapter" data-level="6.3.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#分位数"><i class="fa fa-check"></i><b>6.3.2</b> 分位数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="参数估计.html"><a href="参数估计.html"><i class="fa fa-check"></i><b>7</b> 参数估计</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="参数估计.html"><a href="参数估计.html#参数的点估计"><i class="fa fa-check"></i><b>7.1</b> 参数的点估计</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="参数估计.html"><a href="参数估计.html#矩法估计"><i class="fa fa-check"></i><b>7.1.1</b> 矩法估计</a></li>
+<li class="chapter" data-level="7.1.2" data-path="参数估计.html"><a href="参数估计.html#极大似然估计"><i class="fa fa-check"></i><b>7.1.2</b> 极大似然估计</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="参数估计.html"><a href="参数估计.html#估计量的评价标准"><i class="fa fa-check"></i><b>7.2</b> 估计量的评价标准</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="参数估计.html"><a href="参数估计.html#无偏性"><i class="fa fa-check"></i><b>7.2.1</b> 无偏性</a></li>
+<li class="chapter" data-level="7.2.2" data-path="参数估计.html"><a href="参数估计.html#有效性"><i class="fa fa-check"></i><b>7.2.2</b> 有效性</a></li>
+<li class="chapter" data-level="7.2.3" data-path="参数估计.html"><a href="参数估计.html#一致性"><i class="fa fa-check"></i><b>7.2.3</b> 一致性</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="参数估计.html"><a href="参数估计.html#参数的区间估计"><i class="fa fa-check"></i><b>7.3</b> 参数的区间估计</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="参数估计.html"><a href="参数估计.html#区间估计基本方法"><i class="fa fa-check"></i><b>7.3.1</b> 区间估计基本方法</a></li>
+<li class="chapter" data-level="7.3.2" data-path="参数估计.html"><a href="参数估计.html#单个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.2</b> 单个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.3" data-path="参数估计.html"><a href="参数估计.html#两个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.3</b> 两个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.4" data-path="参数估计.html"><a href="参数估计.html#单侧置信区间"><i class="fa fa-check"></i><b>7.3.4</b> 单侧置信区间</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="假设检验.html"><a href="假设检验.html"><i class="fa fa-check"></i><b>8</b> 假设检验</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="假设检验.html"><a href="假设检验.html#假设检验的基本概念"><i class="fa fa-check"></i><b>8.1</b> 假设检验的基本概念</a></li>
+<li class="chapter" data-level="8.2" data-path="假设检验.html"><a href="假设检验.html#正态总体均值与方差的假设检验"><i class="fa fa-check"></i><b>8.2</b> 正态总体均值与方差的假设检验</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="假设检验.html"><a href="假设检验.html#单个正态总体情形"><i class="fa fa-check"></i><b>8.2.1</b> 单个正态总体情形</a></li>
+<li class="chapter" data-level="8.2.2" data-path="假设检验.html"><a href="假设检验.html#两个正态总体情形"><i class="fa fa-check"></i><b>8.2.2</b> 两个正态总体情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="附录.html"><a href="附录.html"><i class="fa fa-check"></i>附录</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">概率论与数理统计</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="随机变量及其分布" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> 随机变量及其分布</h1>
+<div id="随机变量与分布函数" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> 随机变量与分布函数</h2>
+<div id="随机变量" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> 随机变量</h3>
+<p><font size=4><strong>（1）为什么引入随机变量？</strong></font></p>
+<p>我们观察一个随机现象，其样本空间的样本点可以是数量性质的，也可以是非数量性质的，概率论是从数量的角度来研究随机现象的统计规律性，建立起一系列的公式和定理，借以更好地描述、处理和解决各种与随机现象有关的理论和应用问题。为此，需要将样本空间的样本点与实数联系起来，建立样本空间与实数空间或某一部分的对应关系，这就是随机变量。</p>
+<p><strong>引例1：</strong>抛一枚硬币3次，以<span class="math inline">\(H\)</span>表示“正面向上”，<span class="math inline">\(T\)</span>表示“反面向上”，则试验的样本空间为</p>
+<p><span class="math display">\[\Omega=\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\}\]</span></p>
+<p>以<span class="math inline">\(X\)</span>表示三次投掷中出现<span class="math inline">\(H\)</span>的次数，那么对于样本空间<span class="math inline">\(\Omega=\{e\}\)</span>中的每一个样本点<span class="math inline">\(e\)</span>，<span class="math inline">\(X\)</span>都有一个数值与之对应，即有</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th align="center">样本点</th>
+<th align="center">HHH</th>
+<th align="center">HHT</th>
+<th align="center">HTH</th>
+<th align="center">THH</th>
+<th align="center">HTT</th>
+<th align="center">THT</th>
+<th align="center">TTH</th>
+<th align="center">TTT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">X的值</td>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>按照这样的方式，<span class="math inline">\(\Omega\)</span>中的样本点<span class="math inline">\(\{e\}\)</span>就和实数<span class="math inline">\(0, 1, 2, 3\)</span>对应起来了。</p>
+<p><strong>引例2：</strong>在一袋中装有编号分别为1,2,3的3只球，在袋中任取一只球，放回，再任取一只球，记录它们的号码，试验
+的样本空间为<span class="math inline">\(\Omega=\{e\}=\{(i,j)|i,j=1,2,3\}\)</span>，<span class="math inline">\(i,j\)</span>分别为第1次，第2次取到的球的号码。以<span class="math inline">\(X\)</span>记两
+球号码之和。我们看到，对于试验的每一个结果<span class="math inline">\(e=(i,j)\in \Omega\)</span>，<span class="math inline">\(X\)</span>都有一个指定的值<span class="math inline">\(i+j\)</span>与之对应。</p>
+<ul>
+<li><span class="math inline">\(X\)</span>是定义在样本空间<span class="math inline">\(\Omega\)</span>上的单值实值函数，它的定义域是样本空间<span class="math inline">\(\Omega\)</span>，值域是实数的集合<span class="math inline">\(\{2,3,4,5,6\}\)</span>.</li>
+<li><span class="math inline">\(X\)</span>可以写成
+<span class="math display">\[X=X(e)=X(i,j)=i+j,i,j=1,2,3\]</span></li>
+</ul>
+<p><font size=4><strong>（2）随机变量</strong></font></p>
+<p><strong>①随机变量的定义</strong></p>
+<p>设E是随机试验，它的样本空间为<span class="math inline">\(\Omega=\{e\}\)</span>，如果对于每一个<span class="math inline">\(e\in\Omega\)</span>，都有一个实数<span class="math inline">\(X(e)\)</span>与之对应，这样就得到了一个定义在<span class="math inline">\(\Omega\)</span>上的随机变量。</p>
+<ul>
+<li>随机变量通常用大写字母<span class="math inline">\(X,Y,Z\)</span>或希腊字母<span class="math inline">\(\xi, \eta\)</span>等表示，随机变量所取的值一般采用小写字母<span class="math inline">\(x,y,z\)</span>等。</li>
+</ul>
+<p><strong>②随机变量与普通函数的差异</strong></p>
+<ul>
+<li><p>随机变量定义在样本空间上，定义域可以是数也可以不是数；而普通函数是定义在实数域上的。</p></li>
+<li><p>由于X的取值依试验结果而定，而试验各结果出现有一定的概率，所以<span class="math inline">\(X\)</span>取各值也有一定的概率；而普通函数却没有。</p></li>
+</ul>
+<p><strong>③随机变量的分类</strong></p>
+<p>通常情况下，随机变量分为</p>
+<ul>
+<li><p>连续型随机变量：随机变量所取的可能值是有限多个或无限多个(可列个)。</p></li>
+<li><p>离散型随机变量：随机变量所取的可能值可以连续地充满某个区间。</p></li>
+</ul>
+<p><strong>例子：</strong></p>
+<ul>
+<li><p>观察掷一个骰子出现的点数，随机变量<span class="math inline">\(X\)</span>的可能值是 ：1, 2, 3, 4, 5, 6。</p></li>
+<li><p>随机变量 X 为“测量某零件尺寸时的测误差”，则<span class="math inline">\(X\)</span>的取值范围为 (a, b) 内的任一值。</p></li>
+</ul>
+</div>
+<div id="分布函数" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> 分布函数</h3>
+<p><font size=4><strong>（1）随机事件的数学表示</strong></font></p>
+<p>引入随机变量后，随机事件可以由随机变量的值的集合来表示。对于任意的<span class="math inline">\(x\)</span>，<span class="math inline">\(\{X\leq x\}\)</span>是一个随机事件，那么对任意的<span class="math inline">\(a, b\)</span>，则有</p>
+<ul>
+<li><p><span class="math inline">\(\{X&lt;x\}=\bigcup_{n=1}^{\infty}\left\{X\leq x-\frac{1}{n}\right\}\)</span></p></li>
+<li><p><span class="math inline">\(\{a&lt;X\leq b\}=\{X\leq b\}-\{X\leq a\}\)</span></p></li>
+<li><p><span class="math inline">\(\{X=a\}=\{X\leq a\}-\{X&lt;a\}\)</span></p></li>
+<li><p><span class="math inline">\(\{X&gt;a\}=\overline{\{X\leq a\}}\)</span></p></li>
+<li><p><span class="math inline">\(\{X\geq a\}=\overline{\{X&lt; a\}}\)</span></p></li>
+</ul>
+<p>也都是随机变量。</p>
+<p><font size=4><strong>（2）分布函数的定义</strong></font></p>
+<p>设<span class="math inline">\(X\)</span>是随机变量，<span class="math inline">\(x\)</span>为任意的实数，称函数
+<span class="math display">\[\begin{equation*}
+F(x)=P\{X\leq x\}, -\infty&lt;x &lt;+\infty
+\end{equation*}\]</span>
+是随机变量<span class="math inline">\(X\)</span>的分布函数（distribution function），也称随机变量<span class="math inline">\(X\)</span>服从分布函数<span class="math inline">\(F(x)\)</span>，记为<span class="math inline">\(X\sim F(x)\)</span>。</p>
+<ul>
+<li><p>如果将X看作数轴上随机点的坐标，则分布函数F(x)的值就表示X落在区间<span class="math inline">\((-\infty, x]\)</span>的概率；</p></li>
+<li><p>当<span class="math inline">\(F(x)\)</span>已知时，对任意的实数<span class="math inline">\(a,b\)</span>，显然有</p>
+<p><span class="math display">\[
+\begin{aligned}
+P\{a&lt;X\leq b\}=F(b)-F(a).
+\end{aligned} \tag{2.1}\]</span></p></li>
+</ul>
+<p><font size=4><strong>（3）分布函数的性质</strong></font></p>
+<ul>
+<li><p>有界性：<span class="math display">\[0\leq F(x)\leq 1; \tag{2.2}\]</span></p></li>
+<li><p>单调不减性：若<span class="math inline">\(x_{1}&lt;x_{2}\)</span>，则<span class="math display">\[F(x_{1})\leq F(x_{2});\tag{2.3}\]</span></p></li>
+<li><p>极限性质：<span class="math display">\[\lim_{x\rightarrow-\infty}F(x)=0, \lim_{x\rightarrow +\infty} F(x)=1; \tag{2.4}\]</span></p></li>
+<li><p>右连续性：<span class="math display">\[F(x+0)=\lim_{t\rightarrow x+0}F(t)=F(x). \tag{2.5}\]</span></p></li>
+</ul>
+<p><font size=4><strong>（4）衍生性质</strong></font></p>
+<p>如果一个函数具有上述性质，则一定是某个随机变量的分布函数。</p>
+<p>也就是说，上述性质是鉴别一个函数是否是某随机变量的分布函数的充分必要条件。</p>
+<p><strong>衍生性质：</strong></p>
+<ul>
+<li><span class="math inline">\(P\{X&gt; x\}=1-P\{X\leq x\}=1-F(x) \tag{2.6}\)</span>;</li>
+<li>令<span class="math inline">\(b=x, a\rightarrow x-0\)</span>，有 <span class="math inline">\(P\{X=x\}=F(x)-F(x-0) \tag{2.7}\)</span>;</li>
+<li><span class="math inline">\(P\{X&lt;x\}=P\{X\leq x\}-P\{X=x\}=F(x-0) \tag{2.8}\)</span></li>
+<li><span class="math inline">\(P\{X\geq x\}=1-P\{X&lt;x\}=1-F(x-0) \tag{2.9}\)</span>.</li>
+</ul>
+<p><font size=4><strong>（5）例题</strong></font></p>
+<p><strong>例1：</strong>已知随机变量X在整个实轴上取值，其分布函数为
+<span class="math display">\[\begin{equation*}
+F(x)=\left\{
+       \begin{array}{ll}
+         A+Be^{-\lambda x}, &amp; x&gt;0 \\
+         0, &amp; x\leq 0
+       \end{array}
+     \right.
+\end{equation*}\]</span>
+其中<span class="math inline">\(\lambda&gt;0\)</span>为常数，求常数A,B的值。</p>
+<p>解：有分布函数的性质可知，
+<span class="math display">\[F(+\infty)=A=1.\]</span>
+由分布函数的右连续性知
+<span class="math display">\[F(0)=A+B=0\]</span>
+可得<span class="math inline">\(A=1,B=-1.\)</span></p>
+<p><strong>例2：</strong>设<span class="math inline">\(X\)</span>的分布律为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">X</th>
+<th align="center">-2</th>
+<th align="center">2</th>
+<th align="center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{4}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>求</p>
+<ul>
+<li><span class="math inline">\(X\)</span>的分布函数</li>
+<li><span class="math inline">\(P\{\frac{3}{2}&lt;X\leq \frac{5}{2}\}\)</span></li>
+</ul>
+</div>
+</div>
+<div id="离散型随机变量及其分布" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> 离散型随机变量及其分布</h2>
+<div id="定义与基本概念" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> 定义与基本概念</h3>
+<p><font size=4><strong>（1）基本概念</strong></font></p>
+<p><strong>①定义：（离散型随机变量）</strong></p>
+<p>若随机变量<span class="math inline">\(\xi\)</span>只取有限个或者是可列无限多个值，则称为是离散型随机变量。</p>
+<ul>
+<li>某城市的120急救电话台一昼夜收到的呼唤次数。</li>
+</ul>
+<p><strong>②定义：（分布列）</strong></p>
+<p>设离散型随机变量<span class="math inline">\(X\)</span>的所有可能取值为<span class="math inline">\(x_{k}, k=1,2,3,\cdots,\)</span> 事件<span class="math inline">\(\{X=x_{k}\}, k=1,2,\cdots,\)</span>的概率
+<span class="math display">\[P\{X=x_{k}\}=p_{k},k=1,2,\cdots\]</span>
+称为<span class="math inline">\(X\)</span>的概率分布或分布律。</p>
+<p>分布律又常常表示为表格的形式：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center"><span class="math inline">\(x_{1}\)</span></th>
+<th align="center"><span class="math inline">\(x_{2}\)</span></th>
+<th align="center"><span class="math inline">\(x_{3}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center"><span class="math inline">\(x_{k}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center"><span class="math inline">\(p_{1}\)</span></td>
+<td align="center"><span class="math inline">\(p_{2}\)</span></td>
+<td align="center"><span class="math inline">\(p_{3}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>由概率的定义，<span class="math inline">\(p_{k}\)</span>满足如下两个条件</p>
+<ul>
+<li><p><span class="math inline">\(p_{k}\geq 0, k=1,2,\cdots\)</span>;</p></li>
+<li><p><span class="math inline">\(\sum_{k=1}^{\infty}p_{k}=1\)</span>.</p></li>
+</ul>
+<p>第二个条件是由于<span class="math inline">\(\bigcup_{i=1}^{\infty}\{X=x_{i}\}\)</span>是必然事件，且<span class="math inline">\(\{X=x_{i}\}\bigcap\{X=x_{j}\}=\emptyset,i\neq j.\)</span></p>
+<p><font size=4><strong>（2）例题</strong></font></p>
+<p><strong>例1：</strong>设一汽车在开往目的地的路上需经过四盏信号灯.每盏灯以<span class="math inline">\(p (0&lt;p&lt;1)\)</span>的概率禁止汽车通过.以<span class="math inline">\(X\)</span>表示汽车首次停下时已经过的信号灯盏数（信号灯的工作是相互独立的），求<span class="math inline">\(X\)</span>的分布律。</p>
+<p>解：以<span class="math inline">\(p\)</span>表示每组信号灯禁止汽车通过的概率，可知<span class="math inline">\(X\)</span>的分布律为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center"><span class="math inline">\(p\)</span></td>
+<td align="center"><span class="math inline">\((1-p)p\)</span></td>
+<td align="center"><span class="math inline">\((1-p)^{2}p\)</span></td>
+<td align="center"><span class="math inline">\((1-p)^{3}p\)</span></td>
+<td align="center"><span class="math inline">\((1-p)^{4}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>例2：</strong>一射手对某一目标进行射击，一次击中的概率为0.8</p>
+<ul>
+<li><p>求一次射击的分布列；</p></li>
+<li><p>求到击中目标为止所需的射击次数的分布列。</p></li>
+</ul>
+<p>解：(1). 设<span class="math inline">\(\{X=0\}=\{\text{击不中目标}\}\)</span>，<span class="math inline">\(\{X=1\}=\{\text{击中目标}\}\)</span>，则有
+<span class="math display">\[p_{1}=P\{\{X=0\}\}=0.2, p_{1}=P\{\{X=1\}\}=0.8\]</span>
+所以分布列为：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center">0.2</td>
+<td align="center">0.8</td>
+</tr>
+</tbody>
+</table>
+<p>(2). 设射击到击中目标为止，射击的次数是随机变量<span class="math inline">\(Y\)</span>，则<span class="math inline">\(Y\in\{1,2,\cdots,k,\cdots,\}\)</span>. 所以<span class="math inline">\(Y\)</span>的分布律为：
+<span class="math display">\[p_{k}=P\{Y=k\}=0.2^{k-1}\times 0.8, k=1,2,\cdots,\]</span></p>
+<p>或者<span class="math inline">\(Y\)</span>的分布律用表格表示为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(Y\)</span></th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center"><span class="math inline">\(0.8\)</span></td>
+<td align="center"><span class="math inline">\(0.2\times 0.8\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(0.2^{k-1}\times 0.8\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>例3：</strong>设离散型随机变量<span class="math inline">\(X\)</span>的分布列为
+<span class="math display">\[P\{X=k\}=C_{n}^{k}\frac{a^{k}}{3^{n}}, k=0,1,\cdots,n\]</span>
+求正数<span class="math inline">\(a\)</span>的值</p>
+<p>解：依据离散型随机变量的性质，有
+<span class="math display">\[\begin{equation*}
+1=\sum_{k=0}^{n}C_{n}^{k}\frac{a^{k}}{3^{n}}=\sum_{k=0}^{n}C_{n}^{k}\frac{a^{k}}{3^{k}}\cdot\frac{1}{3^{n-k}}=\left(\frac{a}{3}+\frac{1}{3}\right)^{n}
+\end{equation*}\]</span>
+所以<span class="math inline">\(a=2\)</span>。</p>
+</div>
+<div id="常见离散型随机变量" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> 常见离散型随机变量</h3>
+<p><font size=4><strong>（1）两点分布（0-1）分布</strong></font></p>
+<p><strong>①定义：两点分布（0-1）分布</strong></p>
+<p>设随机变量 <span class="math inline">\(X\)</span> 只可能取0与1两个值，它的分布律为
+<span class="math display">\[P\{X=k\}=p^{k}(1-p)^{1-k}, k=0,1 (0&lt;p&lt;1). \tag{2.10}\]</span>
+也可以写成</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center">1-p</td>
+<td align="center">p</td>
+</tr>
+</tbody>
+</table>
+<p>则称 <span class="math inline">\(X\)</span> 服从 (0-1) 分布或两点分布。</p>
+<p><strong>②例题</strong></p>
+<p><strong>例1：</strong>200件产品中，有190件合格品，10件不合格品，现从中随机抽取一件，那么，若规定
+<span class="math display">\[\begin{equation*}
+X=\left\{
+    \begin{array}{ll}
+      1, &amp; \text{取得不合格品;} \\
+      0, &amp; \text{取得合格品;}
+    \end{array}
+  \right.
+\end{equation*}\]</span></p>
+<p>其分布律为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{190}{200}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{10}{200}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>则随机变量 X 服从(0-1)分布。</p>
+<p><strong>例2：</strong>“抛硬币”试验，观察正、反两面情况
+<span class="math display">\[\begin{equation*}
+X=X(\omega)=\left\{
+    \begin{array}{ll}
+      0, &amp; \text{当$\omega$为正面;} \\
+      1, &amp; \text{当$\omega$为反面;}
+    \end{array}
+  \right.
+\end{equation*}\]</span></p>
+<p>随机变量 <span class="math inline">\(X\)</span> 服从 (0-1) 分布。其分布律为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>0-1分布是最简单的一种分布，任何一个只有两种可能结果的随机现象，比如新生婴儿是男还是女、明天是否下雨、种籽是否发芽等都，属于两点分布。</li>
+</ul>
+<p><font size=4><strong>（2）伯努利概型回顾</strong></font></p>
+<p><strong>伯努利试验：</strong></p>
+<p>若试验E只有两个可能结果：A与<span class="math inline">\(\bar{A}\)</span>，称这个试验为伯努利试验。</p>
+<p><strong>伯努利概型：</strong></p>
+<p>设随机试验E具有如下特性：</p>
+<ul>
+<li><p>每次试验相互独立；</p></li>
+<li><p>每次试验有且仅有两种结果：事件A与事件<span class="math inline">\(\bar{A}\)</span>；</p></li>
+<li><p>每次试验的结果发生的概率相同，即<span class="math inline">\(P(A)=p\)</span>，<span class="math inline">\(P(\bar{A})=1-p\)</span>。</p></li>
+</ul>
+<p>称试验E表示的数学模型为伯努利概型。</p>
+<p><strong>若将试验重复做n次，则这个试验称为是n重伯努利试验。</strong></p>
+<p><font size=4><strong>（3）二项分布</strong></font></p>
+<p><strong>①二项式定理</strong></p>
+<p>在n重伯努利试验中，假设每次事件A发生的概率为p <span class="math inline">\((0&lt;p&lt;1)\)</span>，则在这n重伯努利试验中事件A恰好出现k次的概率为
+<span class="math display">\[\begin{aligned}
+P_{n}(k)=C_{n}^{k}\cdot p_{k}(1-p)^{n-k}.
+\end{aligned} \tag{2.11}\]</span></p>
+<p><strong>②二项分布</strong></p>
+<p>如果随机变量X的分布律是<span class="math display">\[p_{k}=P\{X=k\}=C_{n}^{k}\cdot p^{k}(1-p)^{n-k}\]</span>
+则称<span class="math inline">\(X\)</span>服从二项分布，记为<span class="math inline">\(X\sim B(n，p)\)</span>。</p>
+<ul>
+<li>当<span class="math inline">\(n=1\)</span>时，即<span class="math inline">\(B(1,p)\)</span>，二项分布是0-1分布。</li>
+</ul>
+<p><strong>③二项分布的性质</strong></p>
+<p>考虑比值
+<span class="math display">\[\begin{equation*}
+\frac{p_{k}}{p_{k-1}}=\frac{n-k+1}{k}\frac{p}{1-p}=1+\frac{(n+1)p-k}{k(1-p)}
+\end{equation*}\]</span></p>
+<p>可知</p>
+<ul>
+<li><p>当<span class="math inline">\(k&lt;(n+1)p\)</span>, <span class="math inline">\(p_{k-1}&lt;p_{k}\)</span>，</p></li>
+<li><p>当<span class="math inline">\(k&gt;(n+1)p\)</span>, <span class="math inline">\(p_{k-1}&gt;p_{k}\)</span>。</p></li>
+</ul>
+<p><strong>性质</strong></p>
+<ul>
+<li><p>记<span class="math inline">\(k_{0}=[(n+1)p]\)</span>，则当<span class="math inline">\(k&lt;k_{0}\)</span>是，<span class="math inline">\(p_{k}\)</span>单调增加，当<span class="math inline">\(k&gt;k_{0}\)</span>是，<span class="math inline">\(p_{k}\)</span>单调减少，<span class="math inline">\(p_{k}\)</span>在<span class="math inline">\(k_{0}\)</span>处达到最大值。</p></li>
+<li><p>当<span class="math inline">\(k_{0}=(n+1)p\)</span>为整数时，<span class="math inline">\(p_{k-1}\)</span>和<span class="math inline">\(p_{k}\)</span>都取到最大值。</p></li>
+</ul>
+<p>称<span class="math inline">\(k_{0}\)</span>最可能成功的次数时，称<span class="math inline">\(P(X=k_{0})\)</span>为二项分布的中心项。</p>
+<p><strong>④例题</strong></p>
+<p>为了保证设备正常工作，需配备适量的维修工人。现有同类设备300台，各台工作是
+相互独立的，发生故障的概率为0.001，在通常情况下，一台设备的故障由一个工人来处理。
+问至少要配备多少工人，才能保证设备发生故障后但不能及时维修的概率小于0.01？</p>
+<p>解：设需要配备<span class="math inline">\(N\)</span>名工人。记同一时刻发生故障的设备数为<span class="math inline">\(X\)</span>，则<span class="math inline">\(X\sim B(300,0.001)\)</span>，问题
+的实质是求最小的<span class="math inline">\(N\)</span>，使得<span class="math inline">\(P\{X&gt;N\}\leq 0.01\)</span>。而
+<span class="math display">\[P\{X&gt;N\}=\sum_{k=N+1}^{300}C_{300}^{k}\cdot 0.001^{k}\cdot 0.999^{300-k}\]</span></p>
+<p><font size=4><strong>（4）泊松分布</strong></font></p>
+<p><strong>①泊松分布（Poisson distribution）</strong></p>
+<p>设随机变量<span class="math inline">\(X\)</span>可能取的一切值为<span class="math inline">\(0, 1, 2, \cdots\)</span>，而取各个值的概率为
+<span class="math display">\[p_{k}=P\{X=k\}=\frac{\lambda^{k}e^{-\lambda}}{k!}, k=1,2, \cdots \tag{2.12}\]</span>
+其中<span class="math inline">\(\lambda&gt;0\)</span>为常数，则称<span class="math inline">\(X\)</span>服从参数为<span class="math inline">\(\lambda\)</span>的泊松分布。</p>
+<ul>
+<li>二十世纪初罗瑟福和盖克两位科学家在观察与分析放射性物质放出的<span class="math inline">\(\alpha\)</span>粒子个数的情况时，他们做了2608 次观察(每次时间为7.5 秒)发现
+放射性物质在规定的一段时间内，其放射的粒子数<span class="math inline">\(X\)</span> 服从泊松分布。</li>
+</ul>
+<p><strong>②泊松分布的应用</strong></p>
+<p>在生物学、医学、工业统计、保险科学及
+公用事业的排队等问题中，泊松分布是常见的。
+例如地震、火山爆发、特大洪水、交换台的电
+话呼唤次数等，都服从泊松分布。</p>
+<p><strong>③泊松定理</strong></p>
+<p>在二项分布B(n，p)的概率计算中，往往计算量很大，利用下面的泊松定理近似计算，可以大大减少计算量。下面不加证明地给出泊松定理。</p>
+<p>在n重伯努利试验中，以<span class="math inline">\(p_{n}\)</span>记为每次试验中“成功”事件出现的概率，且<span class="math inline">\(np\rightarrow \lambda (n\rightarrow \infty), \lambda&gt;0\)</span>。则
+<span class="math display">\[\begin{aligned}
+\lim_{n\rightarrow \infty}p_{n}=\frac{\lambda^{k}e^{-\lambda}}{k!}, k=1,2, \cdots.
+\end{aligned} \tag{2.13}\]</span></p>
+<p><strong>④泊松分布的性质</strong></p>
+<p>若<span class="math inline">\(X\sim P(\lambda)\)</span>，则有</p>
+<ul>
+<li><p>当<span class="math inline">\(\lambda\)</span>是整数时，<span class="math display">\[P\{X=\lambda-1\}=P\{X=\lambda\}=\max\{\frac{\lambda^{k}e^{-\lambda}}{k!}, k=1,2, \cdots.\} \tag{2.14}\]</span></p></li>
+<li><p>当<span class="math inline">\(\lambda\)</span>不是整数时，<span class="math display">\[P\{X=[\lambda]\}=\max\{\frac{\lambda^{k}e^{-\lambda}}{k!}, k=1,2, \cdots.\} \tag{2.15}\]</span></p></li>
+</ul>
+</div>
+</div>
+<div id="连续型随机变量及其分布" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> 连续型随机变量及其分布</h2>
+<div id="定义与基本概念-1" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> 定义与基本概念</h3>
+<p><font size=4><strong>（1）定义：连续性随机变量</strong></font></p>
+<p>通俗的讲，如果随机变量的取值能充满实数轴上的某个区间，甚至于整个实数轴。这样的随机变量称为连续型随机变量。</p>
+<p>如果对于随机变量<span class="math inline">\(X\)</span>的分布函数<span class="math inline">\(F(x)\)</span>，存在非负函数<span class="math inline">\(f(x)\)</span>，使得对于任意实数<span class="math inline">\(x\)</span>有
+<span class="math display">\[\begin{aligned}
+F(x)=\int_{-\infty}^{x}f(t)dt
+\end{aligned} \tag{2.16}\]</span>
+则称<span class="math inline">\(X\)</span>为连续型随机变量。</p>
+<ul>
+<li>函数<span class="math inline">\(f(x)\)</span>称为X的概率密度函数，简称概率密度或密度函数。</li>
+</ul>
+<p><font size=4><strong>（2）连续型随机变量的特点</strong></font></p>
+<ul>
+<li>对于任意可能值<span class="math inline">\(a\)</span>,连续型随机变量取<span class="math inline">\(a\)</span>的概率等于零，即<span class="math display">\[P\{X=a\}=0.\]</span></li>
+</ul>
+<p><span class="math display">\[
+  \begin{aligned}
+  0\leq P\{X=a\}&amp;=P\{a-\Delta x&lt;X\leq a\}\\
+  &amp;=\lim_{\Delta x\rightarrow 0}(F(a)-F(a-\Delta x))\\
+  &amp;=\lim_{\Delta x\rightarrow 0}\int_{a-\Delta x}^{a}f(t)dt=0
+  \end{aligned} \tag{2.17}\]</span></p>
+<ul>
+<li>连续型随机变量的概率与区间的开闭无关，即</li>
+</ul>
+<p><span class="math display">\[ \begin{aligned}
+  \begin{split}
+  P\{a\leq X\leq b\}&amp;=P\{a&lt; X\leq b\}\\
+  &amp;=P\{a\leq X&lt;b\}\\
+  &amp;=P\{a&lt; X&lt; b\}
+  \end{split}
+  \end{aligned} \tag{2.18}
+  \]</span></p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p><strong>连续情形：</strong></p>
+<ul>
+<li><p>设X为连续型随机变量，<span class="math inline">\(X=a\)</span>是不可能事件,则有<span class="math inline">\(P\{X=a\}=0.\)</span></p></li>
+<li><p>若<span class="math inline">\(P\{X=a\}=0.\)</span>则不能确定<span class="math inline">\(\{X=a\}\)</span>是不可能发生事件。</p></li>
+</ul></li>
+<li><p><strong>离散情形：</strong></p></li>
+</ul>
+<p>若<span class="math inline">\(X\)</span>为离散型随机变量，则
+<span class="math display">\[\{X=a\}\text{是不可能发生事件}\Leftrightarrow P\{X=a\}=0.\]</span></p>
+<p><font size=4><strong>（3）概率密度函数的性质</strong></font></p>
+<ul>
+<li><p>非负性：<span class="math display">\[f(x)\geq 0.\]</span></p></li>
+<li><p>归一性：<span class="math display">\[\int_{-\infty}^{+\infty}f(x)dx=1.\]</span></p></li>
+<li><p>对于任意实数<span class="math inline">\(x_{1},x_{2},(x_{1}\leq x_{2})\)</span>，有 <span class="math display">\[P\{x_{1}&lt;X\leq x_{2}\}=F(x_{2})-F(x_{1})=\int_{x_{1}}^{x_{2}}f(x)dx\]</span></p></li>
+<li><p>若<span class="math inline">\(f(x)\)</span>在点<span class="math inline">\(x\)</span>处连续，则有<span class="math display">\[F&#39;(x)=f(x).\]</span></p></li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p><strong>注1：</strong>非负性与归一性是判定一个函数 <span class="math inline">\(f(x)\)</span>是否为某个随机变量<span class="math inline">\(X\)</span>的概率密度函数的充要条件。</p></li>
+<li><p><strong>注2：</strong>密度函数 <span class="math inline">\(f(x)\)</span>在某点处<span class="math inline">\(a\)</span>的高度，并不反映<span class="math inline">\(X\)</span>取值的概率。 但是，这个高度越大，则<span class="math inline">\(X\)</span>取<span class="math inline">\(a\)</span>附近的值的概率就越大。</p></li>
+</ul>
+<p><font size=4><strong>（4）几何解释</strong></font></p>
+<ul>
+<li><p><span class="math display">\[f(x)\geq 0,\]</span>表面密度曲线<span class="math inline">\(y=f(x)\)</span>在<span class="math inline">\(x\)</span>轴上方；</p></li>
+<li><p><span class="math display">\[\int_{-\infty}^{+\infty}f(x)dx=1,\]</span>表明密度曲线<span class="math inline">\(y=f(x)\)</span>与<span class="math inline">\(x\)</span>轴所夹图形面积为1；</p></li>
+<li><p><span class="math display">\[P\{a&lt;X&lt;b\}=\int_{a}^{b}f(x)dx\]</span>表明<span class="math inline">\(X\)</span>落在区间<span class="math inline">\((a,b)\)</span>内的概率等于以区间<span class="math inline">\((a,b)\)</span> 为底，以密度曲线<span class="math inline">\(y=f(x)\)</span>为顶的曲边梯形面积。</p></li>
+</ul>
+<p><font size=4><strong>（5）例题</strong></font></p>
+<p><strong>例1：</strong>设连续型随机变量<span class="math inline">\(X\)</span>分布函数为
+<span class="math display">\[\begin{equation*}
+F(x)=\left\{
+       \begin{array}{ll}
+         0, &amp; x\leq -a \\
+         A+B\arcsin(\frac{x}{a}), &amp; -a&lt;x\leq a \\
+         1, &amp; x&gt;a
+       \end{array}
+     \right.
+\end{equation*}\]</span></p>
+<p>求：</p>
+<ul>
+<li>系数<span class="math inline">\(A,B\)</span>的值；</li>
+<li><span class="math inline">\(P\{-a&lt;x&lt;\frac{a}{2}\}\)</span>；</li>
+<li>随机变量<span class="math inline">\(X\)</span>的密度函数。</li>
+</ul>
+<p>解：(1) 因为<span class="math inline">\(X\)</span>是连续型随机变量，所以<span class="math inline">\(F(x)\)</span>连续，则有
+<span class="math display">\[F(-a)=\lim_{x\rightarrow a^{+}}F(x),\]</span>
+<span class="math display">\[F(a)=\lim_{x\rightarrow a^{-}}F(x),\]</span></p>
+<p>即
+<span class="math display">\[A+B\arcsin(\frac{-a}{a})=A-\frac{\pi}{2}=0,\]</span>
+<span class="math display">\[A+B\arcsin(\frac{a}{a})=A+\frac{\pi}{2}=1,\]</span></p>
+<p>解之得 <span class="math inline">\(A=\frac{1}{2}, B=\frac{1}{\pi}\)</span>。</p>
+<p>所以
+<span class="math display">\[\begin{equation*}
+F(x)=\left\{
+       \begin{array}{ll}
+         0, &amp; x\leq -a \\
+         \frac{1}{2}+\frac{1}{\pi}\arcsin(\frac{x}{a}), &amp; -a&lt;x\leq a \\
+         1, &amp; x&gt;a
+       \end{array}
+     \right.
+\end{equation*}\]</span></p>
+<p>(2).</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{-a&lt;x&lt;\frac{a}{2}\}&amp;=F(\frac{a}{2})-F(-a)\\
+&amp;=\frac{1}{2}+\frac{1}{\pi}\arcsin(\frac{a}{2a})-0\\
+&amp;=\frac{1}{2}+\frac{1}{\pi}\times \frac{\pi}{6}=\frac{2}{3}
+\end{split}
+\end{equation*}\]</span></p>
+<p>(3).随机变量<span class="math inline">\(X\)</span>的密度函数
+<span class="math display">\[\begin{equation*}
+  f(x)=F&#39;(x)=\left\{
+               \begin{array}{ll}
+                 1/\pi\sqrt{a^{2}-x^{2}}, &amp; -a&lt;x&lt;a \\
+                 0, &amp; \text{其他}
+               \end{array}
+             \right.
+\end{equation*}\]</span></p>
+<p><strong>例2：</strong>一种电子管的使用寿命为<span class="math inline">\(X\)</span>小时，其概率密度为
+<span class="math display">\[\begin{equation*}
+f(x)=\left\{
+       \begin{array}{ll}
+         \frac{100}{x^{2}}, &amp; x\geq 100 \\
+         0, &amp; x&lt;100
+       \end{array}
+     \right.
+\end{equation*}\]</span>
+某仪器内装有三个这样的电子管，试求使用150小时内只有一个电子管需要更换的概率。</p>
+<p>解：首先计算一个电子管使用寿命不超过150小时的概率为：
+<span class="math display">\[\begin{equation*}
+P\{X\leq 150\}=\int_{100}^{150}\frac{100}{x^{2}}dx=1-\frac{100}{150}=\frac{1}{3}.
+\end{equation*}\]</span></p>
+<p>令<span class="math inline">\(Y\)</span>表示工作150小时内损坏的电子管数，则<span class="math inline">\(Y\sim B(3, \frac{1}{3})\)</span>.</p>
+<p>于是，此仪器工作150小时内仅需要更换一个电子管的概率：
+<span class="math display">\[\begin{equation*}
+P\{Y=1\}=C_{3}^{1}\left(\frac{1}{3}\right)^{1}\left(\frac{2}{3}\right)^{2}=\frac{4}{9}.
+\end{equation*}\]</span></p>
+</div>
+<div id="几种常见的连续性随机变量" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> 几种常见的连续性随机变量</h3>
+<p><font size=4><strong>（1）均匀分布</strong></font></p>
+<p><strong>①定义：均匀分布</strong></p>
+<p>如果连续型随机变量<span class="math inline">\(X\)</span>具有概率密度
+<span class="math display">\[\begin{aligned}
+    f(x)=\left\{
+           \begin{array}{ll}
+             \frac{1}{b-a}, &amp; a&lt;x&lt;b \\
+             1, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{aligned} \tag{2.19}\]</span>
+则称<span class="math inline">\(X\)</span>在区间(a，b)上服从均匀分布，记为<span class="math inline">\(X\sim U(a,b)\)</span>。</p>
+<p><strong>②实际背景</strong></p>
+<p>如果试验所定义的随机变量<span class="math inline">\(X\)</span>仅在一个有限区间<span class="math inline">\([a,b]\)</span>上取值，且在其内取值具有“等可能”性，则<span class="math inline">\(X\sim U[a,b]\)</span>。</p>
+<p><strong>③均匀分布的概率背景</strong></p>
+<p>由于
+<span class="math display">\[\begin{aligned}
+P\{c&lt;X&lt;c+l\}=\int_{c}^{c+l}f(x)dx=\int_{c}^{c+l}\frac{1}{b-a}dx=\frac{l}{b-a}
+\end{aligned} \tag{2.20}\]</span>
+对于任意长度<span class="math inline">\(l\)</span>，<span class="math inline">\(a\leq c&lt; c+l\leq b.\)</span></p>
+<p>由此可得，如果随机变量 <span class="math inline">\(X\)</span> 服从区间<span class="math inline">\([a,b]\)</span>上的均匀分布，则随机变量<span class="math inline">\(X\)</span>在区间上的任一子区间上取值的概率与该子区间的长度成正比，而与该子区间的位置无关。</p>
+<p>均匀分布的分布函数为
+<span class="math display">\[\begin{aligned}
+    F(x)=\left\{
+           \begin{array}{ll}
+             0, &amp; x&gt;a \\
+             \frac{x-a}{b-a}, &amp; a\leq x&lt;b \\
+             1, &amp; x\geq b
+           \end{array}
+         \right.
+\end{aligned}\tag{2.21}\]</span></p>
+<p>密度函数与分布函数的图像如下：</p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5r.h9ckZiMsr1OKrxbJRjAOiOfxvGtCAyWDLLVQTnrodGMAApUSOD1H9KoP7k0ARkpuQXw3Z4.YMUtW0BjqYkdU!/mnull&amp;bo=3wC5AAAAAAABB0Y!&amp;rf=photolist&amp;t=5" alt="图片21" /><img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5nOjYY6acGCKCXqx0TvPiOhuYoYtOrHf71*.s.q2UbGFfj1airFXNe15L*quZIpECuhbLChvoBbC73JSFgnZLDU!/mnull&amp;bo=1gC5AAAAAAABB08!&amp;rf=photolist&amp;t=5" alt="图片22" />
+</center>
+<center>
+图 2.1
+</center>
+<p><strong>④例题</strong></p>
+<p>某公共汽车站从上午7时起，每15分钟来一班车，即7:00, 7:15, 7:30, 7:45等时刻，如果乘客到达此站时间<span class="math inline">\(X\)</span> 是7:00到7:30之间的均匀随机变量，试求他候车时间少于5分钟的概率。</p>
+<p>解：依题意有，<span class="math inline">\(X\sim U[0,30]\)</span>，即
+<span class="math display">\[\begin{equation*}
+    f(x)=\left\{
+           \begin{array}{ll}
+             \frac{1}{30}, &amp; 0\leq x\leq 30 \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p>候车时间少于5分钟的概率为
+<span class="math display">\[\begin{equation*}
+    \begin{split}
+      P\{10\leq X\leq 15\}&amp;+P\{25\leq X\leq 30\}  \\
+      &amp;=\int_{10}^{15}\frac{1}{30}dt+\int_{25}^{30}\frac{1}{30}dt=\frac{1}{3}
+    \end{split}
+\end{equation*}\]</span></p>
+<p><font size=4><strong>（2）指数分布</strong></font></p>
+<p><strong>①定义：指数分布</strong></p>
+<p>若随机变量<span class="math inline">\(X\)</span>的概率密度为
+<span class="math display">\[\begin{aligned}
+f(x)=\left\{
+       \begin{array}{ll}
+         \frac{1}{\theta}e^{-x/\theta}, &amp; x&gt;0 \\
+         0, &amp; \text{其他}
+       \end{array}
+     \right.
+\end{aligned} \tag{2.22}
+\]</span>
+其中<span class="math inline">\(\theta&gt;0\)</span>为常数，则称随机变量<span class="math inline">\(X\)</span>服从参数为<span class="math inline">\(\theta\)</span>的指数分布，记为<span class="math inline">\(X\sim Exp(\theta)\)</span></p>
+<ul>
+<li><p>分布函数为</p>
+<p><span class="math display">\[\begin{aligned}
+F(x)=\left\{
+     \begin{array}{ll}
+       1-e^{-x/\theta}, &amp; x&gt;0 \\
+       0, &amp; \text{其他}
+     \end{array}
+   \right.
+\end{aligned} \tag{2.23}\]</span></p></li>
+</ul>
+<p><strong>②密度函数与分布函数图像</strong></p>
+<p><strong>Matlab程序</strong></p>
+<p><code>clc;clear;</code></p>
+<p><code>x=0:0.01:4; y=exppdf(x,1/3); plot(x,y,'-r'); hold on</code></p>
+<p><code>y1=exppdf(x,1); plot(x,y1,'-.b'); hold on</code></p>
+<p><code>y2=exppdf(x,2); plot(x,y2,'-'); hold off</code></p>
+<p><code>legend('$\theta$=1/3','$\theta$=1','$\theta$=2'); xlabel('x'); ylabel('f(x)');</code></p>
+<p><strong>③密度函数与分布函数的图像如下</strong></p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5gsc4.tOFDMTsx7T8QPdJZ*jrkfNk6f937G2jvs118s5BEJ6XoyBp2PZfnraSMrjlfLx5szwgX*ApdWD5GUe66w!/mnull&amp;bo=4ACoAAAAAAABB2g!&amp;rf=photolist&amp;t=5" alt="图片23" /><img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5okn84c4un7wMkhKhuSdIg0dlCcJHV.65mqHmwUFTNXM*3uNmLd8HNC6*fFsfGU*v85LiUIZEjsEcXyU4EMz.aY!/mnull&amp;bo=4ACoAAAAAAABB2g!&amp;rf=photolist&amp;t=5" alt="图片24" />
+</center>
+<center>
+图 2.2
+</center>
+<p><strong>④指数分布的应用</strong></p>
+<p>因为指数分布只可能取非负实数，所以它被用作各种“寿命”分布的近似分布，
+例如电子元器件的寿命，随机服务系统中的服务时间等都可假定服从指数分布。
+指数分布在可靠性理论与排队论中有着广泛的应用。</p>
+<p><strong>⑤指数分布的无记忆性</strong></p>
+<ul>
+<li>无记忆性：</li>
+</ul>
+<p>对于任意的<span class="math inline">\(s,t&gt;0\)</span>，有<span class="math display">\[P\{X&gt;s+t|X&gt;s\}=P\{X&gt;t\}.\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+\begin{split}
+P\{X&gt;s+t|X&gt;s\}&amp;=\frac{P\{\{X&gt;s+t\}\bigcap\{X&gt;s\}\}}{P\{X&gt;s\}}\\
+&amp;=\frac{P\{X&gt;s+t\}}{P\{X&gt;s\}}=\frac{1-F(s+t)}{1-F(s)}\\
+&amp;=\frac{e^{-(s+t)/\theta}}{e^{-s/\theta}}=e^{-t/\theta}=P\{X&gt;t\}.
+\end{split}
+\end{aligned} \tag{2.24}\]</span></p>
+<p><strong>⑥例题</strong></p>
+<p>设某类日光灯管的使用寿命<span class="math inline">\(X\)</span>服从参数为<span class="math inline">\(\theta=2000\)</span>的指数分布(单位:小时)，求</p>
+<ul>
+<li><p>任取一只这种灯管，求能正常使用1000小时以上的概率。</p></li>
+<li><p>一只这种灯管已经正常使用了1000 小时以上，求还能使用1000小时以上的概率。</p></li>
+</ul>
+<p>解：依题意可知<span class="math inline">\(X\)</span>的分布函数为
+<span class="math display">\[\begin{equation*}
+F(x)=\left\{
+       \begin{array}{ll}
+         1-e^{-\frac{x}{2000}}, &amp; x\geq 0 \\
+         0, &amp; x&lt;0
+       \end{array}
+     \right.
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  \begin{split}
+  P\{X&gt;1000\}&amp;=1-P\{X\leq 1000\}\\
+  &amp;=1-F(1000)=e^{-\frac{1}{2}}\approx 0.607
+  \end{split}
+  \end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+  \begin{split}
+  P\{X&gt;2000&amp;|X&gt;1000\}=\frac{P\{X&gt;2000, X&gt;1000\}}{P\{X&gt;1000\}}\\
+  &amp;=\frac{P\{X&gt;2000\}}{P\{X&gt;1000\}}=\frac{1-P\{X\leq 2000\}}{1-P\{X\leq 1000\}}\\
+  &amp;=\frac{1-F(2000)}{1-F(1000)}\\
+  &amp;=e^{-\frac{1}{2}}\approx 0.607
+  \end{split}
+  \end{equation*}\]</span></p>
+<p><font size=4><strong>（3）正态分布（高斯分布）</strong></font></p>
+<p><strong>正态分布历史:</strong></p>
+<ul>
+<li><p>最早是棣莫弗（Abraham de Moivre）在1718年著作的书籍的（Doctrine of Change），及1734年发表的一篇关于二项分布文章中提出的，当二项随机变量的位置参数n很大及形状参数为1/2时，则所推导出二项分布的近似分布函数就是正态分布。拉普拉斯（Laplace）在1812年发表的《分析概率论》（Theorie Analytique des Probabilites）中对棣莫佛的结论作了扩展到二项分布的位置参数为n及形状参数为p时。现在这一结论通常被称为棣莫佛－拉普拉斯定理。</p></li>
+<li><p>拉普拉斯在误差分析试验中使用了正态分布。勒让德于1805年引入最小二乘法这一重要方法；而高斯则宣称他早在1794年就使用了该方法，并通过假设误差服从正态分布给出了严格的证明。</p></li>
+</ul>
+<p><strong>①正态分布的定义</strong></p>
+<p>如果随机变量<span class="math inline">\(X\)</span>的概率密度为
+<span class="math display">\[\begin{aligned}
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}},~~(-\infty&lt;x&lt;+\infty)
+\end{aligned} \tag{2.25}\]</span>
+其中<span class="math inline">\(\mu,\sigma\)</span>均为常熟，<span class="math inline">\(\sigma&gt;0\)</span>，则称<span class="math inline">\(X\)</span>服从参数为<span class="math inline">\(\mu, \sigma\)</span>的正态分布（又称高斯分布），记为<span class="math inline">\(X\sim N(\mu,\sigma^{2})\)</span>。</p>
+<ul>
+<li>其分布函数为</li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+F(x)=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{x}e^{-\frac{(t-\mu)^{2}}{2\sigma^{2}}}dt
+\end{aligned}\tag{2.26}\]</span></p>
+<p><strong>②标准正态分布</strong></p>
+<p>特别的，当<span class="math inline">\(\mu=0, \sigma^{2}=1\)</span>时，<span class="math inline">\(N(0,1)\)</span>称为标准正态分布，相应的密度函数与分布函数分别记为<span class="math inline">\(\varphi(x)\)</span>和<span class="math inline">\(\Phi(x)\)</span>如下：
+<span class="math display">\[\varphi(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}},~~~~\Phi(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^{2}}{2}}dt \tag{2.27}\]</span></p>
+<p><strong>③正态分布密度函数验证</strong></p>
+<p>令<span class="math inline">\(u=\frac{x-\mu}{\sigma}\)</span>，得
+<span class="math display">\[\begin{equation*}
+I=\int_{-\infty}^{+\infty}\varphi(x)dx=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{-\frac{u^{2}}{2}}du
+\end{equation*}\]</span></p>
+<p>考虑</p>
+<p><span class="math display">\[\begin{equation*}
+I^{2}=\frac{1}{2\pi}\int_{-\infty}^{+\infty}e^{-\frac{x^{2}}{2}}dx\int_{-\infty}^{+\infty}e^{-\frac{y^{2}}{2}}dy=\frac{1}{2\pi}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{-\frac{x^{2}+y^{2}}{2}}dxdy
+\end{equation*}\]</span></p>
+<p>变换为极坐标，有</p>
+<p><span class="math display">\[\begin{equation*}
+I^{2}=\frac{1}{2\pi}\int_{0}^{2\pi}\int_{0}^{+\infty}re^{-\frac{r^{2}}{2}}drd\theta=\int_{0}^{+\infty}re^{-\frac{r^{2}}{2}}dr=1.
+\end{equation*}\]</span>
+即得<span class="math inline">\(I=1\)</span>.</p>
+<p><strong>④正态分布密度函数性质</strong></p>
+<ul>
+<li><p>曲线<span class="math inline">\(f(x)\)</span>关于<span class="math inline">\(x=\mu\)</span>对称，并在<span class="math inline">\(x=\mu\)</span>达到极大值<span class="math inline">\(\frac{1}{\sqrt{2\pi}\sigma}\)</span></p></li>
+<li><p>当<span class="math inline">\(x\rightarrow \pm \infty\)</span>时，<span class="math inline">\(f(x)\)</span>以<span class="math inline">\(x\)</span>轴为渐近线，且<span class="math inline">\(P(\pm \infty)=0\)</span></p></li>
+<li><p>在<span class="math inline">\(x= \mu\pm\sigma\)</span>处，<span class="math inline">\(f(x)\)</span>有拐点。</p></li>
+</ul>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5udNi*e6FRzshunn*YazTmGixHBZsIbdbRsumaYFdlLu3MjigNWtGcZND6ZlgcJB8JEClizKrcbuX.vzvxRSg2g!/mnull&amp;bo=9ACzAAAAAAABB2c!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片25" />
+</center>
+<center>
+图 2.3
+</center>
+<p><strong>分布曲线随<span class="math inline">\(\mu, \sigma\)</span>变化关系:</strong></p>
+<p>当<span class="math inline">\(\sigma\)</span>固定，改变<span class="math inline">\(\mu\)</span>的大小，<span class="math inline">\(f(x)\)</span>的图形的形状不变，只是沿着<span class="math inline">\(x\)</span>上平移。</p>
+<p>当<span class="math inline">\(\mu\)</span>固定，改变<span class="math inline">\(\sigma\)</span>的大小，<span class="math inline">\(f(x)\)</span>的图形的对称轴不变，而形状在改变。<span class="math inline">\(\sigma\)</span>越小，图形越高越瘦，<span class="math inline">\(\sigma\)</span>越大，图形越矮越胖。</p>
+<p><strong>⑤标准正态分布的性质</strong></p>
+<ul>
+<li><span class="math inline">\(\varphi(-x)=\varphi(x)\)</span></li>
+<li><span class="math inline">\(\Phi(0)=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\Phi(-x)=1-\Phi(x)\)</span></li>
+</ul>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5n9w918uJ9dhztfbce1VokU5CH5nqwEVb1OEyYaKvfwWtUXJUeGaXJLiGDNdvOTi0o3yLmatOUttv74uptjoe4k!/mnull&amp;bo=7wCsAAAAAAABB2M!&amp;rf=photolist&amp;t=5" alt="图片26" /><img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5udNi*e6FRzshunn*YazTmHy*72huWq*kWGIpYX*y4O11cquDt.vQXIeQFTVzUGW5jXgkaDSAQ5CtyuPDIHDRNo!/mnull&amp;bo=7wCsAAAAAAABB2M!&amp;rf=photolist&amp;t=5" alt="图片27" />
+</center>
+<center>
+图 2.4
+</center>
+<p><strong>⑥有关正态分布的概率计算</strong></p>
+<p>一般的，若<span class="math inline">\(X\sim(\mu, \sigma^{2})\)</span>， 我只需要通过一个线性变换就将它转化成标准正态分布，之后通过查表可以得到要求概率。</p>
+<p><strong>定理：</strong></p>
+<p>若<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>，则<span class="math inline">\(Z=\frac{X-\mu}{\sigma}\sim N(0,1).\)</span></p>
+<p>证明：<span class="math inline">\(Z=\frac{X-\mu}{\sigma}\)</span>的分布函数为</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{Z\leq x\}&amp;=P\{\frac{X-\mu}{\sigma}\leq x\}=P\{X\leq \mu+\sigma x\}\\
+&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\mu+\sigma x}e^{-\frac{(t-\mu)^{2}}{2\sigma^{2}}}dt
+\end{split}
+\end{equation*}\]</span></p>
+<p>令<span class="math inline">\(\frac{t-\mu}{\sigma}=u\)</span>，得<span class="math inline">\(P\{Z\leq x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{u^{2}}{2}}dt=\Phi(x)\)</span>，故得证。</p>
+<p>若<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>，则它的分布函数<span class="math inline">\(F(x)\)</span>可写成
+<span class="math display">\[F(x)=P\{X\leq x\}=P\left\{\frac{X-\mu}{\sigma}\leq \frac{x-\mu}{\sigma}\right\}=\Phi\left(\frac{x-\mu}{\sigma}\right)\]</span></p>
+<p>对于任意区间<span class="math inline">\((x_{1},x_{2}]\)</span>，有</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{x_{1}&lt;X\leq x_{2}\}&amp;=P\left\{\frac{x_{1}-\mu}{\sigma}&lt;\frac{X-\mu}{\sigma}\leq \frac{x_{2}-\mu}{\sigma}\right\}\\
+&amp;=\Phi\left(\frac{x_{2}-\mu}{\sigma}\right)-\Phi\left(\frac{x_{1}-\mu}{\sigma}\right)
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>⑦例题</strong></p>
+<p><strong>例1：</strong>在电压不超过200伏，在200 - 240伏和超过240伏三种情况下， 某种元件损坏的概率分别为0.1, 0.001和0.2。假设电压服从
+正态分布<span class="math inline">\(X\sim N(220, 25^{2})\)</span>，求</p>
+<ul>
+<li><p>该元件损坏的概率<span class="math inline">\(\alpha\)</span>；</p></li>
+<li><p>该元件损坏时, 电压在 200-240 伏的概率<span class="math inline">\(\beta\)</span>。</p></li>
+</ul>
+<p>解：设<span class="math inline">\(A_{i},i=1,2,3\)</span>分别表示电压不超过200伏, 在200-240伏,超过240伏；<span class="math inline">\(B\)</span>表示“元件损坏”。
+<span class="math display">\[P\{A_{1}\}=P\{X\leq 200\}=\Phi\left(\frac{200-220}{25}\right)=\Phi(-0.8)=0.212\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{A_{2}\}&amp;=P\{200&lt;X\leq 240\}\\
+&amp;=\Phi\left(\frac{240-220}{25}\right)-\Phi\left(\frac{200-220}{25}\right)\\
+&amp;=\Phi(0.8)-\Phi(-0.8)=2\Phi(0.8)-1=0.576
+\end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{A_{3}\}&amp;=P\{X&gt;240\}=1-P\{X\leq 240\}\\
+&amp;=1-\Phi\left(\frac{240-220}{25}\right)=0.212
+\end{split}
+\end{equation*}\]</span></p>
+<p>依题意可知
+<span class="math display">\[P\{B|A_{1}\}=0.1,~~P\{B|A_{2}\}=0.001,~~P\{B|A_{3}\}=0.2\]</span></p>
+<ul>
+<li><p>由全概公式 <span class="math display">\[\alpha=P\{B\}=\sum_{i=1}^{2}P(B|A_{i})P(A_{i})=0.0624\]</span></p></li>
+<li><p>由贝叶斯公式<span class="math display">\[\beta=P\{A_{2}|B\}=\frac{P\{B|A_{2}\}P\{A_{2}\}}{P\{B\}}\approx 0.009.\]</span></p></li>
+</ul>
+<p><strong>例2：</strong>从某地乘车去火车站，有两条路可以走</p>
+<ul>
+<li><p>走市区路程短，但是交通拥挤，所需时间<span class="math inline">\(X_{1}\sim N(50, 100)\)</span>;</p></li>
+<li><p>走郊区路程长，但是意外阻塞少，所需时间<span class="math inline">\(X_{2}\sim N(60, 16)\)</span></p></li>
+</ul>
+<p>问若有70分钟可用，用走哪条路线？若有65分钟呢？</p>
+<ul>
+<li>走市区赶上火车的概率为</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{0\leq X_{1}\leq 70\}&amp;=\Phi\left(\frac{70-50}{10}\right)-\Phi\left(\frac{0-50}{10}\right)\\
+&amp;=\Phi(2)-\Phi(-5)=0.97725
+\end{split}
+\end{equation*}\]</span></p>
+<ul>
+<li>走郊区赶上火车的概率为</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{0\leq X_{2}\leq 70\}&amp;=\Phi\left(\frac{70-60}{4}\right)-\Phi\left(\frac{0-60}{4}\right)\\
+&amp;=\Phi(2.5)-\Phi(-15)=0.9938
+\end{split}
+\end{equation*}\]</span></p>
+<p>故应走郊区。</p>
+<p><strong>65分钟情形：</strong></p>
+<ul>
+<li>走市区赶上火车的概率为</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{0\leq X_{1}\leq 65\}&amp;=\Phi\left(\frac{65-50}{10}\right)-\Phi\left(\frac{0-50}{10}\right)\\
+&amp;=\Phi(1.5)-\Phi(-5)=0.9332
+\end{split}
+\end{equation*}\]</span></p>
+<ul>
+<li>走郊区赶上火车的概率为</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+P\{0\leq X_{2}\leq 65\}&amp;=\Phi\left(\frac{65-60}{4}\right)-\Phi\left(\frac{0-60}{4}\right)\\
+&amp;=\Phi(1.25)-\Phi(-15)=0.8944
+\end{split}
+\end{equation*}\]</span></p>
+<p>故应走市区。</p>
+</div>
+</div>
+<div id="随机变量函数的分布" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> 随机变量函数的分布</h2>
+<div id="离散型随机变量情形" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> 离散型随机变量情形</h3>
+<p><strong>离散型随机变量函数分布</strong></p>
+<p><strong>例1：</strong></p>
+<p>已知<span class="math inline">\(X\)</span>的分布律为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">-1</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center">0.1</td>
+<td align="center">0.2</td>
+<td align="center">0.3</td>
+<td align="center">0.4</td>
+</tr>
+</tbody>
+</table>
+<p>求<span class="math inline">\(Y=2X-1\)</span>以及<span class="math inline">\(Z=X^{2}\)</span>的分布律。</p>
+<p>解：依题意可知，<span class="math inline">\(Y\)</span>所有可能取值为<span class="math inline">\(-3, -1, 1, 3\)</span>. 由
+<span class="math display">\[P\{Y=-3\}=P\{2X-1=-3\}=P\{X=-1\}=0.1;\]</span></p>
+<p><span class="math display">\[P\{Y=-1\}=P\{2X-1=-1\}=P\{X=0\}=0.2;\]</span></p>
+<p><span class="math display">\[P\{Y=1\}=P\{2X-1=1\}=P\{X=1\}=0.3;\]</span></p>
+<p><span class="math display">\[P\{Y=3\}=P\{2X-1=3\}=P\{X=2\}=0.4;\]</span></p>
+所以<span class="math inline">\(Y\)</span>的分布律为
+
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">-1</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(Y\)</span></td>
+<td align="center">-3</td>
+<td align="center">-1</td>
+<td align="center">1</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center">0.1</td>
+<td align="center">0.2</td>
+<td align="center">0.3</td>
+<td align="center">0.4</td>
+</tr>
+</tbody>
+</table>
+<p>依题意有，<span class="math inline">\(Z\)</span>的所有可能取值为<span class="math inline">\(0,1,4\)</span>，故有
+<span class="math display">\[P\{Z=0\}=P\{X^{2}=0\}=P\{X=0\}=0.2;\]</span></p>
+<p><span class="math display">\[P\{Z=1\}=P\{X^{2}=1\}=P\{X=-1\}+P\{X=1\}=0.4;\]</span></p>
+<p><span class="math display">\[P\{Z=4\}=P\{X^{2}=4\}=P\{X=2\}=0.4;\]</span></p>
+所以<span class="math inline">\(Z\)</span>的分布律为
+
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">-1</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(Y\)</span></td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center">0.1</td>
+<td align="center">0.2</td>
+<td align="center">0.3</td>
+<td align="center">0.4</td>
+</tr>
+</tbody>
+</table>
+将取值相等合并，即有
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(p_{k}\)</span></td>
+<td align="center">0.2</td>
+<td align="center">0.4</td>
+<td align="center">0.4</td>
+</tr>
+</tbody>
+</table>
+<p>由上例可以归纳出离散型随机变量函数的分布的求法.</p>
+<p>当<span class="math inline">\(X\)</span>为离散型随机变量时，通常<span class="math inline">\(Y=f(X)\)</span>也是离散型随机变量，若<span class="math inline">\(X\)</span>的分布律为
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center"><span class="math inline">\(x_{1}\)</span></th>
+<th align="center"><span class="math inline">\(x_{2}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center"><span class="math inline">\(x_{n}\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(P\)</span></td>
+<td align="center"><span class="math inline">\(p_{1}\)</span></td>
+<td align="center"><span class="math inline">\(p_{2}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{n}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>当<span class="math inline">\(f(x_{i}),(i=1,2,\cdots,)\)</span>互不相等时，<span class="math inline">\(Y\)</span>的分布律为
+</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center"><span class="math inline">\(f(x_{1})\)</span></th>
+<th align="center"><span class="math inline">\(f(x_{2})\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center"><span class="math inline">\(f(x_{n})\)</span></th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(P\)</span></td>
+<td align="center"><span class="math inline">\(p_{1}\)</span></td>
+<td align="center"><span class="math inline">\(p_{2}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+<td align="center"><span class="math inline">\(p_{n}\)</span></td>
+<td align="center"><span class="math inline">\(\cdots\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>当<span class="math inline">\(f(x_{i}),(i=1,2,\cdots,)\)</span>有相等的项时，应将其对应的概率值加起来即可。</li>
+</ul>
+<p><strong>例2：</strong></p>
+<p>已知随机变量<span class="math inline">\(X\)</span>的分布律为
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X\)</span></th>
+<th align="center">-2</th>
+<th align="center">-1</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(P\)</span></td>
+<td align="center">0.15</td>
+<td align="center">0.2</td>
+<td align="center">0.3</td>
+<td align="center">0.2</td>
+<td align="center">0.15</td>
+</tr>
+</tbody>
+</table>
+<p>试求：</p>
+<ul>
+<li><p><span class="math inline">\(Y=X^{2}\)</span>的分布律；</p></li>
+<li><p><span class="math inline">\(Y=2X+1\)</span>的分布律；</p></li>
+<li><p><span class="math inline">\(Y=|X|+1\)</span>的分布律；</p></li>
+</ul>
+</div>
+<div id="连续型随机变量情形" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> 连续型随机变量情形</h3>
+<p><font size=4><strong>（1）连续型随机变量函数的分布</strong></font></p>
+<p>求连续型随机变量的函数的概率密度主要有两种方法：</p>
+<ul>
+<li><p>分布函数法，一般的函数都适用;</p></li>
+<li><p>公式法，只适用于单调函数。</p></li>
+</ul>
+<p><strong>①分布函数法：</strong></p>
+<p>设连续型随机变量<span class="math inline">\(X\)</span>的概率密度为<span class="math inline">\(f_{X}(x)\)</span>，求<span class="math inline">\(X\)</span>的函数<span class="math inline">\(Y=g(X)\)</span>的概率密度<span class="math inline">\(f_{Y}(y)\)</span>方法如下:</p>
+<ul>
+<li><p>先求其分布函数：<span class="math display">\[F_{Y}(y)=P\{Y\leq y\}=P\{g(X)\leq y\}=\int_{g(X)\leq y}f_{X}(x)dx\]</span></p></li>
+<li><p>在上式两端对<span class="math inline">\(y\)</span>求导，即可求出概率密度<span class="math inline">\(f_{Y}(y)\)</span>.</p></li>
+</ul>
+<p><strong>例3：</strong>设随机变量<span class="math inline">\(X\)</span>具有概率密度
+<span class="math display">\[\begin{equation*}
+f_{X}(x)=\left\{
+        \begin{array}{ll}
+          x/8, &amp; 0&lt;x&lt;4, \\
+          0, &amp; \text{其他}
+        \end{array}
+      \right.
+\end{equation*}\]</span>
+求随机变量<span class="math inline">\(Y=2X+8\)</span>的概率密度。</p>
+<p>解：分别记<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的分布函数为<span class="math inline">\(F_{X}(x)\)</span>和<span class="math inline">\(F_{Y}(y)\)</span>.
+* 先求<span class="math inline">\(F_{y}(y)\)</span>，依题意有</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+F_{Y}(y)&amp;=P\{Y\leq y\}=P\{2X+8\leq y\}\\
+&amp;=P\left\{X\leq \frac{y-8}{2}\right\}=F_{X}\left(\frac{y-8}{2}\right)
+\end{split}
+\end{equation*}\]</span></p>
+<ul>
+<li>将<span class="math inline">\(F_{Y}(y)\)</span>关于<span class="math inline">\(y\)</span>求导，即得<span class="math inline">\(Y=2X+8\)</span>的概率密度</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+f_{Y}(y)&amp;=f_{X}\left(\frac{y-8}{2}\right)\left(\frac{y-8}{2}\right)\\
+&amp;=\left\{
+    \begin{array}{ll}
+      \frac{1}{8}\left(\frac{y-8}{2}\right)\cdot \frac{1}{2}, &amp; 0&lt;\left(\frac{y-8}{2}\right)&lt;4 \\
+      0, &amp; \text{其他}
+    \end{array}
+  \right. \\
+&amp;=\left\{
+    \begin{array}{ll}
+      \frac{y-8}{32}, &amp; 8&lt;y&lt;16 \\
+      0, &amp; \text{其他}
+    \end{array}
+  \right.
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>②线性情况：</strong></p>
+<p><strong>例4：</strong>设随机变量<span class="math inline">\(X\)</span>具有概率密度函数<span class="math inline">\(f_{X}(x), x\in(-\infty, +\infty)\)</span>，试求<span class="math inline">\(X\)</span>的线性函数<span class="math inline">\(Y=k_{1}X+k_{2}\)</span>的概率密度，其中<span class="math inline">\(k_{1}\neq 0, k_{2}\)</span> 为常数。</p>
+<p>解：依题意，<span class="math inline">\(Y\)</span>的分布函数<span class="math display">\[F_{Y}(y)=P\{Y\leq y\}=P\{k_{1}X+k_{2}\leq y\}=P\{k_{1}X\leq y-k_{2}\}\]</span></p>
+<ul>
+<li>当<span class="math inline">\(k_{1}&gt;0\)</span>时，</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+F_{Y}(y)=P\{k_{1}X\leq y-k_{2}\}=P\left\{X\leq \frac{y-k_{2}}{k_{1}}\right\}=F_{X}\left(\frac{y-k_{2}}{k_{1}}\right)
+\end{split}
+\end{equation*}\]</span></p>
+<p>两边关于<span class="math inline">\(y\)</span>求导，得
+<span class="math display">\[\begin{equation*}
+    f_{Y}(y)=F_{Y}&#39;(y)(y)=\frac{1}{k_{1}}f_{X}\left(\frac{y-k_{2}}{k_{1}}\right)
+\end{equation*}\]</span></p>
+<ul>
+<li>当<span class="math inline">\(k_{1}&lt;0\)</span>时，</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+F_{Y}(y)&amp;=P\{k_{1}X\leq y-k_{2}\}=P\left\{X\geq \frac{y-k_{2}}{k_{1}}\right\}\\
+&amp;=1-P\left\{X&lt; \frac{y-k_{2}}{k_{1}}\right\}=1-F_{X}\left(\frac{y-k_{2}}{k_{1}}\right)
+\end{split}
+\end{equation*}\]</span></p>
+<p>两边关于<span class="math inline">\(y\)</span>求导，得
+<span class="math display">\[\begin{equation*}
+    f_{Y}(y)=F_{Y}&#39;(y)(y)=-\frac{1}{k_{1}}f_{X}\left(\frac{y-k_{2}}{k_{1}}\right)
+\end{equation*}\]</span></p>
+<p>综合上述<span class="math inline">\(k_{1}&gt;0\)</span>和<span class="math inline">\(k_{1}&lt;0\)</span>两种情况，即得
+<span class="math display">\[\begin{equation*}
+    f_{Y}(y)=\frac{1}{|k_{1}|}f_{X}\left(\frac{y-k_{2}}{k_{1}}\right)
+\end{equation*}\]</span></p>
+<p><strong>③特殊情况：</strong></p>
+<p>当<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>时，则运用上述结果便可得线性变换<span class="math inline">\(Y=k_{1}X+k_{2}\)</span>的概率密度为
+<span class="math display">\[\begin{equation*}
+\begin{split}
+f_{Y}(y)&amp;=\frac{1}{|k_{1}|}f_{X}\left(\frac{y-k_{2}}{k_{1}}\right)=\frac{1}{|k_{1}|}\cdot \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{\left(\frac{y-k_{2}}{k_{1}}-\mu\right)^{2}}{2\sigma^{2}}}\\
+&amp;=\frac{1}{\sqrt{2\pi}|k_{1}|\sigma}e^{-\frac{(y-\mu k_{1}-k_{2})^{2}}{2k_{1}^{2}\sigma^{2}}}
+\end{split}
+\end{equation*}\]</span></p>
+<p>即<span class="math inline">\(Y\sim N(\mu k_{1}+k_{2}, k_{1}^{2}\sigma^{2}).\)</span></p>
+<p>正态分布的随机变量经过线性变换后，仍是服从正态分布。</p>
+<p><strong>④非线性情况：</strong></p>
+<p><strong>例5：</strong>设随机变量<span class="math inline">\(X\)</span>具有概率密度函数为<span class="math inline">\(f_{X}(x), x\in(-\infty, +\infty)\)</span>，试求<span class="math inline">\(X\)</span>的线性函数<span class="math inline">\(Y=X^{2}\)</span>的概率密度。</p>
+<p>解：分别记<span class="math inline">\(X\)</span>和<span class="math inline">\(Y\)</span>的分布函数为<span class="math inline">\(F_{X}(x)\)</span>和<span class="math inline">\(F_{Y}(y)\)</span>. 先求<span class="math inline">\(Y\)</span>的分布函数，由于<span class="math inline">\(Y=X^{2}\geq 0\)</span>，所以</p>
+<ul>
+<li>当<span class="math inline">\(y&lt;0\)</span>时，<span class="math inline">\(F_{Y}(y)=0\)</span></li>
+<li>当<span class="math inline">\(y&gt;0\)</span>时，有</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+F_{Y}(y)&amp;=P\{Y\leq y\}=P\{X^{2}\leq y\}\\
+&amp;=P\{-\sqrt{y}\leq X\leq \sqrt{y}\}\\
+&amp;=F_{X}(\sqrt{y})-F_{X}(-\sqrt{y})
+\end{split}
+\end{equation*}\]</span></p>
+<p>将<span class="math inline">\(F_{Y}(y)\)</span>关于<span class="math inline">\(y\)</span>求导，即得<span class="math inline">\(Y\)</span>的密度函数</p>
+<p><span class="math display">\[\begin{equation*}
+f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             [f_{X}(\sqrt{y})+f_{X}(-\sqrt{y})]/(2\sqrt{y}), &amp; y\geq0 \\
+             0, &amp; y&lt;0
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p>设<span class="math inline">\(X\sim N(0,1)\)</span>，其密度函数为<span class="math display">\[\varphi(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}, -\infty&lt;x&lt;\infty.\]</span></p>
+<p>由上式可得<span class="math inline">\(Y=X^{2}\)</span>的密度函数为
+<span class="math display">\[\begin{equation*}
+f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             y^{-1/2}e^{-y/2}/\sqrt{2\pi}, &amp; y\geq0 \\
+             0, &amp; y&lt;0
+           \end{array}
+         \right.
+\end{equation*}\]</span></p>
+<p><font size=4><strong>（2）公式法</strong></font></p>
+<p>上面介绍的分布函数法是求随机变量函数<span class="math inline">\(Y=g(X)\)</span>的密度函数的主要方法，对<span class="math inline">\(g(x)\)</span>为单调函数与非单调函数均适用。当<span class="math inline">\(g(x)\)</span>为单调函数时，还可用公式法求<span class="math inline">\(Y=g(X)\)</span>的密度函数。</p>
+<p><strong>定理:</strong></p>
+<p>设随机变量<span class="math inline">\(X\)</span>具有概率密度函数为<span class="math inline">\(f_{X}(x), x\in(-\infty, +\infty)\)</span>，又设函数<span class="math inline">\(g(x)\)</span>处处可导且恒有<span class="math inline">\(g&#39;(x)&gt;0\)</span>（或恒有<span class="math inline">\(g&#39;(x)&lt;0\)</span>），则<span class="math inline">\(Y=g(X)\)</span>是连续型随机变量，其概率密度为
+<span class="math display">\[\begin{aligned}
+f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             f_{Y}[h(y)]|h&#39;(y)|, &amp; \alpha&lt;y&lt;\beta \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{aligned} \tag{2.28}\]</span></p>
+<p>其中<span class="math inline">\(\alpha=\min[g(-\infty), g(+\infty)]\)</span>, <span class="math inline">\(\beta=\max[g(-\infty), g(+\infty)]\)</span>， <span class="math inline">\(h(y)\)</span>为<span class="math inline">\(g(x)\)</span>的反函数。</p>
+<p>证明：先证<span class="math inline">\(g&#39;(x)&gt;0\)</span>的情形，此时<span class="math inline">\(g(x)\)</span>在<span class="math inline">\((-\infty, +\infty)\)</span>严格单调增加，它的反函数<span class="math inline">\(h(y)\)</span>存在，且在<span class="math inline">\((\alpha, \beta)\)</span>严格单调增加、可导．
+现在先求<span class="math inline">\(Y\)</span>的分布函数<span class="math inline">\(F_{Y}(y)\)</span>．因为<span class="math inline">\(Y=g(x)\)</span>在<span class="math inline">\((\alpha, \beta)\)</span>取值，故</p>
+<ul>
+<li><p>当<span class="math inline">\(y&lt;\alpha\)</span>时，<span class="math inline">\(F_{Y}(y)=0\)</span>;</p></li>
+<li><p>当<span class="math inline">\(y&gt;\beta\)</span>时，<span class="math inline">\(F_{Y}(y)=1\)</span>;</p></li>
+<li><p>当<span class="math inline">\(\alpha\leq y\leq\beta\)</span>时，</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+\begin{split}
+F_{Y}(y)&amp;=P\{Y\leq y\}=P\{g(X)\leq y\}\\
+&amp;=P\{X\leq h(y)\}=F_{X}(h(y))
+\end{split}
+\end{aligned} \tag{2.29}\]</span></p>
+<p>将<span class="math inline">\(F_{Y}(y)\)</span>关于<span class="math inline">\(y\)</span>求导，即得<span class="math inline">\(Y\)</span>的密度函数</p>
+<p><span class="math display">\[\begin{aligned}
+f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             f_{Y}[h(y)]h&#39;(y), &amp; \alpha&lt;y&lt;\beta \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{aligned}\tag{2.30}\]</span></p>
+<p>当<span class="math inline">\(g&#39;(x)&lt;0\)</span>时，同样有</p>
+<ul>
+<li><p>当<span class="math inline">\(y&lt;\alpha\)</span>时，<span class="math inline">\(F_{Y}(y)=0\)</span>;</p></li>
+<li><p>当<span class="math inline">\(y&gt;\beta\)</span>时，<span class="math inline">\(F_{Y}(y)=1\)</span>;</p></li>
+<li><p>当<span class="math inline">\(\alpha\leq y\leq\beta\)</span>时，</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+\begin{split}
+F_{Y}(y)&amp;=P\{Y\leq y\}=P\{g(X)\leq y\}\\
+&amp;=P\{X\geq h(y)\}=1-F_{X}(h(y))
+\end{split}
+\end{aligned}\tag{2.31}\]</span></p>
+<p>将<span class="math inline">\(F_{Y}(y)\)</span>关于<span class="math inline">\(y\)</span>求导，即得<span class="math inline">\(Y\)</span>的密度函数</p>
+<p><span class="math display">\[\begin{aligned}
+f_{Y}(y)=\left\{
+           \begin{array}{ll}
+             -f_{Y}[h(y)]h&#39;(y), &amp; \alpha&lt;y&lt;\beta \\
+             0, &amp; \text{其他}
+           \end{array}
+         \right.
+\end{aligned} \tag{2.32}\]</span></p>
+<p>故综上所述，定理得证。</p>
+<p><strong>例6：</strong>设随机变量<span class="math inline">\(X\)</span>具有概率密度函数为<span class="math inline">\(f_{X}(x), x\in(-\infty, +\infty)\)</span>，试求<span class="math inline">\(X\)</span>的线性函数<span class="math inline">\(Y=k_{1}X+k_{2}\)</span>的概率密度，其中<span class="math inline">\(k_{1}\neq 0, k_{2}\)</span> 为常数</p>
+<p>解：依题意有<span class="math inline">\(y=g(x)=k_{1}x+k_{2}\)</span>，因此有反函数<span class="math display">\[x=h(y)=\frac{y-k_{2}}{k_{1}}, ~~\text{且有}h&#39;(y)=\frac{1}{k_{1}}\]</span></p>
+<p>所以依据上面的定理可得</p>
+<p><span class="math display">\[\begin{equation*}
+    f_{Y}(y)=f_{Y}[h(y)]|h&#39;(y)|=\frac{1}{|k_{1}|}f_{X}\left(\frac{y-k_{2}}{k_{1}}\right)
+\end{equation*}\]</span></p>
+<p><strong>例7：</strong>设电压<span class="math inline">\(V=A\sin\Theta\)</span>，其中<span class="math inline">\(A\)</span>是一个已知的正常数，相角<span class="math inline">\(\Theta\)</span>是一个随机变量，且有<span class="math inline">\(\Theta\sim U(-\frac{\pi}{2}, \frac{\pi}{2})\)</span>，试求电压<span class="math inline">\(V\)</span>的密度函数。</p>
+<p>解：很显然<span class="math inline">\(v=A\sin\theta\)</span>在区间<span class="math inline">\([-\frac{\pi}{2}, \frac{\pi}{2}]\)</span>上严格单调，且有反函数
+<span class="math display">\[\theta=h(v)=\arcsin\frac{v}{A},~~\text{且有}h&#39;(y)=\frac{1}{\sqrt{A^{2}-v^{2}}}.\]</span>
+又因为<span class="math inline">\(\Theta\sim U(-\frac{\pi}{2}, \frac{\pi}{2})\)</span>，即有</p>
+<p><span class="math display">\[\begin{equation*}
+f(\theta)=\left\{
+            \begin{array}{ll}
+              \frac{1}{\pi}, &amp; -\frac{\pi}{2}\leq \theta\leq \frac{\pi}{2} \\
+              0, &amp; \text{其他}
+            \end{array}
+          \right.
+\end{equation*}\]</span></p>
+<p>由定理可得<span class="math inline">\(V\)</span>的密度函数为
+<span class="math display">\[\begin{equation*}
+f(v)=\left\{
+            \begin{array}{ll}
+              \frac{1}{\pi}\cdot \frac{1}{\sqrt{A^{2}-v^{2}}}, &amp; -A\leq v\leq A \\
+              0, &amp; \text{其他}
+            \end{array}
+          \right.
+\end{equation*}\]</span></p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>当<span class="math inline">\(f(x)\)</span>在<span class="math inline">\((a, b)\)</span>外取值为0时，只要求<span class="math inline">\(y=g(x)\)</span>在<span class="math inline">\((a, b)\)</span>上单调就可用公式。</p></li>
+<li><p>若<span class="math inline">\(g(x)\)</span>不单调: 先将单调区间算出，当单调区间上<span class="math inline">\(y\)</span>最值相同时，在每个单调区间上用公式，再相加。</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="随机事件及其概率.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="多维随机变量及其分布.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

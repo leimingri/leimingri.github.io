@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>附录 | 概率论与数理统计</title>
+  <meta name="description" content="附录 | 概率论与数理统计" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="附录 | 概率论与数理统计" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="附录 | 概率论与数理统计" />
+  
+  
+  
+
+<meta name="author" content="胡鹏" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="假设检验.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">概率论与数理统计</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html"><i class="fa fa-check"></i><b>1</b> 随机事件及其概率</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#样本空间与随机事件"><i class="fa fa-check"></i><b>1.1</b> 样本空间与随机事件</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#基本概念"><i class="fa fa-check"></i><b>1.1.1</b> 基本概念</a></li>
+<li class="chapter" data-level="1.1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的关系与运算"><i class="fa fa-check"></i><b>1.1.2</b> 事件的关系与运算</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的频率与概率"><i class="fa fa-check"></i><b>1.2</b> 事件的频率与概率</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#频率的定义"><i class="fa fa-check"></i><b>1.2.1</b> 频率的定义</a></li>
+<li class="chapter" data-level="1.2.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#概率的公理化定义"><i class="fa fa-check"></i><b>1.2.2</b> 概率的公理化定义</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型与几何概型"><i class="fa fa-check"></i><b>1.3</b> 古典概型与几何概型</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型"><i class="fa fa-check"></i><b>1.3.1</b> 古典概型</a></li>
+<li class="chapter" data-level="1.3.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#几何概型"><i class="fa fa-check"></i><b>1.3.2</b> 几何概型</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率"><i class="fa fa-check"></i><b>1.4</b> 条件概率</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率-1"><i class="fa fa-check"></i><b>1.4.1</b> 条件概率</a></li>
+<li class="chapter" data-level="1.4.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#乘法公式"><i class="fa fa-check"></i><b>1.4.2</b> 乘法公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式与贝叶斯公式"><i class="fa fa-check"></i><b>1.5</b> 全概率公式与贝叶斯公式</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式"><i class="fa fa-check"></i><b>1.5.1</b> 全概率公式</a></li>
+<li class="chapter" data-level="1.5.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#贝叶斯公式"><i class="fa fa-check"></i><b>1.5.2</b> 贝叶斯公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性"><i class="fa fa-check"></i><b>1.6</b> 事件的独立性</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性-1"><i class="fa fa-check"></i><b>1.6.1</b> 事件的独立性</a></li>
+<li class="chapter" data-level="1.6.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#伯努利概型"><i class="fa fa-check"></i><b>1.6.2</b> 伯努利概型</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html"><i class="fa fa-check"></i><b>2</b> 随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量与分布函数"><i class="fa fa-check"></i><b>2.1</b> 随机变量与分布函数</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量"><i class="fa fa-check"></i><b>2.1.1</b> 随机变量</a></li>
+<li class="chapter" data-level="2.1.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#分布函数"><i class="fa fa-check"></i><b>2.1.2</b> 分布函数</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量及其分布"><i class="fa fa-check"></i><b>2.2</b> 离散型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念"><i class="fa fa-check"></i><b>2.2.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#常见离散型随机变量"><i class="fa fa-check"></i><b>2.2.2</b> 常见离散型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量及其分布"><i class="fa fa-check"></i><b>2.3</b> 连续型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念-1"><i class="fa fa-check"></i><b>2.3.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.3.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#几种常见的连续性随机变量"><i class="fa fa-check"></i><b>2.3.2</b> 几种常见的连续性随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量函数的分布"><i class="fa fa-check"></i><b>2.4</b> 随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量情形"><i class="fa fa-check"></i><b>2.4.1</b> 离散型随机变量情形</a></li>
+<li class="chapter" data-level="2.4.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量情形"><i class="fa fa-check"></i><b>2.4.2</b> 连续型随机变量情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html"><i class="fa fa-check"></i><b>3</b> 多维随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量及其联合分布函数"><i class="fa fa-check"></i><b>3.1</b> 二维随机变量及其联合分布函数</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#多维随机变量"><i class="fa fa-check"></i><b>3.1.1</b> 多维随机变量</a></li>
+<li class="chapter" data-level="3.1.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量"><i class="fa fa-check"></i><b>3.1.2</b> 二维离散型随机变量</a></li>
+<li class="chapter" data-level="3.1.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量"><i class="fa fa-check"></i><b>3.1.3</b> 二维连续型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布和条件分布"><i class="fa fa-check"></i><b>3.2</b> 边缘分布和条件分布</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布"><i class="fa fa-check"></i><b>3.2.1</b> 边缘分布</a></li>
+<li class="chapter" data-level="3.2.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#条件分布"><i class="fa fa-check"></i><b>3.2.2</b> 条件分布</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性"><i class="fa fa-check"></i><b>3.3</b> 随机变量的独立性</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性-1"><i class="fa fa-check"></i><b>3.3.1</b> 随机变量的独立性</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量函数的分布"><i class="fa fa-check"></i><b>3.4</b> 二维随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.1</b> 二维离散型随机变量函数的分布</a></li>
+<li class="chapter" data-level="3.4.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.2</b> 二维连续型随机变量函数的分布</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html"><i class="fa fa-check"></i><b>4</b> 随机变量的数字特征</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望"><i class="fa fa-check"></i><b>4.1</b> 数学期望</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的定义"><i class="fa fa-check"></i><b>4.1.1</b> 数学期望的定义</a></li>
+<li class="chapter" data-level="4.1.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#随机变量函数的数学期望"><i class="fa fa-check"></i><b>4.1.2</b> 随机变量函数的数学期望</a></li>
+<li class="chapter" data-level="4.1.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的性质及条件期望"><i class="fa fa-check"></i><b>4.1.3</b> 数学期望的性质及条件期望</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差"><i class="fa fa-check"></i><b>4.2</b> 方差</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的定义"><i class="fa fa-check"></i><b>4.2.1</b> 方差的定义</a></li>
+<li class="chapter" data-level="4.2.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#常见随机变量的方差"><i class="fa fa-check"></i><b>4.2.2</b> 常见随机变量的方差</a></li>
+<li class="chapter" data-level="4.2.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的性质"><i class="fa fa-check"></i><b>4.2.3</b> 方差的性质</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数原点矩及中心距"><i class="fa fa-check"></i><b>4.3</b> 协方差与相关系数，原点矩及中心距</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数"><i class="fa fa-check"></i><b>4.3.1</b> 协方差与相关系数</a></li>
+<li class="chapter" data-level="4.3.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#原点矩及中心距"><i class="fa fa-check"></i><b>4.3.2</b> 原点矩及中心距</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html"><i class="fa fa-check"></i><b>5</b> 大数定律与中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理"><i class="fa fa-check"></i><b>5.1</b> 大数定理</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理-1"><i class="fa fa-check"></i><b>5.1.1</b> 大数定理</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理"><i class="fa fa-check"></i><b>5.2</b> 中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理-1"><i class="fa fa-check"></i><b>5.2.1</b> 中心极限定理</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html"><i class="fa fa-check"></i><b>6</b> 样本与抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#基本概念-1"><i class="fa fa-check"></i><b>6.1</b> 基本概念</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#总体与样本"><i class="fa fa-check"></i><b>6.1.1</b> 总体与样本</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征"><i class="fa fa-check"></i><b>6.2</b> 样本数字特征</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征-1"><i class="fa fa-check"></i><b>6.2.1</b> 样本数字特征</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布"><i class="fa fa-check"></i><b>6.3</b> 正态总体的抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布-1"><i class="fa fa-check"></i><b>6.3.1</b> 正态总体的抽样分布</a></li>
+<li class="chapter" data-level="6.3.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#分位数"><i class="fa fa-check"></i><b>6.3.2</b> 分位数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="参数估计.html"><a href="参数估计.html"><i class="fa fa-check"></i><b>7</b> 参数估计</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="参数估计.html"><a href="参数估计.html#参数的点估计"><i class="fa fa-check"></i><b>7.1</b> 参数的点估计</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="参数估计.html"><a href="参数估计.html#矩法估计"><i class="fa fa-check"></i><b>7.1.1</b> 矩法估计</a></li>
+<li class="chapter" data-level="7.1.2" data-path="参数估计.html"><a href="参数估计.html#极大似然估计"><i class="fa fa-check"></i><b>7.1.2</b> 极大似然估计</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="参数估计.html"><a href="参数估计.html#估计量的评价标准"><i class="fa fa-check"></i><b>7.2</b> 估计量的评价标准</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="参数估计.html"><a href="参数估计.html#无偏性"><i class="fa fa-check"></i><b>7.2.1</b> 无偏性</a></li>
+<li class="chapter" data-level="7.2.2" data-path="参数估计.html"><a href="参数估计.html#有效性"><i class="fa fa-check"></i><b>7.2.2</b> 有效性</a></li>
+<li class="chapter" data-level="7.2.3" data-path="参数估计.html"><a href="参数估计.html#一致性"><i class="fa fa-check"></i><b>7.2.3</b> 一致性</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="参数估计.html"><a href="参数估计.html#参数的区间估计"><i class="fa fa-check"></i><b>7.3</b> 参数的区间估计</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="参数估计.html"><a href="参数估计.html#区间估计基本方法"><i class="fa fa-check"></i><b>7.3.1</b> 区间估计基本方法</a></li>
+<li class="chapter" data-level="7.3.2" data-path="参数估计.html"><a href="参数估计.html#单个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.2</b> 单个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.3" data-path="参数估计.html"><a href="参数估计.html#两个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.3</b> 两个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.4" data-path="参数估计.html"><a href="参数估计.html#单侧置信区间"><i class="fa fa-check"></i><b>7.3.4</b> 单侧置信区间</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="假设检验.html"><a href="假设检验.html"><i class="fa fa-check"></i><b>8</b> 假设检验</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="假设检验.html"><a href="假设检验.html#假设检验的基本概念"><i class="fa fa-check"></i><b>8.1</b> 假设检验的基本概念</a></li>
+<li class="chapter" data-level="8.2" data-path="假设检验.html"><a href="假设检验.html#正态总体均值与方差的假设检验"><i class="fa fa-check"></i><b>8.2</b> 正态总体均值与方差的假设检验</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="假设检验.html"><a href="假设检验.html#单个正态总体情形"><i class="fa fa-check"></i><b>8.2.1</b> 单个正态总体情形</a></li>
+<li class="chapter" data-level="8.2.2" data-path="假设检验.html"><a href="假设检验.html#两个正态总体情形"><i class="fa fa-check"></i><b>8.2.2</b> 两个正态总体情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="附录.html"><a href="附录.html"><i class="fa fa-check"></i>附录</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">概率论与数理统计</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="附录" class="section level1 unnumbered">
+<h1>附录</h1>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="假设检验.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

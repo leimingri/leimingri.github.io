@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 假设检验 | 概率论与数理统计</title>
+  <meta name="description" content="8 假设检验 | 概率论与数理统计" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8 假设检验 | 概率论与数理统计" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8 假设检验 | 概率论与数理统计" />
+  
+  
+  
+
+<meta name="author" content="胡鹏" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="参数估计.html"/>
+<link rel="next" href="附录.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">概率论与数理统计</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html"><i class="fa fa-check"></i><b>1</b> 随机事件及其概率</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#样本空间与随机事件"><i class="fa fa-check"></i><b>1.1</b> 样本空间与随机事件</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#基本概念"><i class="fa fa-check"></i><b>1.1.1</b> 基本概念</a></li>
+<li class="chapter" data-level="1.1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的关系与运算"><i class="fa fa-check"></i><b>1.1.2</b> 事件的关系与运算</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的频率与概率"><i class="fa fa-check"></i><b>1.2</b> 事件的频率与概率</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#频率的定义"><i class="fa fa-check"></i><b>1.2.1</b> 频率的定义</a></li>
+<li class="chapter" data-level="1.2.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#概率的公理化定义"><i class="fa fa-check"></i><b>1.2.2</b> 概率的公理化定义</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型与几何概型"><i class="fa fa-check"></i><b>1.3</b> 古典概型与几何概型</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型"><i class="fa fa-check"></i><b>1.3.1</b> 古典概型</a></li>
+<li class="chapter" data-level="1.3.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#几何概型"><i class="fa fa-check"></i><b>1.3.2</b> 几何概型</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率"><i class="fa fa-check"></i><b>1.4</b> 条件概率</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率-1"><i class="fa fa-check"></i><b>1.4.1</b> 条件概率</a></li>
+<li class="chapter" data-level="1.4.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#乘法公式"><i class="fa fa-check"></i><b>1.4.2</b> 乘法公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式与贝叶斯公式"><i class="fa fa-check"></i><b>1.5</b> 全概率公式与贝叶斯公式</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式"><i class="fa fa-check"></i><b>1.5.1</b> 全概率公式</a></li>
+<li class="chapter" data-level="1.5.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#贝叶斯公式"><i class="fa fa-check"></i><b>1.5.2</b> 贝叶斯公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性"><i class="fa fa-check"></i><b>1.6</b> 事件的独立性</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性-1"><i class="fa fa-check"></i><b>1.6.1</b> 事件的独立性</a></li>
+<li class="chapter" data-level="1.6.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#伯努利概型"><i class="fa fa-check"></i><b>1.6.2</b> 伯努利概型</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html"><i class="fa fa-check"></i><b>2</b> 随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量与分布函数"><i class="fa fa-check"></i><b>2.1</b> 随机变量与分布函数</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量"><i class="fa fa-check"></i><b>2.1.1</b> 随机变量</a></li>
+<li class="chapter" data-level="2.1.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#分布函数"><i class="fa fa-check"></i><b>2.1.2</b> 分布函数</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量及其分布"><i class="fa fa-check"></i><b>2.2</b> 离散型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念"><i class="fa fa-check"></i><b>2.2.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#常见离散型随机变量"><i class="fa fa-check"></i><b>2.2.2</b> 常见离散型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量及其分布"><i class="fa fa-check"></i><b>2.3</b> 连续型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念-1"><i class="fa fa-check"></i><b>2.3.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.3.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#几种常见的连续性随机变量"><i class="fa fa-check"></i><b>2.3.2</b> 几种常见的连续性随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量函数的分布"><i class="fa fa-check"></i><b>2.4</b> 随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量情形"><i class="fa fa-check"></i><b>2.4.1</b> 离散型随机变量情形</a></li>
+<li class="chapter" data-level="2.4.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量情形"><i class="fa fa-check"></i><b>2.4.2</b> 连续型随机变量情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html"><i class="fa fa-check"></i><b>3</b> 多维随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量及其联合分布函数"><i class="fa fa-check"></i><b>3.1</b> 二维随机变量及其联合分布函数</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#多维随机变量"><i class="fa fa-check"></i><b>3.1.1</b> 多维随机变量</a></li>
+<li class="chapter" data-level="3.1.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量"><i class="fa fa-check"></i><b>3.1.2</b> 二维离散型随机变量</a></li>
+<li class="chapter" data-level="3.1.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量"><i class="fa fa-check"></i><b>3.1.3</b> 二维连续型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布和条件分布"><i class="fa fa-check"></i><b>3.2</b> 边缘分布和条件分布</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布"><i class="fa fa-check"></i><b>3.2.1</b> 边缘分布</a></li>
+<li class="chapter" data-level="3.2.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#条件分布"><i class="fa fa-check"></i><b>3.2.2</b> 条件分布</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性"><i class="fa fa-check"></i><b>3.3</b> 随机变量的独立性</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性-1"><i class="fa fa-check"></i><b>3.3.1</b> 随机变量的独立性</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量函数的分布"><i class="fa fa-check"></i><b>3.4</b> 二维随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.1</b> 二维离散型随机变量函数的分布</a></li>
+<li class="chapter" data-level="3.4.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.2</b> 二维连续型随机变量函数的分布</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html"><i class="fa fa-check"></i><b>4</b> 随机变量的数字特征</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望"><i class="fa fa-check"></i><b>4.1</b> 数学期望</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的定义"><i class="fa fa-check"></i><b>4.1.1</b> 数学期望的定义</a></li>
+<li class="chapter" data-level="4.1.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#随机变量函数的数学期望"><i class="fa fa-check"></i><b>4.1.2</b> 随机变量函数的数学期望</a></li>
+<li class="chapter" data-level="4.1.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的性质及条件期望"><i class="fa fa-check"></i><b>4.1.3</b> 数学期望的性质及条件期望</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差"><i class="fa fa-check"></i><b>4.2</b> 方差</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的定义"><i class="fa fa-check"></i><b>4.2.1</b> 方差的定义</a></li>
+<li class="chapter" data-level="4.2.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#常见随机变量的方差"><i class="fa fa-check"></i><b>4.2.2</b> 常见随机变量的方差</a></li>
+<li class="chapter" data-level="4.2.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的性质"><i class="fa fa-check"></i><b>4.2.3</b> 方差的性质</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数原点矩及中心距"><i class="fa fa-check"></i><b>4.3</b> 协方差与相关系数，原点矩及中心距</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数"><i class="fa fa-check"></i><b>4.3.1</b> 协方差与相关系数</a></li>
+<li class="chapter" data-level="4.3.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#原点矩及中心距"><i class="fa fa-check"></i><b>4.3.2</b> 原点矩及中心距</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html"><i class="fa fa-check"></i><b>5</b> 大数定律与中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理"><i class="fa fa-check"></i><b>5.1</b> 大数定理</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理-1"><i class="fa fa-check"></i><b>5.1.1</b> 大数定理</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理"><i class="fa fa-check"></i><b>5.2</b> 中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理-1"><i class="fa fa-check"></i><b>5.2.1</b> 中心极限定理</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html"><i class="fa fa-check"></i><b>6</b> 样本与抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#基本概念-1"><i class="fa fa-check"></i><b>6.1</b> 基本概念</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#总体与样本"><i class="fa fa-check"></i><b>6.1.1</b> 总体与样本</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征"><i class="fa fa-check"></i><b>6.2</b> 样本数字特征</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征-1"><i class="fa fa-check"></i><b>6.2.1</b> 样本数字特征</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布"><i class="fa fa-check"></i><b>6.3</b> 正态总体的抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布-1"><i class="fa fa-check"></i><b>6.3.1</b> 正态总体的抽样分布</a></li>
+<li class="chapter" data-level="6.3.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#分位数"><i class="fa fa-check"></i><b>6.3.2</b> 分位数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="参数估计.html"><a href="参数估计.html"><i class="fa fa-check"></i><b>7</b> 参数估计</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="参数估计.html"><a href="参数估计.html#参数的点估计"><i class="fa fa-check"></i><b>7.1</b> 参数的点估计</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="参数估计.html"><a href="参数估计.html#矩法估计"><i class="fa fa-check"></i><b>7.1.1</b> 矩法估计</a></li>
+<li class="chapter" data-level="7.1.2" data-path="参数估计.html"><a href="参数估计.html#极大似然估计"><i class="fa fa-check"></i><b>7.1.2</b> 极大似然估计</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="参数估计.html"><a href="参数估计.html#估计量的评价标准"><i class="fa fa-check"></i><b>7.2</b> 估计量的评价标准</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="参数估计.html"><a href="参数估计.html#无偏性"><i class="fa fa-check"></i><b>7.2.1</b> 无偏性</a></li>
+<li class="chapter" data-level="7.2.2" data-path="参数估计.html"><a href="参数估计.html#有效性"><i class="fa fa-check"></i><b>7.2.2</b> 有效性</a></li>
+<li class="chapter" data-level="7.2.3" data-path="参数估计.html"><a href="参数估计.html#一致性"><i class="fa fa-check"></i><b>7.2.3</b> 一致性</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="参数估计.html"><a href="参数估计.html#参数的区间估计"><i class="fa fa-check"></i><b>7.3</b> 参数的区间估计</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="参数估计.html"><a href="参数估计.html#区间估计基本方法"><i class="fa fa-check"></i><b>7.3.1</b> 区间估计基本方法</a></li>
+<li class="chapter" data-level="7.3.2" data-path="参数估计.html"><a href="参数估计.html#单个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.2</b> 单个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.3" data-path="参数估计.html"><a href="参数估计.html#两个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.3</b> 两个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.4" data-path="参数估计.html"><a href="参数估计.html#单侧置信区间"><i class="fa fa-check"></i><b>7.3.4</b> 单侧置信区间</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="假设检验.html"><a href="假设检验.html"><i class="fa fa-check"></i><b>8</b> 假设检验</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="假设检验.html"><a href="假设检验.html#假设检验的基本概念"><i class="fa fa-check"></i><b>8.1</b> 假设检验的基本概念</a></li>
+<li class="chapter" data-level="8.2" data-path="假设检验.html"><a href="假设检验.html#正态总体均值与方差的假设检验"><i class="fa fa-check"></i><b>8.2</b> 正态总体均值与方差的假设检验</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="假设检验.html"><a href="假设检验.html#单个正态总体情形"><i class="fa fa-check"></i><b>8.2.1</b> 单个正态总体情形</a></li>
+<li class="chapter" data-level="8.2.2" data-path="假设检验.html"><a href="假设检验.html#两个正态总体情形"><i class="fa fa-check"></i><b>8.2.2</b> 两个正态总体情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="附录.html"><a href="附录.html"><i class="fa fa-check"></i>附录</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">概率论与数理统计</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="假设检验" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> 假设检验</h1>
+<div id="假设检验的基本概念" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> 假设检验的基本概念</h2>
+<p><font size=4><strong>（1）假设检验问题分类及思想</strong></font></p>
+<p><strong>①假设检验问题：</strong></p>
+<ul>
+<li>依据实际问题的需要，提出原假设<span class="math inline">\(H_{0}\)</span>以及相应的对立假设<span class="math inline">\(H_{1}\)</span>。为了推断<span class="math inline">\(H_{0}\)</span>是否正确，我们先假设<span class="math inline">\(H_{0}\)</span>成立，
+在此条件下，分析样本观测值，如果小概率事件发生，我们就有理由怀疑<span class="math inline">\(H_{0}\)</span>的正确性，因此拒绝接受原假设，否则就接受原假设，
+我们将上述统计推断问题称为假设检验问题。</li>
+</ul>
+<p><strong>②假设检验的问题分为两种类型：</strong></p>
+<ul>
+<li><p>参数假设检验：对总体分布函数中的未知参数提出某种假设，然后利用样本提供的信息对所提出的假设进行检验。</p></li>
+<li><p>非参数假设检验：对总体分布函数的形式或总体的性质提出某种假设所进行的检验。</p></li>
+</ul>
+<p><strong>③基本思想：</strong></p>
+<ul>
+<li>小概率事件在一次试验中实际上几乎不会发生，即实际推断原理。</li>
+</ul>
+<p><strong>例1：</strong>某厂生产一种产品，共计1000件，按规定次品率不超过<span class="math inline">\(2\%\)</span>才能出厂，现从中抽取10件进行检验，发现有3件次品，问这批产品能否出厂。</p>
+<p>解：设这批产品的次品率为p（未知），根据样本提供的信息来推断次品率p是否超过0.02.我们先假设<span class="math inline">\(p\leq 0.02\)</span>（记做<span class="math inline">\(H_0\)</span>）。当<span class="math inline">\(p=0.02\)</span>时，事件A={10件产品中有3件次品}的概率为<span class="math display">\[P(A)=C_{10}^3p^3(1-p)^7\approx 0.0008\]</span>.由此可见，在假设<span class="math inline">\(p=0.02\)</span>成立的条件下，事件A的概率很小。而小概率事件在一次试验中可以认为几乎不会发生。
+当<span class="math inline">\(p&lt;0.02\)</span>时，<span class="math inline">\(P(A)\)</span>更小，更可以认为在一次随机抽样中不会发生。</p>
+<p>而现在，在一次试验中事件A居然发生了，于是我们有理由认为假设不合理，拒绝假设，因此<span class="math inline">\(p&gt;0.02\)</span>，按规定，这批产品不能出厂。</p>
+<p>上例中所提出的明确假设(<span class="math inline">\(H_0:p\leq 0.02\)</span>)所提出的假设称为原假设或零假设，记为<span class="math inline">\(H_0\)</span>。与原假设对立的假设记为<span class="math inline">\(H_1\)</span>,称为备择假设或对立假设（在例1中为<span class="math inline">\(H_1:p&gt;0.02\)</span>）。</p>
+<p><strong>④步骤：</strong></p>
+<ul>
+<li><p>先假定<span class="math inline">\(H_0\)</span>成立；</p></li>
+<li><p>分析样本观测值，若发生小概率事件，则怀疑作为前提的原假设<span class="math inline">\(H_0\)</span>的正确性，此时拒绝原假设<span class="math inline">\(H_0\)</span>（相当于接受备择假设<span class="math inline">\(H_1\)</span>）；否则，大概率事件发生，没有理由拒绝<span class="math inline">\(H_0\)</span>，于是接受原假设。</p></li>
+</ul>
+<p>上述统计推断问题称为假设检验问题。</p>
+<p><font size=4><strong>（2）假设检验的基本概念</strong></font></p>
+<ul>
+<li><p>显著性水平</p>
+<ul>
+<li>在假设检验中将小概率值<span class="math inline">\(\alpha (0&lt;\alpha&lt;1)\)</span>称为显著性水平。</li>
+</ul></li>
+<li><p>检验统计量</p>
+<ul>
+<li>要检验假设<span class="math inline">\(H_{0}\)</span>，需要依据样本<span class="math inline">\(X_{1},X_{2},\cdots,X_{n}\)</span>适当构造的一个统计量。</li>
+</ul></li>
+<li><p>拒绝域</p>
+<ul>
+<li>当检验统计量在某个区域<span class="math inline">\(W\)</span>中取值时，拒绝原假设，此时称<span class="math inline">\(W\)</span>为拒绝域。</li>
+</ul></li>
+<li><p>接受域</p>
+<ul>
+<li>当检验统计量在某个区域<span class="math inline">\(W\)</span>中取值时，接受原假设，此时称<span class="math inline">\(W\)</span>为接受域。</li>
+</ul></li>
+</ul>
+<p><strong>例2：</strong>某车间生产一种零件，其长度X服从正态分布<span class="math inline">\(N(\mu,{0.5}^2)\)</span>，要求标准长度为100（cm）。现从一批零件中随机抽查了9件，测得他们的长度（单位：cm）如下：</p>
+<center>
+99.3 100.1 99.9 99.2 99.6 99.1 99.3 100.2 99.0
+</center>
+<p>问能否认为这批零件不合格？（取显著性水平<span class="math inline">\(\alpha=0.05\)</span>）</p>
+<p>解：假设<span class="math inline">\(H_0:\mu=\mu_0=100;H_1:\mu \neq 100.\)</span>
+由于样本均值<span class="math inline">\(\overline{X}\)</span>为总体均值<span class="math inline">\(\mu\)</span>的无偏估计，因此<span class="math inline">\(|\overline{x}-\mu|\)</span>应该比较小。于是，<span class="math inline">\(\frac{|\overline{x}-\mu|}{\sigma/\sqrt{n}}\)</span>也应该比较小。因此若<span class="math inline">\(\frac{|\overline{x}-\mu|}{\sigma/\sqrt{n}}\)</span>大于等于某个常数时，我们就怀疑原假设<span class="math inline">\(H_0\)</span>的正确性。</p>
+<p>由于 <span class="math inline">\(u=\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}\sim N(0,1)\)</span>，按以上分析，可适当选择常数k，当$ k<span class="math inline">\(时就拒绝\)</span>H_0<span class="math inline">\(，为了确定k的值，令\)</span><span class="math inline">\(P\left\{ \frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}\geq k\right\}=\alpha,\)</span><span class="math inline">\(,则可求得\)</span>k=u_{/2}$。</p>
+<p>若统计量u的观察值落在<span class="math inline">\(|u|\geq u_{\alpha/2}\)</span>的范围内就拒绝<span class="math inline">\(H_0\)</span>，否则就接受<span class="math inline">\(H_0\)</span>。</p>
+<p>本例中，<span class="math inline">\(n=9,\sigma=0.5,\overline{x}=99.52,\mu_0=100,\alpha=0.05,u_{\alpha/2}=u_{0.025}=1.96\)</span>,从而有<span class="math display">\[|u|=\frac{\overline{x}-\mu_{0}}{\sigma/\sqrt{n}}=2.88\]</span>
+由于<span class="math inline">\(|u|=2.88&gt;1.96\)</span>,因此拒绝<span class="math inline">\(H_0:\mu=100\)</span>,即认为这批零件不合格。</p>
+<p>由于检验法则是依据样本做出的，而抽取样本具有随机性，因此假设检验容易出现以下两种错误：</p>
+<ul>
+<li><p>第一类错误：原假设实际上是正确的，但是我们做出的决定是拒绝原假设。</p>
+<ul>
+<li>只有小概率事件发生是才会出现第一类错误，其概率不超过显著性水平<span class="math inline">\(\alpha\)</span>。</li>
+</ul></li>
+<li><p>第二类错误：原假设实际上是不正确的，但是我们做出的决定是接受原假设，记其发生的概率为<span class="math inline">\(\beta\)</span>。</p></li>
+</ul>
+<p>如何避免这两种错误：</p>
+<ul>
+<li><p>一般在固定样本容量的情况下，减少犯某一种错误的概率，然而另一种错误发生的概率会增加。只有在增加样本容量的情况下，才能使两种错误发生的概率减少。</p></li>
+<li><p>在给定样本的情况下，我们总是控制第一类错误发生的概率，而不考虑犯第二种错误的概率，这种假设检验问题称为显著性假设。</p></li>
+</ul>
+<p><strong>双边检验</strong></p>
+<ul>
+<li>原假设<span class="math inline">\(H_{0}:\theta=\theta_{0}\)</span>，对立假设为<span class="math inline">\(H_{1}:\theta\neq\theta_{0}\)</span>。</li>
+</ul>
+<p><strong>左边检验</strong></p>
+<ul>
+<li>原假设<span class="math inline">\(H_{0}:\theta\geq\theta_{0}\)</span>，对立假设为<span class="math inline">\(H_{1}:\theta&lt;\theta_{0}\)</span>。</li>
+</ul>
+<p><strong>右边检验</strong></p>
+<ul>
+<li>原假设<span class="math inline">\(H_{0}:\theta\leq\theta_{0}\)</span>，对立假设为<span class="math inline">\(H_{1}:\theta&gt;\theta_{0}\)</span>。</li>
+</ul>
+<p>左边检验与右边检验统称为单边检验。</p>
+<p><font size=4><strong>（3）假设检验的基本步骤</strong></font></p>
+<ul>
+<li><p>依据实际问题的需要，提出原假设<span class="math inline">\(H_{0}\)</span>以及相应的对立假设<span class="math inline">\(H_{1}\)</span>；</p></li>
+<li><p>给出显著水平<span class="math inline">\(\alpha\)</span>和样本容量 n；</p></li>
+<li><p>确定检验统计量以及拒绝域形式；</p></li>
+<li><p>按犯第一类错误的概率等于<span class="math inline">\(\alpha\)</span>，求出拒绝域W；</p></li>
+<li><p>依据样本观测值计算检验统计量的观测值作出决策，是拒绝原假设，还是接受原假设。</p></li>
+</ul>
+</div>
+<div id="正态总体均值与方差的假设检验" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> 正态总体均值与方差的假设检验</h2>
+<div id="单个正态总体情形" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> 单个正态总体情形</h3>
+<p><font size=4><strong>（1）<span class="math inline">\(\sigma\)</span>已知，关于<span class="math inline">\(\mu\)</span>的假设检验: <span class="math inline">\(u\)</span>检验</strong></font></p>
+<ul>
+<li><p>提出需要检验的假设: <span class="math inline">\(H_{0}: \mu=\mu_{0}; ~~~~H_{1}: \mu\neq\mu_{0}\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  u=\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}\sim N(0,1);
+  \end{aligned}\tag{8.1}\]</span></p>
+<ul>
+<li>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</li>
+</ul>
+<p><span class="math display">\[P\left\{\frac{|\overline{X}-\mu_{0}|}{\sigma/\sqrt{n}}\geq u_{\frac{\alpha}{2}}\right\}=\alpha,\tag{8.2}\]</span> 因此得到的<span class="math inline">\(H_{0}\)</span>的拒绝域为:<span class="math inline">\(W=\{|u|\geq u_{\frac{\alpha}{2}}\}\)</span>.</p>
+<ul>
+<li>依据样本观测值计算<span class="math inline">\(u\)</span>，若<span class="math inline">\(|u|\geq u_{\frac{\alpha}{2}}\)</span>就拒绝<span class="math inline">\(H_{0}\)</span>，认为均值<span class="math inline">\(\mu\)</span>和<span class="math inline">\(\mu_{0}\)</span>有显著差异。反之，接受。</li>
+</ul>
+<p>检验中所用统计量为
+<span class="math display">\[\begin{aligned}
+u=\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}\sim N(0,1)
+\end{aligned}\tag{8.3}\]</span>
+称这类检验为<span class="math inline">\(u\)</span>检验。</p>
+<ul>
+<li><p>左边检验</p>
+<ul>
+<li><p>假设 <span class="math inline">\(H_{0}: \mu=\mu_{0} (\mu\geq \mu_{0})\)</span>; <span class="math inline">\(H_{1}: \mu&lt;\mu_{0}\)</span></p></li>
+<li><p>拒绝域 <span class="math inline">\(W=\{u\leq -u_{\alpha}\}\)</span></p></li>
+</ul></li>
+<li><p>右边检验</p>
+<ul>
+<li><p>假设 <span class="math inline">\(H_{0}: \mu=\mu_{0} (\mu\leq \mu_{0})\)</span>; <span class="math inline">\(H_{1}: \mu&gt;\mu_{0}\)</span></p></li>
+<li><p>拒绝域 <span class="math inline">\(W=\{u\geq u_{\alpha}\}\)</span></p></li>
+</ul></li>
+</ul>
+<p><strong>例3：</strong>一种元件要求其平均寿命不小于1000h。现从一批这种元件中随机抽取25件，测得平均寿命为950h，已知这批元件寿命服从<span class="math inline">\(\sigma=100h\)</span>的正态分布，试在显著性水平<span class="math inline">\(\alpha=0.05\)</span>下确定这批元件是否合格。</p>
+<p><font size=4><strong>（2）<span class="math inline">\(\sigma\)</span>未知，关于<span class="math inline">\(\mu\)</span>的假设检验: <span class="math inline">\(t\)</span>检验</strong></font></p>
+<ul>
+<li><p>提出需要检验的假设: <span class="math inline">\(H_{0}: \mu=\mu_{0}; ~~~~H_{1}: \mu\neq\mu_{0}\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  t=\frac{\overline{X}-\mu_{0}}{S/\sqrt{n}}\sim t(n-1);
+  \end{aligned}\tag{8.4}\]</span></p>
+<ul>
+<li>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</li>
+</ul>
+<p><span class="math display">\[P\left\{\frac{|\overline{X}-\mu_{0}|}{S/\sqrt{n}}\geq t_{\frac{\alpha}{2}}(n-1)\right\}=\alpha,\tag{8.5}\]</span> 因此得到的<span class="math inline">\(H_{0}\)</span>的拒绝域为:<span class="math inline">\(W=\{|t|\geq t_{\frac{\alpha}{2}}(n-1)\}\)</span>.</p>
+<ul>
+<li>依据样本观测值计算<span class="math inline">\(t\)</span>，若<span class="math inline">\(|t|\geq t_{\frac{\alpha}{2}}(n-1)\)</span>就拒绝<span class="math inline">\(H_{0}\)</span>，认为均值<span class="math inline">\(\mu\)</span>和<span class="math inline">\(\mu_{0}\)</span>有显著差异。反之，接受。</li>
+</ul>
+<p>检验中所用统计量为
+<span class="math display">\[\begin{aligned}
+t=\frac{\overline{X}-\mu_{0}}{S/\sqrt{n}}\sim t(n-1)
+  \end{aligned}\tag{8.6}\]</span>
+称这类检验为<span class="math inline">\(t\)</span>检验。</p>
+<ul>
+<li><p>左边检验</p>
+<ul>
+<li><p>假设 <span class="math inline">\(H_{0}: \mu=\mu_{0} (\mu\geq \mu_{0})\)</span>; <span class="math inline">\(H_{1}: \mu&lt;\mu_{0}\)</span></p></li>
+<li><p>拒绝域 <span class="math inline">\(W=\{t\leq -t_{\alpha}(n-1)\}\)</span></p></li>
+</ul></li>
+<li><p>右边检验</p>
+<ul>
+<li><p>假设 <span class="math inline">\(H_{0}: \mu=\mu_{0} (\mu\leq \mu_{0})\)</span>; <span class="math inline">\(H_{1}: \mu&gt;\mu_{0}\)</span></p></li>
+<li><p>拒绝域 <span class="math inline">\(W=\{u\geq t_{\alpha}(n-1)\}\)</span></p></li>
+</ul></li>
+</ul>
+<p><strong>例4：</strong>某车床加工一种零件，要求长度为150mm。今从一批加工后的这种零件中抽取9个，测得长度（单位：mm）如下：</p>
+<center>
+147 150 149 154 152 153 148 151 155
+</center>
+<p>假设零件长度服从正态分布<span class="math inline">\(X\sim N(\mu,\sigma^2)\)</span>，问这批零件是否合格（取<span class="math inline">\(\alpha=0.05\)</span>)</p>
+<p><font size=4><strong>（3）<span class="math inline">\(\mu\)</span>已知，关于<span class="math inline">\(\sigma^{2}\)</span>的假设检验: <span class="math inline">\(\chi^{2}\)</span>检验</strong></font></p>
+<ul>
+<li><p>提出需要检验的假设: <span class="math inline">\(H_{0}: \sigma^{2}=\sigma^{2}_{0}; ~~~~H_{1}: \sigma\neq\sigma^{2}_{0}\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  \chi^{2}=\frac{1}{\sigma^{2}_{0}}\sum_{i=1}^{n}(X_{i}-\mu)^{2}\sim \chi^{2}(n);
+  \end{aligned}\tag{8.7}\]</span></p>
+<ul>
+<li>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</li>
+</ul>
+<p><span class="math display">\[P\left\{\chi^{2}_{1-\alpha/2}(n)\leq \frac{1}{\sigma^{2}_{0}}\sum_{i=1}^{n}(X_{i}-\mu)^{2}\leq \chi^{2}_{\alpha/2}(n)\right\}=1-\alpha\tag{8.8}\]</span></p>
+<ul>
+<li>拒绝域为</li>
+</ul>
+<p><span class="math display">\[W=\{\chi^{2}\leq \chi^{2}_{1-\alpha/2}(n) \text{或} \chi^{2}\geq \chi^{2}_{\alpha/2}(n)\} \tag{8.9}\]</span></p>
+<p><font size=4><strong>（4）<span class="math inline">\(\mu\)</span>未知，关于<span class="math inline">\(\sigma^{2}\)</span>的假设检验: <span class="math inline">\(\chi^{2}\)</span>检验</strong></font></p>
+<ul>
+<li><p>提出需要检验的假设: <span class="math inline">\(H_{0}: \sigma^{2}=\sigma^{2}_{0}; ~~~~H_{1}: \sigma\neq\sigma^{2}_{0}\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  \chi^{2}=\frac{(n-1)S^{2}}{\sigma^{2}_{0}}\sim \chi^{2}(n-1);
+  \end{aligned}\tag{8.10}\]</span></p>
+<ul>
+<li><p>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</p>
+<p><span class="math display">\[P\left\{\chi^{2}_{1-\alpha/2}(n-1)\leq \frac{(n-1)S^{2}}{\sigma^{2}_{0}}\leq \chi^{2}_{\alpha/2}(n-1)\right\}=1-\alpha\tag{8.11}\]</span></p></li>
+<li><p>拒绝域为</p></li>
+</ul>
+<p><span class="math display">\[W=\{\chi^{2}\leq \chi^{2}_{1-\alpha/2}(n-1) \text{或} \chi^{2}\geq \chi^{2}_{\alpha/2}(n-1)\}\tag{8.12}\]</span></p>
+<p><strong>例5：</strong>某无线电厂生产的一种高频管，其中一项指标服从正态分布<span class="math inline">\(X\sim N(\mu,\sigma^2)\)</span>，从一批产品中抽取8只管子，测得该指标数据如下：</p>
+<center>
+68 43 70 62 55 56 60 72
+</center>
+<p>（1）当<span class="math inline">\(\mu=60\)</span>时，检验<span class="math inline">\(\sigma^2=8^2\)</span>(取<span class="math inline">\(\alpha=0.05\)</span>)；</p>
+<p>（2）当<span class="math inline">\(\mu\)</span>未知时，检验<span class="math inline">\(\sigma^2=8^2\)</span>(取<span class="math inline">\(\alpha=0.05\)</span>)。</p>
+</div>
+<div id="两个正态总体情形" class="section level3" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> 两个正态总体情形</h3>
+<p><font size=4><strong>（1）假设与记号</strong></font></p>
+<p>假设总体<span class="math inline">\(X\sim N(\mu_{1},\sigma_{1}^{2})\)</span>， 总体<span class="math inline">\(Y\sim N(\mu_{2},\sigma_{2}^{2})\)</span>，并且这两个正态总体相互独立。样本<span class="math inline">\((X_{1},X_{2},\cdots,X_{n})\)</span>与<span class="math inline">\((Y_{1},Y_{2},\cdots,Y_{n})\)</span>分别来自总体X与Y，他们相互独立，其样本均值与样本方差为
+<span class="math display">\[\overline{X}=\frac{1}{n_{1}}\sum_{i=1}^{n_{1}}x_{i}, ~~~~\overline{Y}=\frac{1}{n_{2}}\sum_{i=1}^{n_{2}}y_{i},\tag{8.13}\]</span>
+<span class="math display">\[S_{1}^{2}=\frac{1}{n_{1}-1}\sum_{i=1}^{n_{1}}(X_{i}-\overline{X})^{2},~~~~S_{2}^{2}=\frac{1}{n_{2}-1}\sum_{i=1}^{n_{2}}(Y_{i}-\overline{Y})^{2}\tag{8.14}\]</span></p>
+<p><font size=4><strong>（2）<span class="math inline">\(\sigma_{1}^{2}\)</span>与<span class="math inline">\(\sigma_{2}^{2}\)</span>已知，均值差<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的假设检验</strong></font></p>
+<ul>
+<li><p>提出需要检验的假设: <span class="math inline">\(H_{0}: \mu_{1}-\mu_{2}=\delta; ~~~~H_{1}: \mu_{1}-\mu_{2}\neq\delta\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  u=\frac{\overline{X}-\overline{Y}-\delta}{\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}}\sim N(0,1);
+  \end{aligned}\tag{8.15}\]</span></p>
+<ul>
+<li><p>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</p>
+<p><span class="math display">\[P\left\{\frac{\overline{X}-\overline{Y}-\delta}{\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}}\geq u_{\alpha/2}\right\}=\alpha \tag{8.16}\]</span></p></li>
+<li><p>拒绝域为<span class="math display">\[W=\{|u|\geq u_{\alpha/2}\}\]</span></p></li>
+</ul>
+<p><strong>例6：</strong>设总体<span class="math inline">\(X\sim N(\mu_1,{10}^2)\)</span>,从总体X中抽取容量为5的样本，其观测值为</p>
+<center>
+21.0 20.5 19.5 20.5 19.0
+</center>
+<p>设总体<span class="math inline">\(Y\sim N(\mu_2,{9}^2)\)</span>,从总体Y中抽取容量为4的样本，其观测值为</p>
+<center>
+20.0 20.5 21.0 19.5
+</center>
+<p>试在显著性水平<span class="math inline">\(\alpha=0.05\)</span>下检验两个总体的均值是否相等。</p>
+<p><font size=4><strong>（3）<span class="math inline">\(\sigma_{1}^{2}=\sigma_{2}^{2}=\sigma\)</span>未知，均值差<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的假设检验</strong></font></p>
+<ul>
+<li><p>提出需要检验的假设: <span class="math inline">\(H_{0}: \mu_{1}-\mu_{2}=\delta; ~~~~H_{1}: \mu_{1}-\mu_{2}\neq\delta\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  T=\frac{\overline{X}-\overline{Y}-\delta}{\frac{(n_{1}-1)S_{1}^{2}+(n_{2}-1)S_{2}^{2}}{n_{1}+n_{2}-2}\sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}}\sim t(n_{1}+n_{2}-2);
+  \end{aligned}\tag{8.17}\]</span></p>
+<ul>
+<li><p>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</p>
+<p><span class="math display">\[P\left\{|T|\geq t_{\alpha/2}(n_{1}+n_{2}-2)\right\}=\alpha\tag{8.18}\]</span></p></li>
+<li><p>拒绝域为</p></li>
+</ul>
+<p><span class="math display">\[W=\{|t|\geq t_{\alpha/2}(n_{1}+n_{2}-2)\}\tag{8.19}\]</span></p>
+<p><strong>例7：</strong>在甲乙两个工厂生产的蓄电池中，分别抽取5个测量蓄电池的电容量，数据如下：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">甲厂</th>
+<th align="center">143</th>
+<th align="center">141</th>
+<th align="center">138</th>
+<th align="center">142</th>
+<th align="center">140</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">乙厂</td>
+<td align="center">141</td>
+<td align="center">143</td>
+<td align="center">139</td>
+<td align="center">144</td>
+<td align="center">141</td>
+</tr>
+</tbody>
+</table>
+<p>设甲厂和乙厂生产的蓄电池的电容量分别服从正态分布<span class="math inline">\(N(\mu_1,\sigma_1^2)\)</span>,<span class="math inline">\(N(\mu_2,\sigma_2^2)\)</span>，且<span class="math inline">\(\sigma_1^2=\sigma_2^2\)</span>，问两厂蓄电池的电容量有无显著差异？（取<span class="math inline">\(\alpha=0.05\)</span>)</p>
+<p><font size=4><strong>（4）均值<span class="math inline">\(\mu_{1}\)</span>与<span class="math inline">\(\mu_{2}\)</span>已知，方差比<span class="math inline">\(\sigma_{1}^{2}/\sigma_{2}^{2}\)</span>的假设检验</strong></font></p>
+<ul>
+<li><p>要检验假设 <span class="math inline">\(H_{0}: \sigma_{1}^{2}=\sigma^{2}_{2}; ~~~~H_{1}: \sigma_{1}^{2}\neq\sigma^{2}_{2}\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  F=\frac{n_{2}\sum_{i=1}^{n_{1}}(X_{i}-\mu_{1})^{2}}{n_{1}\sum_{i=1}^{n_{2}}(Y_{i}-\mu_{2})^{2}}\sim F(n_{1},n_{2}).
+  \end{aligned}\tag{8.20}\]</span></p>
+<ul>
+<li>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</li>
+</ul>
+<p><span class="math display">\[P\{F\leq F_{1-\alpha/2}(n_{1},n_{2}) \text{或} F\geq F_{\alpha/2}(n_{1},n_{2})\}=\alpha\tag{8.21}\]</span></p>
+<ul>
+<li>拒绝域为</li>
+</ul>
+<p><span class="math display">\[W=\{F\leq F_{1-\alpha/2}(n_{1},n_{2}) \text{或} F\geq F_{\alpha/2}(n_{1},n_{2})\}\tag{8.22}\]</span></p>
+<p><font size=4><strong>（5）均值<span class="math inline">\(\mu_{1}\)</span>与<span class="math inline">\(\mu_{2}\)</span>未知，方差比<span class="math inline">\(\sigma_{1}^{2}/\sigma_{2}^{2}\)</span>的假设检验</strong></font></p>
+<ul>
+<li><p>要检验假设 <span class="math inline">\(H_{0}: \sigma_{1}^{2}=\sigma^{2}_{2}; ~~~~H_{1}: \sigma_{1}^{2}\neq\sigma^{2}_{2}\)</span></p></li>
+<li><p>给出检验统计量:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+  F=\frac{S_{1}^{2}}{S_{2}^{2}}\sim F(n_{1}-1,n_{2}-1).
+  \end{aligned}\tag{8.23}\]</span></p>
+<ul>
+<li>对于给定的显著水平<span class="math inline">\(\alpha\)</span>，使得</li>
+</ul>
+<p><span class="math display">\[P\{F\leq F_{1-\alpha/2}(n_{1}-1,n_{2}-1) \text{或} F\geq F_{\alpha/2}(n_{1}-1,n_{2}-1)\}=\alpha\tag{8.24}\]</span>
+* 拒绝域为</p>
+<p><span class="math display">\[W=\{F\leq F_{1-\alpha/2}(n_{1}-1,n_{2}-1) \text{或} F\geq F_{\alpha/2}(n_{1}-1,n_{2}-1)\}\tag{8.25}\]</span></p>
+<p><strong>例8：</strong>假设两批电子元件的电阻值分别服从正态分布<span class="math inline">\(N(\mu_1,\sigma_1^2)\)</span>,<span class="math inline">\(N(\mu_2,\sigma_2^2)\)</span>，分别独立抽取样本，测得电阻值（<span class="math inline">\(\Omega\)</span>）为</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">A批</th>
+<th align="center">0.140</th>
+<th align="center">0.138</th>
+<th align="center">0.143</th>
+<th align="center">0.142</th>
+<th align="center">0.144</th>
+<th align="center">0.137</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">B批</td>
+<td align="center">0.135</td>
+<td align="center">0.140</td>
+<td align="center">0.142</td>
+<td align="center">0.136</td>
+<td align="center">0.138</td>
+<td align="center">0.140</td>
+</tr>
+</tbody>
+</table>
+<p>问这两批电子元件的电阻是否有显著差异（取<span class="math inline">\(\alpha=0.05\)</span>）</p>
+<p><strong>例9：</strong>甲乙两台机床生产同一型号的滚珠，先从这两台机床的产品中分别独立抽取8个和9个，测得滚珠直径如下：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">甲机床</th>
+<th align="center">15.0</th>
+<th align="center">14.5</th>
+<th align="center">15.2</th>
+<th align="center">15.5</th>
+<th align="center">14.8</th>
+<th align="center">15.1</th>
+<th align="center">15.2</th>
+<th align="center">14.8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">乙机床</td>
+<td align="center">15.2</td>
+<td align="center">15.0</td>
+<td align="center">14.8</td>
+<td align="center">15.2</td>
+<td align="center">15.0</td>
+<td align="center">14.8</td>
+<td align="center">15.1</td>
+<td align="center">14.8</td>
+</tr>
+</tbody>
+</table>
+<p>假设滚珠直径服从正态分布，问乙机床的加工精度是否比甲机床高？（取<span class="math inline">\(\alpha=0.05\)</span>）</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="参数估计.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="附录.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

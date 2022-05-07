@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 大数定律与中心极限定理 | 概率论与数理统计</title>
+  <meta name="description" content="5 大数定律与中心极限定理 | 概率论与数理统计" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 大数定律与中心极限定理 | 概率论与数理统计" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 大数定律与中心极限定理 | 概率论与数理统计" />
+  
+  
+  
+
+<meta name="author" content="胡鹏" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="随机变量的数字特征.html"/>
+<link rel="next" href="样本与抽样分布.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">概率论与数理统计</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html"><i class="fa fa-check"></i><b>1</b> 随机事件及其概率</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#样本空间与随机事件"><i class="fa fa-check"></i><b>1.1</b> 样本空间与随机事件</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#基本概念"><i class="fa fa-check"></i><b>1.1.1</b> 基本概念</a></li>
+<li class="chapter" data-level="1.1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的关系与运算"><i class="fa fa-check"></i><b>1.1.2</b> 事件的关系与运算</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的频率与概率"><i class="fa fa-check"></i><b>1.2</b> 事件的频率与概率</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#频率的定义"><i class="fa fa-check"></i><b>1.2.1</b> 频率的定义</a></li>
+<li class="chapter" data-level="1.2.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#概率的公理化定义"><i class="fa fa-check"></i><b>1.2.2</b> 概率的公理化定义</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型与几何概型"><i class="fa fa-check"></i><b>1.3</b> 古典概型与几何概型</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型"><i class="fa fa-check"></i><b>1.3.1</b> 古典概型</a></li>
+<li class="chapter" data-level="1.3.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#几何概型"><i class="fa fa-check"></i><b>1.3.2</b> 几何概型</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率"><i class="fa fa-check"></i><b>1.4</b> 条件概率</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率-1"><i class="fa fa-check"></i><b>1.4.1</b> 条件概率</a></li>
+<li class="chapter" data-level="1.4.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#乘法公式"><i class="fa fa-check"></i><b>1.4.2</b> 乘法公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式与贝叶斯公式"><i class="fa fa-check"></i><b>1.5</b> 全概率公式与贝叶斯公式</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式"><i class="fa fa-check"></i><b>1.5.1</b> 全概率公式</a></li>
+<li class="chapter" data-level="1.5.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#贝叶斯公式"><i class="fa fa-check"></i><b>1.5.2</b> 贝叶斯公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性"><i class="fa fa-check"></i><b>1.6</b> 事件的独立性</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性-1"><i class="fa fa-check"></i><b>1.6.1</b> 事件的独立性</a></li>
+<li class="chapter" data-level="1.6.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#伯努利概型"><i class="fa fa-check"></i><b>1.6.2</b> 伯努利概型</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html"><i class="fa fa-check"></i><b>2</b> 随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量与分布函数"><i class="fa fa-check"></i><b>2.1</b> 随机变量与分布函数</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量"><i class="fa fa-check"></i><b>2.1.1</b> 随机变量</a></li>
+<li class="chapter" data-level="2.1.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#分布函数"><i class="fa fa-check"></i><b>2.1.2</b> 分布函数</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量及其分布"><i class="fa fa-check"></i><b>2.2</b> 离散型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念"><i class="fa fa-check"></i><b>2.2.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#常见离散型随机变量"><i class="fa fa-check"></i><b>2.2.2</b> 常见离散型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量及其分布"><i class="fa fa-check"></i><b>2.3</b> 连续型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念-1"><i class="fa fa-check"></i><b>2.3.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.3.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#几种常见的连续性随机变量"><i class="fa fa-check"></i><b>2.3.2</b> 几种常见的连续性随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量函数的分布"><i class="fa fa-check"></i><b>2.4</b> 随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量情形"><i class="fa fa-check"></i><b>2.4.1</b> 离散型随机变量情形</a></li>
+<li class="chapter" data-level="2.4.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量情形"><i class="fa fa-check"></i><b>2.4.2</b> 连续型随机变量情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html"><i class="fa fa-check"></i><b>3</b> 多维随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量及其联合分布函数"><i class="fa fa-check"></i><b>3.1</b> 二维随机变量及其联合分布函数</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#多维随机变量"><i class="fa fa-check"></i><b>3.1.1</b> 多维随机变量</a></li>
+<li class="chapter" data-level="3.1.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量"><i class="fa fa-check"></i><b>3.1.2</b> 二维离散型随机变量</a></li>
+<li class="chapter" data-level="3.1.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量"><i class="fa fa-check"></i><b>3.1.3</b> 二维连续型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布和条件分布"><i class="fa fa-check"></i><b>3.2</b> 边缘分布和条件分布</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布"><i class="fa fa-check"></i><b>3.2.1</b> 边缘分布</a></li>
+<li class="chapter" data-level="3.2.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#条件分布"><i class="fa fa-check"></i><b>3.2.2</b> 条件分布</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性"><i class="fa fa-check"></i><b>3.3</b> 随机变量的独立性</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性-1"><i class="fa fa-check"></i><b>3.3.1</b> 随机变量的独立性</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量函数的分布"><i class="fa fa-check"></i><b>3.4</b> 二维随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.1</b> 二维离散型随机变量函数的分布</a></li>
+<li class="chapter" data-level="3.4.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.2</b> 二维连续型随机变量函数的分布</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html"><i class="fa fa-check"></i><b>4</b> 随机变量的数字特征</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望"><i class="fa fa-check"></i><b>4.1</b> 数学期望</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的定义"><i class="fa fa-check"></i><b>4.1.1</b> 数学期望的定义</a></li>
+<li class="chapter" data-level="4.1.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#随机变量函数的数学期望"><i class="fa fa-check"></i><b>4.1.2</b> 随机变量函数的数学期望</a></li>
+<li class="chapter" data-level="4.1.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的性质及条件期望"><i class="fa fa-check"></i><b>4.1.3</b> 数学期望的性质及条件期望</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差"><i class="fa fa-check"></i><b>4.2</b> 方差</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的定义"><i class="fa fa-check"></i><b>4.2.1</b> 方差的定义</a></li>
+<li class="chapter" data-level="4.2.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#常见随机变量的方差"><i class="fa fa-check"></i><b>4.2.2</b> 常见随机变量的方差</a></li>
+<li class="chapter" data-level="4.2.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的性质"><i class="fa fa-check"></i><b>4.2.3</b> 方差的性质</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数原点矩及中心距"><i class="fa fa-check"></i><b>4.3</b> 协方差与相关系数，原点矩及中心距</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数"><i class="fa fa-check"></i><b>4.3.1</b> 协方差与相关系数</a></li>
+<li class="chapter" data-level="4.3.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#原点矩及中心距"><i class="fa fa-check"></i><b>4.3.2</b> 原点矩及中心距</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html"><i class="fa fa-check"></i><b>5</b> 大数定律与中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理"><i class="fa fa-check"></i><b>5.1</b> 大数定理</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理-1"><i class="fa fa-check"></i><b>5.1.1</b> 大数定理</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理"><i class="fa fa-check"></i><b>5.2</b> 中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理-1"><i class="fa fa-check"></i><b>5.2.1</b> 中心极限定理</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html"><i class="fa fa-check"></i><b>6</b> 样本与抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#基本概念-1"><i class="fa fa-check"></i><b>6.1</b> 基本概念</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#总体与样本"><i class="fa fa-check"></i><b>6.1.1</b> 总体与样本</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征"><i class="fa fa-check"></i><b>6.2</b> 样本数字特征</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征-1"><i class="fa fa-check"></i><b>6.2.1</b> 样本数字特征</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布"><i class="fa fa-check"></i><b>6.3</b> 正态总体的抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布-1"><i class="fa fa-check"></i><b>6.3.1</b> 正态总体的抽样分布</a></li>
+<li class="chapter" data-level="6.3.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#分位数"><i class="fa fa-check"></i><b>6.3.2</b> 分位数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="参数估计.html"><a href="参数估计.html"><i class="fa fa-check"></i><b>7</b> 参数估计</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="参数估计.html"><a href="参数估计.html#参数的点估计"><i class="fa fa-check"></i><b>7.1</b> 参数的点估计</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="参数估计.html"><a href="参数估计.html#矩法估计"><i class="fa fa-check"></i><b>7.1.1</b> 矩法估计</a></li>
+<li class="chapter" data-level="7.1.2" data-path="参数估计.html"><a href="参数估计.html#极大似然估计"><i class="fa fa-check"></i><b>7.1.2</b> 极大似然估计</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="参数估计.html"><a href="参数估计.html#估计量的评价标准"><i class="fa fa-check"></i><b>7.2</b> 估计量的评价标准</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="参数估计.html"><a href="参数估计.html#无偏性"><i class="fa fa-check"></i><b>7.2.1</b> 无偏性</a></li>
+<li class="chapter" data-level="7.2.2" data-path="参数估计.html"><a href="参数估计.html#有效性"><i class="fa fa-check"></i><b>7.2.2</b> 有效性</a></li>
+<li class="chapter" data-level="7.2.3" data-path="参数估计.html"><a href="参数估计.html#一致性"><i class="fa fa-check"></i><b>7.2.3</b> 一致性</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="参数估计.html"><a href="参数估计.html#参数的区间估计"><i class="fa fa-check"></i><b>7.3</b> 参数的区间估计</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="参数估计.html"><a href="参数估计.html#区间估计基本方法"><i class="fa fa-check"></i><b>7.3.1</b> 区间估计基本方法</a></li>
+<li class="chapter" data-level="7.3.2" data-path="参数估计.html"><a href="参数估计.html#单个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.2</b> 单个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.3" data-path="参数估计.html"><a href="参数估计.html#两个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.3</b> 两个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.4" data-path="参数估计.html"><a href="参数估计.html#单侧置信区间"><i class="fa fa-check"></i><b>7.3.4</b> 单侧置信区间</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="假设检验.html"><a href="假设检验.html"><i class="fa fa-check"></i><b>8</b> 假设检验</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="假设检验.html"><a href="假设检验.html#假设检验的基本概念"><i class="fa fa-check"></i><b>8.1</b> 假设检验的基本概念</a></li>
+<li class="chapter" data-level="8.2" data-path="假设检验.html"><a href="假设检验.html#正态总体均值与方差的假设检验"><i class="fa fa-check"></i><b>8.2</b> 正态总体均值与方差的假设检验</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="假设检验.html"><a href="假设检验.html#单个正态总体情形"><i class="fa fa-check"></i><b>8.2.1</b> 单个正态总体情形</a></li>
+<li class="chapter" data-level="8.2.2" data-path="假设检验.html"><a href="假设检验.html#两个正态总体情形"><i class="fa fa-check"></i><b>8.2.2</b> 两个正态总体情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="附录.html"><a href="附录.html"><i class="fa fa-check"></i>附录</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">概率论与数理统计</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="大数定律与中心极限定理" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> 大数定律与中心极限定理</h1>
+<p>大数定律和中心极限定理是概率论中的比较深入与重要的理论结果。本章主要讨论如下两个问题：</p>
+<p><font size=4><strong>大数定律</strong></font></p>
+<p>在一定条件下,一列随机变量的算术平均值（按某种意义）收敛于所希望的平均值的定理称为“大数定律”。</p>
+<ul>
+<li>大数定律为概率论所存在的基础——“概率是频率的稳定值”提供了理论依据，它以严格的数学形式表达了随机现象最根本的性质之一：
+平均结果的稳定性。它是随机现象统计规律的具体表现，也成为数理统计的理论基础。</li>
+</ul>
+<p><font size=4><strong>中心极限定理</strong></font></p>
+<p>在一定条件下，大量的相互独立的随机变量之和的概率分布近似于正态分布的定理称为“中心极限定理”。</p>
+<ul>
+<li>中心极限定理它以严格的数学形式证明了随机现象另一个最根本的性质之一：如果一个量是由大量相互独立的随机因素的影响所造成，
+而每一个别因素在总影响中所起的作用不大，则这种量一般都服从或近似服从正态分布。它是随机现象统计规律的具体表现，也成为数理
+统计的理论基础。而正态分布又是应用最广的分布。</li>
+</ul>
+<div id="大数定理" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> 大数定理</h2>
+<div id="大数定理-1" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> 大数定理</h3>
+<p><font size=4><strong>（1）准备知识</strong></font></p>
+<p><strong>切比雪夫(Chebyshev)不等式</strong></p>
+<p>设随机变量<span class="math inline">\(X\)</span>的数学期望<span class="math inline">\(E(X)=\mu\)</span>, <span class="math inline">\(D(X)=\sigma^{2}&lt;+\infty\)</span>，则对任意的正数<span class="math inline">\(\varepsilon\)</span>，有</p>
+<p><span class="math display">\[\begin{aligned}
+P\{|X-\mu|\geq \varepsilon\}\leq \frac{\sigma^{2}}{\varepsilon^{2}}
+\end{aligned} \tag{5.1}\]</span>
+其等价为
+<span class="math display">\[\begin{aligned}
+P\{|X-\mu|&lt; \varepsilon\}\geq 1-\frac{\sigma^{2}}{\varepsilon^{2}}
+\end{aligned} \tag{5.2}\]</span></p>
+<p>证明：（1）、设连续型随机变量<span class="math inline">\(X\)</span>的概率密度函数为<span class="math inline">\(f(x)\)</span>，则
+<span class="math display">\[\begin{aligned}
+\begin{split}
+P\{|X-\mu|\geq \varepsilon\}&amp;=\int_{|x-\mu|\geq \varepsilon}f(x)dx\leq \int_{|x-\mu|\geq \varepsilon} \frac{(x-\mu)^{2}}{\varepsilon^{2}}f(x)dx\\
+&amp;\leq \int_{-\infty}^{+\infty} \frac{(x-\mu)^{2}}{\varepsilon^{2}}f(x)dx=\frac{D(X)}{\varepsilon^{2}}=\frac{\sigma^{2}}{\varepsilon^{2}}
+\end{split}
+\end{aligned} \tag{5.3}\]</span></p>
+<p>（2）、设离散型随机变量<span class="math inline">\(X\)</span>的概率分布为<span class="math inline">\(p_{k}=P\{X=x_{k}\}, k=1,2,\cdots\)</span>，则
+<span class="math display">\[\begin{aligned}
+\begin{split}
+P\{|X-\mu|\geq \varepsilon\}&amp;=\sum_{|x_{k}-\mu|\geq \varepsilon}p_{k}\leq \sum_{|x_{k}-\mu|\geq \varepsilon} \frac{(x_{k}-\mu)^{2}}{\varepsilon^{2}}p_{k}\\
+&amp;\leq \sum_{k}\frac{(x_{k}-\mu)^{2}}{\varepsilon^{2}}p_{k}=\frac{\sigma^{2}}{\varepsilon^{2}}
+\end{split}
+\end{aligned} \tag{5.4}\]</span></p>
+<p><strong>说明：</strong></p>
+<ul>
+<li><p>从定理中可以看出，如果<span class="math inline">\(D(X)\)</span>越小，那么随机变量<span class="math inline">\(X\)</span>取值于开区间<span class="math inline">\((E(X)-\varepsilon, E(X)+\varepsilon)\)</span>中的概率就越大，
+这也进一步说明方差是一个反映随机变量在其分布中心<span class="math inline">\(E(X)\)</span>附近集中程度的数量指标，<span class="math inline">\(D(X)\)</span>越小，<span class="math inline">\(X\)</span>的取值越集中于<span class="math inline">\(E(X)\)</span>附近。</p></li>
+<li><p>利用Chebyshev不等式可以在随机变量的分布未知的情况下，利用它的期望和方差对其在某个范围内取值的概率作出估计，当然这个估计是比较保守的。</p></li>
+</ul>
+<p><font size=4><strong>（2）例题</strong></font></p>
+<p><strong>例1：</strong>若某班某次考试的平均分为80分，标准差为10，试估计及格率至少为多少？</p>
+<p>解：用随机变量X表示学生成绩，则数学期望<span class="math inline">\(E(X)=80\)</span>，方差<span class="math inline">\(D(X)=100\)</span>，所以
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{60\leq X\leq 100\}&amp;\geq P\{60&lt;X&lt;100\}\\
+&amp;=P\{|X-80|&lt;20\}\\
+&amp;\geq 1-\frac{100}{20^{2}}=75\%
+\end{split}
+\end{equation*}\]</span>
+所以及格率至少为75%．</p>
+<p><strong>例2：</strong>一电网有1万盏路灯，晚上每盏灯开的概率为0.7，求同时开的灯数在6800至7200之间的概率至少为多少？</p>
+<p>解：设<span class="math inline">\(X\)</span>为同时开的灯数，并且<span class="math inline">\(X\sim B(10^{4}, 0.7)\)</span>，则有
+<span class="math display">\[P\{6800\leq X\leq 7200\}=\sum_{k=6800}^{7200}C_{10^{4}}^{k}\cdot 0.7^{k}\cdot 0.3^{10^{4}-k}.\]</span>
+计算起来相当麻烦。</p>
+<p>由二项分布知
+<span class="math display">\[E(X)=np=7000, D(X)=np(1-p)=2100.\]</span>
+用切比雪夫不等式有
+<span class="math display">\[P\{6800\leq X\leq 7200\}=P\{|X-7000|\leq 200\}\geq 1-\frac{2100}{200^{2}}=0.95\]</span></p>
+<p><strong>例3：</strong>已知<span class="math inline">\(n\)</span>重伯努利试验中参数<span class="math inline">\(p=0.75\)</span>，问至少应做多少次试验，才能使试验成功的频率在0.74和0.76之间的概率不低于0.90？</p>
+<p>解：设需做<span class="math inline">\(n\)</span>次试验，其中成功的次数为<span class="math inline">\(X\)</span>，则<span class="math inline">\(X\sim B(n, p)\)</span>，且有
+<span class="math display">\[E(X)=np, D(X)=np(1-p).\]</span>
+根据契比谢夫不等式应有
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{0.74&lt;\frac{X}{n}&lt;0.76\}&amp;=P\{|\frac{X}{n}-0.75|&lt;0.01\}\\
+&amp;\geq 1-\frac{\frac{1}{n^{2}}np(1-p)}{0.01^{2}}\geq 0.9
+\end{split}
+\end{equation*}\]</span>
+解得
+<span class="math display">\[n\geq \frac{p(1-p)}{0.1\times 0.01^{2}}=\frac{0.75\times(1-0.75)}{0.1\times 0.01^{2}}=18750,\]</span>
+所以至少应做18750次试验。</p>
+<p><font size=4><strong>（3）大数定律</strong></font></p>
+<p>对某个随机变量X进行大量的重复观测，所得到的大批观测数据的算术平均值也具有稳定性，由于这类稳定性都是
+在对随机变量进行大量重复试验的条件下呈现出来的，历史上把这种试验次数很大时出现的规律统称为大数定律。</p>
+<p>在介绍大数定律之前，我们引入依概率收敛定义。</p>
+<p><strong>定义：依概率收敛</strong></p>
+<p>设随机变量序列<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>, 如果存在常数<span class="math inline">\(A\)</span>，使得对于任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，有
+<span class="math display">\[\lim_{n\rightarrow\infty}P\{|X_{n}-A|&lt; \varepsilon\}=1\tag{5.5}\]</span>
+则称随机变量序列<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>依概率收敛于<span class="math inline">\(A\)</span>，记为<span class="math inline">\(X_{n}\longrightarrow{P}A\)</span></p>
+<ul>
+<li>当<span class="math inline">\(n\)</span>无限增大时，对于任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，事件<span class="math inline">\(\{|X_{n}-A|&lt; \varepsilon\}\)</span>发生的概率无限接近于1。</li>
+</ul>
+<p><font size=4><strong>（4）Chebyshev大数定律</strong></font></p>
+<p><strong>定理：Chebyshev大数定律</strong></p>
+<p>设<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>， <span class="math inline">\(X_{n}\)</span>是相互独立的随机变量序列，<span class="math inline">\(E(X_{i})&lt;\infty, i=1,2,\cdots, n\)</span>， 且它们都有有限的方差，并且方差有共同的上界，即<span class="math inline">\(D(X_{i})\leq K, i=1, 2, \cdots, n\)</span>，则对于任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，有
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\right|&lt;\varepsilon\right\}=1 \tag{5.6}\]</span></p>
+<p>证明：由条件可知
+<span class="math display">\[E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n}\sum_{i=1}^{n}E(X_{i}),\tag{5.7}\]</span>
+<span class="math display">\[D\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n^{2}}\sum_{i=1}^{n}D(X_{i})\leq \frac{1}{n^{2}}\cdot nK=\frac{K}{n}\tag{5.8}\]</span></p>
+<p>所以由Chebyshev不等式，对于任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，有
+<span class="math display">\[P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\right|&lt;\varepsilon\right\}\geq 1-\frac{1}{\varepsilon^{2}}D\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)\geq 1-\frac{K}{n\varepsilon^{2}}\tag{5.9}\]</span>
+又因为任何事件的概率都不超过1，则有
+<span class="math display">\[1-\frac{K}{n\varepsilon^{2}}\leq P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\right|&lt;\varepsilon\right\}\leq 1\tag{5.10}\]</span>
+利用极限的夹逼准则，即得
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\right|&lt;\varepsilon\right\}=1\tag{5.11}\]</span></p>
+<p><font size=4><strong>（5）说明及推论</strong></font></p>
+<p>切比雪夫大数定律表明：独立随机变量序列<span class="math inline">\(\{X_{n}\}\)</span>，如果方差有共同的上界，则该序列的算术平均值<span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}X_{i}\)</span>与
+其数学期望的平均值<span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\)</span>的偏差是很小的。即当<span class="math inline">\(n\)</span>充分大的时候，<span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}X_{i}\)</span>差不多不再是随机的了，
+取值接近于其数学期望的概率接近于1。切比雪夫大数定律给出了平均值稳定性的科学描述。</p>
+<p><strong>推论：独立同分布大数定律</strong></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>是相互独立的随机变量序列，它们具有相同的数学期望与方差： <span class="math inline">\(E(X_{k})=\mu\)</span>, <span class="math inline">\(D(X_{k})=\sigma^{2}, k=1,2,\cdots\)</span>. 作前<span class="math inline">\(n\)</span>个随机变量的算术平均值：<span class="math inline">\(\overline{X}_{n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}\)</span>，则对于任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，有
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\overline{X}_{n}-\mu\right|&lt;\varepsilon\right\}=\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-\mu\right|&lt;\varepsilon\right\}=1\tag{5.12}\]</span></p>
+<p>上述推论是Chebyshev大数定律中当数学期望和方差给定具体值时的特殊情况。它表明当<span class="math inline">\(n\)</span>很大时，随机变量<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span> 的算术平均值在概率意义下接近于数学期望<span class="math inline">\(E(X_{k})=\mu\)</span>.其作用是：在数理统计中如不知道<span class="math inline">\(\mu\)</span>，则可用
+其算术平均值来近似代替，则上述推论就提供了理论依据。</p>
+<p><strong>定理：伯努利大数定律</strong></p>
+<p>设<span class="math inline">\(n_{A}\)</span>是<span class="math inline">\(n\)</span>重伯努利试验中事件<span class="math inline">\(A\)</span>发生的次数，<span class="math inline">\(p (0&lt;P&lt;1)\)</span>是事件<span class="math inline">\(A\)</span>在每次试验中发生的概率，则对于任意正数<span class="math inline">\(\varepsilon\)</span>，有
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{n_{A}}{n}-p\right|&lt;\varepsilon\right\}=1\tag{5.13}\]</span></p>
+<p>证明：引入相互独立的随机变量<span class="math inline">\(X_{i}, i=1,2,\cdots, n\)</span>，
+<span class="math display">\[\begin{equation*}
+X_{i}=\left\{
+        \begin{array}{ll}
+          0, &amp; \text{第$i$试验$A$不发生;} \\
+          1, &amp; \text{第$i$试验$A$发生.}
+        \end{array}
+      \right.
+\end{equation*}\]</span>
+则<span class="math inline">\(n_{A}=X_{1}+X_{2}+\cdots+X_{n}\)</span>.</p>
+<p>由已知可知，<span class="math inline">\(X_{i}, i=1,2,\cdots, n\)</span>相互独立且均服从参数为<span class="math inline">\(p\)</span>的0-1分布，则有
+<span class="math display">\[E(X_{i})=p, D(X_{i})=p(1-p), i=1,2,\cdots,n\]</span>
+由独立同分布大数定律可知，对于任意正数<span class="math inline">\(\varepsilon\)</span>
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-p\right|&lt;\varepsilon\right\}=1\tag{5.14}\]</span></p>
+<p>即
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{n_{A}}{n}-p\right|&lt;\varepsilon\right\}=1\tag{5.15}\]</span></p>
+<p><strong>说明：</strong></p>
+<p>伯努利大数定律表明：事件<span class="math inline">\(A\)</span>发生的频率<span class="math inline">\(n_{A}/n\)</span>当<span class="math inline">\(n\)</span>很大时依概率收敛于事件<span class="math inline">\(A\)</span>发生的概率<span class="math inline">\(p\)</span>。</p>
+<p>也就是说对于任意正数<span class="math inline">\(\varepsilon\)</span>，只要重复独立试验的次数<span class="math inline">\(n\)</span>充分大，事件<span class="math inline">\(\left\{\left|\frac{n_{A}}{n}-p\right|&lt;\varepsilon\right\}\)</span> 实际上几乎是必定要发生的，即对于给定的任意小的正数<span class="math inline">\(\varepsilon\)</span>，在<span class="math inline">\(n\)</span>充分大时，事件“<span class="math inline">\(n_{A}/n\)</span>与概率<span class="math inline">\(p\)</span>的偏差小于<span class="math inline">\(\varepsilon\)</span>”
+实际上几乎是必定要发生的。这也正是在大量重复独立试验中，频率<span class="math inline">\(n_{A}/n\)</span>接近于概率<span class="math inline">\(p\)</span>的真正含义，也就是我们所说的频率稳定性的真正含义。
+所以当试验次数很大时，就可以利用事件发生的频率来近似地代替事件发生的概率。</p>
+<p><font size=4><strong>（6）辛钦大数定律</strong></font></p>
+<p><strong>定理：辛钦大数定律</strong></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>， <span class="math inline">\(X_{n}\)</span>相互独立，并服从同一分布，且具有相同的数学期望<span class="math inline">\(E(X_{k})=\mu, k=1,2,\cdots\)</span>，则
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-\mu\right|&lt;\varepsilon\right\}=1\tag{5.16}\]</span></p>
+<ul>
+<li><p>辛钦大数定律中，随机变量的方差可以不存在，只要独立同分布就可以了。</p></li>
+<li><p>伯努利大数定律是辛钦定理的特殊情况。</p></li>
+<li><p>辛钦大数定律提供了求随机变量数学期望<span class="math inline">\(E(X)\)</span>的近似值的方法。这一思想方法将被应用于第七章中讲述的参数的点估计理论中，
+辛钦大数定律是数理统计部分中点估计理论的重要依据。</p></li>
+</ul>
+<p><strong>辛钦大数定律的推广</strong></p>
+<ul>
+<li><strong>定理：高阶矩情形</strong>
+设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>相互独立，并服从同一分布，且具有相同的<span class="math inline">\(k\)</span>阶原点矩<span class="math inline">\(E(X_{i}^{k})=\mu_{k}, i=1,2,\cdots, k&gt;1\)</span>，则有</li>
+</ul>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}^{k}-\mu_{k}\right|&lt;\varepsilon\right\}=1\tag{5.17}\]</span></p>
+<p>证明：因为<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>， <span class="math inline">\(X_{n}\)</span>相互独立，并服从同一分布，所以<span class="math inline">\(X_{1}^{k}\)</span>， <span class="math inline">\(X_{2}^{k}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}^{k}\)</span>， <span class="math inline">\(k&gt;1\)</span>相互独立，并服从同一分布，且<span class="math inline">\(E(X_{i}^{k})=\mu_{k}\)</span>存在，则由辛钦大数定律可知
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}^{k}-\mu_{k}\right|&lt;\varepsilon\right\}=1\tag{5.18}\]</span></p>
+<p><font size=4><strong>（7）补充说明</strong></font></p>
+<p>本章所考虑的大数定律均为弱大数定律，是建立在依概率收敛的基础上的。</p>
+<ul>
+<li>Chebyshev大数定律</li>
+<li>独立同分布大数定律</li>
+<li>伯努利大数定律</li>
+<li>辛钦大数定律</li>
+</ul>
+<p>与之对应的还有强大数定律，是建立在依概率1收敛的基础上的。</p>
+<ul>
+<li>伯雷尔强大数定律</li>
+<li>科尔莫戈罗夫强大数定律</li>
+<li>独立同分布场合的强大数定律</li>
+</ul>
+</div>
+</div>
+<div id="中心极限定理" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> 中心极限定理</h2>
+<div id="中心极限定理-1" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> 中心极限定理</h3>
+<p><font size=4><strong>（1）引例</strong></font></p>
+<p>误差分析是人们经常遇到且感兴趣的随机变量，大量的研究表明，误差是由大量微小的相互独立的随机因素叠加而成的。现在考虑一位操作工在机床上加工机械轴，
+要求其直径应符合规定要求，但加工后的机械轴与规定要求总会有一定误差，这是因为在加工时受到一些随机因素的影响，它们是：</p>
+<ul>
+<li><p>在机床方面有机床振动与转速的影响；</p></li>
+<li><p>在刀具方面有装配与磨损的影响；</p></li>
+<li><p>在材料方面有钢材的成分、产地的影响；</p></li>
+<li><p>在操作者方面有注意力集中程度、当天的情绪的影响；</p></li>
+<li><p>在测量方面有度量工具误差、测量技术的影响；</p></li>
+<li><p>在环境方面有车间温度、湿度、照明、工作电压的影响；</p></li>
+<li><p>在具体场合还可列出许多其他影响因素。</p></li>
+</ul>
+<p>由于这些因素很多，每个因素对加工精度的影响都是很微小的，而且每个因素的出现又都是人们无法控制的、随机的、时有时无、时正时负的。
+这些因素的综合影响最终使每个机械轴的直径产生误差，若将这个误差记为<span class="math inline">\(Y_{n}\)</span>，那么<span class="math inline">\(Y_{n}\)</span>是随机变量，且可以将<span class="math inline">\(Y_{n}\)</span>看作很多微小的随机波动<span class="math inline">\(X_{1}\)</span>，
+<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}\)</span>之和，即<span class="math inline">\(Y_{n} = X_{1}+X_{2}+\cdots+X_{n}\)</span>，这里<span class="math inline">\(n\)</span>是很大的，那么我们关心的是，当时，<span class="math inline">\(Y_{n}\)</span>的分布是什么？</p>
+<ul>
+<li>我们可以考虑用卷积公式去计算<span class="math inline">\(Y_{n}\)</span>的分布，但这样的计算是相当复杂的、不现实的，而且也是不易实现的。
+有时即使能写出<span class="math inline">\(Y_{n}\)</span>的分布，但由于其形式过于复杂而无法使用。</li>
+</ul>
+<p><font size=4><strong>（2）问题提出</strong></font></p>
+<p>在概率论中，我们已经知道正态分布居于头等重要的地位，许多随机变量都遵循
+正态分布。自从高斯指出测量误差服从正态分布之后，人们发现，正态分布在自然
+界中极为常见。并且大量实验观察也表明如果一个量是由大量相互独立的随机因素的影响所造成，
+而每一个别因素在总影响中所起的作用不大， 则这种量一般都服从或近似服从正态分布。</p>
+<p>这仅仅是经验之谈呢，还是确有理论依据呢？对于这样一个重要问题，在长达两个世纪内一直成为概率论研究的中心问题。</p>
+<ul>
+<li>数学家们经过卓越工作建立了一系列定理，解决了这一问题，建立了一系列中心极限定理——是概率论中讨论随机变量和的分布以正态分布为极限的一组定理。</li>
+</ul>
+<p><font size=4><strong>（3）中心极限定理的发展历史</strong></font></p>
+<ul>
+<li><p>这个定理的第一版被法国数学家棣莫弗发现，他在1733年发表的卓越论文中使用正态分布去估计大量抛掷硬币出现正面次数的分布。这个超越时代的成果险些被历史遗忘。</p></li>
+<li><p>著名法国数学家拉普拉斯在1812年发表的巨著 Th<span class="math inline">\(\acute{e}\)</span>orie Analytique des Probabilit<span class="math inline">\(\acute{e}\)</span>s中拯救了这个默默无名的理论.
+拉普拉斯扩展了棣莫弗的理论，指出二项分布可用正态分布逼近。但同棣莫弗一样，拉普拉斯的发现在当时并未引起很大反响。</p></li>
+<li><p>直到十九世纪末中心极限定理的重要性才被世人所知。1901年，俄国数学家里雅普诺夫用更普通的随机变量定义中心极限定理并在数学上进行了精确的证明。</p></li>
+</ul>
+<p><font size=4><strong>（4）常用的中心极限定理</strong></font></p>
+<p><strong>独立同分布的中心极限定理</strong></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>, <span class="math inline">\(\cdots\)</span>相互独立，并服从同一分布，且具有数学期望和方差：<span class="math inline">\(E(X_{k})=\mu\)</span>，<span class="math inline">\(D(X_{k})=\sigma^{2}&gt;0\)</span>，<span class="math inline">\(k=1,2,\cdots\)</span>，则随机变量之和<span class="math inline">\(\sum_{k=1}^{n}X_{k}\)</span>的标准化变量
+<span class="math display">\[Y_{n}=\frac{\sum_{k=1}^{n}X_{k}-E\left(\sum_{k=1}^{n}X_{k}\right)}{\sqrt{D\left(\sum_{k=1}^{n}X_{k}\right)}}=\frac{\sum_{k=1}^{n}X_{k}-n\mu}{\sqrt{n}\sigma}\tag{5.19}\]</span>
+的分布函数<span class="math inline">\(F_{n}(x)\)</span>对于任意的<span class="math inline">\(x\)</span>满足 <span class="math display">\[\lim_{n\rightarrow\infty}F_{n}(x)=\lim_{n\rightarrow\infty}P\left\{\frac{\sum_{k=1}^{n}X_{k}-n\mu}{\sqrt{n}\sigma}\leq x\right\}=\int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^{2}}{2}}dt\tag{5.20}\]</span></p>
+<ul>
+<li>该定理我们通常称之为林德伯格-勒维(Lindeberg-Levy)定理，该定理是这两位学者在上世纪20年代证明的，这里证明从略。</li>
+</ul>
+<p><strong>说明：</strong></p>
+<ul>
+<li><p>林德伯格-勒维定理表明，当<span class="math inline">\(n\)</span>充分大时，<span class="math inline">\(n\)</span>个具有期望和方差的独立同分布的随机变量之和近似服从正态分布。虽然在一般情况下，
+很难求出<span class="math inline">\(X_{1}+X_{2}+\cdots+X_{n}\)</span>的分布的确切形式，但当<span class="math inline">\(n\)</span>很大时，可以求出其近似分布。</p></li>
+<li><p>同样定理也表明了正态分布在概率论中的特殊地位：尽管<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}\)</span>， <span class="math inline">\(\cdots\)</span>是未知的，只要<span class="math inline">\(n\)</span>充分大时，其样本均值<span class="math inline">\(\frac{1}{n}\sum_{k=1}^{n}X_{k}\)</span>的分布却是近似服从正态分布的：</p></li>
+</ul>
+<p><span class="math display">\[\frac{\sum_{k=1}^{n}X_{k}-n\mu}{\sqrt{n}\sigma}=\frac{\frac{1}{n}\sum_{k=1}^{n}X_{k}-\mu}{\sigma/\sqrt{n}}=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)\tag{5.21}\]</span>
+这一结果是数理统计中大样本统计推断的基础</p>
+<p><strong>例1：</strong>某人要测量甲、乙两地之间的距离。限于测量工具，他分成 1200 段来测量。段测量误差（单位：厘米）服从于（-0.5,0.5)上的均匀分布。求总距离误差的绝对值超过20厘米的概率。</p>
+<p>解：设第<span class="math inline">\(k\)</span>段的测量误差为<span class="math inline">\(X_{k}\sim U(-0.5, 0.5), k=1,2,\cdots,1200\)</span>, 且是独立同分布的随机变量，故有
+<span class="math display">\[E(X_{k})=0, D(X_{k})=\frac{1}{12}.\]</span>
+因此累积误差<span class="math inline">\(\sum_{k=1}^{n}X_{k}\)</span>近似服从<span class="math inline">\(N(0, 100)\)</span>，则所求概率为：
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\left\{\left|\sum_{k=1}^{n}X_{k}\right|\geq 20\right\}&amp;=P\left\{\frac{\left|\sum_{k=1}^{n}X_{k}-0\right|}{\sqrt{1200/12}}\geq \frac{20}{\sqrt{1200/12}}\right\}\\
+&amp;=1-P\left\{\frac{\left|\sum_{k=1}^{n}X_{k}-0\right|}{10}\leq 2\right\}\\
+&amp;\approx 1-[\Phi(2)-\Phi(-2)]=0.0456
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>李雅普诺夫中心极限定理</strong></p>
+<p>设<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\(X_{n}\)</span>， <span class="math inline">\(\cdots\)</span>相互独立，并且具有数学期望和方差：<span class="math inline">\(E(X_{k})=\mu_{k}\)</span>，<span class="math inline">\(D(X_{k})=\sigma_{k}^{2}&gt;0\)</span>，<span class="math inline">\(k=1,2,\cdots\)</span>，
+记<span class="math inline">\(B_{n}^{2}=\sum_{k=1}^{n}\sigma_{k}^{2}\)</span>，若存在<span class="math inline">\(\delta&gt;0\)</span>，使得当<span class="math inline">\(n\rightarrow\infty\)</span>时<span class="math display">\[\frac{1}{B_{n}^{2+\delta}}\sum_{k=1}^{n}E[|X_{k}-\mu_{k}|^{2+\delta}]\rightarrow 0\tag{5.22}\]</span>
+则随机变量之和<span class="math inline">\(\sum_{k=1}^{n}X_{k}\)</span>的标准化变量 <span class="math display">\[Z_{n}=\frac{\sum_{k=1}^{n}X_{k}-E\left(\sum_{k=1}^{n}X_{k}\right)}{\sqrt{D\left(\sum_{k=1}^{n}X_{k}\right)}}=\frac{\sum_{k=1}^{n}X_{k}-\sum_{k=1}^{n}\mu_{k}}{B_{n}}\tag{5.23}\]</span>
+的分布函数<span class="math inline">\(F_{n}(z)\)</span>对于任意的<span class="math inline">\(z\)</span>满足 <span class="math display">\[\lim_{n\rightarrow\infty}F_{n}(z)=\lim_{n\rightarrow\infty}P\left\{\frac{\sum_{k=1}^{n}X_{k}-\sum_{k=1}^{n}\mu_{k}}{\sqrt{n}\sigma}\leq z\right\}=\int_{-\infty}^{z}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^{2}}{2}}dt\tag{5.24}\]</span></p>
+<p><font size=4><strong>（5）独立同分布的中心极限定理特殊情况</strong></font></p>
+<p><strong>棣莫佛-拉普拉斯(De Moivre-Laplace)定理</strong></p>
+<p>设随机变量<span class="math inline">\(\eta_{n}, n=1,2,\cdots\)</span>相互独立且服从参数为<span class="math inline">\(n, p (0&lt;p&lt;1)\)</span>的二项分布，则对于任意<span class="math inline">\(x\)</span>，有
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\frac{\eta_{n}-np}{\sqrt{np(1-p)}}\leq x\right\}=\int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^{2}}{2}}dt\tag{5.25}\]</span></p>
+<ul>
+<li><p>定理表明：正态分布是二项分布的极限分布，当<span class="math inline">\(n\)</span>充分大时可以用正态分布来计算二项分布的概率。</p></li>
+<li><p>在第二章中已介绍当<span class="math inline">\(n\rightarrow\infty\)</span>时，二项分布以泊松分布为极限分布；而在本章中二项分布又以正态分布为极限分布。区别是：</p>
+<ul>
+<li>在泊松定理中要求<span class="math inline">\(np\rightarrow\lambda\)</span>， 如果<span class="math inline">\(n\)</span>很大但<span class="math inline">\(np\)</span>不大，那么应该用泊松定理去近似</li>
+<li>在中心极限定理中要求<span class="math inline">\(np\rightarrow\infty\)</span>， 如果<span class="math inline">\(n\)</span>，<span class="math inline">\(np\)</span>都较大，那么应该用中心极限定理去近似。</li>
+</ul></li>
+</ul>
+<p><strong>例2：</strong>某单位有200台电话分机，每台分机有5%的时间要使用外线通话。假定每台分机是否使用外线是相互独立的，问该单位总机要安装多少条外线，
+才能以90%以上的概率保证分机用外线时不等待？</p>
+<p>解：设有<span class="math inline">\(X\)</span>部分机同时使用外线，则有<span class="math inline">\(X\sim B(200, 0.05)\)</span>，且
+<span class="math display">\[E(X)=np=10, \sqrt{np(1-p)}\approx 3.08\]</span>
+设有<span class="math inline">\(N\)</span>条外线。由题意有<span class="math inline">\(P\{X\leq N\}\geq 0.9\)</span>
+由德莫佛-拉普拉斯定理得
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{X\leq N\}&amp;=P\left\{\frac{X-np}{\sqrt{np(1-p)}}\leq \frac{N-np}{\sqrt{np(1-p)}}\right\}\\
+&amp;=\Phi\left(\frac{N-np}{\sqrt{np(1-p)}}\right)=\Phi\left(\frac{N-10}{3.08}\right)\geq 0.9=\Phi(1.28)
+\end{split}
+\end{equation*}\]</span>
+故<span class="math inline">\(N\)</span>应满足条件<span class="math inline">\(\frac{N-10}{3.08}\geq 1.28\)</span>，得<span class="math inline">\(N\geq 13.94\)</span>。故至少需要14条外线。</p>
+<p><strong>例3：</strong>在人寿保险公司里，有16000名同一年龄的人参加人寿保险。一年里这些人的死亡率为0.1%；参加保险的人在一年的第一天交付保险费3元，
+死亡时家属可以从保险公司领取2000元。 求</p>
+<ul>
+<li><p>保险公司因开展这项业务获利不少于10000元的概率；</p></li>
+<li><p>保险公司因开展这项业务亏本的概率。</p></li>
+</ul>
+<p>解：由题意，死亡人数<span class="math inline">\(X\sim B(16000, 0.001)\)</span>，则
+<span class="math display">\[np=16, \sqrt{np(1-p)}\approx \sqrt{16}=4\]</span>
+保险公司一年内这项保险收入是：<span class="math inline">\(3\times 16000=48000\)</span></p>
+<p>（1）、获利不少于10000元，即赔偿不大于 38000(元)，即一年内至多死亡人数为
+<span class="math display">\[\frac{38000}{2000}=19\text{(人)}\]</span></p>
+<p>所以
+<span class="math display">\[P\{X\leq 19\}=P\left\{\frac{X-16}{4}\leq \frac{19-16}{4}\right\}\approx\Phi(0.75)=0.7734\]</span>
+即该公司获利不少于 10000(元)的概率为 0.7734。</p>
+<p>（2）、公司亏本即赔款大于48000元，即一年内至少死亡人数为
+<span class="math display">\[\frac{48000}{2000}=24\text{(人)}\]</span>
+所以
+<span class="math display">\[\begin{equation*}
+\begin{split}
+P\{X&gt;24\}&amp;=1-P\{X\leq 24\}=P\left\{\frac{X-16}{4}\leq \frac{24-16}{4}\right\}\\
+&amp;\approx 1-\Phi(2)=1-0.97725=0.02275
+\end{split}
+\end{equation*}\]</span>
+即该公司亏本的概率为0.02275。</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="随机变量的数字特征.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="样本与抽样分布.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
