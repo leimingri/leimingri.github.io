@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 参数估计 | 概率论与数理统计</title>
+  <meta name="description" content="7 参数估计 | 概率论与数理统计" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 参数估计 | 概率论与数理统计" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 参数估计 | 概率论与数理统计" />
+  
+  
+  
+
+<meta name="author" content="胡鹏" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="样本与抽样分布.html"/>
+<link rel="next" href="假设检验.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">概率论与数理统计</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html"><i class="fa fa-check"></i><b>1</b> 随机事件及其概率</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#样本空间与随机事件"><i class="fa fa-check"></i><b>1.1</b> 样本空间与随机事件</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#基本概念"><i class="fa fa-check"></i><b>1.1.1</b> 基本概念</a></li>
+<li class="chapter" data-level="1.1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的关系与运算"><i class="fa fa-check"></i><b>1.1.2</b> 事件的关系与运算</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的频率与概率"><i class="fa fa-check"></i><b>1.2</b> 事件的频率与概率</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#频率的定义"><i class="fa fa-check"></i><b>1.2.1</b> 频率的定义</a></li>
+<li class="chapter" data-level="1.2.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#概率的公理化定义"><i class="fa fa-check"></i><b>1.2.2</b> 概率的公理化定义</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型与几何概型"><i class="fa fa-check"></i><b>1.3</b> 古典概型与几何概型</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#古典概型"><i class="fa fa-check"></i><b>1.3.1</b> 古典概型</a></li>
+<li class="chapter" data-level="1.3.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#几何概型"><i class="fa fa-check"></i><b>1.3.2</b> 几何概型</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率"><i class="fa fa-check"></i><b>1.4</b> 条件概率</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#条件概率-1"><i class="fa fa-check"></i><b>1.4.1</b> 条件概率</a></li>
+<li class="chapter" data-level="1.4.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#乘法公式"><i class="fa fa-check"></i><b>1.4.2</b> 乘法公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式与贝叶斯公式"><i class="fa fa-check"></i><b>1.5</b> 全概率公式与贝叶斯公式</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#全概率公式"><i class="fa fa-check"></i><b>1.5.1</b> 全概率公式</a></li>
+<li class="chapter" data-level="1.5.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#贝叶斯公式"><i class="fa fa-check"></i><b>1.5.2</b> 贝叶斯公式</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性"><i class="fa fa-check"></i><b>1.6</b> 事件的独立性</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#事件的独立性-1"><i class="fa fa-check"></i><b>1.6.1</b> 事件的独立性</a></li>
+<li class="chapter" data-level="1.6.2" data-path="随机事件及其概率.html"><a href="随机事件及其概率.html#伯努利概型"><i class="fa fa-check"></i><b>1.6.2</b> 伯努利概型</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html"><i class="fa fa-check"></i><b>2</b> 随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量与分布函数"><i class="fa fa-check"></i><b>2.1</b> 随机变量与分布函数</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量"><i class="fa fa-check"></i><b>2.1.1</b> 随机变量</a></li>
+<li class="chapter" data-level="2.1.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#分布函数"><i class="fa fa-check"></i><b>2.1.2</b> 分布函数</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量及其分布"><i class="fa fa-check"></i><b>2.2</b> 离散型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念"><i class="fa fa-check"></i><b>2.2.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.2.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#常见离散型随机变量"><i class="fa fa-check"></i><b>2.2.2</b> 常见离散型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量及其分布"><i class="fa fa-check"></i><b>2.3</b> 连续型随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#定义与基本概念-1"><i class="fa fa-check"></i><b>2.3.1</b> 定义与基本概念</a></li>
+<li class="chapter" data-level="2.3.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#几种常见的连续性随机变量"><i class="fa fa-check"></i><b>2.3.2</b> 几种常见的连续性随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#随机变量函数的分布"><i class="fa fa-check"></i><b>2.4</b> 随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#离散型随机变量情形"><i class="fa fa-check"></i><b>2.4.1</b> 离散型随机变量情形</a></li>
+<li class="chapter" data-level="2.4.2" data-path="随机变量及其分布.html"><a href="随机变量及其分布.html#连续型随机变量情形"><i class="fa fa-check"></i><b>2.4.2</b> 连续型随机变量情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html"><i class="fa fa-check"></i><b>3</b> 多维随机变量及其分布</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量及其联合分布函数"><i class="fa fa-check"></i><b>3.1</b> 二维随机变量及其联合分布函数</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#多维随机变量"><i class="fa fa-check"></i><b>3.1.1</b> 多维随机变量</a></li>
+<li class="chapter" data-level="3.1.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量"><i class="fa fa-check"></i><b>3.1.2</b> 二维离散型随机变量</a></li>
+<li class="chapter" data-level="3.1.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量"><i class="fa fa-check"></i><b>3.1.3</b> 二维连续型随机变量</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布和条件分布"><i class="fa fa-check"></i><b>3.2</b> 边缘分布和条件分布</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#边缘分布"><i class="fa fa-check"></i><b>3.2.1</b> 边缘分布</a></li>
+<li class="chapter" data-level="3.2.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#条件分布"><i class="fa fa-check"></i><b>3.2.2</b> 条件分布</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性"><i class="fa fa-check"></i><b>3.3</b> 随机变量的独立性</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#随机变量的独立性-1"><i class="fa fa-check"></i><b>3.3.1</b> 随机变量的独立性</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维随机变量函数的分布"><i class="fa fa-check"></i><b>3.4</b> 二维随机变量函数的分布</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维离散型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.1</b> 二维离散型随机变量函数的分布</a></li>
+<li class="chapter" data-level="3.4.2" data-path="多维随机变量及其分布.html"><a href="多维随机变量及其分布.html#二维连续型随机变量函数的分布"><i class="fa fa-check"></i><b>3.4.2</b> 二维连续型随机变量函数的分布</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html"><i class="fa fa-check"></i><b>4</b> 随机变量的数字特征</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望"><i class="fa fa-check"></i><b>4.1</b> 数学期望</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的定义"><i class="fa fa-check"></i><b>4.1.1</b> 数学期望的定义</a></li>
+<li class="chapter" data-level="4.1.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#随机变量函数的数学期望"><i class="fa fa-check"></i><b>4.1.2</b> 随机变量函数的数学期望</a></li>
+<li class="chapter" data-level="4.1.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#数学期望的性质及条件期望"><i class="fa fa-check"></i><b>4.1.3</b> 数学期望的性质及条件期望</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差"><i class="fa fa-check"></i><b>4.2</b> 方差</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的定义"><i class="fa fa-check"></i><b>4.2.1</b> 方差的定义</a></li>
+<li class="chapter" data-level="4.2.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#常见随机变量的方差"><i class="fa fa-check"></i><b>4.2.2</b> 常见随机变量的方差</a></li>
+<li class="chapter" data-level="4.2.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#方差的性质"><i class="fa fa-check"></i><b>4.2.3</b> 方差的性质</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数原点矩及中心距"><i class="fa fa-check"></i><b>4.3</b> 协方差与相关系数，原点矩及中心距</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#协方差与相关系数"><i class="fa fa-check"></i><b>4.3.1</b> 协方差与相关系数</a></li>
+<li class="chapter" data-level="4.3.2" data-path="随机变量的数字特征.html"><a href="随机变量的数字特征.html#原点矩及中心距"><i class="fa fa-check"></i><b>4.3.2</b> 原点矩及中心距</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html"><i class="fa fa-check"></i><b>5</b> 大数定律与中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理"><i class="fa fa-check"></i><b>5.1</b> 大数定理</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#大数定理-1"><i class="fa fa-check"></i><b>5.1.1</b> 大数定理</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理"><i class="fa fa-check"></i><b>5.2</b> 中心极限定理</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="大数定律与中心极限定理.html"><a href="大数定律与中心极限定理.html#中心极限定理-1"><i class="fa fa-check"></i><b>5.2.1</b> 中心极限定理</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html"><i class="fa fa-check"></i><b>6</b> 样本与抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#基本概念-1"><i class="fa fa-check"></i><b>6.1</b> 基本概念</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#总体与样本"><i class="fa fa-check"></i><b>6.1.1</b> 总体与样本</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征"><i class="fa fa-check"></i><b>6.2</b> 样本数字特征</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#样本数字特征-1"><i class="fa fa-check"></i><b>6.2.1</b> 样本数字特征</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布"><i class="fa fa-check"></i><b>6.3</b> 正态总体的抽样分布</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#正态总体的抽样分布-1"><i class="fa fa-check"></i><b>6.3.1</b> 正态总体的抽样分布</a></li>
+<li class="chapter" data-level="6.3.2" data-path="样本与抽样分布.html"><a href="样本与抽样分布.html#分位数"><i class="fa fa-check"></i><b>6.3.2</b> 分位数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="参数估计.html"><a href="参数估计.html"><i class="fa fa-check"></i><b>7</b> 参数估计</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="参数估计.html"><a href="参数估计.html#参数的点估计"><i class="fa fa-check"></i><b>7.1</b> 参数的点估计</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="参数估计.html"><a href="参数估计.html#矩法估计"><i class="fa fa-check"></i><b>7.1.1</b> 矩法估计</a></li>
+<li class="chapter" data-level="7.1.2" data-path="参数估计.html"><a href="参数估计.html#极大似然估计"><i class="fa fa-check"></i><b>7.1.2</b> 极大似然估计</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="参数估计.html"><a href="参数估计.html#估计量的评价标准"><i class="fa fa-check"></i><b>7.2</b> 估计量的评价标准</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="参数估计.html"><a href="参数估计.html#无偏性"><i class="fa fa-check"></i><b>7.2.1</b> 无偏性</a></li>
+<li class="chapter" data-level="7.2.2" data-path="参数估计.html"><a href="参数估计.html#有效性"><i class="fa fa-check"></i><b>7.2.2</b> 有效性</a></li>
+<li class="chapter" data-level="7.2.3" data-path="参数估计.html"><a href="参数估计.html#一致性"><i class="fa fa-check"></i><b>7.2.3</b> 一致性</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="参数估计.html"><a href="参数估计.html#参数的区间估计"><i class="fa fa-check"></i><b>7.3</b> 参数的区间估计</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="参数估计.html"><a href="参数估计.html#区间估计基本方法"><i class="fa fa-check"></i><b>7.3.1</b> 区间估计基本方法</a></li>
+<li class="chapter" data-level="7.3.2" data-path="参数估计.html"><a href="参数估计.html#单个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.2</b> 单个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.3" data-path="参数估计.html"><a href="参数估计.html#两个正态总体参数的置信区间"><i class="fa fa-check"></i><b>7.3.3</b> 两个正态总体参数的置信区间</a></li>
+<li class="chapter" data-level="7.3.4" data-path="参数估计.html"><a href="参数估计.html#单侧置信区间"><i class="fa fa-check"></i><b>7.3.4</b> 单侧置信区间</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="假设检验.html"><a href="假设检验.html"><i class="fa fa-check"></i><b>8</b> 假设检验</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="假设检验.html"><a href="假设检验.html#假设检验的基本概念"><i class="fa fa-check"></i><b>8.1</b> 假设检验的基本概念</a></li>
+<li class="chapter" data-level="8.2" data-path="假设检验.html"><a href="假设检验.html#正态总体均值与方差的假设检验"><i class="fa fa-check"></i><b>8.2</b> 正态总体均值与方差的假设检验</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="假设检验.html"><a href="假设检验.html#单个正态总体情形"><i class="fa fa-check"></i><b>8.2.1</b> 单个正态总体情形</a></li>
+<li class="chapter" data-level="8.2.2" data-path="假设检验.html"><a href="假设检验.html#两个正态总体情形"><i class="fa fa-check"></i><b>8.2.2</b> 两个正态总体情形</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="附录.html"><a href="附录.html"><i class="fa fa-check"></i>附录</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">概率论与数理统计</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="参数估计" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> 参数估计</h1>
+<p><font size=4><strong>引言</strong></font></p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5lifRlbBTi6THPV7CG8IkI9uK15cpLeC5E4sTAqrrrBbJWTF3e2Xm*UC1bMTHX4zdJytu1j7gMZDP7tAsxxN4Tk!/mnull&amp;bo=hAHOAAAAAAABB2s!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片71" />
+</center>
+<center>
+图 7.1
+</center>
+<ul>
+<li>研究统计量的性质和评价一个统计推断的优良性，完全取决于其抽样分布的性质。</li>
+</ul>
+<p><font size=4><strong>参数估计问题</strong></font></p>
+<p>参数估计问题：利用从总体抽样得到的信息来估计总体的某些参数或者参数的某些函数。</p>
+<ul>
+<li>在参数估计问题中，假定总体分布形式已知，未知的仅仅是一个或几个参数。</li>
+</ul>
+<p><font size=4><strong>参数估计问题的一般提法</strong></font></p>
+<p>设有一个总体<span class="math inline">\(X\)</span>，总体的分布函数为<span class="math inline">\(F(x, \theta)\)</span>, 其中<span class="math inline">\(\theta\)</span>为未知参数 (<span class="math inline">\(\theta\)</span>可以是向量 ) 。现从该总体抽样，得样本：
+<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span></p>
+<ul>
+<li><p><strong>研究的问题</strong>
+要依据该样本对参数<span class="math inline">\(\theta\)</span>作出估计，或估计<span class="math inline">\(\theta\)</span>的某个已知的函数<span class="math inline">\(g(\theta)\)</span>，这类问题称为参数估计。</p></li>
+<li><p><strong>参数估计问题的分类</strong></p></li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+  \text{参数估计}\left\{
+               \begin{array}{ll}
+                 \text{点估计},  \\
+                 \text{区间估计},
+               \end{array}
+             \right.
+  \end{equation*}\]</span></p>
+<p><font size=4><strong>点估计问题的一般提法</strong></font></p>
+<p>所谓点估计，就是用来自总体<span class="math inline">\(X\)</span>的观测数据，计算出一个数值（点）来估计总体的未知参数的值。具体说来就是</p>
+<p><strong>定义：点估计法</strong></p>
+<p>设总体<span class="math inline">\(X\)</span>的分布函数<span class="math inline">\(F(x, \theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>的形式已知，但其中含有一个或多个未知参数：<span class="math inline">\(\theta_{1}\)</span>, <span class="math inline">\(\theta_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\theta_{m}\)</span>，又设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的一个样本，<span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(x_{n}\)</span>为样本观测值。构造的<span class="math inline">\(m\)</span>个统计量：
+<span class="math display">\[\widehat{\theta}_{i}(X_{1}, X_{2}, \cdots, X_{n}), i=1, 2, \cdots, m\]</span>
+用<span class="math inline">\(\widehat{\theta}_{i}(X_{1}, X_{2}, \cdots, X_{n})\)</span>的观测值<span class="math inline">\(\widehat{\theta}_{i}(x_{1}, x_{2}, \cdots, x_{n})\)</span>作为未知参数<span class="math inline">\(\theta_{i}\)</span>的近似值的方法称为点估计法。</p>
+<ul>
+<li><p>称<span class="math inline">\(\widehat{\theta}_{i}(X_{1}, X_{2}, \cdots, X_{n})\)</span>为未知参数<span class="math inline">\(\theta_{i}\)</span>的估计量;</p></li>
+<li><p>称<span class="math inline">\(\widehat{\theta}_{i}(x_{1}, x_{2}, \cdots, x_{n})\)</span>为未知参数<span class="math inline">\(\theta_{i}\)</span>的估计值。</p></li>
+</ul>
+<div id="参数的点估计" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> 参数的点估计</h2>
+<div id="矩法估计" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> 矩法估计</h3>
+<p><font size=4><strong>（1）矩法估计</strong></font></p>
+<p>矩法估计是由统计学家卡. 皮尔逊（K. Pearson）在19世纪末引入的。它是基于一种简单的“替换”思想建立起来的一种估计方法。</p>
+<p>矩是描写随机变量最简单的数字特征，由大数定律可知，在一定条件下可以用样本的矩作为总体矩的估计，从而得矩估计法的基本思想为用样本的各阶矩来估计总体的各阶矩.</p>
+<p><strong>定理：矩法估计理论基础</strong></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>相互独立，并服从同一分布，且具有相同的<span class="math inline">\(k\)</span>阶原点矩<span class="math inline">\(E(X_{i}^{k})=\mu_{k}, i=1,2,\cdots, k&gt;1\)</span>，则有
+<span class="math display">\[\lim_{n\rightarrow\infty}P\left\{\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}^{k}-\mu_{k}\right|&lt;\varepsilon\right\}=1\tag{7.1}\]</span></p>
+<p><font size=4><strong>（2）矩法估计基本步骤</strong></font></p>
+<p>设总体<span class="math inline">\(X\)</span>的分布函数<span class="math inline">\(F(x, \theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>中含有<span class="math inline">\(m\)</span> 个未知参数<span class="math inline">\(\theta_{1}\)</span>, <span class="math inline">\(\theta_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\theta_{m}\)</span>，假定总体<span class="math inline">\(X\)</span>的前<span class="math inline">\(m\)</span>阶矩存在，则可通过下列步骤求未知参数的矩估计:</p>
+<p>（1）、依据总体<span class="math inline">\(X\)</span>所服从的分布，求出总体的前<span class="math inline">\(m\)</span>阶矩
+<span class="math display">\[\begin{aligned}
+\begin{cases}
+\mu_{1}=\mu_{1}(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\\
+\mu_{2}=\mu_{2}(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\\
+\vdots\\
+\mu_{m}=\mu_{m}(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\\
+\end{cases}
+\end{aligned} \tag{7.2}\]</span></p>
+<ul>
+<li>离散型：</li>
+</ul>
+<p><span class="math inline">\(\mu_{i}=\sum_{l=1}^{n}x_{l}^{i}\cdot P(x, \theta_{1}, \theta_{2}, \cdots, \theta_{m}), i=1,2,\cdots, m\tag{7.3}\)</span></p>
+<ul>
+<li>连续型：</li>
+</ul>
+<p><span class="math inline">\(\mu_{i}=\int_{-\infty}^{+\infty}x^{i}\cdot f(x, \theta_{1}, \theta_{2}, \cdots, \theta_{m})dx, i=1,2,\cdots, m\tag{7.4}\)</span></p>
+<p>（2）、通过求解上面方程，可得</p>
+<p><span class="math display">\[\begin{aligned}
+\begin{cases}
+\theta_{1}=\theta_{1}(\mu_{1}, \mu_{2}, \cdots, \mu_{m})\\
+\theta_{2}=\theta_{2}(\mu_{1}, \mu_{2}, \cdots, \mu_{m})\\
+\vdots\\
+\theta_{m}=\theta_{m}(\mu_{1}, \mu_{2}, \cdots, \mu_{m})\\
+\end{cases}
+\end{aligned}\tag{7.5}\]</span></p>
+<p>（3）、将里面的总体各阶矩<span class="math inline">\(\mu_{1}\)</span>, <span class="math inline">\(\mu_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\mu_{m}\)</span>用样本矩替代，即得
+<span class="math display">\[\widehat{\theta}_{i}=\theta_{i}(A_{1}, A_{2}, \cdots, A_{m}), i=1,2,\cdots, m\tag{7.6}\]</span>
+其中
+<span class="math display">\[A_{i}=\frac{1}{n}\sum_{j=1}^{n}X_{j}^{i}, i=1,2,\cdots, m.\tag{7.7}\]</span></p>
+<p><strong>例题</strong></p>
+<p><strong>例1：</strong>设总体<span class="math inline">\(X\)</span>服从泊松分布<span class="math inline">\(P(\lambda)\)</span>，求参数<span class="math inline">\(\lambda\)</span>的估计量.</p>
+<p>解：依题意有
+<span class="math display">\[\mu_{1}=E(X)=\lambda\]</span>
+所以有
+<span class="math display">\[\lambda=\mu_{1}\]</span>
+用<span class="math inline">\(A_{1}\)</span>替代<span class="math inline">\(\mu_{1}\)</span>，即有
+<span class="math display">\[\widehat{\lambda}=A_{1}=\frac{1}{n}\sum_{i=1}^{n}X_{i}=\overline{X}.\]</span></p>
+<p><strong>例2：</strong>设总体<span class="math inline">\(X\)</span>在<span class="math inline">\([a,b]\)</span>上服从均匀分布，<span class="math inline">\(a, b\)</span>未知，<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>是总体<span class="math inline">\(X\)</span>的一个样本，试求<span class="math inline">\(a, b\)</span>的矩估计。</p>
+<p>解：依题意有
+<span class="math display">\[\begin{equation*}
+\begin{cases}
+\mu_{1}=E(X)=(a+b)/2;\\
+\mu_{2}=E(X^{2})=D(X)+[E(X)]^{2}=(b-a)^{2}/12+(a+b)^{2}/4,
+\end{cases}
+\end{equation*}\]</span></p>
+<p>即有
+<span class="math display">\[\begin{equation*}
+\begin{cases}
+a+b=2\mu_{1};\\
+b-a=\sqrt{12(\mu_{2}-\mu_{1}^{2})},
+\end{cases}
+\end{equation*}\]</span></p>
+<p>解之得
+<span class="math display">\[\begin{equation*}
+\begin{cases}
+a=\mu_{1}-\sqrt{3(\mu_{2}-\mu_{1}^{2})};\\
+b=\mu_{1}+\sqrt{3(\mu_{2}-\mu_{1}^{2})}.
+\end{cases}
+\end{equation*}\]</span>
+分别以<span class="math inline">\(A_{1}\)</span>, <span class="math inline">\(A_{2}\)</span>代替<span class="math inline">\(\mu_{1}\)</span>, <span class="math inline">\(\mu_{2}\)</span>，得<span class="math inline">\(a\)</span>和<span class="math inline">\(b\)</span>的矩估计量分别为
+<span class="math display">\[\begin{equation*}
+\begin{cases}
+a=A_{1}-\sqrt{3(A_{2}-A_{1}^{2})}=\overline{X}-\sqrt{\frac{3}{n}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}};\\
+b=A_{1}+\sqrt{3(A_{2}-A_{1}^{2})}=\overline{X}+\sqrt{\frac{3}{n}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}.
+\end{cases}
+\end{equation*}\]</span></p>
+<p><strong>例3：</strong>设总体<span class="math inline">\(X\)</span>的均值为<span class="math inline">\(\mu\)</span>，方差为<span class="math inline">\(\sigma^{2}\)</span>都存在，且<span class="math inline">\(\sigma^{2}&gt;0\)</span>, <span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>是总体<span class="math inline">\(X\)</span>的一个样本。求：<span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma^{2}\)</span>的矩估计量；</p>
+<p>解：依题意有
+<span class="math display">\[\begin{equation*}
+\begin{cases}
+\mu_{1}=E(X)=\mu;\\
+\mu_{2}=E(X^{2})=D(X)+[E(X)]^{2}=\sigma^{2}+\mu^{2}
+\end{cases}
+\end{equation*}\]</span></p>
+<p>解之得
+<span class="math display">\[\begin{equation*}
+\begin{cases}
+\mu=\mu_{1};\\
+\sigma^{2}=\mu_{2}-\mu_{1}^{2}.
+\end{cases}
+\end{equation*}\]</span></p>
+<p>分别以<span class="math inline">\(A_{1}\)</span>, <span class="math inline">\(A_{2}\)</span>代替<span class="math inline">\(\mu_{1}\)</span>, <span class="math inline">\(\mu_{2}\)</span>，得<span class="math inline">\(\mu\)</span>和<span class="math inline">\(\sigma^{2}\)</span>的矩估计量分别为
+<span class="math display">\[\begin{equation*}
+\begin{cases}
+\widehat{\mu}=A_{1}=\overline{X};\\
+\widehat{\sigma}^{2}=A_{2}-A_{1}^{2}=\frac{1}{n}\sum_{i=1}^{n}X_{i}^{2}-\overline{X}^{2}=\frac{1}{n}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}.
+\end{cases}
+\end{equation*}\]</span></p>
+<p>总体均值与方差的矩估计量的表达式，不因不同的总体分布而异, 即对任意总体<span class="math inline">\(X\)</span>有：
+<span class="math display">\[\widehat{\mu}=\overline{X},~~\widehat{\sigma}^{2}=\frac{1}{n}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}\]</span></p>
+<ul>
+<li><p>矩法的优点是简单易行;</p></li>
+<li><p>缺点是，当总体类型已知时，没有充分利用分布提供的信息。一般场合下，矩估计量不具有唯一性。</p></li>
+</ul>
+<p><strong>例4：</strong>设一大批产品的合格率是<span class="math inline">\(p\)</span>，每次从中抽出10件进行检验，共抽15次，每次抽出的10件中合格品的个数记录如下，
+<span class="math display">\[8, 8, 7, 9, 7, 9, 7, 8, 9, 8, 8, 8, 7, 9, 8\]</span>
+求合格率<span class="math inline">\(p\)</span>的矩估计值。</p>
+<p>解：用<span class="math inline">\(X_{i}\)</span>表示第<span class="math inline">\(i\)</span>次抽出的10件中合格品的个数，<span class="math inline">\(i = 1, 2, \cdots, 15\)</span>．则可以认为<span class="math inline">\(X_{1}\)</span>，<span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{15}\)</span> 独立同分布，是来自二项分布总体<span class="math inline">\(X\sim B(10, p)\)</span>的样本。由于为E(X) = 10p的矩估计量，所以为p的矩估计量，<span class="math inline">\(p\)</span>的矩估计值为：
+<span class="math display">\[\widehat{p}=\frac{\overline{x}}{10}=\frac{\frac{x_{1}+x_{2}+\cdots+x_{15}}{15}}{10}=80\%\]</span></p>
+<p><font size=4><strong>（3）矩法估计总结</strong></font></p>
+<ul>
+<li><p>优点：计算简单，比较容易理解和接受</p></li>
+<li><p>缺点，主要有三个方面</p>
+<ul>
+<li><p>矩法估计有时候会得到不合理的估计。</p></li>
+<li><p>矩法估计不唯一，不同的做法会得到不同的解。</p></li>
+<li><p>总体分布的矩不一定存在，因此，矩法估计不一定有解。</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="极大似然估计" class="section level3" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> 极大似然估计</h3>
+<p><font size=4><strong>（1）极大似然估计基本思想</strong></font></p>
+<p>有个两外形相同的箱子，各装100个球：
+<span class="math display">\[\text{第一箱: 99个白球, 1个红球}\]</span>
+<span class="math display">\[\text{第二箱: 1个白球, 99个红球}\]</span>
+现从两箱中任取一箱，并从箱中任取一球，结果所取得的球是白球，试估计所取到的球来自哪一箱？</p>
+<p>答案是第一箱。因为第一箱更有利于白球的出现，这种思考问题的方法，称为极大似然思想。</p>
+<p>因此，<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>是总体<span class="math inline">\(X\)</span>的一个样本，当样本观测值<span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>， <span class="math inline">\(x_{n}\)</span>出现时，若要估计总体<span class="math inline">\(X\)</span>中的未知参数<span class="math inline">\(\theta\)</span>，自然要选取使<span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(x_{n}\)</span>出现的“概率”达到最大的<span class="math inline">\(\widehat{\theta}\)</span>作为<span class="math inline">\(\theta\)</span>的估计值了。</p>
+<p><font size=4><strong>（2）极大似然估计</strong></font></p>
+<p>极大似然法是在总体类型已知条件下使用的一种参数估计方法 。它首先是由德国数学家高斯（Gauss）在 1821 年提出的 。
+然而，这个方法常归功于英国统计学家费希尔（Fisher ），他在 1922 年重新发现了这一方法， 并首先研究了这种方法的一些性质。</p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5g6be9mtVZONt1pHJda9DSDULG3.Sl9.hBi*AXcjQOskD.DBB93WDLO1oDFq2KKz9tOii.WYW888m9JsHyC0E4M!/mnull&amp;bo=iwH3AAAAAAADB18!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片72" />
+</center>
+<center>
+图 7.2
+</center>
+<p><strong>①基本概念</strong></p>
+<ul>
+<li><strong>似然函数</strong></li>
+</ul>
+<p>设总体<span class="math inline">\(X\)</span>的概率密度函数为<span class="math inline">\(f(x, \theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span> (若<span class="math inline">\(X\)</span>为离散型随机变量时，<span class="math inline">\(f(x, \theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>为分布列<span class="math inline">\(p(x, \theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>)中含有<span class="math inline">\(m\)</span> 个未知参数<span class="math inline">\(\theta_{1}\)</span>, <span class="math inline">\(\theta_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\theta_{m}\)</span>, 又设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的一个样本，<span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(x_{n}\)</span>为样本观测值。称</p>
+<p><span class="math display">\[\begin{aligned}
+\begin{split}
+L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})&amp;=L(x_{1}, x_{2}, \cdots, x_{n}, \theta_{1}, \theta_{2}, \cdots, \theta_{m})\\
+&amp;=\prod_{i=1}^{n}f(x_{i}, \theta_{1}, \theta_{2}, \cdots, \theta_{m}),~~~(\text{连续情形})\\
+&amp;=\prod_{i=1}^{n}p(x_{i}, \theta_{1}, \theta_{2}, \cdots, \theta_{m}),~~~(\text{离散情形})
+\end{split}
+\end{aligned}\tag{7.8}\]</span></p>
+<p>为样本的似然函数。</p>
+<p><strong>②说明</strong></p>
+<ul>
+<li><p>似然函数<span class="math inline">\(L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>是未知参数<span class="math inline">\(\theta_{1}\)</span>, <span class="math inline">\(\theta_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\theta_{m}\)</span>的函数，而<span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(x_{n}\)</span>是已知量。</p></li>
+<li><p>似然函数<span class="math inline">\(L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>可以用来表征随机点<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>落在<span class="math inline">\((x_{1}, x_{2}, \cdots, x_{n})\)</span>邻域内的概率或者事件<span class="math inline">\(\{X_{1}=x_{1}\}\)</span>, <span class="math inline">\(\{X_{2}=x_{2}\}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\{X_{n}=x_{n}\}\)</span>同时发生的概率。</p></li>
+</ul>
+<p><strong>③极大似然估计的数学描述</strong></p>
+<p>寻求未知参数<span class="math inline">\(\theta_{1}\)</span>, <span class="math inline">\(\theta_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\theta_{m}\)</span>的一组估计值<span class="math inline">\(\widehat{\theta}_{1}\)</span>, <span class="math inline">\(\widehat{\theta}_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\widehat{\theta}_{m}\)</span>使得似然函数<span class="math inline">\(L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>达到最大，从而此问题就转化为一般的求函数的最大值问题。因此，称
+<span class="math display">\[\widehat{\theta}_{i}(x_{1}, x_{2}, \cdots, x_{n}), i=1,2,\cdots, m \text{为极大似然估计值}\]</span>
+<span class="math display">\[\widehat{\theta}_{i}(X_{1}, X_{2}, \cdots, X_{n}), i=1,2,\cdots, m \text{为极大似然估计量}\]</span></p>
+<p><font size=4><strong>（3）求最大似然估计量的一般步骤</strong></font></p>
+<ul>
+<li><p>求似然函数<span class="math inline">\(L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>;</p></li>
+<li><p>对似然函数或者对数似然函数(对似然函数取对数：由于这两个函数在同一<span class="math inline">\(\theta_{1}\)</span>, <span class="math inline">\(\theta_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\theta_{m}\)</span>取到最大。)关于<span class="math inline">\(\theta_{1}\)</span>, <span class="math inline">\(\theta_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(\theta_{m}\)</span> 求偏导，得似然方程组或者对数似然方程组，即</p></li>
+</ul>
+<p><span class="math display">\[\text{似然方程:}~~~~ \frac{\partial L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})}{\partial \theta_{i}}=0, i=1,2,\cdots,m\tag{7.9}\]</span></p>
+<p><span class="math display">\[\text{对数似然方程:}~~~~ \frac{\partial \ln L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})}{\partial \theta_{i}}=0, i=1,2,\cdots,m\tag{7.10}\]</span>
+* 解对数似然方程组或者对数似然方程组得到最大似然估计值</p>
+<p><span class="math display">\[\widehat{\theta}_{i}=\widehat{\theta}_{i}(x_{1}, x_{2}, \cdots, x_{n}), i=1,2,\cdots, m\tag{7.11}\]</span>
+* 最后得到最大似然估计量</p>
+<p><span class="math display">\[\widehat{\theta}_{i}=\widehat{\theta}_{i}(X_{1}, X_{2}, \cdots, X_{n}), i=1,2,\cdots, m\tag{7.12}\]</span></p>
+<p><strong>说明：</strong></p>
+<ul>
+<li>按照求函数极值的方法，在求方程组：</li>
+</ul>
+<p><span class="math display">\[\text{似然方程:}~~~~ \frac{\partial L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})}{\partial \theta_{i}}=0, i=1,2,\cdots,m\]</span></p>
+<p><span class="math display">\[\text{对数似然方程:}~~~~ \frac{\partial \ln L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})}{\partial \theta_{i}}=0, i=1,2,\cdots,m\]</span></p>
+<p>的解后还应该用极值的充分条件，对解做进一步的判断，但又由最值原理，如果最值存在，此方程组求得的驻点即为所求的最值点。极大似然估计法一般属于这种情况，所以可直接按步骤(2)求的其值。</p>
+<ul>
+<li>当似然函数不可微或方程组无解时，则应根据定义直接寻求能使<span class="math inline">\(L(\theta_{1}, \theta_{2}, \cdots, \theta_{m})\)</span>达到最大值的解作为极大似然估计量。</li>
+</ul>
+<p><font size=4><strong>（4）例题</strong></font></p>
+<p><strong>例5：</strong>设总体<span class="math inline">\(X\)</span>服从参数为<span class="math inline">\(\lambda\)</span>的泊松分布，<span class="math inline">\(\lambda&gt;0\)</span>未知，求参数<span class="math inline">\(\lambda\)</span>的极大似然估计量。</p>
+<p>解：设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的样本，<span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(x_{n}\)</span>为样本观测值，由于<span class="math inline">\(X\)</span>的分布律为
+<span class="math display">\[P\{X=x\}=p(x, \lambda)=\frac{\lambda^{x}}{x!}e^{-\lambda}, x=0, 1,2,\cdots, \]</span>
+故基于<span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(x_{n}\)</span>的似然函数为
+<span class="math display">\[L(x_{1}, x_{2}, \cdots, x_{n}, \lambda)=\prod_{i=1}^{n}\frac{\lambda^{x_{i}}}{x_{i}!}e^{-\lambda}=e^{-n\lambda}\frac{\lambda^{\sum_{i=1}^{n}x_{i}}}{\prod_{i=1}^{n}x_{i}!}\]</span></p>
+<p>对数似然函数为
+<span class="math display">\[\ln L(x_{1}, x_{2}, \cdots, x_{n}, \lambda)=-n\lambda+\sum_{i=1}^{n}x_{i}\cdot \ln \lambda-\sum_{i=1}^{n}\ln x_{i}\]</span>
+对数似然方程为
+<span class="math display">\[\frac{\partial \ln L(x_{1}, x_{2}, \cdots, x_{n}, \lambda)}{\partial \lambda}=-n+\frac{1}{\lambda}\sum_{i=1}^{n}x_{i}=0\]</span>
+解之得<span class="math inline">\(\lambda=\frac{1}{n}\sum_{i=1}^{n}x_{i}=\overline{x}\)</span>,考虑到<span class="math inline">\(\frac{\partial^{2} \ln L(x_{1}, x_{2}, \cdots, x_{n}, \lambda)}{\partial^{2} \lambda}=-\frac{1}{\lambda^{2}}\sum_{i=1}^{n}x_{i}&lt;0\)</span>
+所以<span class="math inline">\(\lambda\)</span>的极大似然估计值为
+<span class="math display">\[\widehat{\lambda}=\frac{1}{n}\sum_{i=1}^{n}x_{i}=\overline{x}\]</span>
+<span class="math inline">\(\lambda\)</span>的极大似然估计量为
+<span class="math display">\[\widehat{\lambda}=\frac{1}{n}\sum_{i=1}^{n}X_{i}=\overline{X}\]</span></p>
+<p><strong>例6：</strong>设总体<span class="math inline">\(X\)</span>服从参数为<span class="math inline">\([0, \theta]\)</span>上的均匀分布，<span class="math inline">\(\theta&gt;0\)</span>未知，求参数<span class="math inline">\(\theta\)</span>的极大似然估计量。</p>
+<p>解：依题意，可得似然函数为
+<span class="math display">\[\begin{equation*}
+L(x_{1}, x_{2}, \cdots, x_{n}, \theta)=\prod_{i=1}^{n}f(x_{i}, \theta)=\left\{
+                                                                         \begin{array}{ll}
+                                                                           1/\theta^{n}, &amp; 0\leq x_{1}, x_{2}, \cdots, x_{n}\leq \theta \\
+                                                                           0, &amp; \text{其他.}
+                                                                         \end{array}
+                                                                       \right.
+\end{equation*}\]</span>
+由于
+<span class="math display">\[\frac{d L(x_{1}, x_{2}, \cdots, x_{n}, \theta)}{d\theta}=-n\theta^{-(n+1)}\neq 0\]</span>
+因此不同通过似然方程求极大似然估计，故此时应直接由定义来求解。要使似然函数<span class="math inline">\(L(x_{1}, x_{2}, \cdots, x_{n}, \theta)\)</span>值越大只有当<span class="math inline">\(\theta\)</span>值取的越小，故应选取
+<span class="math display">\[\widehat{\theta}=\max(x_{1}, x_{2}, \cdots, x_{n})\triangleq x_{n}^{*}\]</span>
+即<span class="math inline">\(\widehat{\theta}=X_{n}^{*}\)</span>为参数<span class="math inline">\(\theta\)</span>的极大似然估计。</p>
+<p>由第四章可知，在<span class="math inline">\([0, \theta]\)</span>上的均匀分布，其期望值
+<span class="math display">\[\mu=E(X)=\frac{\theta}{2}\]</span>
+即得
+<span class="math display">\[\theta=2\mu\]</span>
+用样本均值<span class="math inline">\(A_{1}=\overline{X}\)</span>代替总体均值<span class="math inline">\(\mu\)</span>，即得<span class="math inline">\(\theta\)</span>的矩法估计
+<span class="math display">\[\widehat{\theta}=2\overline{X}\]</span></p>
+<p>当样本观测值为1,2,4,9时，可知</p>
+<ul>
+<li><p>矩法估计值为<span class="math inline">\(\widehat{\theta}=8\)</span>; (即矩法估计有可能得到不合理的估计。)</p></li>
+<li><p>极大似然估计值为<span class="math inline">\(\widehat{\theta}=9\)</span>。</p></li>
+</ul>
+</div>
+</div>
+<div id="估计量的评价标准" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> 估计量的评价标准</h2>
+<p>从前一节可以看到, 对于同一个参数， 用不同的估计方法求出的估计量可能不相同，有时甚至用同一方法也可能得到不同的估计量，
+那么哪一个估计量好呢？好坏的标准是什么?</p>
+<p><strong>三个常用标准</strong></p>
+<ul>
+<li><p>无偏性</p></li>
+<li><p>有效性</p></li>
+<li><p>一致性</p></li>
+</ul>
+<div id="无偏性" class="section level3" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> 无偏性</h3>
+<p>估计量是随机变量，对于不同的样本值会得到不同的估计值。如果希望估计值在未知参数真值附近摆动，而它的期望值等于未知参数的真值。这就引出无偏性这个评选标准。</p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的一个样本，<span class="math inline">\(\theta\in\Theta\)</span>是包含在总体<span class="math inline">\(X\)</span>分布中的未知参数（可是是多个未知参数），<span class="math inline">\(\Theta\)</span>是<span class="math inline">\(\theta\)</span>的取值范围。</p>
+<p><strong>定义：无偏性</strong></p>
+<p>设<span class="math inline">\(\widehat{\theta}=\widehat{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span>, 是参数<span class="math inline">\(\theta\)</span>的估计量，若对任意的<span class="math inline">\(\theta\in\Theta\)</span>，有
+<span class="math display">\[E(\widehat{\theta})=\theta\tag{7.13}\]</span>
+则称<span class="math inline">\(\widehat{\theta}\)</span>是<span class="math inline">\(\theta\)</span>的无偏估计量（或称估计量<span class="math inline">\(\widehat{\theta}\)</span>是无偏的）。记
+<span class="math display">\[b_{n}=E(\widehat{\theta})-\theta\tag{7.14}\]</span>
+称<span class="math inline">\(b_{n}\)</span>为估计量<span class="math inline">\(\widehat{\theta}\)</span>的偏差，当<span class="math inline">\(b_{n}\neq 0\)</span>时，称<span class="math inline">\(\widehat{\theta}\)</span>是<span class="math inline">\(\theta\)</span>的有偏估计量，若<span class="math inline">\(\lim_{n\rightarrow \infty}b_{n}=0\)</span>, 称<span class="math inline">\(\widehat{\theta}\)</span>是<span class="math inline">\(\theta\)</span>的渐近无偏估计量。</p>
+<p><strong>例1：</strong>设总体<span class="math inline">\(X\)</span>的<span class="math inline">\(k\)</span>阶矩<span class="math inline">\(\mu_{k}=E(X^{k}) (k\geq 1)\)</span>存在，又设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的一个样本，试证明不论总体服从什么分布，<span class="math inline">\(k\)</span>阶样本矩<span class="math display">\[A_{k}=\frac{1}{n}\sum_{i=1}^{n}X_{i}^{k}\]</span>是<span class="math inline">\(k\)</span>阶总体矩<span class="math inline">\(\mu_{k}\)</span>的无偏估计量。</p>
+<p>证明：<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>与总体<span class="math inline">\(X\)</span>同分布，故有
+<span class="math display">\[E(X_{i}^{k})=E(X^{k})=\mu_{k}, i=1,2,\cdots, n\]</span>
+即有
+<span class="math display">\[E(A_{k})=\frac{1}{n}\sum_{i=1}^{n}E(X_{i}^{k})=\mu_{k}.\]</span></p>
+<p><strong>例2：</strong>设总体<span class="math inline">\(X\)</span>服从指数分布，其概率密度为
+<span class="math display">\[\begin{equation*}
+f(x,\theta)=\left\{
+              \begin{array}{ll}
+                e^{-x/\theta}/\theta, &amp; x&gt;0, \\
+                0, &amp; \text{其他.}
+              \end{array}
+            \right.
+\end{equation*}\]</span>
+其中<span class="math inline">\(\theta&gt;0\)</span>为未知参数，又设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的一个样本，试证<span class="math inline">\(\overline{X}\)</span>和<span class="math inline">\(nZ=n\min\{X_{1}, X_{2}, \cdots, X_{n}\}\)</span>都是<span class="math inline">\(\theta\)</span>的无偏估计量。</p>
+<p>证明：首先很容易证明<span class="math inline">\(E(\overline{X})=E(X)=\theta\)</span>，所以<span class="math inline">\(\overline{X}\)</span>是<span class="math inline">\(\theta\)</span>的无偏估计量。而<span class="math inline">\(Z=\min\{X_{1}, X_{2}, \cdots, X_{n}\}\)</span>具有概率密度为
+<span class="math display">\[\begin{equation*}
+f_{\min}(x,\theta)=\left\{
+              \begin{array}{ll}
+                ne^{-nx/\theta}/\theta, &amp; x&gt;0, \\
+                0, &amp; \text{其他.}
+              \end{array}
+            \right.
+\end{equation*}\]</span>
+故有<span class="math display">\[E(Z)=\frac{\theta}{n},~~~~ E(nZ)=\theta\]</span>
+即<span class="math inline">\(nZ\)</span>也是<span class="math inline">\(\theta\)</span>的无偏估计量。</p>
+<p><strong>补充说明：</strong></p>
+<ul>
+<li><p>对于同一个未知参数，可以构造许多不同的无偏估计。</p></li>
+<li><p>若<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的一个样本， <span class="math inline">\(c_{i}, i=1,2,\cdots, n\)</span>是满足<span class="math inline">\(\sum_{i=1}^{n}c_{i}=1\)</span>的任意常数，则估计量<span class="math inline">\(\sum_{i=1}^{n}c_{i}X_{i}\)</span>都是总体期望<span class="math inline">\(E(X)\)</span>的无偏估计。</p></li>
+</ul>
+<p>既然参数的无偏估计不是唯一的，那么怎样在众多无偏估计量选取最优估计量，因此我们引入了无偏估计量有效性的概念。</p>
+</div>
+<div id="有效性" class="section level3" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> 有效性</h3>
+<p><strong>定义：有效性</strong></p>
+<p>设<span class="math inline">\(\widehat{\theta}_{1}=\widehat{\theta}_{1}(X_{1}, X_{2}, \cdots, X_{n})\)</span>与<span class="math inline">\(\widehat{\theta}_{2}=\widehat{\theta}_{2}(X_{1}, X_{2}, \cdots, X_{n})\)</span>, 是参数<span class="math inline">\(\theta\)</span>的无偏估计量，若有
+<span class="math display">\[D(\widehat{\theta}_{1})&lt;D(\widehat{\theta}_{2})\tag{7.15}\]</span>
+则称<span class="math inline">\(\widehat{\theta}_{1}\)</span>较<span class="math inline">\(\widehat{\theta}_{2}\)</span>有效。</p>
+<ul>
+<li>有效性指的是在同是<span class="math inline">\(\theta\)</span>的无偏估计量的前提下， 希望估计值与真值的偏离程度越小越好。一般称方差愈小的估计量愈有效。</li>
+</ul>
+<p><strong>定义：最小方差无偏估计量</strong></p>
+<p>设<span class="math inline">\(\widehat{\theta}_{0}(X_{1}, X_{2}, \cdots, X_{n})\)</span>是参数<span class="math inline">\(\theta\)</span>的无偏估计量，若对于<span class="math inline">\(\theta\)</span>的任一无偏估计量<span class="math inline">\(\widehat{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span>，都有
+<span class="math display">\[D(\widehat{\theta}_{0})\leq D(\widehat{\theta})\tag{7.16}\]</span>
+则称<span class="math inline">\(\widehat{\theta}_{0}\)</span>是<span class="math inline">\(\theta\)</span>的最小方差无偏估计量。</p>
+<p><strong>例3：</strong>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>的一个样本，
+<span class="math display">\[\widehat{\mu}_{1}=\frac{X_{1}}{2}+\frac{X_{2}}{3}+\frac{X_{3}}{6}, ~~~~\widehat{\mu}_{2}=\frac{X_{1}}{2}+\frac{X_{2}}{4}+\frac{X_{3}}{4}\]</span>
+<span class="math display">\[\widehat{\mu}_{3}=\frac{X_{1}}{3}+\frac{X_{2}}{3}+\frac{X_{3}}{3}\]</span></p>
+<ul>
+<li><p>试验证<span class="math inline">\(\widehat{\mu}_{1}\)</span>, <span class="math inline">\(\widehat{\mu}_{2}\)</span>, <span class="math inline">\(\widehat{\mu}_{3}\)</span>为<span class="math inline">\(\mu\)</span>的无偏估计。</p></li>
+<li><p>试比较哪个估计更有效。</p></li>
+</ul>
+<p>解：（1）、依题意有
+<span class="math display">\[E(\widehat{\mu}_{1})=E\left(\frac{X_{1}}{2}+\frac{X_{2}}{3}+\frac{X_{3}}{6}\right)=\frac{\mu}{2}+\frac{\mu}{3}+\frac{\mu}{6}=\mu\]</span></p>
+<p><span class="math display">\[E(\widehat{\mu}_{2})=E\left(\frac{X_{1}}{2}+\frac{X_{2}}{4}+\frac{X_{3}}{4}\right)=\frac{\mu}{2}+\frac{\mu}{4}+\frac{\mu}{4}=\mu\]</span>
+<span class="math display">\[E(\widehat{\mu}_{3})=E\left(\frac{X_{1}}{3}+\frac{X_{2}}{3}+\frac{X_{3}}{3}\right)=\frac{\mu}{3}+\frac{\mu}{3}+\frac{\mu}{3}=\mu\]</span>
+因此<span class="math inline">\(\widehat{\mu}_{1}\)</span>, <span class="math inline">\(\widehat{\mu}_{2}\)</span>, <span class="math inline">\(\widehat{\mu}_{3}\)</span>为<span class="math inline">\(\mu\)</span>的无偏估计量。</p>
+<p>（2）、
+<span class="math display">\[D(\widehat{\mu}_{1})=D\left(\frac{X_{1}}{2}+\frac{X_{2}}{3}+\frac{X_{3}}{6}\right)=\frac{\sigma^{2}}{4}+\frac{\sigma^{2}}{9}+\frac{\sigma^{2}}{36}=\frac{7\sigma^{2}}{18}\]</span>
+<span class="math display">\[D(\widehat{\mu}_{2})=D\left(\frac{X_{1}}{2}+\frac{X_{2}}{4}+\frac{X_{3}}{4}\right)=\frac{\sigma^{2}}{4}+\frac{\sigma^{2}}{16}+\frac{\sigma^{2}}{16}=\frac{3\sigma^{2}}{8}\]</span>
+<span class="math display">\[D(\widehat{\mu}_{3})=D\left(\frac{X_{1}}{3}+\frac{X_{2}}{3}+\frac{X_{3}}{3}\right)=\frac{\sigma^{2}}{9}+\frac{\sigma^{2}}{9}+\frac{\sigma^{2}}{9}=\frac{\sigma^{2}}{3}\]</span>
+因为<span class="math inline">\(D(\widehat{\mu}_{3})&lt;D(\widehat{\mu}_{2})&lt;D(\widehat{\mu}_{1})\)</span>, 故<span class="math inline">\(\widehat{\mu}_{3}\)</span>更有效。</p>
+<p><strong>例4：</strong>设<span class="math inline">\(\widehat{\theta}_{1}\)</span>和<span class="math inline">\(\widehat{\theta}_{2}\)</span>是参数<span class="math inline">\(\theta\)</span>的两个互相独立的无偏估计，已知<span class="math inline">\(D(\widehat{\theta}_{1})=2D(\widehat{\theta}_{2})\)</span>，
+试求常数<span class="math inline">\(a,b\)</span>，使得<span class="math inline">\(a\widehat{\theta}_{1}+b\widehat{\theta}_{2}\)</span>是<span class="math inline">\(\theta\)</span>的无偏估计，且在一切这样的线性估计类中方差最小。</p>
+<p>解：因为<span class="math inline">\(\widehat{\theta}_{1}\)</span>和<span class="math inline">\(\widehat{\theta}_{2}\)</span>是参数<span class="math inline">\(\theta\)</span>的两个互相独立的无偏估计，要使<span class="math inline">\(a\widehat{\theta}_{1}+b\widehat{\theta}_{2}\)</span>是<span class="math inline">\(\theta\)</span>的无偏估计，则需
+<span class="math display">\[E(a\widehat{\theta}_{1}+b\widehat{\theta}_{2})=aE(\widehat{\theta}_{1})+bE(\widehat{\theta}_{2})=(a+b)\theta=\theta\]</span>
+即有<span class="math inline">\(a+b=1\)</span>。</p>
+<p>接下来考察<span class="math inline">\(a\widehat{\theta}_{1}+b\widehat{\theta}_{2}\)</span>的方差，由<span class="math inline">\(D(\widehat{\theta}_{1})=2D(\widehat{\theta}_{2})\)</span>，以及<span class="math inline">\(\widehat{\theta}_{1}\)</span>和<span class="math inline">\(\widehat{\theta}_{2}\)</span>互相独立得
+<span class="math display">\[D(a\widehat{\theta}_{1}+b\widehat{\theta}_{2})=(a^{2}+2b^{2})D(\widehat{\theta}_{2})=(a^{2}+2(1-a)^{2})D(\widehat{\theta}_{2})\]</span>
+易知当<span class="math inline">\(a=\frac{2}{3}, b=\frac{1}{3}\)</span>时方差最小。</p>
+</div>
+<div id="一致性" class="section level3" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> 一致性</h3>
+<p>注意到，前面介绍的无偏性和有效性都是在样本容量 n 固定的前提下提出的。当样本容量 n 增大时自然希望估计量对未知参数的估计更精确；</p>
+<p>再注意到，在无偏估计类中所讨论的是以估计量的方差的大小作为衡量估计量为“最优”的准则。但是无偏估计类中方差为最小或较小的估计量不一定
+比某个有偏的估计量的方差来的小；</p>
+<p>另外，有偏与无偏是反映估计量的数学期望是否等于被估计的参数的真值；方差的大小是反映估计量的观测值与被估计的参数的真值的离散程度。
+如果希望在偏差性与离散性两者兼顾的原则下建立估计量为“最优”的准则，这就引出相合性的概念。</p>
+<p><strong>定义：一致性（相合性）</strong></p>
+<p>设<span class="math inline">\(\widehat{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span>是参数<span class="math inline">\(\theta\)</span>的估计量，若对于<span class="math inline">\(\theta\in \Theta\)</span>以及任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，有
+<span class="math display">\[\lim_{n\rightarrow\infty}P\{|\widehat{\theta}(X_{1}, X_{2}, \cdots, X_{n})-\theta|\leq \varepsilon\}=1\tag{7.17}\]</span>
+即<span class="math inline">\(\widehat{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span>依概率收敛到<span class="math inline">\(\theta\)</span>，称<span class="math inline">\(\widehat{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span>是<span class="math inline">\(\theta\)</span>的一致估计量。</p>
+<ul>
+<li><p>一般，一致性（相合性）是要在样本容量相当大时才能显示出其优越性。但这在实际中很难做到。因此在工程中经常使用的是无偏性和有效性这两条衡量估计量为“最优”的准则。</p></li>
+<li><p>若估计量不具有相合性，那么不论将样本容量 n 取的多大，都不能使得待估计量估计的足够准确。</p></li>
+<li><p>由极大似然估计得到的估计量，在一定条件下也具有一致性（相合性）。</p></li>
+</ul>
+</div>
+</div>
+<div id="参数的区间估计" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> 参数的区间估计</h2>
+<div id="区间估计基本方法" class="section level3" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> 区间估计基本方法</h3>
+<p><font size=4><strong>问题的引出</strong></font></p>
+<p>在参数的点估计中用样本构造一个估计量<span class="math inline">\(\widehat{\theta}\)</span>，用<span class="math inline">\(\widehat{\theta}\)</span>去估计<span class="math inline">\(\theta\)</span>，这仅仅是解决了一个求未知参数<span class="math inline">\(\theta\)</span>的一个 “近似值”问题，而没有解决“近似值”的精确程度问题，即没有给出这个近似值的误差范围和估计的可信程度。</p>
+<p>在参数的区间估计中则要用样本去给出未知参数<span class="math inline">\(\theta\)</span>的一个大致的范围，并使未知参数<span class="math inline">\(\theta\)</span>在其中有指定的概率。</p>
+<p><font size=4><strong>问题提出</strong></font></p>
+<p>若估计参数为<span class="math inline">\(\theta\)</span>，要考虑估计量<span class="math inline">\(\widehat{\theta}\)</span>落在<span class="math inline">\(\underline{\theta}&lt;\widehat{\theta}&lt;\overline{\theta}\)</span>的可能性有多大。即求<span class="math inline">\(P\{\underline{\theta}&lt;\widehat{\theta}&lt;\overline{\theta}\}=?\)</span>, 若给定了可能的值，则就可以求出它的可能范围。</p>
+<p><font size=4><strong>（1）引例</strong></font></p>
+<p><strong>引例：</strong></p>
+<p>在估计湖中鱼数的问题中，若已知得到鱼数<span class="math inline">\(N\)</span>的极大似然估计为1000条。而实际上<span class="math inline">\(N\)</span>的真值可能大于1000条，也可能小于1000条。
+则在区间估计中就可以给出一个区间，在此区间内合理地相信<span class="math inline">\(N\)</span>的真值位于其中。这样对鱼数的估计就有把握多了。</p>
+<ul>
+<li><p>也就是说，所讨论的问题是希望确定一个区间，使得在该区间内能以比较高的可靠程度相信它包含未知参数的真值。</p>
+<ul>
+<li><p>“可靠程度”是用概率来度量的，称为置信概率、置信度或置信水平。习惯上把置信水平记作<span class="math inline">\(1-\alpha\)</span>，这里的<span class="math inline">\(\alpha\)</span>是一个很小的整数。</p></li>
+<li><p>这个区间就是置信区间。</p></li>
+</ul></li>
+</ul>
+<p><font size=4><strong>（2）置信区间</strong></font></p>
+<p><strong>定义：</strong>
+设总体<span class="math inline">\(X\)</span>的分布函数<span class="math inline">\(F(x,\theta)\)</span>含有一个位置参数<span class="math inline">\(\theta\)</span>, <span class="math inline">\(\theta\in\Theta\)</span>（<span class="math inline">\(\Theta\)</span>是<span class="math inline">\(\theta\)</span>可能取值的范围），对于给定值<span class="math inline">\(\alpha (0&lt;\alpha&lt;1)\)</span>，若有来自<span class="math inline">\(X\)</span>的样本<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>确定的两个统计量<span class="math inline">\(\underline{\theta}=\underline{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span>和<span class="math inline">\(\overline{\theta}=\overline{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span> <span class="math inline">\((\underline{\theta}&lt;\overline{\theta})\)</span>，对于任意的<span class="math inline">\(\theta\in\Theta\)</span>，满足
+<span class="math display">\[P\{\underline{\theta}(X_{1}, X_{2}, \cdots, X_{n})&lt;\theta &lt;\overline{\theta}(X_{1}, X_{2}, \cdots, X_{n})\}= 1-\alpha\tag{7.18}\]</span>
+则称随机区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>是<span class="math inline">\(\theta\)</span>的置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间，<span class="math inline">\(\underline{\theta}\)</span>和<span class="math inline">\(\overline{\theta})\)</span>分别称为置信水平为<span class="math inline">\(1-\alpha\)</span>的双侧置信区间的置信下限和置信上限。<span class="math inline">\(1-\alpha\)</span> 称为置信水平。</p>
+<p><font size=4><strong>（3）关于定义的说明</strong></font></p>
+<p>在反复抽样多次(各种得到的样本容量相等，均为<span class="math inline">\(n\)</span>)，每个样本值确定一个区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>，每个这样的区间要么包含<span class="math inline">\(\theta\)</span>的真值，要么不包含<span class="math inline">\(\theta\)</span>的真值，按贝努力大数定理可知在这么多的区间中包含<span class="math inline">\(\theta\)</span>真值的约占<span class="math inline">\(100(1-\alpha)\%\)</span>，不包含<span class="math inline">\(\theta\)</span>真值的仅占<span class="math inline">\(100\alpha\%\)</span>。</p>
+<ul>
+<li><p>当<span class="math inline">\(X\)</span>是连续型随机变量时，对于给定值<span class="math inline">\(\alpha\)</span>，总可以求出<span class="math inline">\(P\{\underline{\theta}&lt;\theta &lt;\overline{\theta}\}= 1-\alpha\)</span>的置信区间。</p></li>
+<li><p>当<span class="math inline">\(X\)</span>是离散型随机变量时，对于给定值<span class="math inline">\(\alpha\)</span>，常常找不到区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>使得<span class="math inline">\(P\{\underline{\theta}&lt;\theta &lt;\overline{\theta}\}\)</span>恰好为<span class="math inline">\(1-\alpha\)</span>，此时我们去找区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>使得<span class="math inline">\(P\{\underline{\theta}&lt;\theta &lt;\overline{\theta}\}\)</span>至少为<span class="math inline">\(1-\alpha\)</span>，且尽可能地接近<span class="math inline">\(1-\alpha\)</span>。</p></li>
+<li><p>随机区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>以概率<span class="math inline">\(1-\alpha\)</span>包含<span class="math inline">\(\theta\)</span>的真值，而不能说<span class="math inline">\(\theta\)</span>以<span class="math inline">\(1-\alpha\)</span>的概率落在区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>。因为参数<span class="math inline">\(\theta\)</span>虽然未知，但它是个常数，没有随机性，而区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>是随机的。</p></li>
+</ul>
+<p><font size=4><strong>（4）区间估计的要求</strong></font></p>
+<p>要求<span class="math inline">\(\theta\)</span>以很大的可能被包含在区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>内，就是说，概率<span class="math inline">\(P\{\underline{\theta}&lt;\theta &lt;\overline{\theta}\}\)</span>要尽可能大，即要求估计尽量可靠。</p>
+<ul>
+<li>估计的精度要尽可能的高。 如要求区间<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>的长度<span class="math inline">\(\overline{\theta}-\underline{\theta}\)</span>尽可能短，或能体现该要求的其它准则。</li>
+</ul>
+<p>用区间(1，100)去估计某人的年龄，虽然很可信，却不能带来任何有用的信息；反之，若用区间(30，31)去估计某人的岁数，虽然提供了关于此人年龄的信息，却很难使人相信这一结果的正确性。</p>
+<ul>
+<li>我们希望既能得到较高的精度，又能得到较高的可靠性。但在获得的信息一定（如样本容量固定）的情况下，这两者一般是不可能同时达到最理想的状态。通常是采取将可靠性固定在某一需要的水平上，求得精度尽可能高的估计区间。下面给出区间估计的定义。</li>
+</ul>
+<p><font size=4><strong>（5）求置信区间的一般步骤</strong></font></p>
+<ul>
+<li><p>寻求一个样本<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>和<span class="math inline">\(\theta\)</span>的函数(称为枢轴量)：</p>
+<p><span class="math display">\[W=W(X_{1}, X_{2}, \cdots, X_{n}, \theta)\]</span>
+使得<span class="math inline">\(W\)</span>的分布不依赖与<span class="math inline">\(\theta\)</span>以及其他未知参数。</p></li>
+<li><p>对于给定的置信水平<span class="math inline">\(1-\alpha\)</span>，定出两个常数<span class="math inline">\(a, b\)</span>，使得</p>
+<p><span class="math display">\[P\{a&lt;W(X_{1}, X_{2}, \cdots, X_{n}, \theta)&lt;b\}=1-\alpha\]</span></p></li>
+<li><p>若能从<span class="math inline">\(a&lt;W(X_{1}, X_{2}, \cdots, X_{n}, \theta)&lt;b\)</span>得到与之等价的<span class="math inline">\(\theta\)</span>的不等式<span class="math inline">\(\underline{\theta}&lt;\theta&lt;\overline{\theta}\)</span>，其中<span class="math inline">\(\underline{\theta}=\underline{\theta}(X_{1}, X_{2}, \cdots, X_{n})\)</span>和<span class="math inline">\(\overline{\theta}=\overline{\theta}(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n})\)</span> 都是统计量，那么<span class="math inline">\((\underline{\theta}, \overline{\theta})\)</span>就是<span class="math inline">\(\theta\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间。</p></li>
+</ul>
+</div>
+<div id="单个正态总体参数的置信区间" class="section level3" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> 单个正态总体参数的置信区间</h3>
+<p><font size=4><strong>（1）均值<span class="math inline">\(\mu\)</span>的置信区间</strong></font></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>是总体<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>的一个样本，<span class="math inline">\(\overline{X}\)</span>和<span class="math inline">\(S^{2}\)</span>分别是样本均值和样本方差，给定置信水平<span class="math inline">\(1-\alpha\)</span>，求均值<span class="math inline">\(\mu\)</span>的置信区间<span class="math inline">\([\underline{\theta}, \overline{\theta}]\)</span>。</p>
+<p><strong>①方差<span class="math inline">\(\sigma^{2}\)</span>已知情形</strong></p>
+<ul>
+<li>首先寻找未知参数的一个良好估计一般可以通过矩法估计或者极大似然估计方法得到。 选取<span class="math inline">\(\mu\)</span>无偏的点估计<span class="math inline">\(\overline{X}\)</span>，并且统计量</li>
+</ul>
+<p><span class="math display">\[Z=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0, 1)\tag{7.19}\]</span>
+而且<span class="math inline">\(Z\)</span>不依赖于任何未知参数。</p>
+<ul>
+<li>对于给定的置信水平<span class="math inline">\(1-\alpha\)</span>，由下图</li>
+</ul>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5lifRlbBTi6THPV7CG8IkI.CqDSUGIHMVRMpK9srqp5sdMPEvjr1mIR6gKpMTqk2GXDMP1cvTCcnQq6VlNiMBlc!/mnull&amp;bo=JgHHAAAAAAABB8A!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片74" />
+</center>
+<center>
+图 7.3
+</center>
+<p>易知</p>
+<p><span class="math display">\[P\left\{-z_{\alpha/2}&lt;\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}&lt;z_{\alpha/2}\right\}=1-\alpha\tag{7.20}\]</span></p>
+<p>即
+<span class="math display">\[P\left\{\overline{X}-\frac{\sigma}{\sqrt{n}}z_{\alpha/2}&lt;\mu&lt;\overline{X}+\frac{\sigma}{\sqrt{n}}z_{\alpha/2}\right\}=1-\alpha\tag{7.21}\]</span></p>
+<ul>
+<li>依据定义可得<span class="math inline">\(\mu\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间</li>
+</ul>
+<p><span class="math display">\[\left(\overline{X}-\frac{\sigma}{\sqrt{n}}z_{\alpha/2}, \overline{X}+\frac{\sigma}{\sqrt{n}}z_{\alpha/2}\right)\tag{7.22}\]</span>
+常将该对称区间写成较短的形式：</p>
+<p><span class="math display">\[\left(\overline{X}\pm\frac{\sigma}{\sqrt{n}}z_{\alpha/2}\right)\tag{7.23}\]</span></p>
+<ul>
+<li><span class="math inline">\(\mu\)</span>的置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间并不唯一，取两个对称的分位点<span class="math inline">\(-z_{\alpha/2}\)</span>和<span class="math inline">\(z_{\alpha/2}\)</span>是为了使两点之间的长度最小，
+从而保证了所得置信区间的精度最大（主要针对概率密度的图形是单峰并且对称的情况）。</li>
+</ul>
+<p>当<span class="math inline">\(\alpha=0.05\)</span>时，我们可以取<span class="math inline">\(-z_{0.04}\)</span>和<span class="math inline">\(z_{0.01}\)</span>，由下图</p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5j*5nom3C3T086wPXXrwa42ObbGeneWm2RKmpUC0Bs4euykLjHAbAEE53dbTiCUMS86QxJoXx53n3c46TTHfShU!/mnull&amp;bo=CwGeAAAAAAABB7Q!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片75" />
+</center>
+<center>
+图 7.4
+</center>
+<p>可知</p>
+<p><span class="math display">\[P\left\{\overline{X}-\frac{\sigma}{\sqrt{n}}z_{0.04}&lt;\mu&lt;\overline{X}+\frac{\sigma}{\sqrt{n}}z_{0.01}\right\}=0.95\tag{7.24}\]</span>
+得<span class="math inline">\(\mu\)</span>的置信水平为0.95的置信区间
+<span class="math display">\[\left(\overline{X}-\frac{\sigma}{\sqrt{n}}z_{0.04}, \overline{X}+\frac{\sigma}{\sqrt{n}}z_{0.01}\right)\tag{7.25}\]</span>
+但对称时的区间长度<span class="math inline">\(L=\frac{2\sigma}{\sqrt{n}}z_{\alpha/2}\)</span>最短。</p>
+<p><strong>例题</strong></p>
+<p><strong>例1：</strong>包糖机某日开工包了12包糖，称得重量(单位:克)分别为
+<span class="math display">\[506, 500, 495, 488, 504, 486\]</span>
+<span class="math display">\[505, 513, 521, 520, 512, 485\]</span>
+假设重量服从正态分布，且标准差<span class="math inline">\(\sigma=10\)</span>，求糖包的重量平均值<span class="math inline">\(\mu\)</span>的置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间（分别取<span class="math inline">\(\alpha=0.1\)</span>和<span class="math inline">\(\alpha=0.05\)</span>）。</p>
+<p>解：依题意有
+<span class="math display">\[\sigma=10, n=12, \overline{x}=502.92\]</span>
+（1）、当<span class="math inline">\(\alpha=0.1\)</span>时，查表可得
+<span class="math display">\[z_{0.05}=1.645\]</span></p>
+<p>因此有
+<span class="math display">\[\overline{x}-\frac{\sigma}{\sqrt{n}}z_{0.05}=502.92-\frac{10}{\sqrt{12}}\times1.645=498.17\]</span>
+<span class="math display">\[\overline{x}+\frac{\sigma}{\sqrt{n}}z_{0.05}=502.92+\frac{10}{\sqrt{12}}\times1.645=507.67\]</span>
+即<span class="math inline">\(\mu\)</span>的置信水平为90%的置信区间<span class="math inline">\((498.17, 507.67)\)</span>。</p>
+<p>（2）、当<span class="math inline">\(\alpha=0.05\)</span>时，查表可得
+<span class="math display">\[z_{0.025}=1.96\]</span>
+同理可得<span class="math inline">\(\mu\)</span>的置信水平为90%的置信区间<span class="math inline">\((497.26, 508.58)\)</span></p>
+<p>当置信水平<span class="math inline">\(1-\alpha\)</span>较大时，置信区间也较大；\
+当置信水平<span class="math inline">\(1-\alpha\)</span>较小时，置信区间也较小。</p>
+<p><strong>例2：</strong>设总体<span class="math inline">\(X\sim N(\mu, 1.25^{2})\)</span>，问需要抽取容量为多大的样本，才能使<span class="math inline">\(\mu\)</span>的置信水平为95%的置信区间长度不大于0.49？</p>
+<p>解：设需要抽取的容量为<span class="math inline">\(n\)</span>的样本，其样本均值为<span class="math inline">\(\overline{X}\)</span>，<span class="math inline">\(\alpha=1-0.95=0.05\)</span>，查表可得
+<span class="math inline">\(z_{0.025}=1.96\)</span>，于是<span class="math inline">\(\mu\)</span>的置信水平为95%的置信区间为
+<span class="math display">\[\left(\overline{X}\pm\frac{\sigma}{\sqrt{n}}z_{0.025}\right)\]</span></p>
+<p>该区间长度
+<span class="math display">\[L=2\times\frac{1.25}{\sqrt{n}}\times1.96=\frac{4.9}{\sqrt{n}}\leq 0.49\]</span>
+解得<span class="math inline">\(n\geq 100\)</span>，即取<span class="math inline">\(n=100\)</span>。</p>
+<p><strong>②方差<span class="math inline">\(\sigma^{2}\)</span>未知情形</strong></p>
+<p>由于方差<span class="math inline">\(\sigma^{2}\)</span>未知，此时不能再用<span class="math inline">\(Z=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\)</span>作为统计量来对<span class="math inline">\(\mu\)</span>进行区间估计，
+因为其中含有未知参数<span class="math inline">\(\sigma^{2}\)</span>。</p>
+<p>考虑到样本标准差<span class="math inline">\(S^{2}\)</span>是<span class="math inline">\(\sigma^{2}\)</span>的无偏估计，可用<span class="math inline">\(S^{2}\)</span>代替<span class="math inline">\(\sigma^{2}\)</span>，并且
+<span class="math display">\[T=\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)\tag{7.26}\]</span>
+而且<span class="math inline">\(T\)</span>不依赖于任何未知参数。</p>
+<p>类似上面的过程，可以得到<span class="math inline">\(\mu\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间
+<span class="math display">\[\left(\overline{X}-\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1), \overline{X}+\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1)\right)\tag{7.27}\]</span></p>
+<p><strong>例3：</strong>已知某种灯泡的寿命服从正态分布，现从一批灯泡中抽取16只，测得其寿命（单位：小时）如下所示：
+<span class="math display">\[1510, 1450, 1480, 1460, 1520, 1480, 1490, 1460\]</span>
+<span class="math display">\[1480, 1510, 1530, 1470, 1500, 1520, 1510, 1470\]</span>
+求该灯泡平均使用寿命95%的置信区间。</p>
+<p>解：依题意有
+<span class="math display">\[n=16, \overline{x}=\frac{1}{16}\sum_{i=1}^{16}x_{i}=1490, s^{2}=\frac{1}{16-1}\sum_{i=1}^{16}(x_{i}-\overline{x})^{2}=613.33\]</span></p>
+<p>当<span class="math inline">\(\alpha=0.05\)</span>时，
+<span class="math display">\[t_{0.025}(15)=2.1315\]</span>
+可以计算得
+<span class="math display">\[\overline{x}-\frac{s}{\sqrt{n}}t_{0.025}(15)=1476.80\]</span>
+<span class="math display">\[\overline{x}+\frac{s}{\sqrt{n}}t_{0.025}(15)=1503.20\]</span>
+因此该灯泡平均使用寿命95%的置信区间为<span class="math inline">\((1476.80, 1503.20)\)</span>。</p>
+<p><strong>③方差<span class="math inline">\(\sigma^{2}\)</span>的置信区间</strong></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>是总体<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>的一个样本，<span class="math inline">\(\overline{X}\)</span>和<span class="math inline">\(S^{2}\)</span>分别是样本均值和样本方差，给定置信水平<span class="math inline">\(1-\alpha\)</span>，求方差<span class="math inline">\(\sigma^{2}\)</span>的区间估计。</p>
+<p><strong>④均值<span class="math inline">\(\mu\)</span>已知情形</strong></p>
+<p>由于<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>，所以选取
+<span class="math display">\[\chi^{2}=\sum_{i=1}^{n}\left(\frac{X_{i}-\mu}{\sigma}\right)^{2}=\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(X_{i}-\mu)^{2}\sim \chi^{2}(n)\tag{7.28}\]</span>
+作为方差<span class="math inline">\(\sigma^{2}\)</span>的区间估计统计量。由于<span class="math inline">\(\chi^{2}\)</span>概率密度不是对称的，对给定的置信水平<span class="math inline">\(1-\alpha\)</span>，不容易找到最短的置信区间，习惯上仍取对称形式的分位点，如下图：</p>
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5j*5nom3C3T086wPXXrwa43iUngOgmOvbyyf*0gtCEID0s47D*iDw0Ueum*BKoiHLrvRml3Zgu1Ik8HriHs04LU!/mnull&amp;bo=HwHFAAAAAAABB*s!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片77" />
+</center>
+<center>
+图 7.5
+</center>
+<p>使得
+<span class="math display">\[P\left\{\chi^{2}_{1-\alpha/2}(n)&lt;\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(X_{i}-\mu)^{2}&lt;\chi^{2}_{\alpha/2}(n)\right\}=1-\alpha\tag{7.29}\]</span>
+即 <span class="math display">\[P\left\{\frac{\sum_{i=1}^{n}(X_{i}-\mu)^{2}}{\chi^{2}_{\alpha/2}(n)}&lt;\sigma^{2}&lt;\frac{\sum_{i=1}^{n}(X_{i}-\mu)^{2}}{\chi^{2}_{1-\alpha/2}(n)}\right\}=1-\alpha\tag{7.30}\]</span>
+方差<span class="math inline">\(\sigma^{2}\)</span>置信水平<span class="math inline">\(1-\alpha\)</span>的置信区间为
+<span class="math display">\[\left(\frac{\sum_{i=1}^{n}(X_{i}-\mu)^{2}}{\chi^{2}_{\alpha/2}(n)}, \frac{\sum_{i=1}^{n}(X_{i}-\mu)^{2}}{\chi^{2}_{1-\alpha/2}(n)}\right)\tag{7.31}\]</span></p>
+<p><strong>⑤均值<span class="math inline">\(\mu\)</span>未知情形</strong></p>
+<p>由于<span class="math inline">\(\mu\)</span>未知，故不能再用<span class="math display">\[\chi^{2}=\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(X_{i}-\mu)^{2}\]</span>作为<span class="math inline">\(\sigma^{2}\)</span>的区间估计统计量，此时我们用<span class="math inline">\(\overline{X}\)</span>代替<span class="math inline">\(\mu\)</span>，并且
+<span class="math display">\[\chi^{2}=\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}=\frac{(n-1)S^{2}}{\sigma^{2}}\sim \chi^{2}(n-1)\tag{7.32}\]</span>
+类似于上面的方式，可得方差<span class="math inline">\(\sigma^{2}\)</span>置信水平<span class="math inline">\(1-\alpha\)</span>的置信区间为
+<span class="math display">\[\left(\frac{(n-1)S^{2}}{\chi^{2}_{\alpha/2}(n-1)}, \frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha/2}(n-1)}\right)\tag{7.32}\]</span></p>
+<p><strong>例4：</strong>已知某种灯泡的寿命服从正态分布，现从一批灯泡中抽取16只，测得其寿命（单位：小时）如下所示：
+<span class="math display">\[1510, 1450, 1480, 1460, 1520, 1480, 1490, 1460\]</span>
+<span class="math display">\[1480, 1510, 1530, 1470, 1500, 1520, 1510, 1470\]</span>
+求该灯泡使用寿命方差的95%的置信区间。</p>
+<p>解：依题意有
+<span class="math display">\[n=16, \overline{x}=\frac{1}{16}\sum_{i=1}^{16}x_{i}=1490, s^{2}=\frac{1}{16-1}\sum_{i=1}^{16}(x_{i}-\overline{x})^{2}=613.33\]</span></p>
+<p>当<span class="math inline">\(\alpha=0.05\)</span>时，查表有
+<span class="math display">\[\chi^{2}_{0.025}(15)=27.4884\]</span>
+<span class="math display">\[\chi^{2}_{0.975}(15)=6.2621\]</span></p>
+<p>计算得
+<span class="math display">\[\frac{(n-1)S^{2}}{\chi^{2}_{0.025}(15)}=334.69\]</span>
+<span class="math display">\[\frac{(n-1)S^{2}}{\chi^{2}_{0.975}(15)}=1469.15\]</span></p>
+<p>故得到灯泡使用寿命方差的置信水平为95%的置信区间为<span class="math inline">\((334.69\)</span>, <span class="math inline">\(1469.15)\)</span>。</p>
+</div>
+<div id="两个正态总体参数的置信区间" class="section level3" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> 两个正态总体参数的置信区间</h3>
+<p><font size=4><strong>（1）<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的区间估计</strong></font></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n_{1}}\)</span>和<span class="math inline">\(Y_{1}\)</span>, <span class="math inline">\(Y_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(Y_{n_{2}}\)</span>分别为总体<span class="math inline">\(X\sim N(\mu_{1}, \sigma_{1}^{2})\)</span>和<span class="math inline">\(Y\sim N(\mu_{2}, \sigma_{2}^{2})\)</span>的样本，且<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立，其样本均值分别记为<span class="math inline">\(\overline{X}\)</span>和<span class="math inline">\(\overline{Y}\)</span>，样本方差分别记为
+<span class="math inline">\(S_{1}^{2}\)</span>和<span class="math inline">\(S_{2}^{2}\)</span>。</p>
+<p><strong>①<span class="math inline">\(\sigma_{1}^{2}\)</span>和<span class="math inline">\(\sigma_{2}^{2}\)</span>已知情形</strong></p>
+<p>由第六章的内容可知
+<span class="math display">\[Z=\frac{\overline{X}-\overline{Y}-(\mu_{1}-\mu_{2})}{\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}}\sim N(0, 1)\tag{7.33}\]</span>
+且不依赖于任何未知参数，故选择上述<span class="math inline">\(Z\)</span>作为<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的区间估计统计量。</p>
+<p>给定置信水平<span class="math inline">\(1-\alpha\)</span>，可得
+<span class="math display">\[P\left\{-z_{\alpha/2}&lt;\frac{\overline{X}-\overline{Y}-(\mu_{1}-\mu_{2})}{\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}}&lt;z_{\alpha/2}\right\}=1-\alpha\tag{7.34}\]</span>
+即
+<span class="math display">\[P\left\{\overline{X}-\overline{Y}-z_{\alpha/2}\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}&lt;\mu_{1}-\mu_{2}&lt;\overline{X}-\overline{Y}+z_{\alpha/2}\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}\right\}=1-\alpha\tag{7.35}\]</span>
+于是，我们得到<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间
+<span class="math display">\[\left(\overline{X}-\overline{Y}\pm z_{\alpha/2}\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}\right)\tag{7.36}\]</span></p>
+<p><strong>说明</strong></p>
+<p>实际应用中两个总体方差的信息往往是未知的,在两个样本容量都比较大的情况下（<span class="math inline">\(n_{1}, n_{2}\geq 30\)</span>），一般采用两个样本方差<span class="math inline">\(S_{1}^{2}\)</span>和<span class="math inline">\(S_{2}^{2}\)</span>近似代替<span class="math inline">\(\sigma_{1}^{2}\)</span>和<span class="math inline">\(\sigma_{2}^{2}\)</span>，于是，得到<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间
+可以由
+<span class="math display">\[\left(\overline{X}-\overline{Y}\pm z_{\alpha/2}\sqrt{\frac{S_{1}^{2}}{n_{1}}+\frac{S_{2}^{2}}{n_{2}}}\right)\tag{7.37}\]</span>
+近似得到。</p>
+<p><strong>例5：</strong>一个消费者团体想要弄清楚使用普通无铅汽油和高级无铅汽油的汽车在行驶里程数上的差异。该团体将同一品牌的汽车分成数量相同的两组，并以一箱汽油为准对每辆汽车进行检验。50辆汽车注入普通无铅汽油，50辆汽车注入高级无铅汽油。普通无铅汽油组的样本均值是21.45英里，样本标准差是3.46英里。高级无铅汽油组的样本均值是24.6英里，样本标准差是2.99英里。假设汽车行驶里程数服从正态分布。构造一个95%的置信区间来估计使用普通无铅汽油和使用高级无铅汽油的汽车在平均行驶里程数上的差异。</p>
+<p>解：设<span class="math inline">\(X\)</span>,<span class="math inline">\(Y\)</span>分别表示使用普通无铅汽油和高级无铅汽油的汽车行驶里程数,且<span class="math inline">\(X\sim N(\mu_{1}, \sigma_{1}^{2})\)</span>和<span class="math inline">\(Y\sim N(\mu_{2}, \sigma_{2}^{2})\)</span>，</p>
+<p>由于<span class="math inline">\(n_{1}, n_{2}\geq 30\)</span>，我们采用
+<span class="math display">\[\left(\overline{X}-\overline{Y}\pm z_{\alpha/2}\sqrt{\frac{S_{1}^{2}}{n_{1}}+\frac{S_{2}^{2}}{n_{2}}}\right)\]</span>
+近似计算<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的置信区间。
+依题意有：
+<span class="math display">\[n_{1}=50, \overline{x}=21.45, s_{1}=3.46\]</span>
+<span class="math display">\[n_{2}=50, \overline{y}=24.6, s_{2}=2.99\]</span>
+且<span class="math inline">\(z_{0.025}=1.96\)</span>, 将已知数据代入计算得到<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的置信水平为95%的置信区间为(–4.42，–1.88)。</p>
+<p>由于<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的置信上限为负数，这意味着使用普通无铅汽油比使用高级无铅汽油的汽车行驶的平均里程数要少。</p>
+<p><strong>②<span class="math inline">\(\sigma_{1}^{2}\)</span>和<span class="math inline">\(\sigma_{2}^{2}\)</span>未知，但<span class="math inline">\(\sigma_{1}^{2}=\sigma_{2}^{2}=\sigma^{2}\)</span>情形</strong></p>
+<p>由第六章的内容可知
+<span class="math display">\[T=\frac{(\overline{X}-\overline{Y})-(\mu_{1}-\mu_{2})}{S_{w}\sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}}\sim t(n_{1}+n_{2}-2)\tag{7.38}\]</span></p>
+<p>其中<span class="math display">\[S_{w}^{2}=\frac{(n_{1}-1)S_{1}^{2}+(n_{2}-1)S_{2}^{2}}{n_{1}+n_{2}-2},\]</span>且<span class="math inline">\(T\)</span>不依赖于任何未知参数，故选其作为<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的区间估计统计量。</p>
+<p>类似于前面，可知<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间
+<span class="math display">\[\left(\overline{X}-\overline{Y}\pm t_{\alpha/2}(n_{1}+n_{2}-2)S_{w}\sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}\right).\tag{7.39}\]</span></p>
+<p><strong>例6：</strong>为了比较甲、乙两类试验田的收获量，随机抽取甲类试验田8块，乙类试验田10块，测得收获量如下
+<span class="math display">\[\text{甲类：} 12.6, 10.2, 11.7, 12.3, 11.1, 10.5, 10.6, 12.2\]</span>
+<span class="math display">\[\text{乙类：} 8.6, 7.9, 9.3, 10.7, 11.2, 11.4, 9.8, 9.5, 10.1, 8.5\]</span>
+假定两类试验田的收获量都服从正态分布且方差相等，求均值之差<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的置信水平为0.95的置信区间。</p>
+<p>解：由于总体方差相等但未知，可采用
+<span class="math display">\[\left(\overline{X}-\overline{Y}\pm t_{\alpha/2}(n_{1}+n_{2}-2)S_{w}\sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}\right),\]</span></p>
+<p>计算<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的置信区间。由两类试验的观测数据计算得
+<span class="math display">\[n_{1}=8, \overline{x}=11.4, s_{1}^{2}=0.851, n_{2}=10, \]</span>
+<span class="math display">\[\overline{y}=9.7, s_{2}^{2}=1.378, s_{w}=1.071\]</span>
+查t分布分位数表知
+<span class="math display">\[t_{\alpha/2}(n_{1}+n_{2}-2)=t_{0.025}(16)=2.1199\]</span>
+带入计算得<span class="math inline">\(\mu_{1}-\mu_{2}\)</span>的置信水平为0.95的置信区间为(0.62, 2.78)。</p>
+<p><font size=4><strong>（2）方差比<span class="math inline">\(\sigma_{1}^{2}/\sigma_{2}^{2}\)</span>的置信区间</strong></font></p>
+<p>设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n_{1}}\)</span>和<span class="math inline">\(Y_{1}\)</span>, <span class="math inline">\(Y_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(Y_{n_{2}}\)</span>分别为总体<span class="math inline">\(X\sim N(\mu_{1}, \sigma_{1}^{2})\)</span>和<span class="math inline">\(Y\sim N(\mu_{2}, \sigma_{2}^{2})\)</span>的样本，且<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>相互独立，其样本均值分别记为<span class="math inline">\(\overline{X}\)</span>和<span class="math inline">\(\overline{Y}\)</span>，样本方差分别记为
+<span class="math inline">\(S_{1}^{2}\)</span>和<span class="math inline">\(S_{2}^{2}\)</span>。</p>
+<p><strong><span class="math inline">\(\mu_{1}\)</span>和<span class="math inline">\(\mu_{2}\)</span>未知情形</strong></p>
+<p>由第六章的内容可知
+<span class="math display">\[F=\frac{S_{1}^{2}/\sigma_{1}^{2}}{S_{2}^{2}/\sigma_{2}^{2}}\sim  F(n_{1}-1, n_{2}-1)\tag{7.40}\]</span>
+且<span class="math inline">\(F\)</span>不依赖于任何未知参数，故选其作为<span class="math inline">\(\sigma_{1}^{2}/\sigma_{2}^{2}\)</span>的区间估计统计量。</p>
+<p>给定置信水平<span class="math inline">\(1-\alpha\)</span>，可得
+<span class="math display">\[P\left\{F_{1-\alpha/2}(n_{1}-1, n_{2}-1)&lt;\frac{S_{1}^{2}/\sigma_{1}^{2}}{S_{2}^{2}/\sigma_{2}^{2}}&lt;F_{\alpha/2}(n_{1}-1, n_{2}-1)\right\}=1-\alpha\tag{7.41}\]</span>
+即
+<span class="math display">\[P\left\{\frac{S_{1}^{2}}{S_{2}^{2}}\frac{1}{F_{\alpha/2}(n_{1}-1, n_{2}-1)}&lt;\frac{\sigma_{1}^{2}}{\sigma_{2}^{2}}&lt;\frac{S_{1}^{2}}{S_{2}^{2}}\frac{1}{F_{1-\alpha/2}(n_{1}-1, n_{2}-1)}\right\}=1-\alpha\tag{7.42}\]</span></p>
+<p>于是，我们得到<span class="math inline">\(\sigma_{1}^{2}/\sigma_{2}^{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的置信区间
+<span class="math display">\[\left(\frac{S_{1}^{2}}{S_{2}^{2}}\frac{1}{F_{\alpha/2}(n_{1}-1, n_{2}-1)}, \frac{S_{1}^{2}}{S_{2}^{2}}\frac{1}{F_{1-\alpha/2}(n_{1}-1, n_{2}-1)}\right)\tag{7.43}\]</span></p>
+</div>
+<div id="单侧置信区间" class="section level3" number="7.3.4">
+<h3><span class="header-section-number">7.3.4</span> 单侧置信区间</h3>
+<p><font size=4><strong>引言</strong></font></p>
+<p>上述置信区间中置信限都是双侧的。</p>
+<p>但对于有些实际问题，人们关心的只是参数在一个方向的界限。</p>
+<p>例如，购买化学药品时，我们所关心的是化学药品中杂质含量平均值最多是多少，即“上限”；
+而购买电子产品时更关心的是它们的平均使用寿命至少是多少，即“下限”。</p>
+<p>这就引出了单侧置信区间的概念。</p>
+<p><font size=4><strong>（1）定义：单侧置信区间</strong></font></p>
+<p>若<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\)</span>的一个样本，对于总体<span class="math inline">\(X\)</span>的未知参数<span class="math inline">\(\theta\)</span>,如果有两个统计量
+<span class="math display">\[\underline{\theta}=\underline{\theta}(X_{1}, X_{2}, \cdots, X_{n}), ~~\text{和}~~\overline{\theta}=\overline{\theta}(X_{1}, X_{2}, \cdots, X_{n})\tag{7.44}\]</span>
+对给定的置信水平<span class="math inline">\(\alpha \in(0, 1)\)</span>，满足</p>
+<ul>
+<li>若有</li>
+</ul>
+<p><span class="math display">\[P\{\theta&lt;\overline{\theta}\}=1-\alpha,\]</span>则称区间<span class="math inline">\((-\infty, \overline{\theta})\)</span>是<span class="math inline">\(\theta\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的单侧置信区间，称<span class="math inline">\(\overline{\theta}\)</span> 为单侧置信上限。</p>
+<ul>
+<li>若有<span class="math display">\[P\{\theta&gt;\underline{\theta}\}=1-\alpha,\]</span>则称区间<span class="math inline">\((\underline{\theta}, +\infty)\)</span>是<span class="math inline">\(\theta\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的单侧置信区间，称<span class="math inline">\(\underline{\theta}\)</span> 为单侧置信上限。</li>
+</ul>
+<p>单侧置信区间的求法与双侧置信区间的求法类似，下面仅给出求正态总体均值和方差的单侧置信区间的部分过程。 设<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(X_{n}\)</span>为总体<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>的样本，<span class="math inline">\(\overline{X}\)</span>和<span class="math inline">\(S^{2}\)</span>分别是样本均值和样本方差，给定置信水平<span class="math inline">\(1-\alpha\)</span>。</p>
+<p><font size=4><strong>（2）<span class="math inline">\(\sigma^{2}\)</span>未知时，<span class="math inline">\(\mu\)</span>的单侧置信上限</strong></font></p>
+<p>类似于双侧置信区间求法，取</p>
+<span class="math display">\[T=\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)\tag{7.45}\]</span>
+且<span class="math inline">\(T\)</span>不依赖于任何未知参数，作为<span class="math inline">\(\mu\)</span>的单侧置信区间估计统计量。对给定的置信水平<span class="math inline">\(1-\alpha\)</span>, 由下图：
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5j*5nom3C3T086wPXXrwa43xkVskX0LdWbpwkxvyezkgxp0ROZ*Z02b46kZ9XHaeIQIwiyVHFT.1OtbhQdtaxbY!/mnull&amp;bo=NgHHAAAAAAABB9A!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片78" />
+</center>
+<center>
+图 7.6
+</center>
+<p>有
+<span class="math display">\[P\left\{\frac{\overline{X}-\mu}{S/\sqrt{n}}&gt;-t_{\alpha}(n-1)\right\}=P\left\{\mu&lt;\overline{X}+\frac{S}{\sqrt{n}}t_{\alpha}(n-1)\right\}=1-\alpha\tag{7.46}\]</span></p>
+<p>因此，我们就得到了<span class="math inline">\(\mu\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的单侧置信区间</p>
+<p><span class="math display">\[\left(-\infty, \overline{X}+\frac{S}{\sqrt{n}}t_{\alpha}(n-1)\right)\tag{7.47}\]</span></p>
+<p><span class="math inline">\(\mu\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>单侧置信上限为
+<span class="math display">\[\overline{\mu}=\overline{X}+\frac{S}{\sqrt{n}}t_{\alpha}(n-1)\tag{7.48}\]</span></p>
+<p><font size=4><strong>（3）<span class="math inline">\(\sigma^{2}\)</span>未知时，<span class="math inline">\(\mu\)</span>的单侧置信下限</strong></font></p>
+同理对给定的置信水平<span class="math inline">\(1-\alpha\)</span>，由下图：
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5jdt3Gp6PzBgeVZfDbHZ.AfNt9ExE5asiEo3lUF*XXq*sfHL85jKWsayXYMqq6QnnoFwwgHs7aKO2tX6156lLzs!/mnull&amp;bo=NgHJAAAAAAABB94!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片79" />
+</center>
+<center>
+图 7.7
+</center>
+<p>有
+<span class="math display">\[P\left\{\frac{\overline{X}-\mu}{S/\sqrt{n}}&lt;t_{\alpha}(n-1)\right\}=P\left\{\mu&gt;\overline{X}-\frac{S}{\sqrt{n}}t_{\alpha}(n-1)\right\}=1-\alpha\tag{7.49}\]</span></p>
+<p>因此，我们就得到了<span class="math inline">\(\mu\)</span>的另一个置信水平为<span class="math inline">\(1-\alpha\)</span>的单侧置信区间</p>
+<p><span class="math display">\[\left({\overline{X}-\frac{S}{\sqrt{n}}t_{\alpha}(n-1)}, +\infty\right)\tag{7.50}\]</span></p>
+<p><font size=4><strong>（4）<span class="math inline">\(\mu\)</span>未知时，<span class="math inline">\(\sigma^{2}\)</span>的单侧置信上限</strong></font></p>
+类似于双侧置信区间求法，取
+<span class="math display">\[\chi^{2}=\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}=\frac{(n-1)S^{2}}{\sigma^{2}}\sim \chi^{2}(n-1)\tag{7.51}\]</span>
+且<span class="math inline">\(\chi^{2}\)</span>不依赖于任何未知参数，作为<span class="math inline">\(\sigma^{2}\)</span>的单侧置信区间估计统计量。对给定的置信水平<span class="math inline">\(1-\alpha\)</span>, 由下图：
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5udNi*e6FRzshunn*YazTmFCmV*djrvJb*Qs3FIFeikOPHW2H*zf.oIVuANmxJb*XF4BUh0vyRJhwFigG2Z5Br8!/mnull&amp;bo=LgHGAAAAAAABB8k!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片710" />
+</center>
+<center>
+图 7.8
+</center>
+<p>有
+<span class="math display">\[P\left\{\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}&gt;\chi^{2}_{1-\alpha}(n-1)\right\}=P\left\{\sigma^{2}&lt;\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{\chi^{2}_{1-\alpha}(n-1)}\right\}=1-\alpha\tag{7.52}\]</span></p>
+<p>因此，我们就得到了<span class="math inline">\(\sigma^{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的单侧置信区间
+<span class="math display">\[\left(0, \frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{\chi^{2}_{1-\alpha}(n-1)}\right)\tag{7.53}\]</span>
+<span class="math inline">\(\sigma^{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>单侧置信上限为
+<span class="math display">\[\overline{\sigma^{2}}=\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{\chi^{2}_{1-\alpha}(n-1)}=\frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha}(n-1)}\tag{7.54}\]</span></p>
+<p><font size=4><strong>（5）<span class="math inline">\(\mu\)</span>未知时，<span class="math inline">\(\sigma^{2}\)</span>的单侧置信下限</strong></font></p>
+同理对给定的置信水平<span class="math inline">\(1-\alpha\)</span>, 由下图：
+<center>
+<img src="https://m.qpic.cn/psc?/V54AC60s2AQkQe24IJrU0a9knd0j1QQg/ruAMsa53pVQWN7FLK88i5qIgRWeH2n1F8v*wuX1D71AcSPYTmnJUdJzCNuQy.FyGhytZok6FcYlww8NwVTPM15Py5JixEvxq5Hh0y7bHFZU!/mnull&amp;bo=NQHIAAAAAAABB9w!&amp;rf=photolist&amp;t=5" title="fig:" alt="图片711" />
+</center>
+<center>
+图 7.9
+</center>
+<p>有
+<span class="math display">\[P\left\{\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}&lt;\chi^{2}_{\alpha}(n-1)\right\}=P\left\{\sigma^{2}&gt;\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{\chi^{2}_{\alpha}(n-1)}\right\}=1-\alpha\tag{7.55}\]</span></p>
+<p>因此，我们就得到了<span class="math inline">\(\sigma^{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>的单侧置信区间
+<span class="math display">\[\left(\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{\chi^{2}_{\alpha}(n-1)}, +\infty\right)\tag{7.56}\]</span></p>
+<p><span class="math inline">\(\sigma^{2}\)</span>的一个置信水平为<span class="math inline">\(1-\alpha\)</span>单侧置信下限为
+<span class="math display">\[\underline{\sigma^{2}}=\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{\chi^{2}_{\alpha}(n-1)}=\frac{(n-1)S^{2}}{\chi^{2}_{\alpha}(n-1)}\tag{7.57}\]</span></p>
+<p><font size=4><strong>例题</strong></font></p>
+<p><strong>例7：</strong></p>
+<p>从一批汽车轮胎中随机地取16只做磨损试验，记录其磨坏时所行驶路程(单位：km)，算得样本均值<span class="math inline">\(\overline{x}=41116\)</span>，样本标准差<span class="math inline">\(s=6346\)</span>．设此样本来自正态总体<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>, <span class="math inline">\(\mu, \sigma^{2}\)</span>均未知，问该种轮胎平均行驶路程至少是多少(置信水平95%)？</p>
+<p>解：由于<span class="math inline">\(X\sim N(\mu, \sigma^{2})\)</span>, <span class="math inline">\(\mu, \sigma^{2}\)</span>均未知，轮胎平均行驶路程的单侧置信下限可由下面公式计算得到
+<span class="math display">\[\underline{\mu}=\overline{X}-\frac{S}{\sqrt{n}}t_{\alpha}(n-1)\]</span>
+其中<span class="math inline">\(s=6346, \overline{x}=41116, n=16, \alpha=0.05, t_{0.05}(15)=1.753\)</span>
+即得置信水平为95%的单侧置信下限：<span class="math display">\[\underline{\mu}=41116-\frac{6346}{\sqrt{16}}\times 1.753=38334.87\]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="样本与抽样分布.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="假设检验.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
